@@ -1,0 +1,813 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<!--gloab-->
+<link href="../css/comm.css" rel="stylesheet" type="text/css" />
+<link href="../css/widget.css" rel="stylesheet" type="text/css" />
+<link href="../css/ico.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../js/jquery-1.8.2.min.js"></script>
+<!--demo-->
+<link href="../css/demo.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../js/demo.js"></script>
+<!--artdialog-->
+<link href="../css/artdialog.css" rel="stylesheet" />
+<script src="../js/artDialog.min.js"></script>
+<script src="../js/jquery.overlay.min.js"></script>
+<!--scroll-->
+<link href="../css/jquery.jscrollpane.css" rel="stylesheet" type="text/css" />
+<script src="../js/jquery.mousewheel.js"></script>
+<script src="../js/jquery.jscrollpane.min.js"></script>
+<script>
+$(function()
+{
+	var settings = {
+		showArrows: false,
+		autoReinitialise: true
+	};
+	$('.scroll-pane').jScrollPane(settings);
+});
+</script>
+<!--AnyChart-->
+<script type="text/javascript" language="JavaScript" src="../anychart/js/AnyChart.js"></script>
+<script type="text/javascript" language="JavaScript">
+	var chart = new AnyChart('../anychart/swf/AnyChart.swf', '../anychart/swf/Preloader.swf');
+		chart.width = "100%";
+		chart.height = "100%";
+		chart.wMode='transparent';
+		chart.setXMLFile("../anychart/xml/view_pie1.xml");
+	chart.write("view_pie1");
+</script>
+<script type="text/javascript" language="JavaScript">
+	var chart = new AnyChart('../anychart/swf/AnyChart.swf', '../anychart/swf/Preloader.swf');
+		chart.width = "100%";
+		chart.height = "100%";
+		chart.wMode='transparent';
+		chart.setXMLFile("../anychart/xml/view_line.xml");
+	chart.write("view_line");
+</script>
+<script type="text/javascript" language="JavaScript">
+	var chart = new AnyChart('../anychart/swf/AnyChart.swf', '../anychart/swf/Preloader.swf');
+		chart.width = "100%";
+		chart.height = "100%";
+		chart.wMode='transparent';
+		chart.setXMLFile("../anychart/xml/view_bar.xml");
+	chart.write("view_bar");
+</script>
+</head>
+<body class="layout">
+
+	<div class="layout_left swf">
+  <div class="portlet" style="margin-bottom:6px;">
+    <div class="top-l">
+      <div class="top-r">
+        <div class="top-m"><span class="title">（未恢复）告警级别统计 - 最近一天</span> </div>
+        </div>
+    </div>
+    <div class="middle-l">
+      <div class="middle-r">
+        <div class="middle-m" style="height:170px;" id="view_pie1" > 
+          
+            </div>
+        </div>
+    </div>
+    <div class="bottom-l">
+      <div class="bottom-r">
+        <div class="bottom-m"></div>
+        </div>
+    </div>
+</div>
+  <div class="portlet" style="margin-bottom:6px;">
+    <div class="top-l">
+      <div class="top-r">
+        <div class="top-m"><span class="title">（未恢复）告警TOP5 - 最近一天</span> </div>
+        </div>
+    </div>
+    <div class="middle-l">
+      <div class="middle-r">
+        <div class="middle-m" id="view_line" style="height: 170px;"> 
+        
+        </div>
+      </div>
+    </div>
+    <div class="bottom-l">
+      <div class="bottom-r">
+        <div class="bottom-m"></div>
+        </div>
+    </div>
+</div>
+  <div class="portlet">
+    <div class="top-l">
+      <div class="top-r">
+        <div class="top-m"><span class="title">（未恢复）严重告警TOP5 - 最近一天</span> </div>
+        </div>
+    </div>
+    <div class="middle-l">
+      <div class="middle-r">
+        <div class="middle-m" style="height:185px;" id="view_bar_noshow" > 
+          	<div class="nodata-min"></div>
+            </div>
+        </div>
+    </div>
+    <div class="bottom-l">
+      <div class="bottom-r">
+        <div class="bottom-m"></div>
+        </div>
+    </div>
+</div>
+</div>
+	<div class="layout_right swf">
+      <div class="portlet">
+    <div class="top-l">
+      <div class="top-r">
+        <div class="top-m"><span class="title">告警一览</span> </div>
+        </div>
+    </div>
+    <div class="middle-l">
+      <div class="middle-r">
+        <div class="middle-m"> 
+        
+        <!--search-->
+        <div class="st2 bnone">
+        	<div class="f_left">            	
+                <div class="select_body" style="width:70px">
+                     <div class="select_trigger_wrap"><a class="select_trigger"></a></div>
+                     <div class="select_text">未恢复</div>
+                </div>
+    			<div class="select_boundtree">
+                 <ul>     
+                      <li><a><span class="t">未恢复</span></a></li>
+                      <li><a><span class="t">已恢复</span></a></li>
+                 </ul>
+    			</div>
+           	</div>
+            <div class="f_left"><span class="select_label2">资源类型：</span></div>
+            <div class="f_left">            	
+                <div class="select_body">
+                     <div class="select_trigger_wrap"><a class="select_trigger"></a></div>
+                     <div class="select_text">全部类型</div>
+                </div>
+    			<div class="select_boundtree">
+         <ul>     
+              <li><a><span class="t">主机</span> <span class="icon icon_arrow_sr"></span></a>
+                <ul style="display: none;">
+                  <li><a><span class="t">Windows</span></a></li>
+                  <li><a><span class="t">Solaris</span></a></li>
+                  <li><a><span class="t">AIX</span></a></li>
+                  <li><a><span class="t">Linux</span></a></li>
+                  <li><a><span class="t">HP-UX</span></a></li>
+                  <li><a><span class="t">SCO</span></a></li>
+                  <li><a><span class="t">UnixWare</span></a></li>
+                  <li><a><span class="t">FreeBSD</span></a></li>
+                  <li><a><span class="t">其他主机</span></a></li>
+            </ul>
+          </li>
+              <li><a><span class="t">网络设备</span> <span class="icon icon_arrow_sr"></span></a>
+                <ul>
+                	<li><a><span class="t">路由器</span><span class="icon icon_arrow_sr"></span></a>
+                        <ul>
+                              <li><a><span class="t">3Com路由器</span></a></li>
+                              <li><a><span class="t">Array路由器</span></a></li>
+                              <li><a><span class="t">Ceragon路由器</span></a></li>
+                              <li><a><span class="t">Cisco路由器</span></a></li>
+                              <a class="more"></a>
+                        </ul>
+                    </li>
+                    <li><a><span class="t">交换机</span><span class="icon icon_arrow_sr"></span></a>
+                    	<ul>
+                              <li><a><span class="t">3Com交换机</span></a></li>
+                              <li><a><span class="t">Array交换机</span></a></li>
+                              <li><a><span class="t">Ceragon交换机</span></a></li>
+                              <li><a><span class="t">Cisco交换机</span></a></li>
+                              <a class="more"></a>
+                        </ul>
+                    </li>
+                    <li><a><span class="t">安全设备</span><span class="icon icon_arrow_sr"></span></a>
+                    	<ul>
+                              <li><a><span class="t">各厂商安全设备</span></a></li>
+                        </ul>
+                    </li>
+                    <li><a><span class="t">负载均衡器</span><span class="icon icon_arrow_sr"></span></a>
+                    	<ul>
+                              <li><a><span class="t">各厂商负载均衡器</span></a></li>
+                        </ul>
+                    </li>
+                    <li><a><span class="t">网闸</span><span class="icon icon_arrow_sr"></span></a>
+                    	<ul>
+                              <li><a><span class="t">各厂商网闸</span></a></li>
+                        </ul>
+                    </li>
+                    <li><a><span class="t">其他网络设备</span><span class="icon icon_arrow_sr"></span></a>
+                    	<ul>
+                              <li><a><span class="t">3Com其他设备</span></a></li>
+                              <li><a><span class="t">Array其他设备</span></a></li>
+                              <li><a><span class="t">Ceragon其他设备</span></a></li>
+                              <li><a><span class="t">Cisco其他设备</span></a></li>
+                              <a class="more"></a>
+                        </ul>
+                    </li>
+                </ul>
+          	  </li>
+              <li><a><span class="t">应用</span><span class="icon icon_arrow_sr"></span></a>
+                <ul>
+                	<li><a><span class="t">数据库</span><span class="icon icon_arrow_sr"></span></a>
+                    	<ul>   
+                  <li><a><span class="t">Apache</span></a></li>
+                  <li><a><span class="t">ApusicAS</span></a></li>
+                  <li><a><span class="t">CICS</span></a></li>
+                  <li><a><span class="t">DB2</span></a></li>
+                  <li><a><span class="t">IBM Directory Server</span></a></li>
+                  <li><a><span class="t">IIS</span></a></li>
+                  <li><a><span class="t">Informix</span></a></li>
+                  <li><a><span class="t">JBoss AS</span></a></li>
+                  <li><a><span class="t">Lotus Domino应用</span></a></li>
+                  <li><a><span class="t">MS Exchange 2003</span></a></li>
+                  <li><a><span class="t">MS Exchange 2005</span></a></li>
+                  <li><a><span class="t">MySQL</span></a></li>
+                  <a class="more"></a>
+                </ul>
+                    </li>
+                    <li><a><span class="t">邮件服务器</span><span class="icon icon_arrow_sr"></span></a>
+                    	<ul>   
+                  <li><a><span class="t">Apache</span></a></li>
+                  <li><a><span class="t">ApusicAS</span></a></li>
+                  <li><a><span class="t">CICS</span></a></li>
+                  <li><a><span class="t">DB2</span></a></li>
+                  <li><a><span class="t">IBM Directory Server</span></a></li>
+                  <li><a><span class="t">IIS</span></a></li>
+                  <li><a><span class="t">Informix</span></a></li>
+                  <li><a><span class="t">JBoss AS</span></a></li>
+                  <li><a><span class="t">Lotus Domino应用</span></a></li>
+                  <li><a><span class="t">MS Exchange 2003</span></a></li>
+                  <li><a><span class="t">MS Exchange 2005</span></a></li>
+                  <li><a><span class="t">MySQL</span></a></li>
+                  <a class="more"></a>
+                </ul>
+                    </li>
+                    <li><a><span class="t">J2EE应用服务器</span><span class="icon icon_arrow_sr"></span></a>
+                    	<ul>   
+                  <li><a><span class="t">Apache</span></a></li>
+                  <li><a><span class="t">ApusicAS</span></a></li>
+                  <li><a><span class="t">CICS</span></a></li>
+                  <li><a><span class="t">DB2</span></a></li>
+                  <li><a><span class="t">IBM Directory Server</span></a></li>
+                  <li><a><span class="t">IIS</span></a></li>
+                  <li><a><span class="t">Informix</span></a></li>
+                  <li><a><span class="t">JBoss AS</span></a></li>
+                  <li><a><span class="t">Lotus Domino应用</span></a></li>
+                  <li><a><span class="t">MS Exchange 2003</span></a></li>
+                  <li><a><span class="t">MS Exchange 2005</span></a></li>
+                  <li><a><span class="t">MySQL</span></a></li>
+                  <a class="more"></a>
+                </ul>
+                    </li>
+                    <li><a><span class="t">Web服务器</span><span class="icon icon_arrow_sr"></span></a>
+                    	<ul>   
+                  <li><a><span class="t">Apache</span></a></li>
+                  <li><a><span class="t">ApusicAS</span></a></li>
+                  <li><a><span class="t">CICS</span></a></li>
+                  <li><a><span class="t">DB2</span></a></li>
+                  <li><a><span class="t">IBM Directory Server</span></a></li>
+                  <li><a><span class="t">IIS</span></a></li>
+                  <li><a><span class="t">Informix</span></a></li>
+                  <li><a><span class="t">JBoss AS</span></a></li>
+                  <li><a><span class="t">Lotus Domino应用</span></a></li>
+                  <li><a><span class="t">MS Exchange 2003</span></a></li>
+                  <li><a><span class="t">MS Exchange 2005</span></a></li>
+                  <li><a><span class="t">MySQL</span></a></li>
+                  <a class="more"></a>
+                </ul>
+                    </li>
+                    <li><a><span class="t">Lotus Domino</span><span class="icon icon_arrow_sr"></span></a>
+                    	<ul>   
+                  <li><a><span class="t">Apache</span></a></li>
+                  <li><a><span class="t">ApusicAS</span></a></li>
+                  <li><a><span class="t">CICS</span></a></li>
+                  <li><a><span class="t">DB2</span></a></li>
+                  <li><a><span class="t">IBM Directory Server</span></a></li>
+                  <li><a><span class="t">IIS</span></a></li>
+                  <li><a><span class="t">Informix</span></a></li>
+                  <li><a><span class="t">JBoss AS</span></a></li>
+                  <li><a><span class="t">Lotus Domino应用</span></a></li>
+                  <li><a><span class="t">MS Exchange 2003</span></a></li>
+                  <li><a><span class="t">MS Exchange 2005</span></a></li>
+                  <li><a><span class="t">MySQL</span></a></li>
+                  <a class="more"></a>
+                </ul>
+                    </li>
+                </ul>
+              </li>
+              <li><a><span class="t">基础服务</span><span class="icon icon_arrow_sr"></span></a>
+                <ul>                                    
+                  <li><a><span class="t">Ping</span></a></li>
+                  <li><a><span class="t">Port</span></a></li>
+                  <li><a><span class="t">URL</span></a></li>
+                </ul>
+              </li>
+     </ul>
+    </div>
+                
+            	</div>
+            <div class="f_left"><span class="select_label2">产生时间：</span></div>
+            <div class="f_left">
+                <div class="select_body">
+                     <div class="select_trigger_wrap"><a class="select_trigger"></a></div>
+                     <div class="select_text">最近一小时</div>
+                </div>
+                <div class="select_boundtree">
+                  <ul>
+                    <li><a><span class="t">最近一小时</span></a></li>
+                    <li><a><span class="t">最近一天</span></a></li>
+                    <li><a><span class="t">自定义时间</span></a></li>
+                  </ul>
+                </div>
+            </div>
+            <div class="f_left" style="margin-left:10px;">
+            <input class="calendar" value="2013/04/10 21:40:20">
+            <span class="t">-</span>
+            <input class="calendar" value="2013/05/10 21:40:20">
+            </div>
+            <div class="f_left m_left"><a class="btn_s">搜索</a></div>     
+        </div>
+        <!--search-->
+        <div class="st">
+            <span class="f_left">
+                <a class="btn_s4 on" id="show_all"><span>全部 (280)</span></a>
+                <a class="btn_s4 rbg" id="show_red"><span class="alarm1s"></span><span class="rt">严重 (20)</span></a>
+                <a class="btn_s4 obg"><span class="alarm2s"></span> <span class="ot">主要 (20)</span></a>
+                <a class="btn_s4 abg"><span class="alarm4s"></span> <span class="at">警告 (20)</span></a>
+            </span>
+        </div>
+        <!--table #all-->
+        <div class="common" id="all">
+                    <div class="theadpart">
+                    <table>
+                    	<thead> 		 			 		 			  			   		    			   		 
+                        <tr>
+                            <th width="20%"><a class="rank-down"></a><a class="rank-pull" id="show_rank"></a><span>告警内容</span></th>
+                            <th width="20%"><a class="rank-down"></a><a class="rank-pull"></a><span>资源名称</span></th>
+                            <th width="15%"><a class="rank-down"></a><a class="rank-pull"></a><span>IP地址</span> </th>
+                            <th width="20%"><a class="rank-down"></a><a class="rank-pull"></a><span>监控类型</span> </th>
+                            <th width="15%"><a class="rank-down"></a><span>产生时间</span> </th>
+                            <th width="10%" class="tcenter">发送纪录 </th>
+                        </tr>
+                        </thead>
+                    </table>
+                    </div>
+                    <div class="tbodypart">
+                    <table>
+                    	<tbody>
+                        <tr>
+                            <td width="20%"><span class="alarm1s"></span><a id="show_info">内存利用率轻微超标</a></td>
+                            <td width="20%">Rill_ZB_Switch_6509_1</td>
+                            <td width="15%">192.168.1.1</td>
+                            <td width="20%">Windows主机(SSH/Telnet)</td>
+                            <td width="15%">2013/03/29 13:39:52</td>
+                            <td width="10%" class="tcenter"><span class="icon icon_record"></span></td>
+                        </tr>	
+                        <tr class="cbg">
+                            <td><span class="alarm1s"></span>内存利用率轻微超标</td>
+                            <td>Rill_ZB_Switch_6509_1</td>
+                            <td>192.168.1.1</td>
+                            <td>Windows主机(SSH/Telnet)</td>
+                            <td>2013/03/29 13:39:52</td>
+                            <td class="tcenter"></td>
+                        </tr>
+                        <tr>
+                            <td><span class="alarm1s"></span>内存利用率轻微超标</td>
+                            <td>Rill_ZB_Switch_6509_1</td>
+                            <td>192.168.1.1</td>
+                            <td>Windows主机(SSH/Telnet)</td>
+                            <td>2013/03/29 13:39:52</td>
+                            <td class="tcenter"></td>
+                        </tr>
+                        <tr class="cbg">
+                            <td><span class="alarm2s"></span>内存利用率轻微超标</td>
+                            <td>Rill_ZB_Switch_6509_1</td>
+                            <td>192.168.1.1</td>
+                            <td>Windows主机(SSH/Telnet)</td>
+                            <td>2013/03/29 13:39:52</td>
+                            <td class="tcenter"><span class="icon icon_record"></span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="alarm4s"></span>内存利用率轻微超标</td>
+                            <td>Rill_ZB_Switch_6509_1</td>
+                            <td>192.168.1.1</td>
+                            <td>Windows主机(SSH/Telnet)</td>
+                            <td>2013/03/29 13:39:52</td>
+                            <td class="tcenter"><span class="icon icon_record"></span></td>
+                        </tr>
+                        <tr class="cbg">
+                            <td><span class="alarm4s"></span>内存利用率轻微超标</td>
+                            <td>Rill_ZB_Switch_6509_1</td>
+                            <td>192.168.1.1</td>
+                            <td>Windows主机(SSH/Telnet)</td>
+                            <td>2013/03/29 13:39:52</td>
+                            <td class="tcenter"><span class="icon icon_record"></span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="alarm4s"></span>内存利用率轻微超标</td>
+                            <td>Rill_ZB_Switch_6509_1</td>
+                            <td>192.168.1.1</td>
+                            <td>Windows主机(SSH/Telnet)</td>
+                            <td>2013/03/29 13:39:52</td>
+                            <td class="tcenter"><span class="icon icon_record"></span></td>
+                        </tr>
+                        <tr class="cbg">
+                            <td><span class="alarm2s"></span>内存利用率轻微超标</td>
+                            <td>Rill_ZB_Switch_6509_1</td>
+                            <td>192.168.1.1</td>
+                            <td>Windows主机(SSH/Telnet)</td>
+                            <td>2013/03/29 13:39:52</td>
+                            <td class="tcenter"><span class="icon icon_record"></span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="alarm4s"></span>内存利用率轻微超标</td>
+                            <td>Rill_ZB_Switch_6509_1</td>
+                            <td>192.168.1.1</td>
+                            <td>Windows主机(SSH/Telnet)</td>
+                            <td>2013/03/29 13:39:52</td>
+                            <td class="tcenter"><span class="icon icon_record"></span></td>
+                        </tr>
+                        <tr class="cbg">
+                            <td><span class="alarm4s"></span>内存利用率轻微超标</td>
+                            <td>Rill_ZB_Switch_6509_1</td>
+                            <td>192.168.1.1</td>
+                            <td>Windows主机(SSH/Telnet)</td>
+                            <td>2013/03/29 13:39:52</td>
+                            <td class="tcenter"></td>
+                        </tr>
+                        <tr>
+                            <td><span class="alarm4s"></span>内存利用率轻微超标</td>
+                            <td>Rill_ZB_Switch_6509_1</td>
+                            <td>192.168.1.1</td>
+                            <td>Windows主机(SSH/Telnet)</td>
+                            <td>2013/03/29 13:39:52</td>
+                            <td class="tcenter"><span class="icon icon_record"></span></td>
+                        </tr>
+                        <tr class="cbg">
+                            <td><span class="alarm2s"></span>内存利用率轻微超标</td>
+                            <td>Rill_ZB_Switch_6509_1</td>
+                            <td>192.168.1.1</td>
+                            <td>Windows主机(SSH/Telnet)</td>
+                            <td>2013/03/29 13:39:52</td>
+                            <td class="tcenter"><span class="icon icon_record"></span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="alarm2s"></span>内存利用率轻微超标</td>
+                            <td>Rill_ZB_Switch_6509_1</td>
+                            <td>192.168.1.1</td>
+                            <td>Windows主机(SSH/Telnet)</td>
+                            <td>2013/03/29 13:39:52</td>
+                            <td class="tcenter"><span class="icon icon_record"></span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="alarm2s"></span>内存利用率轻微超标</td>
+                            <td>Rill_ZB_Switch_6509_1</td>
+                            <td>192.168.1.1</td>
+                            <td>Windows主机(SSH/Telnet)</td>
+                            <td>2013/03/29 13:39:52</td>
+                            <td class="tcenter"><span class="icon icon_record"></span></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    </div>
+                    <div class="page">
+                        <span class="jump">
+                            <input type="text" class="pageinput">
+                            <a class="page-go" title="跳转到"></a>
+                        </span>
+                        <span class="paging-btns">
+                            <a class="p-last">末页</a>
+                            <a class="p-next">下一页</a>
+                            <a class="p-prev">上一页</a>
+                            <a class="p-first">首页</a>
+                        </span>
+                        <span>17</span>
+                        <span>总条数</span>
+                        <span>1</span>
+                        <span>/</span>
+                        <span>1</span>
+                    </div>
+                    </div>
+        <!--table #red-->
+        <div class="common" id="red" style="display:none">
+                    <div class="theadpart">
+                    <table>
+                    	<thead> 		 			 		 			  			   		    			   		 
+                        <tr>
+                            <th width="20%"><a class="rank-down"></a><a class="rank-pull"></a><span>告警内容</span></th>
+                            <th width="20%"><a class="rank-down"></a><a class="rank-pull"></a><span>资源名称</span></th>
+                            <th width="15%"><a class="rank-down"></a><a class="rank-pull"></a><span>IP地址</span> </th>
+                            <th width="20%"><a class="rank-down"></a><a class="rank-pull"></a><span>监控类型</span> </th>
+                            <th width="15%"><a class="rank-down"></a><span>产生时间</span></th>
+                            <th width="10%" class="tcenter">发送纪录 </th>
+                        </tr>
+                        </thead>
+                    </table>
+                    </div>
+                    <div class="tbodypart">
+                    <table>
+                    	<tbody>
+                        <tr>
+                            <td width="20%"><span class="alarm1s"></span>内存利用率轻微超标</td>
+                            <td width="20%">Rill_ZB_Switch_6509_1</td>
+                            <td width="15%">192.168.1.1</td>
+                            <td width="20%">Windows主机(SSH/Telnet)</td>
+                            <td width="15%">2013/03/29 13:39:52</td>
+                            <td width="10%" class="tcenter"><span class="icon icon_record"></span></td>
+                        </tr>	
+                        <tr class="cbg">
+                            <td><span class="alarm1s"></span>内存利用率轻微超标</td>
+                            <td>Rill_ZB_Switch_6509_1</td>
+                            <td>192.168.1.1</td>
+                            <td>Windows主机(SSH/Telnet)</td>
+                            <td>2013/03/29 13:39:52</td>
+                            <td class="tcenter"><span class="icon icon_record"></span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="alarm1s"></span>内存利用率轻微超标</td>
+                            <td>Rill_ZB_Switch_6509_1</td>
+                            <td>192.168.1.1</td>
+                            <td>Windows主机(SSH/Telnet)</td>
+                            <td>2013/03/29 13:39:52</td>
+                            <td class="tcenter"><span class="icon icon_record"></span></td>
+                        </tr>
+                        <tr class="cbg">
+                            <td><span class="alarm1s"></span>内存利用率轻微超标</td>
+                            <td>Rill_ZB_Switch_6509_1</td>
+                            <td>192.168.1.1</td>
+                            <td>Windows主机(SSH/Telnet)</td>
+                            <td>2013/03/29 13:39:52</td>
+                            <td class="tcenter"><span class="icon icon_record"></span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="alarm1s"></span>内存利用率轻微超标</td>
+                            <td>Rill_ZB_Switch_6509_1</td>
+                            <td>192.168.1.1</td>
+                            <td>Windows主机(SSH/Telnet)</td>
+                            <td>2013/03/29 13:39:52</td>
+                            <td class="tcenter"><span class="icon icon_record"></span></td>
+                        </tr>
+                        <tr class="cbg">
+                            <td><span class="alarm1s"></span>内存利用率轻微超标</td>
+                            <td>Rill_ZB_Switch_6509_1</td>
+                            <td>192.168.1.1</td>
+                            <td>Windows主机(SSH/Telnet)</td>
+                            <td>2013/03/29 13:39:52</td>
+                            <td class="tcenter"><span class="icon icon_record"></span></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    </div>
+                    </div>
+</div>
+</div>
+</div>
+    <div class="bottom-l">
+      <div class="bottom-r">
+        <div class="bottom-m"></div>
+</div>
+</div>
+</div>
+  </div>
+
+
+
+<!--infoshare-->
+<div id="infoshare" style="width:770px;display:none; ">
+    <div class="panel_null">
+    <div class="top-l">
+      <div class="top-r">
+        <div class="top-m"><span class="title">修改用户信息</span><span class="ico-quit"></span></div>
+      </div>
+    </div>
+    <div class="middle-l">
+      <div class="middle-r">
+        <div class="middle-m">
+            <div class="share">
+                    <h3>报警信息转发</h3>
+                    <table cellpadding="0" cellspacing="0" style="height:360px">
+                    <tbody>
+                    <tr>
+                        <td width="22%">添加转发邮件地址</td>
+                        <td><input class="search" value="example@example.com"> <a><span class="icon icon_plus"></span></a></td>
+                    </tr>
+                    <tr>
+                        <td>转发邮件地址</td>
+                        <td>
+                            <ul class="tc">
+                                <li><a>zhouzhou@ruijie.com<span class="icon icon_cross_s"></span></a></li>
+                                <li><a>leilei@ruijie.com<span class="icon icon_cross_s"></span></a></li>
+                                <li><a>zhouzhou@ruijie.com<span class="icon icon_cross_s"></span></a></li>
+                                <li><a>leilei@ruijie.com<span class="icon icon_cross_s"></span></a></li>
+                                <li><a>zhouzhou@ruijie.com<span class="icon icon_cross_s"></span></a></li>
+                                <li><a>leilei@ruijie.com<span class="icon icon_cross_s"></span></a></li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>添加转发手机号码</td>
+                        <td><input class="search" value="133012356789"> <a><span class="icon icon_plus"></span></a></td>
+                    </tr>
+                    <tr>
+                        <td>转发手机号码</td>
+                        <td>
+                            <ul class="tc">
+                                <li><a>133012356789<span class="icon icon_cross_s"></span></a></li>
+                                <li><a>133012356789<span class="icon icon_cross_s"></span></a></li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+              </table>
+              <div class="button"><input type="button" class="submit" value="确定" /> <input type="button" class="cancel dialog_close" value="取消" /></div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="bottom-l">
+      <div class="bottom-r">
+        <div class="bottom-m"></div>
+      </div>
+    </div>
+</div>
+</div>
+<!--record-->
+<div id="record" style="width:800px;display:none;">
+    <div class="panel">
+    <div class="top-l">
+      <div class="top-r">
+        <div class="top-m"><span class="title">发送纪录</span><span class="ico-quit"></span></div>
+      </div>
+    </div>
+    <div class="middle-l">
+      <div class="middle-r">
+        <div class="middle-m"> 
+                <div class="form">
+                <table cellpadding="0" cellspacing="0">
+                	<tr>
+                    	<td width="20%">信息转发</td>
+                        <td width="80%"><a class="btn" id="share_btn"><span class="icon icon_share"></span><span>转发</span></a></td>
+                    </tr>
+                    <tr>
+                    	<td>发送状态:</td>
+                        <td><span class="icon icon_sms"></span><span class="icon icon_email"></span> <span class="icon_loading"></span> 发送中...</td>
+                    </tr>
+                    <tr>
+                    	<td>告警时间:</td>
+                        <td>2013-05-23 11:50:59</td>
+                    </tr>
+                    <tr>
+                    	<td>接收人:</td>
+                        <td>
+                        	<ul class="tc">
+                                <li>Administrator</li>
+                                <li>周周</li>
+                                <li>雷雷</li>
+                                <li>娟娟</li>
+                                <li>Administrator</li>
+                                <li>周周</li>
+                                <li>雷雷</li>
+                                <li>娟娟</li>
+                                <li>Administrator</li>
+                                <li>周周</li>
+                                <li>雷雷</li>
+                                <li>娟娟</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                    	<td>发送内容:</td>
+                        <td><div class="preset bb2">(Windows)172.17.161.111 内存平均度速率：15000Byte/s(红色阈值>10000Byte/s)</div></td>
+                    </tr>
+                </table>
+                </div>
+        </div>
+      </div>
+    </div>
+    <div class="bottom-l">
+      <div class="bottom-r">
+        <div class="bottom-m"></div>
+      </div>
+    </div>
+</div>
+</div>
+
+<!--rank-->
+<div id="rank" style="width:250px;top:148px;left:370px; position:absolute; display:none">
+    <div class="layer">
+            <div class="top-l">
+              <div class="top-r">
+                <div class="top-m"><span class="title">---</span><span class="ico-quit"></span></div>
+              </div>
+            </div>
+            <div class="middle-l">
+              <div class="middle-r">
+                <div class="middle-m">
+                	<input class="search" /><span class="icon icon_search"></span>
+                </div>
+              </div>
+            </div>
+            <div class="bottom-l">
+              <div class="bottom-r">
+                <div class="bottom-m"></div>
+              </div>
+            </div>
+        </div>
+</div>
+<!--info-->
+<div id="info" style="width:600px;display:none">
+    <div class="panel">
+    <div class="top-l">
+      <div class="top-r">
+        <div class="top-m"><span class="title">内存利用率轻微超标</span><span class="ico-quit"></span></div>
+      </div>
+    </div>
+    <div class="middle-l">
+      <div class="middle-r">
+        <div class="middle-m"> 
+        	<div class="p_content">
+            <div class="simple">
+            <div class="theadpart">
+            <table>
+                <tr>
+                	<th width="15%">资源名称：</th>
+                	<th colspan="3">(Windows)WIN-CRI7TJ4VFIF.exchtest.com 172.17.160.242 </th>
+                </tr>
+            </table>
+            </div>
+            <div class="tbodypart">
+            <table>
+                <tr>
+                	<td width="15%">内存利用率：</td>
+                    <td width="35%">83.59%(黄色阈值>80%) </td>
+                    <td width="15%">产生时间：</td>
+                    <td>2013-05-24 11:03:49</td>
+                </tr>
+                <tr>
+                	<td>内存利用率：</td>
+                    <td>83.29%(黄色阈值>80%) </td>
+                    <td>产生时间：</td>
+                    <td>2013-05-24 11:08:49</td>
+                </tr>
+                <tr>
+                	<td>内存利用率：</td>
+                    <td>83.26%(黄色阈值>80%)</td>
+                    <td>产生时间：</td>
+                    <td>2013-05-24 11:13:49</td>
+                </tr>
+            </table>
+            </div>
+            </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="bottom-l">
+      <div class="bottom-r">
+        <div class="bottom-m"></div>
+      </div>
+    </div>
+</div>
+</div>
+
+
+<script>
+$('#show_all').click(function(){
+	$("#all").show();
+	$("#red").hide()
+});
+$('#show_red').click(function(){
+	$("#red").show();
+	$("#all").hide()
+});
+$('#show_rank').click(function(){
+	$("#rank").fadeIn(200);
+	return false;
+});
+$('#show_info').click(function(){
+	art.dialog({
+    content: document.getElementById('info'),
+	padding: 0,
+	lock: true
+	});
+});
+$('.icon_record').click(function(){
+	art.dialog({
+    content: document.getElementById('record'),
+	padding: 0,
+	lock: true
+	});
+});
+$('#share_btn').click(function(){
+	art.dialog({
+    content: document.getElementById('infoshare'),
+	padding: 0,
+	lock: true
+	});
+});
+</script>
+
+</body>
+</html>

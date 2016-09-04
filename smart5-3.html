@@ -1,0 +1,720 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<!--gloab-->
+<link href="../css/comm.css" rel="stylesheet" type="text/css" />
+<link href="../css/widget.css" rel="stylesheet" type="text/css" />
+<link href="../css/ico.css" rel="stylesheet" type="text/css" />
+<link href="../css/tree.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../js/jquery-1.8.2.min.js"></script>
+<!--demo-->
+<link href="../css/demo.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../js/demo.js"></script>
+<!--artdialog-->
+<link href="../css/artdialog.css" rel="stylesheet" />
+<script src="../js/artDialog.min.js"></script>
+<script src="../js/jquery.overlay.min.js"></script>
+<!--scroll-->
+<link href="../css/jquery.jscrollpane.css" rel="stylesheet" type="text/css" />
+<script src="../js/jquery.mousewheel.js"></script>
+<script src="../js/jquery.jscrollpane.min.js"></script>
+<script>
+$(function()
+{
+	var settings = {
+		showArrows: false,
+		autoReinitialise: true
+	};
+	$('.scroll-pane').jScrollPane(settings);
+});
+</script>
+<script type="text/javascript" language="JavaScript" src="../anychart/js/AnyChart.js"></script>
+<script type="text/javascript" language="JavaScript">
+	var chart = new AnyChart('../anychart/swf/AnyChart.swf', '../anychart/swf/Preloader.swf');
+		chart.width = "100%";
+		chart.height = "100%";
+		chart.wMode='transparent';
+		chart.setXMLFile("../anychart/xml/view_bar_topn.xml");
+	chart.write("view_bar_topn");
+</script>
+</head>
+<body>
+    <!--layout right-->
+    <div class="layout_right bar scroll-pane" style="height:644px;">
+    <div class="st2">
+    	<span class="f_left">视图：</span>
+        <div class="f_left">
+            <div class="select_body" style="width:130px;">
+                 <div class="select_trigger_wrap"><a class="select_trigger"></a></div>
+                 <div class="select_text">testTOPN</div>          
+            </div>
+            <div class="select_boundtree">
+              <ul>
+                <li><a><span class="t">定义视图名称</span></a></li>
+                <li><a><span class="t">定义视图名称</span></a></li>
+              </ul>
+            </div>
+        </div>
+        <div class="f_left">
+        <span class="icon icon_plusc_g" id="show_add"></span>
+        <span class="icon icon_minus_g" id="show_alert"></span>
+        <span class="icon icon_edit_g" id="show_edit"></span>
+        </div>
+        <div class="f_left">
+            <div class="select_body" >
+                 <div class="select_trigger_wrap"><a class="select_trigger"></a></div>
+                 <div class="select_text">最近一天</div>          
+            </div>
+            <div class="select_boundtree">
+              <ul>
+                <li><a><span class="t">最近一天</span></a></li>
+                <li><a><span class="t">最近三天</span></a></li>
+                <li><a><span class="t">最近一周</span></a></li>
+                <li><a><span class="t">自定义时间</span></a></li>
+              </ul>
+            </div>
+        </div>
+        <div class="f_left" style="margin-top:3px">
+            <input class="calendar" value="2013/04/10 21:40:20" />
+            <span class="t">-</span>
+            <input class="calendar" value="2013/05/10 21:40:20" />
+        </div>
+        <div class="f_left">
+        <a class="t">排序规则：</a>
+        <a class="btn_t on">升序</a>
+        <a class="btn_t">降序</a>
+        </div>
+        <div class="f_left">
+        <a class="btn_s"><span class="t">执行</span></a>
+        </div>
+    </div>
+    <div class="p_content">
+		<div class="report">
+        	<h3>testTOPN (2013-05-07 14:12 --- 2013-05-08 14:12)
+            	<a class="btn"><span class="icon icon_share"></span>导出PDF</a>
+                <a class="btn"><span class="icon icon_share"></span>导出Word</a>
+                <a class="btn"><span class="icon icon_share"></span>导出Excel</a>
+            </h3>
+            <table>
+            	<thead>
+                	<tr>
+                    <th width="20%">序号</th>
+                    <th width="40%">资源名称</th>
+                    <th>内存利用率(%)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    	<tr>
+                        	<td>1</td>
+                            <td>(Windows) WIN-CRI7TJ4VFIF(172.17.160.148))</td>
+                            <td>72.26</td>
+                        </tr>
+                        <tr class="cbg">
+                        	<td>2</td>
+                            <td>(Windows) R04303(172.17.161.117)</td>
+                            <td>69.67</td>
+                        </tr>
+                        <tr>
+                        	<td>3</td>
+                            <td>(Windows) WIN-CRI7TJ4VFIF(172.17.160.148))</td>
+                            <td>72.26</td>
+                        </tr>
+                        <tr class="cbg">
+                        	<td>4</td>
+                            <td>(Windows) R04303(172.17.161.117)</td>
+                            <td>69.67</td>
+                        </tr>
+                        <tr>
+                        	<td>5</td>
+                            <td>(Windows) WIN-CRI7TJ4VFIF(172.17.160.148))</td>
+                            <td>72.26</td>
+                        </tr>
+                        <tr class="cbg">
+                        	<td>6</td>
+                            <td>(Windows) R04303(172.17.161.117)</td>
+                            <td>69.67</td>
+                        </tr>
+                        <tr>
+                        	<td>7</td>
+                            <td>(Windows) WIN-CRI7TJ4VFIF(172.17.160.148))</td>
+                            <td>72.26</td>
+                        </tr>
+                        <tr class="cbg">
+                        	<td>8</td>
+                            <td>(Windows) R04303(172.17.161.117)</td>
+                            <td>69.67</td>
+                        </tr>
+                    </tbody>
+            </table>
+        </div>
+        <div style="width:100%; height:300px;" id="view_bar_topn"></div>
+    </div>
+    </div>
+
+    <!--layout left-->
+    <div class="layout_left bar">
+        <ul class="sidebar">
+            <li class="first">
+                <a href="smart5.html">
+                    <span class="big_stats"></span>
+                    <span class="sidebar-text">资源TOP5</span>
+                </a>
+            </li>
+            <li>
+                <a href="smart5-1.html">
+                    <span class="big_list"></span>
+                    <span class="sidebar-text">资源报表</span>
+                </a>
+            </li>
+            <li>
+                <a href="smart5-2.html">
+                    <span class="big_picture"></span>
+                    <span class="sidebar-text">告警统计</span>
+                </a>
+            </li>
+            <li class="on">
+                <a href="smart5-3.html">
+                    <span class="big_graph"></span>
+                    <span class="sidebar-text">TOPN报表</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+<!--layer add-->
+<div id="add" style="width:800px;display:none">
+    <div class="panel">
+    <div class="top-l">
+      <div class="top-r">
+        <div class="top-m"><span class="title">新建视图</span><span class="ico-quit"></span></div>
+      </div>
+    </div>
+    <div class="middle-l">
+      <div class="middle-r">
+        <div class="middle-m scroll-pane" style="height:600px;">  
+            <div class="p_content">
+            <div class="simple">
+            <table>
+            	<tr>
+                	<td width="10%">视图名称：</td>
+                    <td><input type="text" class="forminput2" value="自定义视图1" /> <span class="rt">*</span> </td>
+                    <td><span class="icon icon_info"></span><span class="t">视图名称请控制在30个字符以内。</span></td>
+                </tr>
+                <tr>
+                	<td>报表名称：</td>
+                    <td><input type="text" class="forminput2" value="自定义报表" /> <span class="rt">*</span></td>
+                    <td><span class="icon icon_info"></span><span class="t">报表名称请控制在30个字符以内。</span></td>
+                </tr>
+                <tr>
+                	<td>资源类型：</td>
+                    <td>
+                    	<div class="f_left">
+                        <div class="select_body" style="width:200px;">
+                             <div class="select_trigger_wrap"><a class="select_trigger"></a></div>
+                             <div class="select_text">Windows主机</div>
+                        </div>
+    					<div class="select_boundtree">
+                             <ul>     
+                                  <li><a><span class="t">主机</span> <span class="icon icon_arrow_sr"></span></a>
+                                    <ul style="display: none;">
+                                      <li><a><span class="t">Windows</span></a></li>
+                                      <li><a><span class="t">Solaris</span></a></li>
+                                      <li><a><span class="t">AIX</span></a></li>
+                                      <li><a><span class="t">Linux</span></a></li>
+                                      <li><a><span class="t">HP-UX</span></a></li>
+                                      <li><a><span class="t">SCO</span></a></li>
+                                      <li><a><span class="t">UnixWare</span></a></li>
+                                      <li><a><span class="t">FreeBSD</span></a></li>
+                                      <li><a><span class="t">其他主机</span></a></li>
+                                </ul>
+                              </li>
+                                  <li><a><span class="t">网络设备</span> <span class="icon icon_arrow_sr"></span></a>
+                                    <ul>
+                                        <li><a><span class="t">路由器</span><span class="icon icon_arrow_sr"></span></a>
+                                            <ul>
+                                                  <li><a><span class="t">3Com路由器</span></a></li>
+                                                  <li><a><span class="t">Array路由器</span></a></li>
+                                                  <li><a><span class="t">Ceragon路由器</span></a></li>
+                                                  <li><a><span class="t">Cisco路由器</span></a></li>
+                                                  <a class="more"></a>
+                                            </ul>
+                                        </li>
+                                        <li><a><span class="t">交换机</span><span class="icon icon_arrow_sr"></span></a>
+                                            <ul>
+                                                  <li><a><span class="t">3Com交换机</span></a></li>
+                                                  <li><a><span class="t">Array交换机</span></a></li>
+                                                  <li><a><span class="t">Ceragon交换机</span></a></li>
+                                                  <li><a><span class="t">Cisco交换机</span></a></li>
+                                                  <a class="more"></a>
+                                            </ul>
+                                        </li>
+                                        <li><a><span class="t">安全设备</span><span class="icon icon_arrow_sr"></span></a>
+                                            <ul>
+                                                  <li><a><span class="t">各厂商安全设备</span></a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a><span class="t">负载均衡器</span><span class="icon icon_arrow_sr"></span></a>
+                                            <ul>
+                                                  <li><a><span class="t">各厂商负载均衡器</span></a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a><span class="t">网闸</span><span class="icon icon_arrow_sr"></span></a>
+                                            <ul>
+                                                  <li><a><span class="t">各厂商网闸</span></a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a><span class="t">其他网络设备</span><span class="icon icon_arrow_sr"></span></a>
+                                            <ul>
+                                                  <li><a><span class="t">3Com其他设备</span></a></li>
+                                                  <li><a><span class="t">Array其他设备</span></a></li>
+                                                  <li><a><span class="t">Ceragon其他设备</span></a></li>
+                                                  <li><a><span class="t">Cisco其他设备</span></a></li>
+                                                  <a class="more"></a>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                  </li>
+                                  <li><a><span class="t">应用</span><span class="icon icon_arrow_sr"></span></a>
+                                    <ul>
+                                        <li><a><span class="t">数据库</span><span class="icon icon_arrow_sr"></span></a>
+                                            <ul>   
+                                      <li><a><span class="t">Apache</span></a></li>
+                                      <li><a><span class="t">ApusicAS</span></a></li>
+                                      <li><a><span class="t">CICS</span></a></li>
+                                      <li><a><span class="t">DB2</span></a></li>
+                                      <li><a><span class="t">IBM Directory Server</span></a></li>
+                                      <li><a><span class="t">IIS</span></a></li>
+                                      <li><a><span class="t">Informix</span></a></li>
+                                      <li><a><span class="t">JBoss AS</span></a></li>
+                                      <li><a><span class="t">Lotus Domino应用</span></a></li>
+                                      <li><a><span class="t">MS Exchange 2003</span></a></li>
+                                      <li><a><span class="t">MS Exchange 2005</span></a></li>
+                                      <li><a><span class="t">MySQL</span></a></li>
+                                      <a class="more"></a>
+                                    </ul>
+                                        </li>
+                                        <li><a><span class="t">邮件服务器</span><span class="icon icon_arrow_sr"></span></a>
+                                            <ul>   
+                                      <li><a><span class="t">Apache</span></a></li>
+                                      <li><a><span class="t">ApusicAS</span></a></li>
+                                      <li><a><span class="t">CICS</span></a></li>
+                                      <li><a><span class="t">DB2</span></a></li>
+                                      <li><a><span class="t">IBM Directory Server</span></a></li>
+                                      <li><a><span class="t">IIS</span></a></li>
+                                      <li><a><span class="t">Informix</span></a></li>
+                                      <li><a><span class="t">JBoss AS</span></a></li>
+                                      <li><a><span class="t">Lotus Domino应用</span></a></li>
+                                      <li><a><span class="t">MS Exchange 2003</span></a></li>
+                                      <li><a><span class="t">MS Exchange 2005</span></a></li>
+                                      <li><a><span class="t">MySQL</span></a></li>
+                                      <a class="more"></a>
+                                    </ul>
+                                        </li>
+                                        <li><a><span class="t">J2EE应用服务器</span><span class="icon icon_arrow_sr"></span></a>
+                                            <ul>   
+                                      <li><a><span class="t">Apache</span></a></li>
+                                      <li><a><span class="t">ApusicAS</span></a></li>
+                                      <li><a><span class="t">CICS</span></a></li>
+                                      <li><a><span class="t">DB2</span></a></li>
+                                      <li><a><span class="t">IBM Directory Server</span></a></li>
+                                      <li><a><span class="t">IIS</span></a></li>
+                                      <li><a><span class="t">Informix</span></a></li>
+                                      <li><a><span class="t">JBoss AS</span></a></li>
+                                      <li><a><span class="t">Lotus Domino应用</span></a></li>
+                                      <li><a><span class="t">MS Exchange 2003</span></a></li>
+                                      <li><a><span class="t">MS Exchange 2005</span></a></li>
+                                      <li><a><span class="t">MySQL</span></a></li>
+                                      <a class="more"></a>
+                                    </ul>
+                                        </li>
+                                        <li><a><span class="t">Web服务器</span><span class="icon icon_arrow_sr"></span></a>
+                                            <ul>   
+                                      <li><a><span class="t">Apache</span></a></li>
+                                      <li><a><span class="t">ApusicAS</span></a></li>
+                                      <li><a><span class="t">CICS</span></a></li>
+                                      <li><a><span class="t">DB2</span></a></li>
+                                      <li><a><span class="t">IBM Directory Server</span></a></li>
+                                      <li><a><span class="t">IIS</span></a></li>
+                                      <li><a><span class="t">Informix</span></a></li>
+                                      <li><a><span class="t">JBoss AS</span></a></li>
+                                      <li><a><span class="t">Lotus Domino应用</span></a></li>
+                                      <li><a><span class="t">MS Exchange 2003</span></a></li>
+                                      <li><a><span class="t">MS Exchange 2005</span></a></li>
+                                      <li><a><span class="t">MySQL</span></a></li>
+                                      <a class="more"></a>
+                                    </ul>
+                                        </li>
+                                        <li><a><span class="t">Lotus Domino</span><span class="icon icon_arrow_sr"></span></a>
+                                            <ul>   
+                                      <li><a><span class="t">Apache</span></a></li>
+                                      <li><a><span class="t">ApusicAS</span></a></li>
+                                      <li><a><span class="t">CICS</span></a></li>
+                                      <li><a><span class="t">DB2</span></a></li>
+                                      <li><a><span class="t">IBM Directory Server</span></a></li>
+                                      <li><a><span class="t">IIS</span></a></li>
+                                      <li><a><span class="t">Informix</span></a></li>
+                                      <li><a><span class="t">JBoss AS</span></a></li>
+                                      <li><a><span class="t">Lotus Domino应用</span></a></li>
+                                      <li><a><span class="t">MS Exchange 2003</span></a></li>
+                                      <li><a><span class="t">MS Exchange 2005</span></a></li>
+                                      <li><a><span class="t">MySQL</span></a></li>
+                                      <a class="more"></a>
+                                    </ul>
+                                        </li>
+                                    </ul>
+                                  </li>
+                                  <li><a><span class="t">基础服务</span><span class="icon icon_arrow_sr"></span></a>
+                                    <ul>                                    
+                                      <li><a><span class="t">Ping</span></a></li>
+                                      <li><a><span class="t">Port</span></a></li>
+                                      <li><a><span class="t">URL</span></a></li>
+                                    </ul>
+                                  </li>
+                         </ul>
+                        </div>
+                        </div>
+                    </td>
+                    <td><span class="icon icon_info"></span><span class="t">当选择的资源超过10个，图形只显示资源TOP10。</span></td>
+                </tr>
+            </table>
+            </div>
+            <div class="wrapper">
+                      <div class="wrapper_l scroll-pane" style="height:400px;">
+                                <div class="st3">
+                                <div class="select_body" style="width:100%;">
+                                  <div class="select_trigger_wrap"><a class="select_trigger_del"></a></div>
+                                  <input class="select_text" value="请输入IP地址或资源名称">
+                                </div>
+                                <div class="select_boundtree" style="display: none;">
+                                      <ul>
+                                        <li><a><span class="t">选择子资源</span></a></li>
+                                        <li><a><span class="t">选择子资源</span></a></li>
+                                      </ul>
+                                    </div>
+                                </div>
+                              <!--tree-->
+                              <ul class="tree-wrap">
+                                    <li nodeid="root">
+                                    <ul class="treeview">
+                                    <li class="collapsable">
+                                    	<div class="hitarea expandable-hitarea"></div>
+                                    	<input type="checkbox">
+                                    	<span>主机(73)</span>
+                                        <ul>
+                                            <li class="collapsable">
+                                                <div class="hitarea expandable-hitarea"></div>
+                                                <input type="checkbox">
+                                                <span>Windows(68)</span>
+                                                <ul>
+                                                    <li class="collapsable">
+                                                        <div class="hitarea expandable-hitarea"></div>
+                                                        <input type="checkbox">
+                                                        <span>Windows(68)</span>
+                                                        <ul>
+                                            <li>
+                                                <div class="placeholder"></div>
+                                                <input type="checkbox">
+                                                <span>Windows(68)Windows(68)Windows(68)Windows(68)</span>
+                                            </li>
+                                            <li class="">
+                                                <div class="placeholder"></div>
+                                                <input type="checkbox">
+                                                <span>Windows(68)Windows(68)Windows(68)Windows(68)Windows(68)Windows(68)Windows(68)</span>
+                                            </li>
+                                            <li class="last">
+                                                <div class="last"></div>
+                                                <input type="checkbox">
+                                                <span>Windows(68)</span>
+                                            </li>
+                                         </ul>
+                                                    </li>
+                                                    <li class="expandable">
+                                                        <div class="hitarea expandable-hitarea"></div>
+                                                        <input type="checkbox">
+                                                        <span>Windows(68)</span>
+                                                    </li>
+                                                    <li class="expandable last">
+                                                        <div class="hitarea expandable-hitarea"></div>
+                                                        <input type="checkbox">
+                                                        <span>Windows(68)</span>
+                                                    </li>
+                                                 </ul>
+                                            </li>
+                                            <li class="expandable">
+                                                <div class="hitarea expandable-hitarea"></div>
+                                                <input type="checkbox">
+                                                <span>Windows(68)</span>
+                                            </li>
+                                            <li class="expandable last">
+                                                <div class="hitarea expandable-hitarea"></div>
+                                                <input type="checkbox">
+                                                <span>Windows(68)</span>
+                                            </li>
+                                         </ul>
+                                    </li>
+                                    <li class="expandable">
+                                    	<div class="hitarea expandable-hitarea"></div>
+                                    	<input type="checkbox">
+                                    	<span>主机(73)</span>
+                                        <ul>
+                                            <li class="expandable">
+                                                <div class="hitarea expandable-hitarea"></div>
+                                                <input type="checkbox">
+                                                <span>Windows(68)</span>
+                                            </li>
+                                            <li class="expandable">
+                                                <div class="hitarea expandable-hitarea"></div>
+                                                <input type="checkbox">
+                                                <span>Windows(68)</span>
+                                            </li>
+                                            <li class="expandable">
+                                                <div class="hitarea expandable-hitarea"></div>
+                                                <input type="checkbox">
+                                                <span>Windows(68)</span>
+                                            </li>
+                                         </ul>
+                                    </li>
+                                    </ul>
+                                    </li>
+                              </ul>
+                              <!--treeend-->
+                      </div>
+                      <div class="wrapper_m" style="height:400px;">
+                        <span class="ltor"></span>
+                        <span class="rtol"></span>
+                      </div>
+                      <div class="wrapper_r scroll-pane" style="height:400px;">
+                            <ul class="tree-wrap">
+                                    <li nodeid="root">
+                                    <ul class="treeview">
+                                    <li class="collapsable">
+                                    	<div class="hitarea expandable-hitarea"></div>
+                                    	<input type="checkbox">
+                                    	<span>主机(73)</span>
+                                        <ul>
+                                            <li class="collapsable">
+                                                <div class="hitarea expandable-hitarea"></div>
+                                                <input type="checkbox">
+                                                <span>Windows(68)</span>
+                                                <ul>
+                                                    <li class="collapsable">
+                                                        <div class="hitarea expandable-hitarea"></div>
+                                                        <input type="checkbox">
+                                                        <span>Windows(68)</span>
+                                                        <ul>
+                                            <li>
+                                                <div class="placeholder"></div>
+                                                <input type="checkbox">
+                                                <span>Windows(68)</span>
+                                            </li>
+                                            <li class="">
+                                                <div class="placeholder"></div>
+                                                <input type="checkbox">
+                                                <span>Windows(68)</span>
+                                            </li>
+                                            <li class=" last">
+                                                <div class="last"></div>
+                                                <input type="checkbox">
+                                                <span>Windows(68)</span>
+                                            </li>
+                                         </ul>
+                                                    </li>
+                                                    <li class="expandable">
+                                                        <div class="hitarea expandable-hitarea"></div>
+                                                        <input type="checkbox">
+                                                        <span>Windows(68)</span>
+                                                    </li>
+                                                    <li class="expandable last">
+                                                        <div class="hitarea expandable-hitarea"></div>
+                                                        <input type="checkbox">
+                                                        <span>Windows(68)</span>
+                                                    </li>
+                                                 </ul>
+                                            </li>
+                                            <li class="expandable">
+                                                <div class="hitarea expandable-hitarea"></div>
+                                                <input type="checkbox">
+                                                <span>Windows(68)</span>
+                                            </li>
+                                            <li class="expandable last">
+                                                <div class="hitarea expandable-hitarea"></div>
+                                                <input type="checkbox">
+                                                <span>Windows(68)</span>
+                                            </li>
+                                         </ul>
+                                    </li>
+                                    <li class="expandable">
+                                    	<div class="hitarea expandable-hitarea"></div>
+                                    	<input type="checkbox">
+                                    	<span>主机(73)</span>
+                                        <ul>
+                                            <li class="expandable">
+                                                <div class="hitarea expandable-hitarea"></div>
+                                                <input type="checkbox">
+                                                <span>Windows(68)</span>
+                                            </li>
+                                            <li class="expandable">
+                                                <div class="hitarea expandable-hitarea"></div>
+                                                <input type="checkbox">
+                                                <span>Windows(68)</span>
+                                            </li>
+                                            <li class="expandable">
+                                                <div class="hitarea expandable-hitarea"></div>
+                                                <input type="checkbox">
+                                                <span>Windows(68)</span>
+                                            </li>
+                                         </ul>
+                                    </li>
+                                    </ul>
+                                    </li>
+                              </ul>
+                      </div>
+                      <div class="clear"></div>
+                </div>
+            <div class="rare">
+            <div class="theadpart">
+            <table>
+            	<tr>
+                    <th>选择指标<a class="btn_t" id="show_metrics">高级设置</a></th>
+                </tr>
+            </table>
+            </div>
+            <div class="tbodypart">
+            <table>
+                <tr>
+                	<td width="10%"><input type="checkbox" /></td>
+                    <td width="30%">Ping时延</td>
+                    <td class="line" width="10%">-</td>
+                    <td width="10%"><input type="checkbox" /></td>
+                    <td width="30%">CPU平均利用率</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                	<td><input type="checkbox" /></td>
+                    <td>内存利用率</td>
+                    <td class="line">%</td>
+                    <td><input type="checkbox" /></td>
+                    <td>内存错页率</td>
+                    <td>%</td>
+                </tr>
+                <tr>
+                	<td><input type="checkbox" /></td>
+                    <td>硬盘平均等待队列</td>
+                    <td class="line">%</td>
+                    <td><input type="checkbox" /></td>
+                    <td>CPU系统模式百分比</td>
+                    <td>%</td>
+                </tr>
+                </table>
+            <table id="metrics" style="display:none">
+                <tr>
+                	<td width="10%"><input type="checkbox" /></td>
+                    <td width="30%">CPU平均负载（1分钟）</td>
+                    <td width="10%" class="line">-</td>
+                    <td width="10%"><input type="checkbox" /></td>
+                    <td width="30%">CPU平均负载（5分钟）</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                	<td><input type="checkbox" /></td>
+                    <td>CPU用户模式百分比</td>
+                    <td class="line">%</td>
+                    <td><input type="checkbox" /></td>
+                    <td>CPU空闲模式百分比</td>
+                    <td>%</td>
+                </tr>
+                <tr>
+                	<td><input type="checkbox" /></td>
+                    <td>CPU系统模式百分比</td>
+                    <td class="line">%</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                </table>
+            </div>
+        	</div>
+            <div class="button">
+              <span class="infotxt"></span>
+              <a class="btn_b2">确定</a>
+              <a class="btn_b dialog_close">取消</a>    
+			</div>
+        	</div>
+            
+        </div>
+      </div>
+    </div>
+    <div class="bottom-l">
+      <div class="bottom-r">
+        <div class="bottom-m"></div>
+      </div>
+    </div>
+</div>
+
+</div>
+
+<!--layer alert-->
+<div id="alert" style="width:400px;display:none">
+    <div class="panel_null">
+    <div class="top-l">
+      <div class="top-r">
+        <div class="top-m"><span class="ico-quit"></span></div>
+      </div>
+    </div>
+    <div class="middle-l">
+      <div class="middle-r">
+        <div class="middle-m"> 
+            <div class="alert_text">
+              <span class="icon icon_trash"></span>
+              <span>确定要删除当前视图吗？</span>
+            </div>
+            <div class="button">
+              <a class="btn_s2">确定</a>
+              <a class="btn_s dialog_close">取消</a>    
+			</div>
+        </div>
+      </div>
+    </div>
+    <div class="bottom-l">
+      <div class="bottom-r">
+        <div class="bottom-m"></div>
+      </div>
+    </div>
+</div>
+
+</div>
+<script>
+$('#show_alert').click(function(){
+	art.dialog({
+    content: document.getElementById('alert'),
+	id: 'alert',
+	padding: 0,
+	lock: true
+	});
+});
+$('#show_add').click(function(){
+	art.dialog({
+    content: document.getElementById('add'),
+	id: 'add',
+	padding: 0,
+	lock: true
+	});
+});
+$("#show_metrics").click(function(){
+	if($("#metrics").is(":hidden"))
+	{
+		$("#metrics").show();
+		$(this).html("简单设置");
+	}
+	else
+	{
+		$("#metrics").hide();
+		$(this).html("高级设置")
+		}
+	})
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,966 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<!--index-->
+<link href="../css/index.css" rel="stylesheet" type="text/css" />
+<!--gloab-->
+<link href="../css/comm.css" rel="stylesheet" type="text/css" />
+<link href="../css/widget.css" rel="stylesheet" type="text/css" />
+<link href="../css/ico.css" rel="stylesheet" type="text/css" />
+<link href="../css/tree.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../js/jquery-1.8.2.min.js"></script>
+<!--demo-->
+<link href="../css/demo.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../js/demo.js"></script>
+<!--artdialog-->
+<link href="../css/artdialog.css" rel="stylesheet" />
+<script src="../js/artDialog.min.js"></script>
+<script src="../js/jquery.overlay.min.js"></script>
+<!--scroll-->
+<link href="../css/jquery.jscrollpane.css" rel="stylesheet" type="text/css" />
+<script src="../js/jquery.mousewheel.js"></script>
+<script src="../js/jquery.jscrollpane.min.js"></script>
+<script>
+$(function()
+{
+	var settings = {
+		showArrows: false,
+		autoReinitialise: true
+	};
+	$('.scroll-pane').jScrollPane(settings);
+});
+</script>
+<!--AnyChart-->
+<script type="text/javascript" language="JavaScript" src="../anychart/js/AnyChart.js"></script>
+<script type="text/javascript" language="JavaScript">
+	var chart = new AnyChart('../anychart/swf/AnyChart.swf', '../anychart/swf/Preloader.swf');
+		chart.width = "100%";
+		chart.height = "100%";
+		chart.wMode='transparent';
+		chart.setXMLFile("../anychart/xml/view_pie_index.xml");
+	chart.write("view_pie");
+</script>
+<script type="text/javascript" language="JavaScript">
+	var chart = new AnyChart('../anychart/swf/AnyChart.swf', '../anychart/swf/Preloader.swf');
+		chart.width = "100%";
+		chart.height = "100%";
+		chart.wMode='transparent';
+		chart.setXMLFile("../anychart/xml/view_bar_index.xml");
+	chart.write("view_bar");
+</script>
+</head>
+<body>
+	<div class="p_content">
+	<div class="portlet" style="width:49.4%; float:left; margin-right:1%; margin-bottom:1%;">
+      <div class="top-l">
+        <div class="top-r">
+          <div class="top-m">
+          <span class="ico-del"></span>
+          <span class="ico-update"></span>
+          <span class="icon_pie"></span>
+          <span class="title">告警一览</span> 	
+          </div>
+        </div>
+      </div>
+      <div class="middle-l">
+        <div class="middle-r">
+          <div class="middle-m" style="height:251px;">
+            <!-- all -->
+            <div id="all">
+            <div class="p_content">
+                <div class="pie_area" style="height:203px;" id="view_pie"></div>
+                <div class="count_area">
+                    <div class="bb2" style="height:150px;">
+                    <table>
+                    	<tbody>
+                        <tr>
+                        	<td><span class="alarm1s"></span> <span class="rt">严重</span></td>
+                            <td><a>10</a> 个</td>
+                        </tr>
+                        <tr class="cbg">
+                        	<td><span class="alarm2s"></span> <span class="ot">主要</span></td>
+                            <td><a>100</a> 个</td>                        	
+                        </tr>
+                        <tr>
+                        	<td><span class="alarm4s"></span> <span class="at">警告</span></td>
+                            <td><a>5</a> 个</td>
+                        </tr>
+                        <tr  class="cbg">
+                        	<td>全部</td>
+                            <td>共 <a >486</a> 个</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <ul class="btn_nav">
+                <li class="first"><a class="on">全部</a></li><li><a>主机</a></li><li><a>应用</a></li><li class="last"><a>网络设备</a></li>
+            </ul>
+            </div>
+            <!-- all detail-->
+            <div class="overlay-min" id="all_detali" style="display:none">
+            	<a class="back"></a>
+                <div class="common">
+                    <div class="theadpart">
+                    <table>
+                    	<thead> 		 			 		 			  			   		    			   		 
+                        <tr>
+                            <th width="30%"><span>告警内容</span><a class="rank-down"></a></th>
+                            <th width="30%"><span>资源名称</span><a class="rank-down"></a></th>
+                            <th width="20%"><span>IP地址</span><a class="rank-down"></a><a class="rank-pull"></a> </th>
+                            <th width="20%"><span>监控类型</span><a class="rank-down"></a> </th>
+                        </tr>
+                        </thead>
+                    </table>
+                    </div>
+                    <div class="tbodypart scroll-pane" style="height:230px;">
+                    <table>
+                    	<tbody>
+                        <tr>
+                            <td width="30%"><span class="alarm1s"></span>内存利用率轻微超标</td>
+                            <td width="30%">Rill_ZB_Switch_6509_1</td>
+                            <td width="20%">192.168.1.1</td>
+                            <td width="20%">Windows主机(SSH/Telnet)</td>
+                        </tr>	
+                        <tr class="cbg">
+                            <td><span class="alarm1s"></span>内存利用率轻微超标</td>
+                            <td>Rill_ZB_Switch_6509_1</td>
+                            <td>192.168.1.1</td>
+                            <td>Windows主机(SSH/Telnet)</td>
+                        </tr>
+                        <tr>
+                            <td><span class="alarm1s"></span>内存利用率轻微超标</td>
+                            <td>Rill_ZB_Switch_6509_1</td>
+                            <td>192.168.1.1</td>
+                            <td>Windows主机(SSH/Telnet)</td>
+                        </tr>
+                        <tr class="cbg">
+                            <td><span class="alarm1s"></span>内存利用率轻微超标</td>
+                            <td>Rill_ZB_Switch_6509_1</td>
+                            <td>192.168.1.1</td>
+                            <td>Windows主机(SSH/Telnet)</td>
+                        </tr>
+                        <tr>
+                            <td><span class="alarm1s"></span>内存利用率轻微超标</td>
+                            <td>Rill_ZB_Switch_6509_1</td>
+                            <td>192.168.1.1</td>
+                            <td>Windows主机(SSH/Telnet)</td>
+                        </tr>
+                        <tr class="cbg">
+                            <td><span class="alarm1s"></span>内存利用率轻微超标</td>
+                            <td>Rill_ZB_Switch_6509_1</td>
+                            <td>192.168.1.1</td>
+                            <td>Windows主机(SSH/Telnet)</td>
+                        </tr>
+                        <tr>
+                            <td><span class="alarm1s"></span>内存利用率轻微超标</td>
+                            <td>Rill_ZB_Switch_6509_1</td>
+                            <td>192.168.1.1</td>
+                            <td>Windows主机(SSH/Telnet)</td>
+                        </tr>
+                        <tr class="cbg">
+                            <td><span class="alarm1s"></span>内存利用率轻微超标</td>
+                            <td>Rill_ZB_Switch_6509_1</td>
+                            <td>192.168.1.1</td>
+                            <td>Windows主机(SSH/Telnet)</td>
+                        </tr>
+                        <tr>
+                            <td><span class="alarm1s"></span>内存利用率轻微超标</td>
+                            <td>Rill_ZB_Switch_6509_1</td>
+                            <td>192.168.1.1</td>
+                            <td>Windows主机(SSH/Telnet)</td>
+                        </tr>
+                        <tr class="cbg">
+                            <td><span class="alarm1s"></span>内存利用率轻微超标</td>
+                            <td>Rill_ZB_Switch_6509_1</td>
+                            <td>192.168.1.1</td>
+                            <td>Windows主机(SSH/Telnet)</td>
+                        </tr>
+                        <tr>
+                            <td><span class="alarm1s"></span>内存利用率轻微超标</td>
+                            <td>Rill_ZB_Switch_6509_1</td>
+                            <td>192.168.1.1</td>
+                            <td>Windows主机(SSH/Telnet)</td>
+                        </tr>
+                        <tr class="cbg">
+                            <td><span class="alarm1s"></span>内存利用率轻微超标</td>
+                            <td>Rill_ZB_Switch_6509_1</td>
+                            <td>192.168.1.1</td>
+                            <td>Windows主机(SSH/Telnet)</td>
+                        </tr>
+                        <tr>
+                            <td><span class="alarm1s"></span>内存利用率轻微超标</td>
+                            <td>Rill_ZB_Switch_6509_1</td>
+                            <td>192.168.1.1</td>
+                            <td>Windows主机(SSH/Telnet)</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    </div>
+                    </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bottom-l">
+        <div class="bottom-r">
+          <div class="bottom-m"></div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="portlet" style="width:49.4%; float:left;">
+      <div class="top-l">
+        <div class="top-r">
+          <div class="top-m">
+          <span class="ico-del"></span>
+          <span class="ico-set" id="show_oracle"></span>
+          <span class="ico-update"></span>
+          <span class="icon_flag"></span>
+          <span class="title">关注应用</span>
+          </div>
+        </div>
+      </div>
+      <div class="middle-l">
+        <div class="middle-r">
+          <div class="middle-m" style="height:251px; overflow:hidden"> 
+            	<div class="st">
+                <table>
+                	<tr>
+                    	<td width="12%">当前状态：</td>
+                        <td width="8%"><span class="bt">可用</span></td>
+                        <td width="12%">IP地址：</td>
+                        <td width="15%"><a class="bt">192.168.0.1</a></td>
+                        <td width="12%">资源类别：</td>
+                        <td width="15%"><span class="bt">Oracle</span></td>
+                        <td width="12%">应用名称：</td>
+                        <td><a class="bt">ZB_主数据库</a></td>
+                    </tr>
+                </table>
+                </div>
+                <div class="embody" style="height:220px;">
+               	  	<div class="info" style="width:33%;">
+                    <div class="lrline2" style="height:100%">
+                        <div class="info_pie"><img src="../images/demo/circle_cpu2.png" /></div>
+                        <p class="tcenter">CPU平均利用率： <span class="bt">65%</span> </p>
+                        <p class="tcenter">Oracle当前占用： <span class="bt">15%</span> </p>
+                    </div>
+                  	</div>
+                    <div class="info" style="width:33%;">
+                    <div class="lrline2" style="height:100%">
+                        <div class="info_pie"><img src="../images/demo/circle_mem2.png" /></div>
+                        <p class="tcenter">内存平均利用率： <span class="bt">65%</span> </p>
+                        <p class="tcenter">Oracle当前占用： <span class="bt">15%</span> </p>
+                    </div>
+                    </div>
+                    <div class="info" style="width:34%;">
+                    <!--有数据-->
+                    <div class="lrline2" style="height:100%; display:none">
+                    <div class="common">
+                    <div class="theadpart">
+                    <table>
+                    	<thead>
+                        <tr>
+                            <th>Oracle性能指标</th>
+                        </tr>
+                        </thead>
+                    </table>
+                    </div>
+                    <div class="tbodypart scroll-pane" style="height:186px;">
+                    <table>
+                    	<tbody>
+                        <tr>
+                            <td width="65%">高速缓冲缓存命中率</td>
+                            <td><span class="rt">99.56 %</span></td>
+                        </tr>	
+                        <tr class="cbg">
+                            <td>共享内存使用率</td>
+                            <td><span class="ot">60 %</span></td>
+                        </tr>
+                        <tr>
+                            <td>PGA(程序全局区)的命中率</td>
+                            <td><span class="rt">100%</span></td>
+                        </tr>
+                        <tr class="cbg">
+                            <td>每分钟登陆会话数</td>
+                            <td><span class="gt">10 个/分钟</span></td>
+                        </tr>
+                        <tr>
+                            <td>每秒SQL解析次数</td>
+                            <td><span class="gt">1.69 次/秒</span></td>
+                        </tr>
+                        <tr class="cbg">
+                            <td>数据库中每秒执行的事务量</td>
+                            <td><span class="gt">0.19 次/秒</span></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    </div>
+                    </div>
+                    </div>
+                    <!--无数据-->
+                    <div class="bb lrline2" style="height:100%; display:">
+                    	<div class="nolist" style="height:100%;"></div>
+                    </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+          		
+          </div>
+        </div>
+      </div>
+      <div class="bottom-l">
+        <div class="bottom-r">
+          <div class="bottom-m"></div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="portlet" style="width:49.4%; float:left; margin-right:1%">
+      <div class="top-l">
+        <div class="top-r">
+          <div class="top-m">
+          <span class="ico-del"></span>
+          <span class="ico-set" id="show_monitor"></span>
+          <span class="ico-update"></span>
+          <span class="icon_flag"></span>
+          <span class="title">关注主机</span>
+          </div>
+        </div>
+      </div>
+      <div class="middle-l">
+        <div class="middle-r">
+          <div class="middle-m" style="height:280px;"> 
+            	<div class="st">
+                <table>
+                	<tr>
+                    	<td width="12%">当前状态：</td>
+                        <td width="8%"><span class="bt">可用</span></td>
+                        <td width="12%">IP地址：</td>
+                        <td width="15%"><a class="bt">192.168.0.1</span></a></td>
+                        <td width="12%">操作系统：</td>
+                        <td width="15%"><span class="bt">Windows</span></td>
+                        <td width="12%">主机名称：</td>
+                        <td><a class="bt">R04735R04735R04735R04735R04735</a></td>
+                    </tr>
+                </table>
+                </div>
+                <div class="embody" style="height:250px;">
+               	  <div class="info" style="width:25%;">
+                  <div class="lrline2" style="height:100%">
+                        <div class="info_pie"><img src="../images/demo/circle_cpu.png" /></div>
+                        <p>&nbsp;</p>
+                        <p class="tcenter">CPU平均利用率： <span class="bt">15%</span> </p>
+                  </div>
+                  </div>
+                    <div class="info" style="width:25%;">
+                    <div class="lrline2" style="height:100%">
+                        <div class="info_pie"><img src="../images/demo/circle_mem.png" /></div>
+                        <p>&nbsp;</p>
+                        <p class="tcenter">内存平均利用率： <span class="bt">15%</span> </p>
+                    </div>
+                    </div>
+                    <div class="info" style="width:25%;">
+                    <div class="lrline2" style="height:100%">
+                        <div class="scroll-pane" style="height:249px;">
+                        <div class="p_content">
+                            <p class="tnowrap" style="width:150px;" title="分区/proc/sys/fs/binfmt_misc利用率">分区/proc/sys/fs/binfmt_misc利用率：</p>
+                            <div class="rate rate_t"><span class="rate_red" style="width:90%"></span><span class="rt">90.99%</span></div>
+                            <p class="tnowrap">分区D 利用率： </p>
+                            <div class="rate rate_t"><span class="rate_orange" style="width:70%"></span><span class="ot">70%</span></div>
+                            <p class="tnowrap">分区E 利用率： </p>
+                            <div class="rate rate_t"><span class="rate_green" style="width:50%"></span><span class="gt">50%</span></div>
+                            <p class="tnowrap">分区F 利用率： </p>
+                            <div class="rate rate_t"><span class="rate_green" style="width:0%"></span><span class="gt">-</span></div>
+                            <p class="tnowrap">分区G 利用率： </p>
+                            <div class="rate rate_t"><span class="rate_green" style="width:50%"></span><span class="gt">50%</span></div>
+                            <p class="tnowrap">分区H 利用率： </p>
+                            <div class="rate rate_t"><span class="rate_green" style="width:50%"></span><span class="gt">50%</span></div>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="info" style="width:25%;">
+                    <div class="lrline2" style="height:100%">
+                        <div class="scroll-pane" style="height:249px;">
+                            <div class="bline p_content">
+                            <p>本地连接：</p>
+                            <p class="tnowrap" style="width:150px;">Intel(R) 82579LM GigabGigabGigabGigab</p>
+                            <p><span class="icon icon_online"></span> <span class="gt tsuper">接口正常</span></p>
+                            </div>
+                            <div class="dline p_content">
+                            <p>本地连接：</p>
+                            <p class="tnowrap" style="width:150px;">Intel(R) 82579LM GigabGigabGigabGigab</p>
+                            <p><span class="icon icon_offline"></span> <span class="rt tsuper">接口断开</span></p>
+                            </div>
+                            <div class="dline p_content">
+                            <p>本地连接：</p>
+                            <p class="tnowrap" style="width:150px;">--</p>
+                            <p><span class="icon icon_unknown"></span> <span class="rt tsuper">接口未知</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+          </div>
+        </div>
+      </div>
+      <div class="bottom-l">
+        <div class="bottom-r">
+          <div class="bottom-m"></div>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="portlet" style="width:49.4%; float:left;">
+      <div class="top-l">
+        <div class="top-r">
+          <div class="top-m">
+          <span class="ico-del"></span>
+          <span class="ico-set" id="show_topnsetting"></span>
+          <span class="ico-update"></span>
+          <span class="ico-chart"></span>
+          <span class="icon_chartblue"></span>
+          <span class="title">TOPN</span>
+          </div>
+        </div>
+      </div>
+      <div class="middle-l">
+        <div class="middle-r">
+          <div class="middle-m" style="height:280px;"> 
+          	<!--topn-->
+            <div id="topn">
+            <div class="common">
+                    <div class="theadpart">
+                    <table>
+                    	<thead>
+                        <tr>
+                        	<th width="6%">序号</th>
+                            <th width="25%">资源名称</th>
+                            <th width="25%">IP地址</th>
+                            <th width="20%">资源类别</th>
+                            <th>CPU利用率</th>
+                        </tr>
+                        </thead>
+                    </table>
+                    </div>
+                    <div class="tbodypart">
+                    <table>
+                    	<tbody>
+                        <tr>
+                        	<td width="6%" class="tcenter">1</td>
+                            <td width="25%"><a id="show_topn" href="#">Kid ica server</a></td>
+                            <td width="25%">192.168.0.100</td>
+                            <td width="20%">Windows</td>
+                            <td><div class="rate rate_t"><span class="rate_red" style="width:90%"></span><span class="rt">90%</span></div></td>
+                        </tr>	
+                        <tr class="cbg">
+                        	<td class="tcenter">2</td>
+                        	<td>Rill_ZB_Switch_6509_1</td>
+                            <td>192.168.0.100</td>
+                            <td>Aix</td>
+                            <td><div class="rate rate_t"><span class="rate_red" style="width:80%"></span><span class="rt">80%</span></div></td>
+                        </tr>
+                        <tr>
+                        	<td class="tcenter">3</td>
+                            <td>Rill_ZB_Switch_6509_1</td>
+                            <td>192.168.0.100</td>
+                            <td>Windows</td>
+                            <td><div class="rate rate_t"><span class="rate_orange" style="width:70%"></span><span class="ot">70%</span></div></td>
+                        </tr>
+                        <tr class="cbg">
+                        	<td class="tcenter">4</td>
+                            <td>Rill_ZB_Switch_6509_1</td>
+                            <td>192.168.0.100</td>
+                            <td>Solaris</td>
+                            <td><div class="rate rate_t"><span class="rate_orange" style="width:60%"></span><span class="ot">60%</span></div></td>
+                        </tr>
+                        <tr>
+                        	<td class="tcenter">5</td>
+                            <td>Rill_ZB_Switch_6509_1</td>
+                            <td>192.168.0.100</td>
+                            <td>Windows</td>
+                            <td><div class="rate rate_t"><span class="rate_green" style="width:50%"></span><span class="gt">50%</span></div></td>
+                        </tr>
+                        <tr class="cbg">
+                        	<td class="tcenter">6</td>
+                            <td>Rill_ZB_Switch_6509_1</td>
+                            <td>192.168.0.100</td>
+                            <td>HP-UX</td>
+                            <td><div class="rate rate_t"><span class="rate_green" style="width:40%"></span><span class="gt">40%</span></div></td>
+                        </tr>
+                        <tr>
+                        	<td class="tcenter">7</td>
+                            <td>Rill_ZB_Switch_6509_1</td>
+                            <td>192.168.0.100</td>
+                            <td>Solaris</td>
+                            <td><div class="rate rate_t"><span class="rate_green" style="width:30%"></span><span class="gt">30%</span></div></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    </div>
+                    </div>
+            </div>
+            <!--topn_detail-->
+            <div class="overlay-min" id="topn_detail" style="display:none">
+            	<div id="view_bar" style="height:100%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bottom-l">
+        <div class="bottom-r">
+          <div class="bottom-m"></div>
+        </div>
+      </div>
+    </div>
+    </div>
+	<ul class="pagination">
+              <li><a class="setting"></a></li>
+              <li class="current"><a href="view.html"></a></li>
+              <li><a href="view2.html"></a></li>
+              <li><a href="view3.html"></a></li>
+              <li><a class="add"></a></li>
+            </ul>
+<!--setting-->
+<div id="setting" style="width:400px;display:none">
+    <div class="panel_null">
+    <div class="top-l">
+      <div class="top-r">
+        <div class="top-m"><span class="title">我的工作台窗口设置</span><span class="ico-quit"></span></div>
+      </div>
+    </div>
+    <div class="middle-l">
+      <div class="middle-r">
+        <div class="middle-m">  
+            <div class="simple m_bottom">
+            	<table>
+                	<tr>
+                    	<td width="30%">刷新频率：</td>
+                        <td width="70%">
+                        <div class="select_body">
+                             <div class="select_trigger_wrap"><a class="select_trigger"></a></div>
+                             <div class="select_text">从不</div>
+                        </div>
+                        <div class="select_boundtree">
+                          <ul>
+                          	<li><a class="on"><span class="t">从不</span></a></li>
+                            <li><a><span class="t">两分钟</span></a></li>
+                            <li><a><span class="t">五分钟</span></a></li>
+                            <li><a><span class="t">十分钟</span></a></li>
+                          </ul>
+                        </div>
+                        </td>
+                    </tr>
+                	<tr>
+                    	<td>自动播放：</td>
+                        <td>
+                        <div class="select_body">
+                             <div class="select_trigger_wrap"><a class="select_trigger"></a></div>
+                             <div class="select_text">从不</div>
+                        </div>
+                        <div class="select_boundtree">
+                          <ul>
+                          	<li><a class="on"><span class="t">从不</span></a></li>
+                            <li><a><span class="t">两分钟</span></a></li>
+                            <li><a><span class="t">五分钟</span></a></li>
+                            <li><a><span class="t">十分钟</span></a></li>
+                          </ul>
+                        </div>
+                      </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="button">
+                	<a class="btn_s2">确定</a>
+                    <a class="btn_s dialog_close">取消</a>
+                </div>
+        </div>
+      </div>
+    </div>
+    <div class="bottom-l">
+      <div class="bottom-r">
+        <div class="bottom-m"></div>
+      </div>
+    </div>
+</div>
+</div>
+<!--bigadd-->
+<div id="bigadd" style="width:1000px;display:none">
+    <div class="panel">
+    <div class="top-l">
+      <div class="top-r">
+        <div class="top-m"><span class="title">我的工作台窗口设置</span><span class="ico-quit"></span></div>
+      </div>
+    </div>
+    <div class="middle-l">
+      <div class="middle-r">
+        <div class="middle-m">  
+            <div class="grid">
+                <div class="grid_l">
+                    <div class="grid_box">
+                        <div class="subject">告警一览<span class="icon icon_addto"></span></div>
+                        <div class="preview preview1"></div>
+                    </div>
+                    <div class="grid_box">
+                        <div class="subject">TOPN<span class="icon icon_addto"></span></div>
+                        <div class="preview preview2"></div>
+                    </div>
+                    <div class="grid_box">
+                        <div class="subject">资源一览<span class="icon icon_addto"></span></div>
+                        <div class="preview preview3"></div>
+                    </div>
+                    <div class="grid_box">
+                        <div class="subject">可用性一览<span class="icon icon_addto"></span></div>
+                        <div class="preview preview4"></div>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="grid_box">
+                        <div class="subject">指标关键链<span class="icon icon_addto"></span></div>
+                        <div class="preview preview5"></div>
+                    </div>
+                    <div class="grid_box">
+                        <div class="subject">关注主机<span class="icon icon_addto"></span></div>
+                        <div class="preview preview6"></div>
+                    </div>
+                    <div class="grid_box">
+                        <div class="subject">关注网络设备<span class="icon icon_addto"></span></div>
+                        <div class="preview preview7"></div>
+                    </div>
+                    <div class="grid_box">
+                        <div class="subject">关注应用<span class="icon icon_addto"></span></div>
+                        <div class="preview preview8"></div>
+                    </div>
+                    
+                    
+                </div>
+                <div class="grid_r">
+                    <div class="grid_trash on">
+                    	<span class="icon icon_trash"></span>
+                        <span class="t">拖动图标到此处进行移除。</span>
+                    </div>
+                    <div class="grid_tip">
+                    	<span class="icon icon_i"></span>
+                        <span class="t">请拖动下列图标进行排序。</span>
+                    </div>
+                    
+                    <div class="screen">
+                    	<div class="screen_item"><img src="../images/ele/quartz1.png" /></div>
+                        <div class="screen_item"><img src="../images/ele/quartz2.png" /></div>
+                        <div class="screen_item"><img src="../images/ele/quartz3.png" /></div>
+                        <div class="screen_item"><img src="../images/ele/quartz4.png" /></div>
+                    </div>
+                    <div class="screen">
+                    	<div class="screen_item"><img src="../images/ele/quartz5.png" /></div>
+                        <div class="screen_item on"></div>
+                        <div class="screen_item"></div>
+                        <div class="screen_item"></div>
+                    </div>
+                    <div class="screen">
+                    	<div class="screen_item"><img src="../images/ele/quartz6.png" /></div>
+                        <div class="screen_item"><img src="../images/ele/quartz6.png" /></div>
+                        <div class="screen_item"><img src="../images/ele/quartz7.png" /></div>
+                        <div class="screen_item"><img src="../images/ele/quartz8.png" /></div>
+                    </div>
+                    <div class="grid_submit">
+                    	<input type="button" class="submit" value="提交" />
+                        <input type="button" class="cancel dialog_close" value="取消" />
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="bottom-l">
+      <div class="bottom-r">
+        <div class="bottom-m"></div>
+      </div>
+    </div>
+</div>
+</div>
+<!--topnsetting-->
+<div id="topnsetting" style="width:450px; display:none">
+    <div class="panel_null">
+    <div class="top-l">
+      <div class="top-r">
+        <div class="top-m"><span class="title">---</span><span class="ico-quit"></span></div>
+      </div>
+    </div>
+    <div class="middle-l">
+      <div class="middle-r">
+        <div class="middle-m">
+            <ul class="leap m20">   
+              	<li><a class="on">
+                	<span class="check_s"></span>
+                	<span class="shortcut_cpu"></span>
+                	<span class="t">CPU</span></a></li>
+                <li><a>
+                	<span class="check_s"></span>
+                    <span class="shortcut_memory"></span>
+                	<span class="t">内存</span></a></li>
+            </ul>
+            <ul class="btn_nav m20">
+                <li class="first"><a class="on">主机</a></li><li><a>应用</a></li><li class="last"><a>网络设备</a></li>
+            </ul>
+            
+            <div class="button">
+              <a class="btn_s2">确定</a>
+              <a class="btn_s dialog_close">取消</a>    
+			</div>
+        </div>
+      </div>
+    </div>
+    <div class="bottom-l">
+      <div class="bottom-r">
+        <div class="bottom-m"></div>
+      </div>
+    </div>
+</div>
+
+</div>
+<!--monitor-->
+<div id="monitor" style="width:450px; display:none">
+    <div class="panel_null">
+    <div class="top-l">
+      <div class="top-r">
+        <div class="top-m"><span class="title">---</span><span class="ico-quit"></span></div>
+      </div>
+    </div>
+    <div class="middle-l">
+      <div class="middle-r">
+        <div class="middle-m">
+            <div class="scroll-pane" style="width:400px;height:400px;">
+            <ul class="tree-wrap">
+                    <li nodeid="root">
+                    <ul class="treeview">
+                    <li class="collapsable">
+                        <div class="hitarea expandable-hitarea"></div>
+                        <span>主机</span>
+                        <ul>
+                            <li class="collapsable">
+                                <div class="hitarea expandable-hitarea"></div>
+                                <span>Windows</span>
+                                <ul>
+                                    <li class="collapsable">
+                                        <div class="hitarea"></div>
+                                        <span class="icon_radioed"></span>
+                                        <span>（172.17.160.1）R04733</span>
+                                    </li>
+                                    <li class="expandable">
+                                        <div class="hitarea"></div>
+                                        <span class="icon_unradio"></span>
+                                        <span>（172.17.160.1）R04733</span>
+                                    </li>
+                                    <li class="expandable last">
+                                        <div class="hitarea"></div>
+                                        <span class="icon_unradio"></span>
+                                        <span>（172.17.160.1）R04733</span>
+                                    </li>
+                                 </ul>
+                            </li>
+                            <li class="expandable">
+                                <div class="hitarea expandable-hitarea"></div>
+                                <span>Solaris</span>
+                                <ul>
+                                    <li class="collapsable">
+                                        <div class="hitarea"></div>
+                                        <span class="icon_unradio"></span>
+                                        <span>（172.17.160.1）R04733</span>
+                                    </li>
+                                    <li class="expandable">
+                                        <div class="hitarea"></div>
+                                        <span class="icon_unradio"></span>
+                                        <span>（172.17.160.1）R04733</span>
+                                    </li>
+                                    <li class="expandable last">
+                                        <div class="hitarea"></div>
+                                        <span class="icon_unradio"></span>
+                                        <span>（172.17.160.1）R04733</span>
+                                    </li>
+                                 </ul>
+                            </li>
+                            <li class="expandable last">
+                                <div class="hitarea expandable-hitarea"></div>
+                                <span>AIX</span>
+                                <ul>
+                                    <li class="collapsable">
+                                        <div class="hitarea"></div>
+                                        <span class="icon_unradio"></span>
+                                        <span>（172.17.160.1）R04733</span>
+                                    </li>
+                                    <li class="expandable">
+                                        <div class="hitarea"></div>
+                                        <span class="icon_unradio"></span>
+                                        <span>（172.17.160.1）R04733</span>
+                                    </li>
+                                    <li class="expandable last">
+                                        <div class="hitarea"></div>
+                                        <span class="icon_unradio"></span>
+                                        <span>（172.17.160.1）R04733</span>
+                                    </li>
+                                 </ul>
+                            </li>
+                         </ul>
+                    </li>
+                    </ul>
+                    </li>
+              </ul>
+            </div>
+            <div class="button">
+              <a class="btn_s2">确定</a>
+              <a class="btn_s dialog_close">取消</a>    
+			</div>
+        </div>
+      </div>
+    </div>
+    <div class="bottom-l">
+      <div class="bottom-r">
+        <div class="bottom-m"></div>
+      </div>
+    </div>
+</div>
+
+</div>
+<!--oracle-->
+<div id="oracle" style="width:450px; display:none">
+    <div class="panel_null">
+    <div class="top-l">
+      <div class="top-r">
+        <div class="top-m"><span class="title">---</span><span class="ico-quit"></span></div>
+      </div>
+    </div>
+    <div class="middle-l">
+      <div class="middle-r">
+        <div class="middle-m">
+        	<div class="scroll-pane" style="width:400px;height:400px;">
+            <ul class="tree-wrap">
+                    <li nodeid="root">
+                    <ul class="treeview">
+                            <li class="collapsable">
+                                <div class="hitarea expandable-hitarea"></div>
+                                <span>MySQL</span>
+                                <ul>
+                                    <li class="collapsable">
+                                        <div class="hitarea"></div>
+                                        <span class="icon_radioed"></span>
+                                        <span>（172.17.160.1）R04733</span>
+                                    </li>
+                                    <li class="expandable">
+                                        <div class="hitarea"></div>
+                                        <span class="icon_unradio"></span>
+                                        <span>（172.17.160.1）R04733</span>
+                                    </li>
+                                    <li class="expandable last">
+                                        <div class="hitarea"></div>
+                                        <span class="icon_unradio"></span>
+                                        <span>（172.17.160.1）R04733</span>
+                                    </li>
+                                 </ul>
+                            </li>
+                            <li class="expandable">
+                                <div class="hitarea expandable-hitarea"></div>
+                                <span>Oracle</span>
+                                <ul>
+                                    <li class="collapsable">
+                                        <div class="hitarea"></div>
+                                        <span class="icon_unradio"></span>
+                                        <span>（172.17.160.1）R04733</span>
+                                    </li>
+                                    <li class="expandable">
+                                        <div class="hitarea"></div>
+                                        <span class="icon_unradio"></span>
+                                        <span>（172.17.160.1）R04733</span>
+                                    </li>
+                                    <li class="expandable last">
+                                        <div class="hitarea"></div>
+                                        <span class="icon_unradio"></span>
+                                        <span>（172.17.160.1）R04733</span>
+                                    </li>
+                                 </ul>
+                            </li>
+                            <li class="expandable last">
+                                <div class="hitarea expandable-hitarea"></div>
+                                <span>Sybase</span>
+                                <ul>
+                                    <li class="collapsable">
+                                        <div class="hitarea"></div>
+                                        <span class="icon_unradio"></span>
+                                        <span>（172.17.160.1）R04733</span>
+                                    </li>
+                                    <li class="expandable">
+                                        <div class="hitarea"></div>
+                                        <span class="icon_unradio"></span>
+                                        <span>（172.17.160.1）R04733</span>
+                                    </li>
+                                    <li class="expandable last">
+                                        <div class="hitarea"></div>
+                                        <span class="icon_unradio"></span>
+                                        <span>（172.17.160.1）R04733</span>
+                                    </li>
+                                 </ul>
+                            </li>
+                         </ul>
+                    </li>
+              </ul>
+            </div>
+            <div class="button">
+              <a class="btn_s2">确定</a>
+              <a class="btn_s dialog_close">取消</a>    
+			</div>
+        </div>
+      </div>
+    </div>
+    <div class="bottom-l">
+      <div class="bottom-r">
+        <div class="bottom-m"></div>
+      </div>
+    </div>
+</div>
+</div>
+
+<script>
+$('.bigadd,.add').click(function(){
+	art.dialog({
+    content: document.getElementById('bigadd'),
+	padding: 0,
+	lock: true
+	});
+});
+$('.pagination .setting').click(function(){
+	art.dialog({
+    content: document.getElementById('setting'),
+	padding: 0,
+	lock: true
+	});
+});
+$('#show_topnsetting').click(function(){
+	art.dialog({
+    content: document.getElementById('topnsetting'),
+	padding: 0,
+	lock: true
+	});
+});
+$('#show_monitor').click(function(){
+	art.dialog({
+    content: document.getElementById('monitor'),
+	padding: 0,
+	lock: true
+	});
+});
+
+$('#show_oracle').click(function(){
+	art.dialog({
+    content: document.getElementById('oracle'),
+	padding: 0,
+	lock: true
+	});
+});
+</script>
+</body>
+</html>

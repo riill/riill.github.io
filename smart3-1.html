@@ -1,0 +1,330 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<!--gloab-->
+<link href="../css/comm.css" rel="stylesheet" type="text/css" />
+<link href="../css/widget.css" rel="stylesheet" type="text/css" />
+<link href="../css/ico.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../js/jquery-1.8.2.min.js"></script>
+<!--demo-->
+<link href="../css/demo.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../js/demo.js"></script>
+<!--artdialog-->
+<link href="../css/artdialog.css" rel="stylesheet" />
+<script src="../js/artDialog.min.js"></script>
+<script src="../js/jquery.overlay.min.js"></script>
+<!--scroll-->
+<link href="../css/jquery.jscrollpane.css" rel="stylesheet" type="text/css" />
+<script src="../js/jquery.mousewheel.js"></script>
+<script src="../js/jquery.jscrollpane.min.js"></script>
+<script>
+$(function()
+{
+	var settings = {
+		showArrows: false,
+		autoReinitialise: true
+	};
+	$('.scroll-pane').jScrollPane(settings);
+});
+</script>
+</head>
+<body class="layout">
+	<!--layout left-->
+    <div class="layout_left">
+      <div class="portlet">
+        <div class="top-l">
+          <div class="top-r">
+            <div class="top-m"><span class="title">资源管理</span> </div>
+      </div>
+    </div>
+        <div class="middle-l">
+          <div class="middle-r">
+            <div class="middle-m"> 
+              <!--subnav-->
+              <div class="subnav">
+                <ul>
+                  <li>
+                    <a class="h-subnav on">
+                    	<span class="t">自定义资源组</span>
+                        <span class="icon icon_cog"></span>
+                    </a>
+                    <ul>
+                        <li>
+                            <a class="h-subnav"><span class="icon icon_allfiles"></span><span class="t" onclick="javascript:window.location.href='smart3.html'">自定义资源组1</span><span class="num">440</span>
+                            <span class="icon icon_modify"></span><span class="icon icon_remove"></span></a>
+                    	</li>
+                        <li>
+                            <a class="h-subnav"><span class="icon icon_allfiles"></span><span class="t">自定义资源组2</span><span class="num">90</span>
+                            <span class="icon icon_modify"></span><span class="icon icon_remove"></span></a>
+                    </li>
+                        <li>
+                            <a class="h-subnav"><span class="icon icon_allfiles"></span><span class="t">自定义资源组3</span><span class="num">7</span>
+                            <span class="icon icon_modify"></span><span class="icon icon_remove"></span></a>
+                    </li>
+                        <li>
+                            <a class="h-subnav" id="show_add"><span class="icon icon_plus"></span><span class="t">新建资源组</span></a>
+                  </li>
+              </ul>
+              </li>
+                  <li class="last">
+                    <a class="h-subnav on"><span class="t">资源类型</span></a>
+                    <ul>
+                          <li>
+                            <a class="h-subnav on" href="smart3-1.html"><span class="icon icon_server"></span><span class="t">主机</span><span class="num">200</span></a>
+                      </li>
+                          <li>
+                            <a class="h-subnav"><span class="icon icon_network"></span><span class="t">网络设备</span><span class="num">119</span></a>
+                      </li>
+                          <li>
+                            <a class="h-subnav"><span class="icon icon_app"></span><span class="t">应用</span><span class="num">877</span></a>
+                    </li>
+                </ul>
+              </li>
+            </ul>
+</div>
+</div>
+</div>
+</div>
+        <div class="bottom-l">
+          <div class="bottom-r">
+            <div class="bottom-m"></div>
+</div>
+</div>
+</div>
+</div>
+	
+    <!--layout right-->
+    <div class="layout_right">
+      	<div class="panel">
+            <div class="top-l">
+              <div class="top-r">
+                <div class="top-m"><span class="title">资源管理 - 主机</span></div>
+              </div>
+            </div>
+            <div class="middle-l">
+              <div class="middle-r">
+                <div class="middle-m">  
+                <!--search-->
+                <div class="st">
+                <div class="st_btn">
+                <a class="btn" id="show_find"><span class="icon icon_eye"></span> 资源发现</a>
+                <a class="btn" id="show_inbox"><span class="icon icon_outbox"></span> 移入资源组</a>
+                <a class="btn" id="show_more"><span class="icon icon_more"></span> 批量操作 <span class="icon icon_down"></span></a>
+            </div>
+            </div>
+                <!--table-->
+                <div class="common">
+                            <div class="theadpart">
+                              <table>
+                                <thead>
+                                  <tr>
+                                    <th width="5%">
+                                      <input type="checkbox" class="bcenter" />
+                                </th>
+                                    <th width="5%" class="tcenter"><a class="rank-up"></a><span>状态</span></th>
+                                    <th width="15%"><a class="rank-down"></a><a class="rank-pull" id="show_rank"></a><span>资源名称</span></th>
+                                    <th width="10%"><a class="rank-up"></a><a class="rank-pull"></a><span>IP地址</span></th>
+                                    <th width="15%"><a class="rank-up"></a><a class="rank-pull"></a><span>资源类型</span></th>
+                                    <th width="20%" class="tcenter"><a class="rank-up"></a><span>CPU利用率</span></th>
+                                    <th width="20%" class="tcenter"><a class="rank-up"></a><span>内存利用率</span></th>
+                                    <th class="tcenter"><span>监控设置</span></th>
+                            </tr>
+                            </thead>
+                        </table>
+                        </div>
+                            <div class="tbodypart">
+                              <table>
+                                <tbody>
+                                <tr>
+                                    <td width="5%">
+                                      <input type="checkbox" class="bcenter" />
+                                </td>
+                                    <td width="5%" class="tcenter"><span class="icon status_g"></span></td>
+                                    <td width="15%"><a onclick="javascript:openwindow('smart3-info.html','',1358,757);">Kid ica server</a></td>
+                                    <td width="10%">192.168.0.100</td>
+                                    <td width="15%">Linux主机(SNMP)</td>
+                                    <td width="20%">
+                                      <div class="rate rate_t"><span class="rate_red" style="width:90%"></span><span class="rt">90%</span></div>
+                                </td>
+                                    <td width="20%">
+                                      <div class="rate rate_t"><span class="rate_green" style="width:45%"></span><span class="gt">45%</span></div>
+                                </td>
+                                    <td class="tcenter"><span class="icon icon_set" id="show_set"></span></td>
+                            </tr>	
+                                <tr class="cbg">
+                                    <td>
+                                      <input type="checkbox" class="bcenter" />
+                                </td>
+                                    <td class="tcenter"><span class="icon status_g"></span></td>
+                                    <td><a onclick="javascript:openwindow('smart3-info.html','',1358,757);">Rill_ZB_Switch_6509_1</a></td>
+                                    <td>192.168.0.100</td>
+                                    <td>Linux主机(SSH/Telnet)</td>
+                                    <td>
+                                      <div class="rate rate_t"><span class="rate_red" style="width:80%"></span><span class="rt">80%</span></div>
+                                </td>
+                                    <td>
+                                      <div class="rate rate_t"><span class="rate_red" style="width:90%"></span><span class="rt">90%</span></div>
+                                </td>
+                                    <td class="tcenter"><span class="icon icon_set"></span></td>
+                            </tr>
+                                <tr>
+                                    <td>
+                                      <input type="checkbox" class="bcenter" />
+                                </td>
+                                    <td class="tcenter"><span class="icon status_r"></span></td>
+                                    <td><a onclick="javascript:openwindow('smart3-info.html','',1358,757);">Rill_ZB_Switch_6509_1</a></td>
+                                    <td>192.168.0.100</td>
+                                    <td>Windows主机(SSH/Telnet)</td>
+                                    <td>
+                                      <div class="rate rate_t"><span class="rate_orange" style="width:70%"></span><span class="ot">70%</span></div>
+                                </td>
+                                    <td>
+                                      <div class="rate rate_t"><span class="rate_green" style="width:30%"></span><span class="gt">30%</span></div>
+                                </td>
+                                    <td class="tcenter"><span class="icon icon_set"></span></td>
+                            </tr>
+                                <tr class="cbg">
+                                    <td>
+                                      <input type="checkbox" class="bcenter" />
+                                </td>
+                                    <td class="tcenter"><span class="icon status_r"></span></td>
+                                    <td><a onclick="javascript:openwindow('smart3-app.html','',1358,757);">ZB_数据库12信息</a></td>
+                                    <td>192.168.0.100</td>
+                                    <td>Windows主机(SNMP)</td>
+                                    <td>
+                                      <div class="rate rate_t"><span class="rate_orange" style="width:60%"></span><span class="ot">60%</span></div>
+                                </td>
+                                    <td>
+                                      <div class="rate rate_t"><span class="rate_green" style="width:30%"></span><span class="gt">30%</span></div>
+                                </td>
+                                    <td class="tcenter"><span class="icon icon_set"></span></td>
+                            </tr>
+                                <tr>
+                                    <td>
+                                      <input type="checkbox" class="bcenter" />
+                                </td>
+                                    <td class="tcenter"><span class="icon status_g"></span></td>
+                                    <td><a onclick="javascript:openwindow('smart3-app01.html','',1358,757);">ZB_数据库12信息(Oracle)</a></td>
+                                    <td>192.168.0.100</td>
+                                    <td>Websphere application server(SNMP)</td>
+                                    <td>
+                                      <div class="rate rate_t"><span class="rate_green" style="width:50%"></span><span class="gt">50%</span></div>
+                                </td>
+                                    <td>
+                                      <div class="rate rate_t"><span class="rate_green" style="width:30%"></span><span class="gt">30%</span></div>
+                                </td>
+                                    <td class="tcenter"><span class="icon icon_set"></span></td>
+                            </tr>
+                                <tr class="cbg">
+                                    <td>
+                                      <input type="checkbox" class="bcenter" />
+                                </td>
+                                    <td class="tcenter"><span class="icon status_g"></span></td>
+                                    <td><a onclick="javascript:openwindow('smart3-data_table.html','',1358,757);">ZB_数据库表空间</a></td>
+                                    <td>192.168.0.100</td>
+                                    <td>Websphere application server(SNMP)</td>
+                                    <td>
+                                      <div class="rate rate_t"><span class="rate_green" style="width:40%"></span><span class="gt">40%</span></div>
+                                </td>
+                                    <td>
+                                      <div class="rate rate_t"><span class="rate_green" style="width:30%"></span><span class="gt">30%</span></div>
+                                </td>
+                                    <td class="tcenter"><span class="icon icon_set"></span></td>
+                            </tr>
+                                <tr>
+                                    <td>
+                                      <input type="checkbox" class="bcenter" />
+                                </td>
+                                    <td class="tcenter"><span class="icon status"></span></td>
+                                    <td>Rill_ZB_Switch_6509_1</td>
+                                    <td>192.168.0.100</td>
+                                    <td>Windows主机(SNMP)</td>
+                                    <td>
+                                      <div class="rate rate_t"><span class="rate_green" style="width:30%"></span><span class="gt">30%</span></div>
+                                </td>
+                                    <td>
+                                      <div class="rate rate_t"><span class="rate_green" style="width:50%"></span><span class="gt">50%</span></div>
+                                </td>
+                                    <td class="tcenter"><span class="icon icon_set"></span></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        </div>
+                        </div>
+                </div>
+              </div>
+            </div>
+            <div class="bottom-l">
+              <div class="bottom-r">
+                <div class="bottom-m"></div>
+              </div>
+            </div>
+        </div>  
+        
+
+    </div>
+<!--inbox-->
+<div id="inbox" style="width:400px;display:none">
+    <div class="panel_null">
+    <div class="top-l">
+      <div class="top-r">
+        <div class="top-m"><span class="ico-quit"></span></div>
+      </div>
+    </div>
+    <div class="middle-l">
+      <div class="middle-r">
+        <div class="middle-m"> 
+            <div class="simple">
+            <table>
+            	<tr>
+                	<td>请选择要移入的资源组：</td>
+                    <td width="10%"></td>
+                </tr>
+            	<tr>
+                	<td>自定义资源组1</td>
+                    <td><span class="icon icon_checked"></span></td>
+                </tr>
+                <tr>
+                	<td>自定义资源组2</td>
+                    <td><span class="icon icon_uncheck"></span></td>
+                </tr>
+                <tr>
+                	<td>自定义资源组3</td>
+                    <td><span class="icon icon_uncheck"></span></td>
+                </tr>
+                <tr>
+                	<td>自定义资源组4</td>
+                    <td><span class="icon icon_uncheck"></span></td>
+                </tr>
+                <tr>
+                	<td>自定义资源组5</td>
+                    <td><span class="icon icon_uncheck"></span></td>
+                </tr>
+            </table>
+            </div>
+            <div class="button">
+              <a class="btn_s2">确定</a>
+              <a class="btn_s dialog_close">取消</a>    
+			</div>
+        </div>
+      </div>
+    </div>
+    <div class="bottom-l">
+      <div class="bottom-r">
+        <div class="bottom-m"></div>
+      </div>
+    </div>
+</div>
+</div>
+<script>
+$('#show_inbox').click(function(){
+	art.dialog({
+    content: document.getElementById('inbox'),
+	padding: 0,
+	lock: true
+	});
+});	
+</script>
+</body>
+</html>

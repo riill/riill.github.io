@@ -1,0 +1,463 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html class="homepage">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<!--index-->
+<link href="../css/index.css" rel="stylesheet" type="text/css" />
+<!--gloab-->
+<link href="../css/comm.css" rel="stylesheet" type="text/css" />
+<link href="../css/widget.css" rel="stylesheet" type="text/css" />
+<link href="../css/ico.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../js/jquery-1.8.2.min.js"></script>
+<!--demo-->
+<link href="../css/demo.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../js/demo.js"></script>
+<!--artdialog-->
+<link href="../css/artdialog.css" rel="stylesheet" />
+<script src="../js/artDialog.min.js"></script>
+<script src="../js/jquery.overlay.min.js"></script>
+<!--scroll-->
+<link href="../css/jquery.jscrollpane.css" rel="stylesheet" type="text/css" />
+<script src="../js/jquery.mousewheel.js"></script>
+<script src="../js/jquery.jscrollpane.min.js"></script>
+<script>
+$(function()
+{
+	var settings = {
+		showArrows: false,
+		autoReinitialise: true
+	};
+	$('.scroll-pane').jScrollPane(settings);
+});
+</script>
+</head>
+
+<body style="min-width:1024px; width:1366px;">
+<div class="header">
+	<div class="logo"><img src="../images/index/logo2.png" />    </div>
+    <div class="welcome">
+    	<span class="welcome_text">系统管理员你好，欢迎使用 RIIL SMART 管理系统</span>
+        <span class="icon icon_phone" onclick="javascript:openwindow('smart_400.html','',1024,630);"></span>
+        <span class="icon icon_key" id="show_key"></span>
+        <span class="icon icon_user" id="show_user"></span>
+        <span class="icon icon_ask" onclick="location.href='smart_suggest01.html'"></span>
+        <span class="icon icon_tshirt" id="show_tshirt"></span>
+        <span class="icon icon_help" onclick="javascript:openwindow('smart_dis01.html','',1024,718);"></span>
+        <span class="icon icon_exit" onclick="location.href='login.html'" ></span>
+    </div>
+    <div class="nav">
+    	<ul>
+        	<li><a class="nav01 on" href="view.html" target="contentIframe"></a></li>
+            <li><a class="nav02" href="smart2.html" target="contentIframe"></a></li>
+            <li><a class="nav03" href="smart3.html" target="contentIframe"></a></li>
+            <li><a class="nav04" href="smart4.html" target="contentIframe"></a></li>
+            <li><a class="nav05" href="smart5.html" target="contentIframe"></a></li>
+            <li><a class="nav06" href="smart6.html" target="contentIframe"></a></li>
+        </ul>
+    </div>
+</div>
+<div class="content" id="content">
+	<iframe id="contentIframe" name="contentIframe" frameborder="0"
+				marginheight="0" marginwidth="0" scrolling="no" height="100%"
+				width="100%" allowtransparency="ture"
+				style="background: transparent" src="view.html"> </iframe>
+</div>
+<div class="footer"><div class="textbg">北京星网锐捷网络技术有限公司 @ 版权所有</div></div>
+
+<!--key-->
+<div id="key" style="width:1000px;display:none">
+    <div class="panel">
+    <div class="top-l">
+      <div class="top-r">
+        <div class="top-m"><span class="title">License授权信息</span><span class="ico-quit"></span></div>
+      </div>
+    </div>
+    <div class="middle-l">
+      <div class="middle-r">
+        <div class="middle-m">  
+            <div class="rare scroll-pane" style="height:500px;">
+<div class="theadpart">  
+<table>
+<thead>
+<tr>
+<th style="width:29%">模块</th>
+<th style="width:40%">功能说明</th>
+<th style="width:15%">到期时间</th>
+<th style="width:8%">数量</th>
+<th style="width:8%">剩余数量</th>
+</tr>
+</thead>
+</table>
+</div>
+<div class="tbodypart">
+<table>
+<tbody>
+<tr>
+<td class="rowtd" style="width:29%" rowspan="6">RG-RIIL6.X-WIN SMART平台</td>
+<td style="width:40%">SNMP Trap监控功能</td>
+<td style="width:15%">2013-08-30 21:09:09</td>
+<td style="width:8%">-</td>
+<td style="width:8%">-</td>
+</tr>
+<tr class="cbg">
+<td style="width:40%">注册用户数量</td>
+<td style="width:15%">2013-08-30 21:09:09</td>
+<td style="width:8%">500</td>
+<td style="width:8%">499</td>
+</tr>
+<tr>
+<td style="width:40%">系统管理功能模块</td>
+<td style="width:15%">2013-08-30 21:09:09</td>
+<td style="width:8%">-</td>
+<td style="width:8%">-</td>
+</tr>
+<tr class="cbg">
+<td style="width:40%">网络拓扑功能</td>
+<td style="width:15%">2013-08-30 21:09:09</td>
+<td style="width:8%">-</td>
+<td style="width:8%">-</td>
+</tr>
+<tr>
+<td style="width:40%">自动发现功能</td>
+<td style="width:15%">2013-08-30 21:09:09</td>
+<td style="width:8%">-</td>
+<td style="width:8%">-</td>
+</tr>
+<tr class="cbg">
+<td style="width:40%">资源监控管理</td>
+<td style="width:15%">2013-08-30 21:09:09</td>
+<td style="width:8%">-</td>
+<td style="width:8%">-</td>
+</tr>
+<tr>
+<td class="rowtd" style="width:29%">RG-RIIL6.X-DCS 分布式采集组件</td>
+<td style="width:40%">采集服务器数量</td>
+<td style="width:15%">2013-08-30 21:09:09</td>
+<td style="width:8%">20</td>
+<td style="width:8%">19</td>
+</tr>
+<tr class="cbg">
+<td class="rowtd" style="width:29%" rowspan="2">RG-RIIL6.X-Domain</td>
+<td style="width:40%">域数量</td>
+<td style="width:15%">2013-08-30 21:09:09</td>
+<td style="width:8%">50</td>
+<td style="width:8%">45</td>
+</tr>
+<tr>
+<td style="width:40%">域管理功能</td>
+<td style="width:15%">2013-08-30 21:09:09</td>
+<td style="width:8%">-</td>
+<td style="width:8%">-</td>
+</tr>
+<tr class="cbg">
+<td class="rowtd" style="width:29%">RG-RIIL6.x-IMC 网络设备数量</td>
+<td style="width:40%">监控资源数量 - 网络设备</td>
+<td style="width:15%">2013-08-30 21:09:09</td>
+<td style="width:8%">1000</td>
+<td style="width:8%">990</td>
+</tr>
+<tr>
+<td class="rowtd" style="width:29%">RG-RIIL6.X-BMC-Suit 业务服务管理组件</td>
+<td style="width:40%">业务服务功能</td>
+<td style="width:15%">2013-08-30 21:09:09</td>
+<td style="width:8%">-</td>
+<td style="width:8%">-</td>
+</tr>
+<tr class="cbg">
+<td class="rowtd" style="width:29%">RG-RIIL6.X-BMC-LIC 1节点应用监控</td>
+<td style="width:40%">监控资源数量-应用</td>
+<td style="width:15%">2013-08-30 21:09:09</td>
+<td style="width:8%">100</td>
+<td style="width:8%">96</td>
+</tr>
+<tr>
+<td class="rowtd" style="width:29%">RG-RIIL6.X-BMC-LIC-OS 1节点主机监控</td>
+<td style="width:40%">监控设备数量-主机</td>
+<td style="width:15%">2013-08-30 21:09:09</td>
+<td style="width:8%">500</td>
+<td style="width:8%">451</td>
+</tr>
+<tr class="cbg">
+<td class="rowtd" style="width:29%">RG-RIIL6.X-BMC-LIC-Stor</td>
+<td style="width:40%">监控资源数量--存储设备</td>
+<td style="width:15%">2013-08-30 21:09:09</td>
+<td style="width:8%">20</td>
+<td style="width:8%">20</td>
+</tr>
+<tr>
+<td class="rowtd" style="width:29%" rowspan="2">RG-RIIL6.X-Log 日志监控组件</td>
+<td style="width:40%">日志监控功能</td>
+<td style="width:15%">2013-08-30 21:09:09</td>
+<td style="width:8%">-</td>
+<td style="width:8%">-</td>
+</tr>
+<tr class="cbg">
+<td style="width:40%">监控资源数量 - 日志资源</td>
+<td style="width:15%">2013-08-30 21:09:09</td>
+<td style="width:8%">50</td>
+<td style="width:8%">50</td>
+</tr>
+<tr>
+<td class="rowtd" style="width:29%" rowspan="2">RG-RIIL6.X-Script 脚本监控组件</td>
+<td style="width:40%">监控资源数量 - 脚本资源</td>
+<td style="width:15%">2013-08-30 21:09:09</td>
+<td style="width:8%">50</td>
+<td style="width:8%">49</td>
+</tr>
+<tr class="cbg">
+<td style="width:40%">脚本监控功能</td>
+<td style="width:15%">2013-08-30 21:09:09</td>
+<td style="width:8%">-</td>
+<td style="width:8%">-</td>
+</tr>
+<tr>
+<td class="rowtd" style="width:29%">RIIL 6.X-Mobile 移动终端组件</td>
+<td style="width:40%">移动终端功能</td>
+<td style="width:15%">2013-08-30 21:09:09</td>
+<td style="width:8%">-</td>
+<td style="width:8%">-</td>
+</tr>
+<tr class="cbg">
+<td class="rowtd" style="width:29%">RIIL 6.X-Mobile-iPad 移动终端</td>
+<td style="width:40%">移动终端数量</td>
+<td style="width:15%">2013-08-30 21:09:09</td>
+<td style="width:8%">50</td>
+<td style="width:8%">50</td>
+</tr>
+<tr>
+<td class="rowtd" style="width:29%">RG-RIIL6.X-NTA-Suit 流量分析组件</td>
+<td style="width:40%">流量分析功能</td>
+<td style="width:15%">2013-08-30 21:09:09</td>
+<td style="width:8%">-</td>
+<td style="width:8%">-</td>
+</tr>
+<tr class="cbg">
+<td class="rowtd" style="width:29%">RG-RIIL6.X-NTA-LIC 流量分析监听端口数量</td>
+<td style="width:40%">监控资源数量 - 流量分析监听端口数量</td>
+<td style="width:15%">2013-08-30 21:09:09</td>
+<td style="width:8%">50</td>
+<td style="width:8%">48</td>
+</tr>
+<tr>
+<td class="rowtd" style="width:29%">RG-RIIL6.X-KM 知识库管理</td>
+<td style="width:40%">知识库功能</td>
+<td style="width:15%">2013-08-30 21:09:09</td>
+<td style="width:8%">-</td>
+<td style="width:8%">-</td>
+</tr>
+<tr class="cbg">
+<td class="rowtd" style="width:29%" rowspan="3">RG-RIIL6.X-CMDB CMDB管理</td>
+<td style="width:40%">CMDB - 配置审计功能</td>
+<td style="width:15%">2013-08-30 21:09:09</td>
+<td style="width:8%">-</td>
+<td style="width:8%">-</td>
+</tr>
+<tr>
+<td style="width:40%">CMDB中配置项数量</td>
+<td style="width:15%">2013-08-30 21:09:09</td>
+<td style="width:8%">50</td>
+<td style="width:8%">-217</td>
+</tr>
+<tr class="cbg">
+<td style="width:40%">CMDB功能</td>
+<td style="width:15%">2013-08-30 21:09:09</td>
+<td style="width:8%">-</td>
+<td style="width:8%">-</td>
+</tr>
+<tr>
+<td class="rowtd" style="width:29%" rowspan="2">RG-RIIL6.X-Alarm</td>
+<td style="width:40%">事件告警客户端接入功能</td>
+<td style="width:15%">2013-08-30 21:09:09</td>
+<td style="width:8%">-</td>
+<td style="width:8%">-</td>
+</tr>
+<tr>
+<td style="width:40%">事件告警客户端接入数量</td>
+<td style="width:15%">2013-08-30 21:09:09</td>
+<td style="width:8%">50</td>
+<td style="width:8%">-</td>
+</tr>
+<tr class="cbg">
+<td class="rowtd" style="width:29%" rowspan="2">RG-RIIL-WSM-Suit 无线业务管理组件</td>
+<td style="width:40%">无线管理允许监控的AP数量</td>
+<td style="width:15%">2013-08-30 21:09:09</td>
+<td style="width:8%">500</td>
+<td style="width:8%">453</td>
+</tr>
+<tr>
+<td style="width:40%">无线管理功能</td>
+<td style="width:15%">2013-08-30 21:09:09</td>
+<td style="width:8%">-</td>
+<td style="width:8%">-</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+	   </div>
+        </div>
+      </div>
+    </div>
+    <div class="bottom-l">
+      <div class="bottom-r">
+        <div class="bottom-m"></div>
+      </div>
+    </div>
+</div>
+</div>
+<!--user-->
+<div id="user" style="width:660px;display:none">
+    <div class="panel">
+    <div class="top-l">
+      <div class="top-r">
+        <div class="top-m"><span class="title">修改用户信息</span><span class="ico-quit"></span></div>
+      </div>
+    </div>
+    <div class="middle-l">
+      <div class="middle-r">
+        <div class="middle-m">  
+            <div class="form">
+                      <table cellpadding="0" cellspacing="0">
+                    	<tbody>
+                            <tr>
+                            	<td width="25%">用户名</td>
+                                <td>Administrator</td>
+                          	</tr>
+                            <tr class="cbg">
+                            	<td>原密码</td>
+                                <td><input type="text" class="forminput"><span class="rt t">*</span></td>
+                          	</tr>
+                            <tr>
+                            	<td>新密码</td>
+                                <td><input type="text" class="forminput"></td>
+                          	</tr>
+                            <tr class="cbg">
+                            	<td>姓名</td>
+                                <td><input type="text" class="forminput" value="周周"><span class="rt t">*</span></td>
+                          	</tr>
+                            <tr>
+                            	<td>手机号码</td>
+                                <td><input type="text" class="forminput" value="13132209999"><span class="t">此手机号码用于接收短信报警。</span></td>
+                          	</tr>
+                            <tr class="cbg">
+                            	<td>电子邮箱</td>
+                                <td><input type="text" class="forminput" value="zhouzhou@ruijie.com.cn"><span class="t">此邮箱用于接收邮件报警。</span></td>
+                          	</tr>
+                            <tr>
+                                <td class="t_right" colspan="2"><input type="button" class="submit" value="保存"> <input type="button" class="cancel dialog_close" value="取消"> </td>
+                            </tr>
+                      </tbody>
+                  </table>
+                  </div>
+        </div>
+      </div>
+    </div>
+    <div class="bottom-l">
+      <div class="bottom-r">
+        <div class="bottom-m"></div>
+      </div>
+    </div>
+</div>
+</div>
+<!--tshirt-->
+<div id="tshirt" style="width:600px;display:none">
+    <div class="panel_null">
+    <div class="top-l">
+      <div class="top-r">
+        <div class="top-m"><span class="title">---</span><span class="ico-quit"></span></div>
+      </div>
+    </div>
+    <div class="middle-l"> 
+      <div class="middle-r">
+        <div class="middle-m">  
+            <ul class="tshirt">   
+              	<li class="on"><a class="tshirt1"><span class="check" style="display:block"></span><span class="btn_s" style="display:none">选择</span></a></li>
+                <li><a class="tshirt2"><span class="check"></span><span class="btn_s">选择</span></a></li>
+                <li><a class="tshirt3"><span class="check"></span><span class="btn_s">选择</span></a></li>
+                <li><a class="tshirt4"><span class="check"></span><span class="btn_s">选择</span></a></li>
+              </ul>
+            <div class="button">
+              <span class="infotxt"></span>
+              <a class="btn_s2">确定</a>
+              <a class="btn_s dialog_close">取消</a>    
+			</div>
+        </div>
+      </div>
+    </div>
+    <div class="bottom-l">
+      <div class="bottom-r">
+        <div class="bottom-m"></div>
+      </div>
+    </div>
+</div>
+
+</div>
+<!--p400-->
+<div id="p400" style="width:600px;display:none">
+    <div class="panel_null">
+    <div class="top-l">
+      <div class="top-r">
+        <div class="top-m"><span class="title">---</span><span class="ico-quit"></span></div>
+      </div>
+    </div>
+    <div class="middle-l"> 
+      <div class="middle-r">
+        <div class="middle-m">  
+            <div class=""></div>
+            <div class="button">
+              <span class="infotxt"></span>
+              <a class="btn_s2">确定</a>
+              <a class="btn_s dialog_close">取消</a>    
+			</div>
+        </div>
+      </div>
+    </div>
+    <div class="bottom-l">
+      <div class="bottom-r">
+        <div class="bottom-m"></div>
+      </div>
+    </div>
+</div>
+
+</div>
+
+
+<script>
+$('#show_key').click(function(){
+	art.dialog({
+    content: document.getElementById('key'),
+	id: 'key',
+	padding: 0,
+	lock: true
+	});
+});
+$('#show_user').click(function(){
+	art.dialog({
+    content: document.getElementById('user'),
+	id: 'user',
+	padding: 0,
+	lock: true
+	});
+});
+$('#show_tshirt').click(function(){
+	art.dialog({
+    content: document.getElementById('tshirt'),
+	id: 'user',
+	padding: 0,
+	lock: true
+	});
+});
+$('#show_p400').click(function(){
+	art.dialog({
+    content: document.getElementById('p400'),
+	id: 'user',
+	padding: 0,
+	lock: true
+	});
+});
+
+</script>
+
+
+</body>
+</html>

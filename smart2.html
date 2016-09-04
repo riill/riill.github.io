@@ -1,0 +1,1071 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<!--index-->
+<link href="../css/index.css" rel="stylesheet" type="text/css" />
+<!--gloab-->
+<link href="../css/comm.css" rel="stylesheet" type="text/css" />
+<link href="../css/widget.css" rel="stylesheet" type="text/css" />
+<link href="../css/ico.css" rel="stylesheet" type="text/css" />
+<link href="../css/tree.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../js/jquery-1.8.2.min.js"></script>
+<!--demo-->
+<link href="../css/demo.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../js/demo.js"></script>
+<!--artdialog-->
+<link href="../css/artdialog.css" rel="stylesheet" />
+<script src="../js/artDialog.min.js"></script>
+<script src="../js/jquery.overlay.min.js"></script>
+<!--scroll-->
+<link href="../css/jquery.jscrollpane.css" rel="stylesheet" type="text/css" />
+<script src="../js/jquery.mousewheel.js"></script>
+<script src="../js/jquery.jscrollpane.min.js"></script>
+<script>
+$(function()
+{
+	var settings = {
+		showArrows: false,
+		autoReinitialise: true
+	};
+	$('.scroll-pane').jScrollPane(settings);
+});
+</script>
+</head>
+<body class="topo_bg">
+<img src="../images/demo/topo_all.png" usemap="#Map" border="0" />
+<map name="Map" id="Map">
+  <area shape="rect" coords="337,598,415,627" href="#" id="show_board" />
+  <area shape="rect" coords="735,488,901,508" href="#" id="show_boardinfo" />
+  <area shape="rect" coords="90,600,170,626" href="#" id="show_allset" />
+  <area shape="rect" coords="934,280,1105,302" href="#" id="show_addlink" />
+  <area shape="rect" coords="737,348,902,369" href="#" id="show_textarea"/>
+</map>
+<!--allset-->
+<div id="allset" style="width:800px;display:none">
+    <div class="panel_null">
+            <div class="top-l">
+              <div class="top-r">
+                <div class="top-m"><span class="title">全局设置</span><span class="ico-quit"></span></div>
+          </div>
+        </div>
+            <div class="middle-l">
+              <div class="middle-r">
+              <div class="middle-m">
+                	
+                    <div class="tab-group">
+                      <div class="tab">
+                        <ul>
+                          <li class="on"><a id="show_allset_tab1">设备全局设置</a> </li>
+                          <li><a id="show_allset_tab2">链路全局设置</a> </li>
+                          <li><a id="show_allset_tab3">拓扑全局设置</a> </li>
+                        </ul>
+                      </div>
+                      <div class="tab-content" id="allset_tab1">
+                       	<div class="st">
+                        	<div class="f_left"><span class="icon_uncheck"></span> 控制全局（全部拓扑图统一按照全局设置显示，单个资源的属性设置将不生效。）</div>
+                        </div>
+                        <div class="simple">
+                        	<table>
+                            	<tr>
+                                	<td>请选择设备标注：</td>
+                                </tr>
+                                <tr>
+                                	<td>
+                                    	<label><span class="icon_unradio"></span>管理IP</label>
+                                    	<label><span class="icon_unradio"></span>SysOID</label>
+                                        <label><span class="icon_unradio"></span>屏显名称</label>
+                                        <label><span class="icon_unradio"></span>设备类型</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                	<td>核心设备图标大小设置：</td>
+                                </tr>
+                                <tr>
+                                	<td>
+                                    	<label><span class="icon_unradio"></span>小（同普通设备大小一致）</label>
+                                    	<label><span class="icon_unradio"></span>中</label>
+                                        <label><span class="icon_unradio"></span>大</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                	<td>骨干设备图标大小设置：</td>
+                                </tr>
+                                <tr>
+                                	<td>
+                                    	<label><span class="icon_unradio"></span>小（同普通设备大小一致）</label>
+                                    	<label><span class="icon_unradio"></span>中</label>
+                                        <label><span class="icon_unradio"></span>大</label>
+                                    </td>
+                                </tr>
+                            </table>
+                        	
+                        </div>
+                        <div class="button">
+                        	<input class="submit" type="button" value="确定" />
+                            <input class="cancel" type="button" value="取消" />
+                        </div>
+                      </div>
+                      <div class="tab-content scroll-pane" id="allset_tab2" style="display:none; height:400px">
+                       	<div class="st">
+                        	<div class="f_left"><span class="icon_uncheck"></span> 控制全局（全部拓扑图统一按照全局设置显示，单个资源的属性设置将不生效。）</div>
+                        </div>
+                        <div class="setting-unit">
+                            <div class="title">
+                                <span>链路设置</span>
+                                <span class="icon icon_close"></span>
+                            </div>
+                            <div class="holder" style="display:block">
+                                <div class="sub">
+                                    <table>
+                            	<tr>
+                                	<td width="15%">链路标注：</td>
+                                    <td>
+                                        <div class="select_body">
+                                             <div class="select_trigger_wrap"><a class="select_trigger"></a></div>
+                                             <div class="select_text">下行流量</div>
+                                        </div>
+                                        <div class="select_boundtree">
+                                          <ul>
+                                            <li><a><span class="t">无标注</span></a></li>
+                                            <li><a><span class="t">链路类型</span></a></li>
+                                            <li><a><span class="t">链路备注</span></a></li>
+                                            <li><a><span class="t">上行流量</span></a></li>
+                                            <li><a class="on"><span class="t">下行流量</span></a></li>
+                                            <li><a><span class="t">总流量</span></a></li>
+                                          </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                	<td>链路显示方式：</td>
+                                    <td><span class="icon_uncheck"></span>以单链路形式显示</td>
+                                </tr>
+                                <tr class="last">
+                                	<td>链路颜色指示：</td>
+                                    <td>
+                                        <div class="select_body">
+                                             <div class="select_trigger_wrap"><a class="select_trigger"></a></div>
+                                             <div class="select_text">总流量</div>
+                                        </div>
+                                        <div class="select_boundtree">
+                                          <ul>
+                                            <li><a><span class="t">带宽利用率</span></a></li>
+                                            <li><a class="on"><span class="t">总流量</span></a></li>
+                                          </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="setting-unit">
+                            <div class="title">
+                                <span>指标阈值设置</span>
+                                <span class="icon icon_close"></span>
+                            </div>
+                            <div class="holder">
+                            	<div class="st3">
+                                	<div class="f_left">
+                                        <div class="select_body">
+                                             <div class="select_trigger_wrap"><a class="select_trigger"></a></div>
+                                             <div class="select_text">100M</div>
+                                        </div>
+                                        <div class="select_boundtree">
+                                          <ul>
+                                            <li><a><span class="t">10M及以下</span></a></li>
+                                            <li><a class="on"><span class="t">100M</span></a></li>
+                                            <li><a><span class="t">1000M</span></a></li>
+                                            <li><a><span class="t">10G</span></a></li>
+                                          </ul>
+                                        </div>
+                                      </div>
+                                    <div class="f_left">
+                                        <span class="t">针对不同带宽设置其对应阈值</span>
+                                    </div>
+                                    <div class="st_btn">
+                                    	<a class="btn"><span class="icon_recover"></span>恢复默认设置</a>
+                                    </div>
+                                </div>
+                                <div class="sub">
+                                        <div class="theadpart">
+                                        <table>
+                                            <tr>
+                                                <th width="20%">指标</th>
+                                                <th>阈值定义</th>
+                                                <th width="15%">抖动</th>
+                                                <th width="15%">超时时间</th>
+                                            </tr>
+                                        </table>
+                                        </div>
+                                        <div class="tbodypart">
+                                        	<table>
+                                                <tr>
+                                                    <td width="20%">可用状态</td>
+                                                    <td>-</td>
+                                                    <td width="15%">
+                                                        <div class="select_body" style="width:40px;">
+                                                             <div class="select_trigger_wrap"><a class="select_trigger"></a></div>
+                                                             <div class="select_text">2</div>
+                                                        </div>
+                                                        <div class="select_boundtree">
+                                                          <ul>
+                                                            <li><a><span class="t">1</span></a></li>
+                                                            <li><a class="on"><span class="t">2</span></a></li>
+                                                            <li><a><span class="t">3</span></a></li>
+                                                            <li><a><span class="t">4</span></a></li>
+                                                            <li><a><span class="t">5</span></a></li>
+                                                          </ul>
+                                                        </div>
+                                                    </td>
+                                                    <td width="15%">
+                                                    	<input class="blight" size="5" type="text"> 毫秒
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>上行流量</td>
+                                                    <td>
+                                                    	<input type="text" class="by" size="10" value="60"> Kbps
+                                                    	-
+                                                        <input type="text" class="br" size="10" value="80"> Kbps
+                                                    </td>
+                                                    <td>
+                                                        <div class="select_body" style="width:40px;">
+                                                             <div class="select_trigger_wrap"><a class="select_trigger"></a></div>
+                                                             <div class="select_text">2</div>
+                                                        </div>
+                                                        <div class="select_boundtree">
+                                                          <ul>
+                                                            <li><a><span class="t">1</span></a></li>
+                                                            <li><a class="on"><span class="t">2</span></a></li>
+                                                            <li><a><span class="t">3</span></a></li>
+                                                            <li><a><span class="t">4</span></a></li>
+                                                            <li><a><span class="t">5</span></a></li>
+                                                          </ul>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                    	<input class="blight" size="5" type="text"> 毫秒
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>下行流量</td>
+                                                    <td>
+                                                    	<input type="text" class="by" size="10" value="60"> Kbps
+                                                    	-
+                                                        <input type="text" class="br" size="10" value="80"> Kbps
+                                                    </td>
+                                                    <td>
+                                                        <div class="select_body" style="width:40px;">
+                                                             <div class="select_trigger_wrap"><a class="select_trigger"></a></div>
+                                                             <div class="select_text">2</div>
+                                                        </div>
+                                                        <div class="select_boundtree">
+                                                          <ul>
+                                                            <li><a><span class="t">1</span></a></li>
+                                                            <li><a class="on"><span class="t">2</span></a></li>
+                                                            <li><a><span class="t">3</span></a></li>
+                                                            <li><a><span class="t">4</span></a></li>
+                                                            <li><a><span class="t">5</span></a></li>
+                                                          </ul>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                    	<input class="blight" size="5" type="text"> 毫秒
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>总流量</td>
+                                                    <td>
+                                                    	<input type="text" class="by" size="10" value="60"> Kbps
+                                                    	-
+                                                        <input type="text" class="br" size="10" value="80"> Kbps
+                                                    </td>
+                                                    <td>
+                                                        <div class="select_body" style="width:40px;">
+                                                             <div class="select_trigger_wrap"><a class="select_trigger"></a></div>
+                                                             <div class="select_text">2</div>
+                                                        </div>
+                                                        <div class="select_boundtree">
+                                                          <ul>
+                                                            <li><a><span class="t">1</span></a></li>
+                                                            <li><a class="on"><span class="t">2</span></a></li>
+                                                            <li><a><span class="t">3</span></a></li>
+                                                            <li><a><span class="t">4</span></a></li>
+                                                            <li><a><span class="t">5</span></a></li>
+                                                          </ul>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                    	<input class="blight" size="5" type="text"> 毫秒
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>上行带宽利用率</td>
+                                                    <td>-
+                                                    </td>
+                                                    <td>
+                                                        <div class="select_body" style="width:40px;">
+                                                             <div class="select_trigger_wrap"><a class="select_trigger"></a></div>
+                                                             <div class="select_text">2</div>
+                                                        </div>
+                                                        <div class="select_boundtree">
+                                                          <ul>
+                                                            <li><a><span class="t">1</span></a></li>
+                                                            <li><a class="on"><span class="t">2</span></a></li>
+                                                            <li><a><span class="t">3</span></a></li>
+                                                            <li><a><span class="t">4</span></a></li>
+                                                            <li><a><span class="t">5</span></a></li>
+                                                          </ul>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                    	<input class="blight" size="5" type="text"> 毫秒
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>下行带宽利用率</td>
+                                                    <td>-
+                                                    </td>
+                                                    <td>
+                                                        <div class="select_body" style="width:40px;">
+                                                             <div class="select_trigger_wrap"><a class="select_trigger"></a></div>
+                                                             <div class="select_text">2</div>
+                                                        </div>
+                                                        <div class="select_boundtree">
+                                                          <ul>
+                                                            <li><a><span class="t">1</span></a></li>
+                                                            <li><a class="on"><span class="t">2</span></a></li>
+                                                            <li><a><span class="t">3</span></a></li>
+                                                            <li><a><span class="t">4</span></a></li>
+                                                            <li><a><span class="t">5</span></a></li>
+                                                          </ul>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                    	<input class="blight" size="5" type="text"> 毫秒
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>总带宽利用率</td>
+                                                    <td>-
+                                                    </td>
+                                                    <td>
+                                                        <div class="select_body" style="width:40px;">
+                                                             <div class="select_trigger_wrap"><a class="select_trigger"></a></div>
+                                                             <div class="select_text">2</div>
+                                                        </div>
+                                                        <div class="select_boundtree">
+                                                          <ul>
+                                                            <li><a><span class="t">1</span></a></li>
+                                                            <li><a class="on"><span class="t">2</span></a></li>
+                                                            <li><a><span class="t">3</span></a></li>
+                                                            <li><a><span class="t">4</span></a></li>
+                                                            <li><a><span class="t">5</span></a></li>
+                                                          </ul>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                    	<input class="blight" size="5" type="text"> 毫秒
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>
+                        
+                        
+                      </div>
+                      <div class="tab-content" id="allset_tab3" style="display:none">
+                       	<div class="st">
+                        	<div class="f_left"><span class="icon_uncheck"></span> 控制全局（全部拓扑图统一按照全局设置显示，单个资源的属性设置将不生效。）</div>
+                        </div>
+                        <div class="simple">
+                            <table cellpadding="0" cellspacing="0">
+                            	<tr>
+                                	<td width="20%">不显示事件和状态：</td>
+                                    <td><label><span class="icon_uncheck"></span></label></td>
+                                </tr>
+                                <tr>
+                                	<td>拓扑显示设备：</td>
+                                	<td>
+                                    	<label class="dis"><span class="icon_uncheck dis"></span>路由器</label>
+                                    	<label class="dis"><span class="icon_uncheck dis"></span>三层交换机</label>
+                                        <label class="dis"><span class="icon_uncheck dis"></span>二层交换机</label>
+                                        <label class="dis"><span class="icon_uncheck dis"></span>无线AP设备</label>
+                                        <label class="dis"><span class="icon_uncheck dis"></span>路由器</label>
+                                    	<label class="dis"><span class="icon_uncheck dis"></span>三层交换机</label>
+                                        <label class="dis"><span class="icon_uncheck dis"></span>二层交换机</label>
+                                        <label class="dis"><span class="icon_uncheck dis"></span>无线AP设备</label>
+                                        <label><span class="icon_uncheck"></span>主机</label>
+                                    	<label><span class="icon_uncheck"></span>存储设备</label>
+                                        <label><span class="icon_uncheck"></span>其他</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                	<td>文字显示比例：</td>
+                                	<td>-</td>
+                                </tr>
+                                <tr>
+                                	<td>节点文字颜色：</td>
+                                	<td>-</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="button">
+                        	<input class="submit" type="button" value="确定" />
+                            <input class="cancel" type="button" value="取消" />
+                        </div>
+                      </div>
+                    </div>
+                    
+              </div>
+          </div>
+        </div>
+            <div class="bottom-l">
+              <div class="bottom-r">
+                <div class="bottom-m"></div>
+          </div>
+        </div>
+    </div>
+</div>
+<!--board-->
+<div id="board" style="width:1200px;display:none">
+    <div class="panel_null">
+            <div class="top-l">
+              <div class="top-r">
+                <div class="top-m"><span class="title">面板管理</span><span class="ico-quit"></span></div>
+          </div>
+        </div>
+            <div class="middle-l">
+              <div class="middle-r">
+              <div class="middle-m">
+			
+            <div class="layout">
+            <!--left tree-->
+            <div class="layout_left" style="height:530px;">
+            <div class="portlet">
+            <div class="top-l">
+              <div class="top-r">
+                <div class="top-m"><span class="title">选择设备</span><span class="ico-quit"></span></div>
+          	  </div>
+        	</div>
+            <div class="middle-l">
+              <div class="middle-r">
+              <div class="middle-m" style="height:500px;">
+              	<div class="st">
+                <div class="st_btn f_left">
+                <a class="btn" id="show_import"><span class="icon icon_import"></span> 导入</a>
+                <a class="btn"><span class="icon icon_share"></span> 导出</a>
+                </div>
+          	</div>
+            	<div class="scroll-pane" style="height:470px;">
+            	<ul class="tree-wrap">
+                                    <li nodeid="root">
+                                    <ul class="treeview">
+                                    <li class="collapsable">
+                                    	<div class="hitarea expandable-hitarea"></div>
+                                    	<input type="checkbox">
+                                    	<span>网络设备</span>
+                                        <ul>
+                                            <li class="collapsable">
+                                                <div class="hitarea expandable-hitarea"></div>
+                                                <input type="checkbox">
+                                                <span>路由器</span>
+                                            </li>
+                                            <li class="expandable">
+                                                <div class="hitarea expandable-hitarea"></div>
+                                                <input type="checkbox">
+                                                <span>交换机</span>
+                                                <ul>
+                                                    <li class="collapsable">
+                                                        <div class="hitarea expandable-hitarea"></div>
+                                                        <input type="checkbox">
+                                                        <span>锐捷</span>
+                                                        <ul>
+                                                            <li>
+                                                                <div class="placeholder"></div>
+                                                                <input type="checkbox">
+                                                                <span>RG-S5760(1)</span>
+                                                                <ul>
+                                                                    <li>
+                                                                        <div class="placeholder"></div>
+                                                                        <input type="checkbox">
+                                                                        <span>面板1(1)</span>
+                                                                        <span class="ico-tool" id="show_treetool"></span>
+                                                                    </li>
+                                                                    <li>
+                                                                        <div class="placeholder"></div>
+                                                                        <input type="checkbox">
+                                                                        <span>面板2(0)</span>
+                                                                        <span class="ico-tool"></span>
+                                                                    </li>
+                                                                    <li>
+                                                                        <div class="placeholder"></div>
+                                                                        <input type="checkbox">
+                                                                        <span>RG-S5760(1)</span>
+                                                                        <span class="ico-tool"></span>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                         </ul>
+                                                    </li>
+                                                    <li class="expandable">
+                                                        <div class="hitarea expandable-hitarea"></div>
+                                                        <input type="checkbox">
+                                                        <span>Windows(68)</span>
+                                                    </li>
+                                                    <li class="expandable last">
+                                                        <div class="hitarea expandable-hitarea"></div>
+                                                        <input type="checkbox">
+                                                        <span>Windows(68)</span>
+                                                    </li>
+                                                 </ul>
+                                            </li>
+                                            <li class="expandable last">
+                                                <div class="hitarea expandable-hitarea"></div>
+                                                <input type="checkbox">
+                                                <span>安全设备</span>
+                                            </li>
+                                         </ul>
+                                    </li>
+                                    <li class="expandable">
+                                    	<div class="hitarea expandable-hitarea"></div>
+                                    	<input type="checkbox">
+                                    	<span>无线设备</span>
+                                        <ul>
+                                            <li class="expandable">
+                                                <div class="hitarea expandable-hitarea"></div>
+                                                <input type="checkbox">
+                                                <span>无线AC设备</span>
+                                            </li>
+                                            <li class="expandable">
+                                                <div class="hitarea expandable-hitarea"></div>
+                                                <input type="checkbox">
+                                                <span>无线AP设备</span>
+                                            </li>
+                                         </ul>
+                                    </li>
+                                    </ul>
+                                    </li>
+                              </ul>
+                </div>
+              </div>
+          </div>
+        </div>
+            <div class="bottom-l">
+              <div class="bottom-r">
+                <div class="bottom-m"></div>
+          </div>
+        </div>
+    </div>
+    		</div>
+           	<!--right-->
+           	<div class="layout_right" style="width:890px; height:530px;">
+           <div class="tab-group">
+              <div class="tab">
+                <ul>
+                  <li class="on"><a id="show_tab1">面板配置</a> </li>
+                  <li><a id="show_tab2">设备关联</a> </li>
+                </ul>
+              </div>
+              <div class="tab-content" id="tab1" style="height:500px;">
+               		<div class="st">
+                    	<table>
+                        <tr>
+                        	<td width="10%">面板名称：</td>
+                            <td width="15%"><span class="bt">13</span></td>
+                            <td width="10%">设备类型：</td>
+                            <td width="15%"><span class="bt">交换机</span></td>
+                            <td width="10%">设备厂商：</td>
+                            <td width="15%"><span class="bt">锐捷</span></td>
+                            <td width="10%">设备系列：</td>
+                            <td width="15%"><span class="bt">RG-S20</span></td>
+                        </tr>
+                        </table>
+                    </div>
+                    <div class="bb2" style="height:468px;">
+                    	<div class="nodata" style="margin-top:10%;"><span>暂无可展示的数据。</span></div>
+                    </div>
+              </div>
+              <div class="tab-content" id="tab2" style="height:500px; display:none;">
+               		<div class="st">
+                    <div class="f_left">
+                        <div class="select_body">
+                             <div class="select_trigger_wrap"><a class="select_trigger"></a></div>
+                             <div class="select_text">IP地址</div>
+                        </div>
+                        <div class="select_boundtree">
+                          <ul>
+                            <li><a><span class="t">设备名称</span></a></li>
+                            <li><a><span class="t">设备型号</span></a></li>
+                          </ul>
+                        </div>
+                    </div>
+                    <div class="f_left"><input class="search null" value="" /> <span class="icon icon_search"></span></div>
+                    <div class="st_btn">
+                    <a class="btn" id="show_add"><span class="icon icon_plusc"></span>添加</a>
+                    <a class="btn"><span class="icon icon_trash"></span>删除</a>
+                    </div>
+                    </div>
+                    <div class="bb2" style="height:468px;">
+                    	<div class="common">
+                        	<div class="theadpart">
+                            <table>
+                            	<tr>
+                                	<th width="10%" class="tcenter"><span class="icon_checked"></span></th>
+                                	<th width="30%">设备名称</th>
+                                    <th width="30%">IP地址</th>
+                                    <th>设备型号</th>
+                                </tr>
+                            </table>
+                            </div>
+                            <div class="tbodypart">
+                            <table>
+                            	<tr>
+                                	<td width="10%" class="tcenter"><span class="icon_checked"></span></td>
+                                	<td width="30%">S5760_test</td>
+                                    <td width="30%">172.17.161.1</td>
+                                    <td>s5760-48GT-4SFP</td>
+                                </tr>
+                                <tr class="cbg">
+                                	<td width="10%" class="tcenter"><span class="icon_checked"></span></td>
+                                	<td width="30%">S5760_test</td>
+                                    <td width="30%">172.17.161.1</td>
+                                    <td>s5760-48GT-4SFP</td>
+                                </tr>
+                                <tr>
+                                	<td width="10%" class="tcenter"><span class="icon_checked"></span></td>
+                                	<td width="30%">S5760_test</td>
+                                    <td width="30%">172.17.161.1</td>
+                                    <td>s5760-48GT-4SFP</td>
+                                </tr>
+                            </table>
+                            </div>
+                        </div>
+                    </div>
+              </div>
+            </div>
+           </div>
+			</div>
+
+              </div>
+          </div>
+        </div>
+            <div class="bottom-l">
+              <div class="bottom-r">
+                <div class="bottom-m"></div>
+          </div>
+        </div>
+    </div>
+</div>
+<!--boardinfo-->
+<div id="boardinfo" style="width:800px;display:none">
+    <div class="panel">
+            <div class="top-l">
+              <div class="top-r">
+                <div class="top-m"><span class="title">面板信息（172.17.167.2）</span><span class="ico-quit"></span></div>
+          </div>
+        </div>
+            <div class="middle-l">
+              <div class="middle-r">
+              <div class="middle-m">
+                <div class="rare">
+                    <table>
+                    	<tr>
+                        	<th>设备信息</th>
+                        </tr>
+                    </table>
+                    <table>
+                    	<tr>
+                        	<td width="13%">设备名称：</td>
+                            <td width="20%">S3760</td>
+                            <td width="13%">显示名称：</td>
+                            <td width="20%">S3760</td>
+                        	<td width="13%">设备IP：</td>
+                            <td>172.17.167.2</td>
+                        </tr>
+                        <tr class="last">
+                        	<td>设备类型：</td>
+                            <td>三层交换机</td>
+                        	<td>设备型号：</td>
+                            <td>s3760E-48</td>
+                            <td>设备厂商：</td>
+                            <td>锐捷</td>
+                        </tr>
+                    </table>
+                    </div>
+                    <div class="rare">
+                    <table>
+                    	<tr>
+                        	<th>面板信息</th>
+                            <th>
+                            	<div class="f_right">
+                        		<span class="port_sgreen"></span>可用
+                            	<span class="port_sred"></span>不可用
+                            	<span class="port_sgray"></span>未知
+                        		</div>
+                            </th>
+                        </tr>
+                    </table>
+                    </div>
+                    <div class="bb2" style="height:360px;">
+                        <div class="nodata" style="margin-top:5%;"><span>暂无可展示的数据。</span></div>
+                    </div>
+              </div>
+          </div>
+        </div>
+            <div class="bottom-l">
+              <div class="bottom-r">
+                <div class="bottom-m"></div>
+          </div>
+        </div>
+    </div>
+</div>
+<!--treetool-->
+<div id="treetool" style="top:305px;left:290px; position:absolute; display:none; z-index:9999">
+    <div class="layer">
+            <div class="top-l">
+              <div class="top-r">
+                <div class="top-m"><span class="title">---</span><span class="ico-quit"></span></div>
+              </div>
+            </div>
+            <div class="middle-l">
+              <div class="middle-r">
+                <div class="middle-m" style="width:70px;">
+                	<ul>
+                    	<li class="first"><a class="btn on"><span class="icon icon_plusc"></span><span>新建</span></a></li>
+                        <li class="last"><a class="btn"><span class="icon icon_share"></span><span>导出</span></a></li>
+                    </ul>
+                </div>
+              </div>
+            </div>
+            <div class="bottom-l">
+              <div class="bottom-r">
+                <div class="bottom-m"></div>
+              </div>
+            </div>
+        </div>
+</div>
+<!--add-->
+<div id="add" style="width:700px;display:none">
+    <div class="panel">
+            <div class="top-l">
+              <div class="top-r">
+                <div class="top-m"><span class="title">添加设备</span><span class="ico-quit"></span></div>
+          </div>
+        </div>
+            <div class="middle-l">
+              <div class="middle-r">
+              <div class="middle-m">
+                <!--table-->
+                    <div class="st">
+                    <div class="f_left">
+                        <div class="select_body">
+                             <div class="select_trigger_wrap"><a class="select_trigger"></a></div>
+                             <div class="select_text">IP地址</div>
+                        </div>
+                        <div class="select_boundtree">
+                          <ul>
+                            <li><a><span class="t">设备名称</span></a></li>
+                            <li><a><span class="t">设备型号</span></a></li>
+                          </ul>
+                        </div>
+                    </div>
+                    <div class="f_left"><input class="search null" value="" /> <span class="icon icon_search"></span></div>
+                    </div>
+                   	<div class="common">
+                        	<div class="theadpart">
+                            <table>
+                            	<tr>
+                               	  <th width="10%" class="tcenter"><span class="icon_checked"></span></th>
+                                	<th width="30%">设备名称</th>
+                                    <th width="20%">IP地址</th>
+                                    <th width="20%">设备型号</th>
+                                    <th>所用面板</th>
+                                </tr>
+                            </table>
+                            </div>
+                            <div class="tbodypart scroll-pane" style="height:300px;">
+                            <table>
+                            	<tr>
+                               	  <td width="10%" class="tcenter"><span class="icon_checked"></span></td>
+                                	<td width="30%">S5760_test</td>
+                                    <td width="20%">172.17.161.1</td>
+                                    <td width="20%">s5760-48GT-4SFP</td>
+                                    <td>面板1</td>
+                                </tr>
+                                <tr class="cbg">
+                               	  <td width="10%" class="tcenter"><span class="icon_checked"></span></td>
+                                	<td width="30%">S5760_test</td>
+                                    <td width="30%">172.17.161.1</td>
+                                    <td>s5760-48GT-4SFP</td>
+                                    <td>面板1</td>
+                                </tr>
+                                <tr>
+                               	  <td width="10%" class="tcenter"><span class="icon_checked"></span></td>
+                                	<td width="30%">S5760_test</td>
+                                    <td width="30%">172.17.161.1</td>
+                                    <td>s5760-48GT-4SFP</td>
+                                    <td>面板1</td>
+                                </tr>
+                            </table>
+                            </div>
+                </div>
+                <div class="button">
+                        <input type="button" class="submit" value="确定">
+                        <input type="button" class="cancel" value="取消">
+                    </div>
+              </div>
+          </div>
+        </div>
+            <div class="bottom-l">
+              <div class="bottom-r">
+                <div class="bottom-m"></div>
+          </div>
+        </div>
+    </div>
+
+</div>
+<!--addlink-->
+<div id="addlink" style="width:550px;display:none">
+    <div class="panel">
+            <div class="top-l">
+              <div class="top-r">
+                <div class="top-m"><span class="title">添加链路</span><span class="ico-quit"></span></div>
+          </div>
+        </div>
+            <div class="middle-l">
+              <div class="middle-r">
+              <div class="middle-m">
+                <!--table-->
+                   	<div class="form">
+                            <table cellpadding="0" cellspacing="0">
+                            	<tr>
+                               	  	<td width="30%">源IP地址：</td>
+                                	<td width="70%"><input type="text" class="forminput"><a class="btn_s" style="margin-left:30px;">获取接口</a></td>
+                                </tr>
+                                <tr class="cbg">
+                               	  	<td>源接口：</td>
+                                	<td>
+                                    <div class="select_body" style="width:200px;">
+                                         <div class="select_trigger_wrap"><a class="select_trigger"></a></div>
+                                         <div class="select_text">--</div>
+                                    </div>
+                                    <div class="select_boundtree">
+                                      <ul>
+                                        <li><a><span class="t">--</span></a></li>
+                                        <li><a><span class="t">--</span></a></li>
+                                      </ul>
+                                    </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                               	  	<td width="30%">目的IP地址：</td>
+                                	<td width="70%"><input type="text" class="forminput"><a class="btn_s" style="margin-left:30px;">获取接口</a></td>
+                                </tr>
+                                <tr class="cbg">
+                               	  	<td>目的接口：</td>
+                                	<td>
+                                    <div class="select_body" style="width:200px;">
+                                         <div class="select_trigger_wrap"><a class="select_trigger"></a></div>
+                                         <div class="select_text">--</div>
+                                    </div>
+                                    <div class="select_boundtree">
+                                      <ul>
+                                        <li><a><span class="t">--</span></a></li>
+                                        <li><a><span class="t">--</span></a></li>
+                                      </ul>
+                                    </div>
+                                    </td>
+                                </tr>
+                            </table>
+                            </div>
+                <div class="button">
+                        <input type="button" class="submit" value="确定">
+                        <input type="button" class="cancel" value="取消">
+                </div>
+              </div>
+          </div>
+      </div>
+            <div class="bottom-l">
+              <div class="bottom-r">
+                <div class="bottom-m"></div>
+          </div>
+        </div>
+  </div>
+
+</div>
+<!--textarea-->
+<div id="textarea" style="width:550px;display:none">
+    <div class="panel">
+            <div class="top-l">
+              <div class="top-r">
+                <div class="top-m"><span class="title">编辑备注</span><span class="ico-quit"></span></div>
+          </div>
+        </div>
+            <div class="middle-l">
+              <div class="middle-r">
+              <div class="middle-m">
+                <!--table-->
+                <div style="padding:20px;"><textarea style="width:500px;"></textarea></div>
+                <div class="button">
+                        <input type="button" class="submit" value="确定">
+                        <input type="button" class="cancel" value="取消">
+                </div>
+              </div>
+          </div>
+      </div>
+            <div class="bottom-l">
+              <div class="bottom-r">
+                <div class="bottom-m"></div>
+          </div>
+        </div>
+  </div>
+
+</div>
+<!--import-->
+<div id="import" style="width:550px;display:none">
+    <div class="panel">
+            <div class="top-l">
+              <div class="top-r">
+                <div class="top-m"><span class="title">面板导入</span><span class="ico-quit"></span></div>
+          </div>
+        </div>
+            <div class="middle-l">
+              <div class="middle-r">
+              <div class="middle-m">
+                <!--table-->
+                <div class="form">
+                	<table cellpadding="0" cellspacing="0">
+                    	<tr>
+                        	<td width="60">选择文件：</td>
+                            <td><input name="" type="file" /></td>
+                        </tr>
+                        <tr>
+                        	<td colspan="2">若导入面板已存在，请选择处理方式：</td>
+                        </tr>
+                        <tr>
+                        	<td colspan="2"><span class="icon_checked"></span> <span class="t">覆盖（仅覆盖面板名称、面板图信息）</span></td>
+                        </tr>
+                        <tr>
+                        	<td colspan="2"><span class="icon_uncheck"></span> <span class="t">创建为自定义面板</span></td>
+                        </tr>
+                        <tr>
+                        	<td colspan="2"><span class="icon_uncheck"></span> <span class="t">放弃导入</span></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="button">
+                        <input type="button" class="submit" value="确定">
+                        <input type="button" class="cancel" value="取消">
+                </div>
+              </div>
+          </div>
+      </div>
+            <div class="bottom-l">
+              <div class="bottom-r">
+                <div class="bottom-m"></div>
+          </div>
+        </div>
+  </div>
+
+</div>
+
+<script>
+$("#show_allset").click(function(){
+	art.dialog({
+    content: document.getElementById('allset'),
+	padding: 0,
+	lock: true
+	});
+});
+$("#show_board").click(function(){
+	art.dialog({
+    content: document.getElementById('board'),
+	padding: 0,
+	lock: true
+	});
+});
+$("#show_boardinfo").click(function(){
+	art.dialog({
+    content: document.getElementById('boardinfo'),
+	padding: 0,
+	lock: true
+	});
+});
+$("#show_add").click(function(){
+	art.dialog({
+    content: document.getElementById('add'),
+	padding: 0,
+	lock: true
+	});
+});
+$("#show_addlink").click(function(){
+	art.dialog({
+    content: document.getElementById('addlink'),
+	padding: 0,
+	lock: true
+	});
+}); 
+$("#show_textarea").click(function(){
+	art.dialog({
+    content: document.getElementById('textarea'),
+	padding: 0,
+	lock: true
+	});
+});
+$("#show_import").click(function(){
+	art.dialog({
+    content: document.getElementById('import'),
+	padding: 0,
+	lock: true
+	});
+});
+$("#show_treetool").click(function(){
+	$("#treetool").show();
+	return false;
+	})
+$("#show_yuzhiset").click(function(){
+	$(this).html('隐藏');
+	$("#yuzhiset").fadeIn(300);
+	return false;
+	})
+$("#show_tab1").click(function(){
+	$(this).closest("ul").find("li").removeClass("on");
+	$(this).closest("li").addClass("on");
+	$("#tab2").hide();
+	$("#tab1").fadeIn(300);
+	});
+$("#show_tab2").click(function(){
+	$(this).closest("ul").find("li").removeClass("on");
+	$(this).closest("li").addClass("on");
+	$("#tab1").hide();
+	$("#tab2").fadeIn(300);
+	});
+$("#show_allset_tab1").click(function(){
+	$(this).closest("ul").find("li").removeClass("on");
+	$(this).closest("li").addClass("on");
+	$("#allset_tab2").hide();
+	$("#allset_tab3").hide();
+	$("#allset_tab1").fadeIn(300);
+	});
+$("#show_allset_tab2").click(function(){
+	$(this).closest("ul").find("li").removeClass("on");
+	$(this).closest("li").addClass("on");
+	$("#allset_tab1").hide();
+	$("#allset_tab3").hide();
+	$("#allset_tab2").fadeIn(300);
+	});
+$("#show_allset_tab3").click(function(){
+	$(this).closest("ul").find("li").removeClass("on");
+	$(this).closest("li").addClass("on");
+	$("#allset_tab2").hide();
+	$("#allset_tab1").hide();
+	$("#allset_tab3").fadeIn(300);
+	});
+</script>
+</body>
+</html>

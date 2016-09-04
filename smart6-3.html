@@ -1,0 +1,225 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>RIIL Smart</title>
+<!--gloab-->
+<link href="../css/comm.css" rel="stylesheet" type="text/css" />
+<link href="../css/widget.css" rel="stylesheet" type="text/css" />
+<link href="../css/ico.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../js/jquery-1.8.2.min.js"></script>
+<!--demo-->
+<link href="../css/demo.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../js/demo.js"></script>
+<!--artdialog-->
+<link href="../css/artdialog.css" rel="stylesheet" />
+<script src="../js/artDialog.min.js"></script>
+<script src="../js/jquery.overlay.min.js"></script>
+<!--scroll-->
+<link href="../css/jquery.jscrollpane.css" rel="stylesheet" type="text/css" />
+<script src="../js/jquery.mousewheel.js"></script>
+<script src="../js/jquery.jscrollpane.min.js"></script>
+<script>
+$(function()
+{
+	var settings = {
+		showArrows: false,
+		autoReinitialise: true
+	};
+	$('.scroll-pane').jScrollPane(settings);
+});
+</script>
+</head>
+<body>
+    <!--layout right-->
+    <div class="layout_right bar">
+        <div class="p_content">
+          <div class="tab-group">
+                <div class="tab">
+                  <ul>
+                    <li class="on"><a href="smart6-3.html">系统审计日志</a> </li>
+                    <li><a href="smart6-3-1.html">系统信息</a> </li>
+                    <li><a href="smart6-3-2.html">清空数据</a> </li>
+                </ul>
+              </div>
+                <div class="tab-content" style="height:600px;">
+                  <div class="st">
+                    <div class="st_btn">
+                    <a class="btn"><span class="icon icon_repeat"></span> 清空</a>
+                    <a class="btn"><span class="icon icon_trash"></span> 删除</a>
+                    </div>
+                  </div>
+                    <div class="common">
+                        <div class="theadpart">
+                        <table>
+                            <thead>
+                            <tr>						
+                                <th width="5%" class="tcenter"><span class="icon icon_uncheck"></span></th>
+                                <th width="20%">操作时间</th>
+                                <th width="15%">操作人</th>
+                                <th width="15%">客户端IP	</th>
+                                <th width="15%">操作模块</th>
+                                <th width="15%">操作</th>
+                                <th>操作对象</th>
+                            </tr>
+                            </thead>
+                        </table>
+                        </div>
+                        <div class="tbodypart">
+                        <table>
+                            <tbody> 	   		
+                                <tr>
+                                    <td width="5%" class="tcenter"><span class="icon icon_uncheck"></span></td>
+                                    <td width="20%">2013/03/22 18:22:00</td>
+                                    <td width="15%">周周</td>
+                                    <td width="15%">192.168.2.11</td>
+                                    <td width="15%">审计日志</td>
+                                    <td width="15%">查看</td>
+                                    <td>审计日志</td>
+                                </tr>
+                                <tr class="cbg">
+                                    <td class="tcenter"><span class="icon icon_uncheck"></span></td>
+                                    <td>2013/03/22 18:22:00</td>
+                                    <td>周周</td>
+                                    <td>192.168.2.11</td>
+                                    <td>系统管理</td>
+                                    <td>查看</td>
+                                    <td>系统管理 － 报警设置</td>
+                                </tr>
+                                <tr>
+                                    <td class="tcenter"><span class="icon icon_uncheck"></span></td>
+                                    <td>2013/03/22 18:22:00</td>
+                                    <td>雷雷</td>
+                                    <td>192.168.2.11</td>
+                                    <td>系统管理</td>
+                                    <td>查看</td>
+                                    <td>系统管理 － 用户管理</td>
+                                </tr>
+                                <tr class="cbg">
+                                    <td class="tcenter"><span class="icon icon_uncheck"></span></td>
+                                    <td>2013/03/22 18:22:00</td>
+                                    <td>雷雷</td>
+                                    <td>192.168.2.11</td>
+                                    <td>系统管理</td>
+                                    <td>查看</td>
+                                    <td>系统管理</td>
+                                </tr>
+                                <tr>
+                                    <td class="tcenter"><span class="icon icon_uncheck"></span></td>
+                                    <td>2013/03/22 18:22:00</td>
+                                    <td>雷雷</td>
+                                    <td>192.168.2.11</td>
+                                    <td>工作台</td>
+                                    <td>查看</td>
+                                    <td>工作台</td>
+                                </tr>
+                                <tr class="cbg">
+                                    <td class="tcenter"><span class="icon icon_uncheck"></span></td>
+                                    <td>2013/03/22 18:22:00</td>
+                                    <td>周周</td>
+                                    <td>192.168.2.11</td>
+                                    <td>网络拓扑</td>
+                                    <td>查看</td>
+                                    <td>网络拓扑</td>
+                                </tr>
+                                <tr>
+                                    <td class="tcenter"><span class="icon icon_uncheck"></span></td>
+                                    <td>2013/03/22 18:22:00</td>
+                                    <td>周周</td>
+                                    <td>192.168.2.11</td>
+                                    <td>资源管理</td>
+                                    <td>查看</td>
+                                    <td>资源管理</td>
+                                </tr>
+                                <tr class="cbg">
+                                    <td class="tcenter"><span class="icon icon_uncheck"></span></td>
+                                    <td>2013/03/22 18:22:00</td>
+                                    <td>周周</td>
+                                    <td>192.168.2.11</td>
+                                    <td>系统管理</td>
+                                    <td>查看</td>
+                                    <td>系统管理 － 监控模板</td>
+                                </tr>
+                                <tr>
+                                    <td class="tcenter"><span class="icon icon_uncheck"></span></td>
+                                    <td>2013/03/26 18:22:00</td>
+                                    <td>雷雷</td>
+                                    <td>192.168.2.11</td>
+                                    <td>RIILSMART</td>
+                                    <td>登录</td>
+                                    <td>RIILSMART</td>
+                                </tr>
+                                <tr class="cbg">
+                                    <td class="tcenter"><span class="icon icon_uncheck"></span></td>
+                                    <td>2013/03/26 18:22:00</td>
+                                    <td>雷雷</td>
+                                    <td>192.168.2.11</td>
+                                    <td>监控模板</td>
+                                    <td>复制</td>
+                                    <td>复制监控模板</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        </div>
+                        </div>
+          </div>
+    </div>
+        </div>
+    </div>
+
+    <!--layout left-->
+    <div class="layout_left bar">
+    <ul class="sidebar">
+        <li class="first">
+            <a href="smart6.html">
+                <span class="big_users"></span>
+                <span class="sidebar-text">用户管理</span>
+            </a>
+        </li>
+        <li>
+            <a href="smart6-4.html">
+            	<span class="big_radar"></span>
+                <span class="sidebar-text">资源发现</span>
+            </a>
+            <ul class="sub-sidebar">
+            <li>
+                <a href="smart6-4.html">
+                    <span class="big_find"></span>
+                	<span class="sidebar-text">单个资源发现</span>
+                </a>
+            </li>
+            <li class="divider"></li>
+            <li>
+                <a href="smart6-4-1.html">
+                    <span class="big_findauto"></span>
+                	<span class="sidebar-text">自动拓扑发现</span>
+                </a>
+            </li>
+        </ul>
+        </li>
+        <li>
+            <a href="smart6-2.html">
+            	<span class="big_bell"></span>
+                <span class="sidebar-text">报警设置</span>
+            </a>
+        </li>
+        <li class="on">
+            <a href="smart6-3.html">
+            	<span class="big_setting"></span>
+                <span class="sidebar-text">系统信息</span>
+            </a>
+        </li>
+    </ul>
+	</div>
+
+<script type=text/javascript>
+$(function(){
+	$('#select1 li').hover(function(){
+		$(this).children('ul').stop(true,true).show();
+	},function(){
+		$(this).children('ul').stop(true,true).hide();
+	});
+});
+</script>
+</body>
+</html>

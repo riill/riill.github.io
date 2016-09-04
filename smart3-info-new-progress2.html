@@ -1,0 +1,455 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<!--gloab-->
+<link href="../css/comm.css" rel="stylesheet" type="text/css" />
+<link href="../css/widget.css" rel="stylesheet" type="text/css" />
+<link href="../css/ico.css" rel="stylesheet" type="text/css" />
+<link href="../css/tree.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../js/jquery-1.8.2.min.js"></script>
+<!--demo-->
+<link href="../css/demo.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../js/demo.js"></script>
+<!--artdialog-->
+<link href="../css/artdialog.css" rel="stylesheet" />
+<script src="../js/artDialog.min.js"></script>
+<script src="../js/jquery.overlay.min.js"></script>
+<!--scroll-->
+<link href="../css/jquery.jscrollpane.css" rel="stylesheet" type="text/css" />
+<script src="../js/jquery.mousewheel.js"></script>
+<script src="../js/jquery.jscrollpane.min.js"></script>
+<script>
+$(function()
+{
+	var settings = {
+		showArrows: false,
+		autoReinitialise: true
+	};
+	$('.scroll-pane').jScrollPane(settings);
+});
+</script>
+</head>
+<body class='fixsize'>
+	<div class="st">
+      <table>
+        <tbody><tr>
+          <td width="7%">资源名称：</td>
+                <td width="7%"><span class="bt">WIN-CRI7TJ4VFIF</span></td>
+          <td width="7%">显示名称：</td>
+                <td width="7%"><span class="bt">WIN-CRI7TJ4VFIF</span></td>
+          <td width="7%">IP地址：</td>
+          <td width="7%"><span class="bt">192.168.0.1</span></td>
+          <td width="7%">资源类型：</td>
+          <td width="7%"><span class="bt">WINDOWS</span></td>
+          <td width="7%">操作系统：</td>
+          <td width="7%"><span class="bt">Windows</span></td>
+          <td width="7%">当前可用性：</td>
+          <td><span class="bt">可用</span></td>
+          <td width="7%">运行时长：</td>
+          <td><span class="bt">20小时20分65秒</span></td>
+            </tr>
+      </tbody></table>
+</div>
+    <div class="tshadow">
+    <img src="../images/demo/lg-host.png" usemap="#Map" border="0" />
+    <map name="Map" id="Map"><area shape="rect" coords="712,16,803,68" href="smart3-info-netport-son.html" />
+      <area shape="rect" coords="423,16,490,65" href="smart3-info-new.html" />
+      <area shape="rect" coords="518,16,593,68" href="smart3-info-new-cpu.html" />
+      <area shape="rect" coords="616,16,703,69" href="smart3-info-new-disk.html" />
+      <area shape="rect" coords="810,17,896,74" href="smart3-info-new-progress.html" />
+    </map>
+    </div>
+    <!--通栏-->
+    <div class="detail">
+    <!--标题-->
+    <div class="rare">
+    	<table>
+        	<tr>
+            	<th>进程</th>
+                <th><a class="btn f_right" id="show_scan"><span class="icon icon_scan"></span>扫描</a></th>
+            </tr>
+        </table>
+    </div>
+    <!--内容-->
+    <div class="common">
+    	<div class="theadpart">
+        <table>
+        <tr>
+        <th width="5%" class="tcenter">状态</th>	 
+        <th width="15%"><a class="rank-pull"></a>显示名称	</th>
+        <th width="10%">进程可用状态</th>
+        <th width="10%">CPU利用率(%)</th>
+        <th width="10%">内存利用率(%)</th>
+        <th width="10%">PID</th>
+        <th width="10%">进程名称</th>
+        <th width="10%">进程路径</th>
+        <th width="10%">启动参数</th>
+        <th width="10%">物理内存(KB)</th>
+        </tr>
+        </table>
+        </div>
+        <div class="tbodypart scroll-pane" style="height:250px;">
+        <table>
+        	<tr class="on">
+            	<td width="5%" class="tcenter"><span class="status_g"></span></td>
+                <td width="15%">AcPrfMgrSvc.exe</td>
+                <td width="10%">-</td>
+                <td width="10%">-</td>
+                <td width="10%">-</td>
+                <td width="10%">-</td>
+                <td width="10%">-</td>
+                <td width="10%">-</td>
+                <td width="10%">-</td>
+                <td width="10%">-</td>
+            </tr>
+            <tr class="cbg">
+            	<td class="tcenter"><span class="status"></span></td>
+                <td>ABCD.exe</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr>
+            	<td class="tcenter"><span class="status"></span></td>
+                <td>ABCD.exe</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr class="cbg">
+            	<td class="tcenter"><span class="status"></span></td>
+                <td>ABCD.exe</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr>
+            	<td class="tcenter"><span class="status"></span></td>
+                <td>ABCD.exe</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr class="cbg">
+            	<td class="tcenter"><span class="status"></span></td>
+                <td>ABCD.exe</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr>
+            	<td class="tcenter"><span class="status"></span></td>
+                <td>ABCD.exe</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr class="cbg">
+            	<td class="tcenter"><span class="status"></span></td>
+                <td>ABCD.exe</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr>
+            	<td class="tcenter"><span class="status"></span></td>
+                <td>ABCD.exe</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr class="cbg">
+            	<td class="tcenter"><span class="status"></span></td>
+                <td>ABCD.exe</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr>
+            	<td class="tcenter"><span class="status"></span></td>
+                <td>ABCD.exe</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        </table>
+        </div>
+    </div>
+    </div>
+    
+    <!--4栏-->
+    <div class="detail4">
+        <div class="lrline2">
+        <div class="rare">
+            <table>
+                <tbody><tr>
+                    <th>指标一览</th>
+                    <th></th>
+                </tr>
+            </tbody></table>
+        </div>
+        <div class="common">
+                    <div class="tbodypart scroll-pane" style="height:250px;">
+                    <table>			
+                        <tbody>
+                        	<tr>
+                                <td><span class="icon_down"></span>可用性指标</td>
+                            </tr>
+                            <tr class="on">
+                                <td><span class="icon"></span>进程可用状态</td>
+                            </tr>
+                            <tr>
+                                <td><span class="icon_down"></span>性能指标</td>
+                            </tr>
+                            <tr>
+                                <td><span class="icon"></span>CPU利用率(%)</td>
+                            </tr>
+                            <tr>
+                                <td><span class="icon"></span>内存利用率(%)</td>
+                            </tr>
+                            <tr>
+                                <td><span class="icon_down"></span>信息指标</td>
+                            </tr>
+                            <tr>
+                                <td><span class="icon"></span>PID</td>
+                            </tr>
+                            <tr>
+                                <td><span class="icon"></span>进程名称</td>
+                            </tr>
+                            <tr>
+                                <td><span class="icon"></span>进程路径</td>
+                            </tr>
+                            <tr>
+                                <td><span class="icon"></span>启动参数</td>
+                            </tr>
+                            <tr>
+                                <td><span class="icon"></span>物理内存(KB)</td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                	</div>
+                </div>
+        </div>
+    </div>
+    
+    <div class="detail4_3">
+        <div class="lrline2">
+        <div class="rare">
+            <table>
+                <tbody><tr>
+                    <th>指标状态</th>
+                    <th>
+                    	<div class="f_right">
+                        <div class="select_body">
+                             <div class="select_trigger_wrap"><a class="select_trigger"></a></div>
+                             <div class="select_text">CPU</div>
+                        </div>
+                        <div class="select_boundtree">
+                          <ul>
+                            <li><a class=""><span class="t">CPU</span></a></li>
+                            <li><a><span class="t">内存</span></a></li>
+                          </ul>
+                        </div>
+                        </div>
+                    </th>
+                </tr>
+            </tbody></table>
+        </div>
+        <div class="f_left" style="width:40%">
+            <div class="common r-line">
+                    <div class="tbodypart"  style="height:250px">
+                    <table>
+                        <tbody>
+                        	<tr>
+                            	<td width="30%">指标名称：</td>
+                                <td>进程可用状态</td>
+                            </tr>
+                            <tr class="cbg">
+                                <td>指标状态：</td>
+                                <td><span class="status_g"></span></td>
+                            </tr>
+                            <tr>
+                                <td>当前值：</td>
+                                <td>1</td>
+                            </tr>
+                            <tr class="cbg">
+                                <td>最近采集时间：</td>
+                                <td>2013-07-22 16:14</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                	</div>
+            </div>
+            </div>
+        <div class="f_right" style="width:60%">
+            <img src="../images/demo/biao.jpg">
+            </div>
+        </div>
+    </div>
+    <!--bottom-->
+<div class="detail_footer">
+    	<a class="on" href="#"><span class="icon_home"></span></a>
+        <a href="#">指标列表</a>
+        <a href="#">告警内容</a>
+    </div>
+
+<!--scan-->
+<div id="scan" style="width:900px;display:none">
+    <div class="panel">
+    <div class="top-l">
+      <div class="top-r">
+        <div class="top-m">
+        	<span class="ico-quit"></span>
+        	<span class="title">进程列表</span>
+        </div>
+      </div>
+    </div>
+    <div class="middle-l">
+      <div class="middle-r">
+        <div class="middle-m"> 
+            <div class="st">
+            	<div class="st_btn">
+                	<a class="btn"><span class="icon_plusc"></span>加入监控</a>
+                    <a class="btn"><span class="icon_minus"></span>取消监控</a>
+                </div>
+            </div>
+            <div class="common">
+            	<table>
+                	<tr>
+                    	<th width="5%" class="tcenter"><span class="icon_uncheck"></span></th>
+                        <th width="5%" class="tcenter">状态</th>
+                        <th width="20%">进程名称</th>
+                        <th width="10%">PID</th>
+                        <th width="50%">启动路径</th>
+                        <th class="tcenter">监控状态</th>
+                    </tr>
+                </table>
+                <table cellpadding="0" cellspacing="0">
+                	<tr>
+                    	<td width="5%" class="tcenter"><span class="icon_uncheck"></span></td>
+                        <td width="5%" class="tcenter"><span class="status_g"></span></td>
+                        <td width="20%">wrapper.exe</td>
+                        <td width="10%">1292</td>
+                        <td width="50%">D:\ProgramFiles\ManageEegine\.........</td>
+                        <td class="tcenter"><span class="icon_access"></span></td>
+                    </tr>
+                    <tr>
+                    	<td class="tcenter"><span class="icon_uncheck"></span></td>
+                        <td class="tcenter"><span class="status_g"></span></td>
+                        <td>wrapper.exe</td>
+                        <td>1292</td>
+                        <td>D:\ProgramFiles\ManageEegine\.........</td>
+                        <td class="tcenter"><span class="icon_noaccess"></span></td>
+                    </tr>
+                    <tr>
+                    	<td class="tcenter"><span class="icon_uncheck"></span></td>
+                        <td class="tcenter"><span class="status_g"></span></td>
+                        <td>wrapper.exe</td>
+                        <td>1292</td>
+                        <td>D:\ProgramFiles\ManageEegine\.........</td>
+                        <td class="tcenter"><span class="icon_access"></span></td>
+                    </tr>
+                    <tr>
+                    	<td class="tcenter"><span class="icon_uncheck"></span></td>
+                        <td class="tcenter"><span class="status_g"></span></td>
+                        <td>wrapper.exe</td>
+                        <td>1292</td>
+                        <td>D:\ProgramFiles\ManageEegine\.........</td>
+                        <td class="tcenter"><span class="icon_access"></span></td>
+                    </tr>
+                    <tr>
+                    	<td class="tcenter"><span class="icon_uncheck"></span></td>
+                        <td class="tcenter"><span class="status_g"></span></td>
+                        <td>wrapper.exe</td>
+                        <td>1292</td>
+                        <td>D:\ProgramFiles\ManageEegine\.........</td>
+                        <td class="tcenter"><span class="icon_noaccess"></span></td>
+                    </tr>
+                    <tr>
+                    	<td class="tcenter"><span class="icon_uncheck"></span></td>
+                        <td class="tcenter"><span class="status_g"></span></td>
+                        <td>wrapper.exe</td>
+                        <td>1292</td>
+                        <td>D:\ProgramFiles\ManageEegine\.........</td>
+                        <td class="tcenter"><span class="icon_noaccess"></span></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="button">
+            	<input type="button" class="submit" value="保存" onclick="window.location='smart3-info-new-progress2.html'"> <input type="button" class="cancel dialog_close" value="取消">
+			</div>
+        </div>
+      </div>
+    </div>
+    <div class="bottom-l">
+      <div class="bottom-r">
+        <div class="bottom-m"></div>
+      </div>
+    </div>
+</div>
+</div>
+
+<script>
+$('#show_scan').click(function(){
+	art.dialog({
+    content: document.getElementById('scan'),
+	padding: 0,
+	lock: true
+	});
+});
+</script>
+
+</body>
+</html>

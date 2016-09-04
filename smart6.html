@@ -1,0 +1,359 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>RIIL Smart</title>
+<!--gloab-->
+<link href="../css/comm.css" rel="stylesheet" type="text/css" />
+<link href="../css/widget.css" rel="stylesheet" type="text/css" />
+<link href="../css/ico.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../js/jquery-1.8.2.min.js"></script>
+<!--demo-->
+<link href="../css/demo.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../js/demo.js"></script>
+<!--artdialog-->
+<link href="../css/artdialog.css" rel="stylesheet" />
+<script src="../js/artDialog.min.js"></script>
+<script src="../js/jquery.overlay.min.js"></script>
+<!--scroll-->
+<link href="../css/jquery.jscrollpane.css" rel="stylesheet" type="text/css" />
+<script src="../js/jquery.mousewheel.js"></script>
+<script src="../js/jquery.jscrollpane.min.js"></script>
+<script>
+$(function()
+{
+	var settings = {
+		showArrows: false,
+		autoReinitialise: true
+	};
+	$('.scroll-pane').jScrollPane(settings);
+});
+</script>
+</head>
+<body>
+    <!--layout right-->
+    <div class="layout_right bar">
+        <div class="p_content">
+        <div class="portlet">
+            <div class="top-l">
+              <div class="top-r">
+                <div class="top-m"><span class="title">用户管理</span> </div>
+              </div>
+            </div>
+            <div class="middle-l">
+              <div class="middle-r">
+                <div class="middle-m"> 
+                <!--search-->
+                <div class="st1">
+                    <div class="st_btn">
+                    <a class="btn" id="show_add"><span class="icon icon_edit"></span> 添加</a>
+                    <a class="btn" id="show_alert"><span class="icon icon_trash"></span> 删除</a>
+                    <a class="btn" id="show_loading"><span class="icon icon_loading"></span> Loading</a>
+                    </div>
+                </div>
+                <!--table-->
+                <div class="rare">
+                            <div class="theadpart">
+                            <table>
+                                <thead>
+                                <tr>
+                                    <th width="5%" class="tcenter"><span class="icon icon_uncheck"></span></th>
+                                    <th width="20%">用户名</th>
+                                    <th width="20%">用户类型</th>
+                                    <th width="15%">姓名</th>
+                                    <th width="20%">手机号码</th>
+                                    <th>电子邮箱</th>
+                                </tr>
+                                </thead>
+                            </table>
+                            </div>
+                            <div class="tbodypart">
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td width="5%" class="tcenter"><span class="icon icon_uncheck"></span></td>
+                                        <td width="20%"><a id="show_edit">Administrator</a></td>
+                                        <td width="20%">管理员</td>
+                                        <td width="15%">周周</td>
+                                        <td width="20%">13312345678</td>
+                                        <td>zhouzhou@zhouzhou.com</td>
+                                    </tr>
+                                    <tr class="cbg">
+                                        <td class="tcenter"><span class="icon icon_uncheck"></span></td>
+                                        <td>Administrator</td>
+                                        <td>管理员</td>
+                                        <td>周周</td>
+                                        <td>13312345678</td>
+                                        <td>zhouzhou@zhouzhou.com</td></tr>
+                                    <tr>
+                                        <td class="tcenter"><span class="icon icon_uncheck"></span></td>
+                                        <td>Administrator</td>
+                                        <td>管理员</td>
+                                        <td>周周</td>
+                                        <td>13312345678</td>
+                                        <td>zhouzhou@zhouzhou.com</td></tr>
+                                    <tr class="cbg">
+                                        <td class="tcenter"><span class="icon icon_uncheck"></span></td>
+                                        <td>Administrator</td>
+                                        <td>管理员</td>
+                                        <td>周周</td>
+                                        <td>13312345678</td>
+                                        <td>zhouzhou@zhouzhou.com</td></tr>
+                                </tbody>
+                            </table>
+                            </div>
+                            </div>
+                </div>
+              </div>
+            </div>
+            <div class="bottom-l">
+              <div class="bottom-r">
+                <div class="bottom-m"></div>
+              </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <!--layout left-->
+	<div class="layout_left bar">
+    <ul class="sidebar">
+        <li class="first on">
+            <a href="smart6.html">
+                <span class="big_users"></span>
+                <span class="sidebar-text">用户管理</span>
+            </a>
+        </li>
+        <li>
+            <a href="smart6-4.html">
+            	<span class="big_radar"></span>
+                <span class="sidebar-text">资源发现</span>
+            </a>
+            <ul class="sub-sidebar">
+            <li>
+                <a href="smart6-4.html">
+                    <span class="big_find"></span>
+                	<span class="sidebar-text">单个资源发现</span>
+                </a>
+            </li>
+            <li class="divider"></li>
+            <li>
+                <a href="smart6-4-1.html">
+                    <span class="big_findauto"></span>
+                	<span class="sidebar-text">自动拓扑发现</span>
+                </a>
+            </li>
+        </ul>
+        </li>
+        <li>
+            <a href="smart6-2.html">
+            	<span class="big_bell"></span>
+                <span class="sidebar-text">报警设置</span>
+            </a>
+        </li>
+        <li>
+            <a href="smart6-3.html">
+            	<span class="big_setting"></span>
+                <span class="sidebar-text">系统信息</span>
+            </a>
+        </li>
+        <li>
+            <a href="smart6-4.html">
+            	<span class="big_book"></span>
+                <span class="sidebar-text">帮助中心</span>
+            </a>
+        </li>
+    </ul>
+	</div>
+
+<div id="alert" style="width:350px;display:none">
+    <div class="panel_null">
+    <div class="top-l">
+      <div class="top-r">
+        <div class="top-m"><span class="ico-quit"></span></div>
+      </div>
+    </div>
+    <div class="middle-l">
+      <div class="middle-r">
+        <div class="middle-m"> 
+            <div class="alert_text">
+              <span class="icon icon_trash"></span>
+              <span>确定要删除所选项吗？</span>
+            </div>
+            <div class="button">
+              <a class="btn_s2">确定</a>
+              <a class="btn_s dialog_close">取消</a>    
+			</div>
+        </div>
+      </div>
+    </div>
+    <div class="bottom-l">
+      <div class="bottom-r">
+        <div class="bottom-m"></div>
+      </div>
+    </div>
+</div>
+
+</div>
+<!--add-->
+<div id="add" style="width:700px;display:none">
+    <div class="panel">
+            <div class="top-l">
+              <div class="top-r">
+                <div class="top-m"><span class="title">添加用户</span><span class="ico-quit"></span></div>
+              </div>
+            </div>
+            <div class="middle-l">
+              <div class="middle-r">
+                <div class="middle-m"> 
+					<div class="form">
+                      <table cellpadding="0" cellspacing="0">
+                    	<tbody>
+                        	<tr>
+                            	<td width="25%">用户类型</td>
+                                <td>
+                                	 <label><input type="radio" checked="checked"> <span class="t">普通用户</span></label>
+                                     <label><input type="radio"> <span class="t">管理员</span></label>
+                                     <span class="icon icon_info"></span>
+                                </td>
+                          	</tr>
+                            <tr class="cbg">
+                            	<td>用户名</td>
+                                <td><input type="text" class="forminput"><span class="rt t">*</span></td>
+                          	</tr>
+                            <tr>
+                            	<td>密码</td>
+                                <td><input type="text" class="forminput"><span class="rt t">*</span></td>
+                          	</tr>
+                            <tr class="cbg">
+                            	<td>姓名</td>
+                                <td><input type="text" class="forminput"><span class="rt t">*</span></td>
+                          	</tr>
+                            <tr>
+                            	<td>手机号码</td>
+                                <td><input type="text" class="forminput"><span class="t">此手机号码用于接收短信报警。</span></td>
+                          	</tr>
+                            <tr class="cbg">
+                            	<td>电子邮箱</td>
+                                <td><input type="text" class="forminput"><span class="t">此邮箱用于接收邮件报警。</span></td>
+                          	</tr>
+                            <tr>
+                                <td class="t_right" colspan="2">
+                                <input type="button" class="submit" value="保存"> 
+                                <input type="button" class="cancel dialog_close" value="取消"> </td>
+                            </tr>
+                      </tbody>
+                  </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="bottom-l">
+              <div class="bottom-r">
+                <div class="bottom-m"></div>
+              </div>
+            </div>
+        </div>
+</div>
+<!--edit-->
+<div id="edit" style="width:700px;display:none">
+    <div class="panel">
+            <div class="top-l">
+              <div class="top-r">
+                <div class="top-m"><span class="title">编辑用户</span><span class="ico-quit"></span></div>
+              </div>
+            </div>
+            <div class="middle-l">
+              <div class="middle-r">
+                <div class="middle-m"> 
+					<div class="form">
+                      <table cellpadding="0" cellspacing="0">
+                    	<tbody>
+                            <tr class="cbg">
+                            	<td width="25%">用户名</td>
+                                <td><input type="text" class="forminput" value="Administrator"><span class="rt t">*</span></td>
+                          	</tr>
+                            <tr>
+                            	<td>原密码</td>
+                                <td><input type="password" class="forminput" value="password"><span class="rt t">*</span></td>
+                          	</tr>
+                            <tr class="cbg">
+                            	<td>姓名</td>
+                                <td><input type="text" class="forminput" value="周周"><span class="rt t">*</span></td>
+                          	</tr>
+                            <tr>
+                            	<td>手机号码</td>
+                                <td><input type="text" class="forminput" value="13132209999"><span class="t">此手机号码用于接收短信报警。</span></td>
+                          	</tr>
+                            <tr class="cbg">
+                            	<td>电子邮箱</td>
+                                <td><input type="text" class="forminput" value="zhouzhou@ruijie.com.cn"><span class="t">此邮箱用于接收邮件报警。</span></td>
+                          	</tr>
+                            <tr>
+                                <td class="t_right" colspan="2"><input type="button" class="submit" value="保存"> <input type="button" class="cancel dialog_close" value="取消"> </td>
+                            </tr>
+                      </tbody>
+                  </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="bottom-l">
+              <div class="bottom-r">
+                <div class="bottom-m"></div>
+              </div>
+            </div>
+        </div>
+</div>
+
+<script>
+$(document).ready(function(){
+var $modal = $('<div class="loading"> 加载中，请稍候......</div>')
+.css({
+	zIndex: 3000,
+	opacity: 0.9,
+	position: 'absolute',
+	top: '45%',
+	left: '45%'
+});
+$('#show_alert').click(function(){
+	art.dialog({
+    content: document.getElementById('alert'),
+	id: 'alert',
+	padding: 0,
+	lock: true
+	});
+});
+$('#show_loading').click(function(evt) {
+	evt.preventDefault();
+	$(this).overlay({
+	effect: 'fade',
+	opacity: 0.8,
+	closeOnClick: true,
+	onShow: function() {
+		$('body').append($modal);
+		},
+	onHide: function() {
+		$modal.remove();
+		},
+	})
+});
+});
+$('#show_add').click(function(){
+	art.dialog({
+    content: document.getElementById('add'),
+	padding: 0,
+	lock: true
+	});
+});
+$('#show_edit').click(function(){
+	art.dialog({
+    content: document.getElementById('edit'),
+	padding: 0,
+	lock: true
+	});
+});
+
+</script>
+</body>
+</html>

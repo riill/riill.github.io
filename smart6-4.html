@@ -1,0 +1,805 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>RIIL Smart</title>
+<!--gloab-->
+<link href="../css/comm.css" rel="stylesheet" type="text/css" />
+<link href="../css/widget.css" rel="stylesheet" type="text/css" />
+<link href="../css/ico.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../js/jquery-1.8.2.min.js"></script>
+<!--demo-->
+<link href="../css/demo.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../js/demo.js"></script>
+<!--artdialog-->
+<link href="../css/artdialog.css" rel="stylesheet" />
+<script src="../js/artDialog.min.js"></script>
+<script src="../js/jquery.overlay.min.js"></script>
+<!--scroll-->
+<link href="../css/jquery.jscrollpane.css" rel="stylesheet" type="text/css" />
+<script src="../js/jquery.mousewheel.js"></script>
+<script src="../js/jquery.jscrollpane.min.js"></script>
+<script>
+$(function()
+{
+	var settings = {
+		showArrows: false,
+		autoReinitialise: true
+	};
+	$('.scroll-pane').jScrollPane(settings);
+});
+</script>
+</head>
+<body>
+    <!--layout right-->
+    <div class="layout_right bar">
+        <div class="p_content">
+          <div class="portlet">
+    <div class="top-l">
+      <div class="top-r">
+        <div class="top-m"><span class="title">单个资源发现</span> </div>
+    </div>
+    </div>
+    <div class="middle-l">
+      <div class="middle-r">
+        <div class="middle-m"> 
+          <div class="setting-units">
+            <div class="setting-unit">
+            <div class="title">发现类型</div>
+            <span class="icon icon_open"></span>
+            <div class="holder" style="display:block">
+              <ul class="sub_ul">
+                  <li>
+                    <span class="fixedvalue">资源类型</span>
+                    <div class="select_body" style="width:200px;">
+                         <div class="select_trigger_wrap"><a class="select_trigger"></a></div>
+                         <div class="select_text">Windows主机</div>
+                    </div>
+    				<div class="select_boundtree" style="width:200px; margin-left:204px;">
+         <ul>     
+              <li><a><span class="t">主机</span> <span class="icon icon_arrow_sr"></span></a>
+                <ul style="display: none;">
+                  <li><a><span class="t">Windows</span></a></li>
+                  <li><a><span class="t">Solaris</span></a></li>
+                  <li><a><span class="t">AIX</span></a></li>
+                  <li><a><span class="t">Linux</span></a></li>
+                  <li><a><span class="t">HP-UX</span></a></li>
+                  <li><a><span class="t">SCO</span></a></li>
+                  <li><a><span class="t">UnixWare</span></a></li>
+                  <li><a><span class="t">FreeBSD</span></a></li>
+                  <li><a><span class="t">其他主机</span></a></li>
+            </ul>
+          </li>
+              <li><a><span class="t">网络设备</span> <span class="icon icon_arrow_sr"></span></a>
+                <ul>
+                	<li><a><span class="t">路由器</span><span class="icon icon_arrow_sr"></span></a>
+                        <ul>
+                              <li><a><span class="t">3Com路由器</span></a></li>
+                              <li><a><span class="t">Array路由器</span></a></li>
+                              <li><a><span class="t">Ceragon路由器</span></a></li>
+                              <li><a><span class="t">Cisco路由器</span></a></li>
+                              <a class="more"></a>
+                        </ul>
+                    </li>
+                    <li><a><span class="t">交换机</span><span class="icon icon_arrow_sr"></span></a>
+                    	<ul>
+                              <li><a><span class="t">3Com交换机</span></a></li>
+                              <li><a><span class="t">Array交换机</span></a></li>
+                              <li><a><span class="t">Ceragon交换机</span></a></li>
+                              <li><a><span class="t">Cisco交换机</span></a></li>
+                              <a class="more"></a>
+                        </ul>
+                    </li>
+                    <li><a><span class="t">安全设备</span><span class="icon icon_arrow_sr"></span></a>
+                    	<ul>
+                              <li><a><span class="t">各厂商安全设备</span></a></li>
+                        </ul>
+                    </li>
+                    <li><a><span class="t">负载均衡器</span><span class="icon icon_arrow_sr"></span></a>
+                    	<ul>
+                              <li><a><span class="t">各厂商负载均衡器</span></a></li>
+                        </ul>
+                    </li>
+                    <li><a><span class="t">网闸</span><span class="icon icon_arrow_sr"></span></a>
+                    	<ul>
+                              <li><a><span class="t">各厂商网闸</span></a></li>
+                        </ul>
+                    </li>
+                    <li><a><span class="t">其他网络设备</span><span class="icon icon_arrow_sr"></span></a>
+                    	<ul>
+                              <li><a><span class="t">3Com其他设备</span></a></li>
+                              <li><a><span class="t">Array其他设备</span></a></li>
+                              <li><a><span class="t">Ceragon其他设备</span></a></li>
+                              <li><a><span class="t">Cisco其他设备</span></a></li>
+                              <a class="more"></a>
+                        </ul>
+                    </li>
+                </ul>
+          	  </li>
+              <li><a><span class="t">应用</span><span class="icon icon_arrow_sr"></span></a>
+                <ul>
+                	<li><a><span class="t">数据库</span><span class="icon icon_arrow_sr"></span></a>
+                    	<ul>   
+                  <li><a><span class="t">Apache</span></a></li>
+                  <li><a><span class="t">ApusicAS</span></a></li>
+                  <li><a><span class="t">CICS</span></a></li>
+                  <li><a><span class="t">DB2</span></a></li>
+                  <li><a><span class="t">IBM Directory Server</span></a></li>
+                  <li><a><span class="t">IIS</span></a></li>
+                  <li><a><span class="t">Informix</span></a></li>
+                  <li><a><span class="t">JBoss AS</span></a></li>
+                  <li><a><span class="t">Lotus Domino应用</span></a></li>
+                  <li><a><span class="t">MS Exchange 2003</span></a></li>
+                  <li><a><span class="t">MS Exchange 2005</span></a></li>
+                  <li><a><span class="t">MySQL</span></a></li>
+                  <a class="more"></a>
+                </ul>
+                    </li>
+                    <li><a><span class="t">邮件服务器</span><span class="icon icon_arrow_sr"></span></a>
+                    	<ul>   
+                  <li><a><span class="t">Apache</span></a></li>
+                  <li><a><span class="t">ApusicAS</span></a></li>
+                  <li><a><span class="t">CICS</span></a></li>
+                  <li><a><span class="t">DB2</span></a></li>
+                  <li><a><span class="t">IBM Directory Server</span></a></li>
+                  <li><a><span class="t">IIS</span></a></li>
+                  <li><a><span class="t">Informix</span></a></li>
+                  <li><a><span class="t">JBoss AS</span></a></li>
+                  <li><a><span class="t">Lotus Domino应用</span></a></li>
+                  <li><a><span class="t">MS Exchange 2003</span></a></li>
+                  <li><a><span class="t">MS Exchange 2005</span></a></li>
+                  <li><a><span class="t">MySQL</span></a></li>
+                  <a class="more"></a>
+                </ul>
+                    </li>
+                    <li><a><span class="t">J2EE应用服务器</span><span class="icon icon_arrow_sr"></span></a>
+                    	<ul>   
+                  <li><a><span class="t">Apache</span></a></li>
+                  <li><a><span class="t">ApusicAS</span></a></li>
+                  <li><a><span class="t">CICS</span></a></li>
+                  <li><a><span class="t">DB2</span></a></li>
+                  <li><a><span class="t">IBM Directory Server</span></a></li>
+                  <li><a><span class="t">IIS</span></a></li>
+                  <li><a><span class="t">Informix</span></a></li>
+                  <li><a><span class="t">JBoss AS</span></a></li>
+                  <li><a><span class="t">Lotus Domino应用</span></a></li>
+                  <li><a><span class="t">MS Exchange 2003</span></a></li>
+                  <li><a><span class="t">MS Exchange 2005</span></a></li>
+                  <li><a><span class="t">MySQL</span></a></li>
+                  <a class="more"></a>
+                </ul>
+                    </li>
+                    <li><a><span class="t">Web服务器</span><span class="icon icon_arrow_sr"></span></a>
+                    	<ul>   
+                  <li><a><span class="t">Apache</span></a></li>
+                  <li><a><span class="t">ApusicAS</span></a></li>
+                  <li><a><span class="t">CICS</span></a></li>
+                  <li><a><span class="t">DB2</span></a></li>
+                  <li><a><span class="t">IBM Directory Server</span></a></li>
+                  <li><a><span class="t">IIS</span></a></li>
+                  <li><a><span class="t">Informix</span></a></li>
+                  <li><a><span class="t">JBoss AS</span></a></li>
+                  <li><a><span class="t">Lotus Domino应用</span></a></li>
+                  <li><a><span class="t">MS Exchange 2003</span></a></li>
+                  <li><a><span class="t">MS Exchange 2005</span></a></li>
+                  <li><a><span class="t">MySQL</span></a></li>
+                  <a class="more"></a>
+                </ul>
+                    </li>
+                    <li><a><span class="t">Lotus Domino</span><span class="icon icon_arrow_sr"></span></a>
+                    	<ul>   
+                  <li><a><span class="t">Apache</span></a></li>
+                  <li><a><span class="t">ApusicAS</span></a></li>
+                  <li><a><span class="t">CICS</span></a></li>
+                  <li><a><span class="t">DB2</span></a></li>
+                  <li><a><span class="t">IBM Directory Server</span></a></li>
+                  <li><a><span class="t">IIS</span></a></li>
+                  <li><a><span class="t">Informix</span></a></li>
+                  <li><a><span class="t">JBoss AS</span></a></li>
+                  <li><a><span class="t">Lotus Domino应用</span></a></li>
+                  <li><a><span class="t">MS Exchange 2003</span></a></li>
+                  <li><a><span class="t">MS Exchange 2005</span></a></li>
+                  <li><a><span class="t">MySQL</span></a></li>
+                  <a class="more"></a>
+                </ul>
+                    </li>
+                </ul>
+              </li>
+              <li><a><span class="t">基础服务</span><span class="icon icon_arrow_sr"></span></a>
+                <ul>                                    
+                  <li><a><span class="t">Ping</span></a></li>
+                  <li><a><span class="t">Port</span></a></li>
+                  <li><a><span class="t">URL</span></a></li>
+                </ul>
+              </li>
+     </ul>
+    </div>
+                  </li>
+                  <li>
+                  	<span class="fixedvalue">发现方式</span>
+                    <div class="select_body" style="width:200px;">
+         <div class="select_trigger_wrap"><a class="select_trigger"></a></div>
+         <div class="select_text">Windows主机（SNMP）</div>
+    </div>
+            		<div class="select_boundtree" style="width:200px; margin-left:204px;">
+         <ul>     
+              <li><a><span class="t">Windows主机(SNMP)</span></a></li>
+              <li><a><span class="t">Windows主机(WMI)</span></a></li>
+     	</ul>
+    </div>
+                  </li>
+              </ul>
+          </div>
+          </div>
+            <div class="setting-unit">
+            <div class="title">发现信息</div>
+            <span class="icon icon_open"></span>
+            <div class="holder" style="display:block">
+                <ul class="sub_ul">
+                <li>
+                <span class="fixedvalue">IP地址</span>
+                <input class="forminput" type="text" />
+                <span class="rt">*</span>
+                <span class="icon icon_info" title="待发现资源所在主机的IP地址,如x.x.x.x。"></span>
+                </li>
+                
+                <li>
+                <span class="fixedvalue">SNMP版本</span>
+                 <div class="select_body" style="width:200px;">
+                                     <div class="select_trigger_wrap"><a class="select_trigger"></a></div>
+                                     <div class="select_text">SNMP V1</div>
+                                     
+                                </div>
+                 <div class="select_boundtree" style="margin-left:204px;">
+                              <ul>
+                                <li><a><span class="t">SNMP V1</span></a></li>
+                                <li><a><span class="t">SNMP V2</span></a></li>
+                                <li><a><span class="t">SNMP V3</span></a></li>
+                              </ul>
+                            </div>
+                <span class="rt">*</span>
+                <span class="icon icon_info" title="请选择登陆服务器的方式:如Windows，请选择WMI，确认并启用WMI；如Unix，请选择SSH或Telnet。"></span>
+                </li>
+                
+                <li>
+                <span class="fixedvalue">端口</span>
+                <input class="forminput" type="text" />
+                <span class="rt">*</span>
+                </li>
+                
+                <li>
+                <span class="fixedvalue">只读共同体</span>
+                <input class="forminput" type="text" />
+                <span class="rt">*</span>
+                </li>
+                
+                <li>
+                <span class="fixedvalue">读写共同体</span>
+                <input class="forminput" type="text" />
+                <span class="rt">*</span>
+                </li>
+                
+                </ul>
+          </div>
+          </div>
+          	<div class="setting-unit">
+            <div class="title">发现信息(style2)</div>
+            <span class="icon icon_open"></span>
+            <div class="holder p_content">
+                                     <div class="wrapper1">
+                                         <div class="scroll-pane bb" style="height:360px;">
+                                         <div class="common">
+                                         <div class="theadpart">
+                                         <table>
+                                            <tr>
+                                                <th>主机信息</th>
+                                            </tr>
+                                         </table>
+                                         </div>
+                                         </div>
+                                         <ul class="sub_ul">
+                <li>
+                <span class="fixedvalue">IP地址</span>
+                <input class="forminput" type="text" />
+                <span class="rt">*</span>
+                <span class="icon icon_info" title="待发现资源所在主机的IP地址,如x.x.x.x。"></span>
+                </li>
+                
+                <li>
+                <span class="fixedvalue">SNMP版本</span>
+                 <div class="select_body" style="width:200px;">
+                                     <div class="select_trigger_wrap"><a class="select_trigger"></a></div>
+                                     <div class="select_text">SNMP V1</div>
+                                     
+                                </div>
+                 <div class="select_boundtree" style="margin-left:204px;">
+                              <ul>
+                                <li><a><span class="t">SNMP V1</span></a></li>
+                                <li><a><span class="t">SNMP V2</span></a></li>
+                                <li><a><span class="t">SNMP V3</span></a></li>
+                              </ul>
+                            </div>
+                <span class="rt">*</span>
+                <span class="icon icon_info" title="请选择登陆服务器的方式:如Windows，请选择WMI，确认并启用WMI；如Unix，请选择SSH或Telnet。"></span>
+                </li>
+                
+                <li>
+                <span class="fixedvalue">端口</span>
+                <input class="forminput" type="text" />
+                <span class="rt">*</span>
+                </li>
+                
+                <li>
+                <span class="fixedvalue">只读共同体</span>
+                <input class="forminput" type="text" />
+                <span class="rt">*</span>
+                </li>
+                
+                <li>
+                <span class="fixedvalue">读写共同体</span>
+                <input class="forminput" type="text" />
+                <span class="rt">*</span>
+                </li>
+                
+                </ul>
+                                         </div>
+                                     </div>
+                                     <div class="wrapper2">
+                                     <div class="scroll-pane bb" style="height:360px;">
+                                     	 <div class="common">
+                                         <table>
+                                            <tr>
+                                                <th>WebSphere应用服务器信息</th>
+                                            </tr>
+                                         </table>
+                                         </div>
+                                         <ul class="sub_ul">
+                <li>
+                <span class="fixedvalue">IP地址</span>
+                <input class="forminput" type="text" />
+                <span class="rt">*</span>
+                <span class="icon icon_info" title="待发现资源所在主机的IP地址,如x.x.x.x。"></span>
+                </li>
+                
+                <li>
+                <span class="fixedvalue">SNMP版本</span>
+                 <div class="select_body" style="width:200px;">
+                                     <div class="select_trigger_wrap"><a class="select_trigger"></a></div>
+                                     <div class="select_text">SNMP V1</div>
+                                     
+                                </div>
+                 <div class="select_boundtree" style="margin-left:204px;">
+                              <ul>
+                                <li><a><span class="t">SNMP V1</span></a></li>
+                                <li><a><span class="t">SNMP V2</span></a></li>
+                                <li><a><span class="t">SNMP V3</span></a></li>
+                              </ul>
+                            </div>
+                <span class="rt">*</span>
+                <span class="icon icon_info" title="请选择登陆服务器的方式:如Windows，请选择WMI，确认并启用WMI；如Unix，请选择SSH或Telnet。"></span>
+                </li>
+                
+                <li>
+                <span class="fixedvalue">端口</span>
+                <input class="forminput" type="text" />
+                <span class="rt">*</span>
+                </li>
+                
+                <li>
+                <span class="fixedvalue">只读共同体</span>
+                <input class="forminput" type="text" />
+                <span class="rt">*</span>
+                </li>
+                
+                <li>
+                <span class="fixedvalue">读写共同体</span>
+                <input class="forminput" type="text" />
+                <span class="rt">*</span>
+                </li>
+                
+                </ul>              
+                                     </div>           
+                                </div>
+                                 <div class="clear"></div> 
+                          	</div>
+          </div>
+            <div class="setting-unit">
+                <div class="title" id="find2" style="display:none">
+                       发现结果
+              	</div>
+                <div class="button" id="find1">
+                    <a class="t" id="show_info"><span class="icon icon_important"></span> 查看发现前提 </a>
+                    <input type="button" class="submit" value="发现" id="findbtn">
+            	</div>
+                <div class="holder p_content">
+                     <div class="wrapper1">
+                         <div class="bb" style="height:380px;">
+                         <div class="common">
+                         <div class="theadpart">
+                         <table>
+                         	<tr>
+                            	<th>发现信息</th>
+                            </tr>
+                         </table>
+                         </div>
+                         </div>
+                         <div class="sub">
+                         <table>
+                                    <tr>         
+                                        <td width="25%">耗时时间</td>
+                                        <td>00:00:20</td>
+                                    </tr>
+                                    <tr>
+                                        <td width="25%">IP地址</td>
+                                        <td>192.168.1.1</td>
+                                    </tr>
+                                    <tr>
+                                        <td>资源名称</td>
+                                        <td>R04807</td>
+                                    </tr>
+                                    <tr>
+                                        <td>显示名称</td>
+                                        <td>
+                                          <input type="text" class="comm" size="10" value=" R04807" />
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                        <td>资源类型</td>
+                                        <td>Windows</td>
+                                    </tr>
+                              </table>
+                         </div>
+                         </div>
+                     </div>
+                     <div class="wrapper2">
+                     <div class="scroll-pane bb" style="height:380px;">
+                     <div class="common">
+                         <div class="theadpart">
+                         <table>
+                         	<tr>
+                            	<th>子资源信息</th>
+                            </tr>
+                         </table>
+                         </div>
+                         <div class="tbodypart">
+                         <table>
+                         	<tbody>
+                                <tr>
+                                    <td width="90%"><a><span class="icon icon_down"></span><span class="t">CPU ( 8 ) </span></a></td>
+                                    <td width="10%"><span class="icon icon_checked"></span></td>
+                              	</tr>
+                                <tr class="cbg">
+                                    <td><a><span class="icon"></span><span class="t">CPU0</span></a></td>
+                                    <td><span class="icon icon_checked"></span></td>
+                              	</tr>
+                                <tr class="cbg">
+                                    <td><a><span class="icon"></span><span class="t">CPU1</span></a></td>
+                                    <td><span class="icon icon_checked"></span></td>
+                              	</tr>
+                                <tr class="cbg">
+                                    <td><a><span class="icon"></span><span class="t">CPU2</span></a></td>
+                                    <td><span class="icon icon_checked"></span></td>
+                              	</tr>
+                                <tr class="cbg">
+                                    <td><a><span class="icon"></span><span class="t">CPU3</span></a></td>
+                                    <td><span class="icon icon_checked"></span></td>
+                              	</tr>
+                                <tr class="cbg">
+                                    <td><a><span class="icon"></span><span class="t">CPU4</span></a></td>
+                                    <td><span class="icon icon_checked"></span></td>
+                              	</tr>
+                                <tr class="cbg">
+                                    <td><a><span class="icon"></span><span class="t">CPU5</span></a></td>
+                                    <td><span class="icon icon_checked"></span></td>
+                              	</tr>
+                                <tr class="cbg">
+                                    <td><a><span class="icon"></span><span class="t">CPU6</span></a></td>
+                                    <td><span class="icon icon_checked"></span></td>
+                              	</tr>
+                                <tr class="cbg">
+                                    <td><a><span class="icon"></span><span class="t">CPU7</span></a></td>
+                                    <td><span class="icon icon_checked"></span></td>
+                              	</tr>
+                                <tr class="cbg">
+                                    <td><a><span class="icon"></span><span class="t">CPU8</span></a></td>
+                                    <td><span class="icon icon_checked"></span></td>
+                              	</tr>
+                                <tr>
+                                    <td><a><span class="icon icon_down"></span><span class="t">分区（4）</span></a></td>
+                                    <td><span class="icon icon_checked"></span></td>
+                              	</tr>
+                                <tr class="cbg">
+                                    <td><a><span class="icon"></span><span class="t">C:/</span></a></td>
+                                    <td><span class="icon icon_checked"></span></td>
+                              	</tr>
+                                <tr class="cbg">
+                                    <td><a><span class="icon"></span><span class="t">D:/</span></a></td>
+                                    <td><span class="icon icon_checked"></span></td>
+                              	</tr>
+                                <tr class="cbg">
+                                    <td><a><span class="icon"></span><span class="t">E:/</span></a></td>
+                                    <td><span class="icon icon_checked"></span></td>
+                              	</tr>
+                                <tr class="cbg">
+                                    <td><a><span class="icon"></span><span class="t">F:/</span></a></td>
+                                    <td><span class="icon icon_checked"></span></td>
+                              	</tr>
+                                <tr>
+                                    <td><a><span class="icon icon_right"></span><span class="t">硬盘（4）</span></a></td>
+                                    <td><span class="icon icon_checked"></span></td>
+                              	</tr>
+                                <tr>
+                                    <td><a><span class="icon icon_right"></span><span class="t">网络接口（50）</span></a></td>
+                                    <td><span class="icon icon_checked"></span></td>
+                              	</tr>
+                          </tbody>
+                          </table>
+                         </div>
+                         </div>              
+                     </div>           
+                </div>
+                 <div class="clear"></div> 
+          </div>
+          	</div>
+            <div class="setting-unit" id="find9" style="display:none">
+                    <div class="button">
+                        <input type="button" class="submit" value="继续发现">
+                        <input type="button" class="submit" id="show_jump" value="完成">
+                  </div>
+              </div>
+    </div>
+    </div>
+    </div>
+      <div class="bottom-l">
+        <div class="bottom-r">
+          <div class="bottom-m"></div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+
+    <!--layout left-->
+    <div class="layout_left bar">
+    <ul class="sidebar">
+        <li class="first">
+            <a href="smart6.html">
+                <span class="big_users"></span>
+                <span class="sidebar-text">用户管理</span>
+            </a>
+        </li>
+        <li class="on">
+            <a href="smart6-4.html">
+            	<span class="big_radar"></span>
+                <span class="sidebar-text">资源发现</span>
+            </a>
+            <ul class="sub-sidebar">
+            <li>
+                <a href="smart6-4.html">
+                    <span class="big_find"></span>
+                	<span class="sidebar-text">单个资源发现</span>
+                </a>
+            </li>
+            <li class="divider"></li>
+            <li>
+                <a href="smart6-4-1.html">
+                    <span class="big_findauto"></span>
+                	<span class="sidebar-text">自动拓扑发现</span>
+                </a>
+            </li>
+        </ul>
+        </li>
+        <li>
+            <a href="smart6-2.html">
+            	<span class="big_bell"></span>
+                <span class="sidebar-text">报警设置</span>
+            </a>
+        </li>
+        <li>
+            <a href="smart6-3.html">
+            	<span class="big_setting"></span>
+                <span class="sidebar-text">系统信息</span>
+            </a>
+        </li>
+    </ul>
+	</div>
+
+<!--layer-->
+<div id="jump" style="width:550px;display:none">
+    <div class="panel_null">
+    <div class="top-l">
+      <div class="top-r">
+        <div class="top-m"><span class="ico-quit"></span></div>
+      </div>
+    </div>
+    <div class="middle-l">
+      <div class="middle-r">
+        <div class="middle-m"> 
+            <div class="alert_text">
+              <span>发现完成，我要去</span>
+            </div>
+            <ul class="leap">   
+              	<li><a href="smart3.html"><span class="shortcut_box"></span>
+                	<span class="t">资源管理</span></a></li>
+                <li><a href="smart2.html"><span class="shortcut_topo"></span>
+                	<span class="t">网络拓扑</span></a></li>
+                <li><a href="smart6-4-1.html"><span class="shortcut_scan"></span>
+                	<span class="t">自动拓扑发现</span></a></li>
+              </ul>
+              <div class="clear" style="height:20px;"></div>
+        </div>
+      </div>
+    </div>
+    <div class="bottom-l">
+      <div class="bottom-r">
+        <div class="bottom-m"></div>
+      </div>
+    </div>
+</div>
+
+</div>
+<div id="info" style="width:1000px;display:none">
+    <div class="panel_null">
+    <div class="top-l">
+      <div class="top-r">
+        <div class="top-m"><span class="ico-quit"></span></div>
+      </div>
+    </div>
+    <div class="middle-l">
+      <div class="middle-r">
+        <div class="middle-m"> 
+            <div class="scroll-pane" style="height:500px;">
+            <div id="RIIL_RMM_HOST_WINDOWS_SNMP_helpContent">
+            <title>Windows主机(SNMP)</title>
+            <p>
+                <strong>Windows</strong><strong>主机(SNMP)</strong><strong>方式资源发现前提</strong></p>
+            <p>
+                1、支持的版本：Windows 2000/XP/2003/2008/win7</p>
+            <p>
+                2.、Windows XP/2003/2008需要安装SNMP补丁程序</p>
+            <p>
+                3. 启动SNMP</p>
+            <p>
+                在“管理工具－服务”列表中启动“SNMP Service”服务。</p>
+            <p>
+                &nbsp; <img src="http://172.17.160.61:80/smart/static/help/images/1.png"></p>
+            <p>
+                检查SNMP配置：</p>
+            <p>
+                (1). 右键单击“SNMP Service”服务，打开“属性”窗口“安全”页签；</p>
+            <p>
+                (2). 选择“接受来自任何主机的SNMP数据包”，或选择“接受来自这些主机的SNMP包”，添加RIIL机器IP地址即可。</p>
+            <p>
+                &nbsp;&nbsp; <img src="http://172.17.160.61:80/smart/static/help/images/2.png"></p>
+            <p>
+                检查方法：</p>
+            <p>
+                在“开始－运行”中执行命令 snmpwalk.exe -v 2c -c public IP地址（需要装snmpwalk才能执行此命令）。例如：执行snmpwalk.exe -v 2c -c public 192.168.40.105</p>
+            <p>
+                如SNMP启动，有返回值</p>
+            <p>
+                如SNMP未启动，则显示Timeout信息。</p>
+            <p>
+                4. 防火墙</p>
+            <p>
+                (1). 打开 “控制面版－Windows防火墙”，设置被监控端的防火墙允许SNMP访问（默认 UDP 161端口）和Ping操作。</p>
+            <p>
+                (2). 请确认RIIL Server与被控端之间经过的防火墙允许SNMP访问（默认 UDP 161端口）和Ping操作。</p>
+            </div>
+<!--
+              <p>1.    支持的版本：AIX 5.x<br />
+                2.    网络连接正常(可以使用ping [IP]命令检查网络连接，例如：ping 192.168.1.1 )<br />
+                3.    启动系统自带SNMP，命令为：startsrc -s snmpd。验证SNMP可用性：使用命令“snmpwalk –v 1 –c public 192.168.1.1”取值，看是否有返回结果；或登录AIX主机运行ps –ef|grep snmpd。如图：<br /> 
+                <img src="images/ele/info.jpg" width="712" height="69" />              <br />
+                4.    验证SYSTEMOID：snmpwalk -v 1 -c public [IP] 1.3.6.1.2.1.1.2<br />
+                5.    MAC地址获取：snmpwalk -v 1 -c public [IP] 1.3.6.1.2.1.2.2.1.6<br />
+                6.    验证IP地址取值：snmpwalk -v 1 -c public [IP] 1.3.6.1.2.1.4.20.1.1<br />
+                <br />
+                使用netsnmp，配置分以下几步’<br />
+                (1). 创建用户<br />
+                确定使用哪种安全性协议，HMAC-MD5或HMAC-SHA。下面以MD5为例。<br />
+                使用 pwtokey 命令来生成认证密钥。根据使用的认证协议以及是否使用专用密钥，输出看上去会有所不同。这些密钥将会用在 /etc/snmpdv3.conf 和 /etc/clsnmp.conf 文件中。<br />
+                用户 u1 使用的命令如下：<br />
+                pwtokey -p HMAC-MD5 -u auth anypassword 192.168.10.11所指定的 IP 地址是运行代理的IP 地址。密码可以是任意密码，但是务必要把它保存在一个安全的地方以供将来使用。输出看上去应该类似于以下：<br />
+                Display of 16 byte HMAC-MD5 authKey: 63960c12520dc8829d27f7fbaf5a0470 <br />
+                Display of 16 byte HMAC-MD5 localized authKey:b3b6c6306d67e9c6f8e7e664a47ef9a0<br />
+                利用超级权限，编辑/etc/snmpdv3.conf。<br />
+                按照文件中给定的格式添加一条 USM_USER 条目来创建一个用户。authKey 的值将是用 pwtokey 命令生成的本地化的认证密钥。用户 u1 的此条目如下所示：<br />
+                #---------------------------------------------------------------------------<br />
+                # USM_USER entries<br />
+                #    Defines a user for the User-based Security Model (USM).<br />
+                # Format is:<br />
+                # userName engineID authProto authKey privProto privKey keyType storageType<br />
+                #<br />
+                USM_USER u1 - HMAC-MD5 b3b6c6306d67e9c6f8e7e664a47ef9a0 - - L -<br />
+                #----------------------------------------------------------------------------<br />
+                userName：用户名。此例中是 u1。<br />
+                authProto 必须是创建这些密钥时所用的协议。此例中是 HMAC-MD5。<br />
+                authKey：使用 pwtokey 命令创建的本地化的认证密钥。<br />
+                privProto 和 privkey 都没有指定，此例没有使用专用密钥。<br />
+                keyType 是 L，此例使用本地化的认证密钥。<br />
+                保存关闭 /etc/snmpdv3.conf 文件。然后编辑/etc/clsnmp.conf 文件。</p>
+              <p><br />
+                (2). 配置组<br />
+                用户必须要添加到组中。要把用户添加到一个新组中，请在 /etc/snmpdv3.conf 文件中创建一个新的条目 VACM_GROUP。 u1 的组条目如下：<br />
+                #--------------------------------------------------------------<br />
+                # VACM_GROUP entries<br />
+                #    Defines a security group (made up of users or communities)<br />
+                #    for the View-based Access Control Model (VACM).<br />
+                # Format is:<br />
+                # groupName securityModel securityName storageType<br />
+                VACM_GROUP group1 USM u1 -<br />
+                #--------------------------------------------------------------<br />
+                groupName：组名称,可以是任何名称。此例是 group1。<br />
+                securityModel：设为 USM，利用 SNMPv3 的安全功能。<br />
+                securityName：是用户名。在该例中就是 u1。<br /> 
+              <br />
+                (3). 配置查看和访问许可权<br />
+                给创建的新组设置查看和访问许可权。通过向 /etc/snmpdv3.conf 文件中添加 VACM_VIEW 和 VACM_ACCESS 条目来设置这些许可权。<br />
+                给 /etc/snmpdv3.conf 文件添加 VACM_VIEW 条目来定义该组可以访问哪些 MIB 对象。<br />
+                在此情形中，group1 能访问 interfaces、tcp、icmp 和 system MIB 子树。然而，我们要限制 group1 对 system MIB 子树内的 sysObjectID MIB 变量的访问。<br />
+                #----------------------------------------------------------------<br />
+                # VACM_VIEW entries<br />
+                #    Defines a particular set of MIB data, called a view, for the<br />
+                #    View-based Access Control Model.<br />
+                # Format is:<br />
+                # viewName viewSubtree viewMask viewType storageType<br />
+                VACM_VIEW group1View                interfaces           - included -<br />
+                VACM_VIEW group1View                tcp                      - included -<br />
+                VACM_VIEW group1View                icmp                      - included -<br />
+                VACM_VIEW group1View                system                   - included -<br />
+                VACM_VIEW group1View                sysObjectID           - excluded -<br />
+                #----------------------------------------------------------------<br />
+                viewName 是查看的名称。在该例中就是 group1View。<br />
+                viewSubtree 是您想要授予访问权的 MIB 子树。<br />
+                viewType 决定查看中是否包括所定义的 MIB 子树。在该例中，包括了所有的子树在内，但是作为 system 子树的一部分的 MIB 变量 sysObjectID 除外。<br />
+                在 /etc/snmpdv3.conf 文件中添加 VACM_ACCESS 条目来定义组对上面指定的 MIB 对象拥有的许可权。给 group1 的是只读访问权。<br />
+                #-----------------------------------------------------------------------------------------------------------<br />
+                # VACM_ACCESS entries<br />
+                #    Identifies the access permitted to different security groups<br />
+                #    for the View-based Access Control Model.<br />
+                # Format is:<br />
+                # groupName contextPrefix contextMatch securityLevel securityModel readView writeView notifyView storageType<br />
+                VACM_ACCESS group1 - - AuthNoPriv USM group1View - group1View -<br />
+                #-----------------------------------------------------------------------------------------------------------<br />
+                groupName：组名。在该例中就是 group1。<br />
+                securityLevel：所用的安全级别。noAuthNoPriv，AuthNoPriv，AuthPriv。此例为 AuthNoPriv。<br />
+                securityMode1：使用的安全模型（SNMPv1、SNMPv2c 或 USM）。此例设为 USM 以允许使用 SNMPv3 安全功能。<br />
+                readView：确定组对哪些 VACM_VIEW 拥有读访问权。此例中group1View授予 group1 对 group1View VACM_VIEW 条目的读访问权。<br />
+                writeView：确定组对哪些 VACM_VIEW 拥有写访问权。此例中没有给 group1 写访问权。<br />
+              notifyView：指定了在由访问表中的条目控制来执行观察时所适用的查看名称。</p>
+-->
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="bottom-l">
+      <div class="bottom-r">
+        <div class="bottom-m"></div>
+      </div>
+    </div>
+</div>
+
+</div>
+<script>
+$('#show_jump').click(function(){
+	art.dialog({
+    content: document.getElementById('jump'),
+	padding: 0,
+	lock: true
+	});
+});
+
+$('#show_info').click(function(){
+	art.dialog({
+    content: document.getElementById('info'),
+	padding: 0,
+	lock: true
+	});
+});
+</script>
+
+</body>
+</html>

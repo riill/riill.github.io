@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Riil-Smart login</title>
+<link href="../css/login.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../js/jquery-1.8.2.min.js"></script>
+</head>
+ 
+<body class="login">
+      <div class="login-middle" style="margin-top:-250px; margin-left:-285px;">
+            <div class="logo"><img src="../images/login/logo.png" /></div>
+            <!--warning start-->
+            <div class="wrap" style="width:700px; margin-left:-350px; margin-top:-40px;display:">
+            <div class="wraning">
+                <div class="wraningbg">
+                    <p><img src="../images/login/exclamation-red.png" /> 错误的用户名或者密码，请检查输入后重新登入。
+                    错误的用户名或者密码，请检查输入后重新登入。错误的用户名或者密码。
+                    </p>
+                </div>
+            </div>
+            </div>
+            <!--warning end-->
+            <div class="inputarea">
+                    <p class="user">
+                        <input class="userinput" />
+                    </p>
+                    <p class="pwd">
+                        <input class="pwinput" type="password" />
+                        <input class="btn_login" type="button" onclick="location.href='index.html'"  /> 
+                    </p>
+                    <p class="radio"></p>
+            </div>
+        </div>		
+      <div class="copyright" style="position:absolute; top:700px;">北京星网锐捷网络技术有限公司 © 版权所有</div>
+<script>
+ $(".userinput, .pwinput").click(function(){
+	 $(this).closest('p').toggleClass('on');
+	 });
+ $(".radio").click(function(){
+	 $(this).toggleClass('on');
+	 });
+</script>
+</body>
+</html>

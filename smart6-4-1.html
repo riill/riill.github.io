@@ -1,0 +1,805 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>RIIL Smart</title>
+<!--gloab-->
+<link href="../css/comm.css" rel="stylesheet" type="text/css" />
+<link href="../css/widget.css" rel="stylesheet" type="text/css" />
+<link href="../css/ico.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../js/jquery-1.8.2.min.js"></script>
+<!--demo-->
+<link href="../css/demo.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../js/demo.js"></script>
+<!--artdialog-->
+<link href="../css/artdialog.css" rel="stylesheet" />
+<script src="../js/artDialog.min.js"></script>
+<script src="../js/jquery.overlay.min.js"></script>
+<!--scroll-->
+<link href="../css/jquery.jscrollpane.css" rel="stylesheet" type="text/css" />
+<script src="../js/jquery.mousewheel.js"></script>
+<script src="../js/jquery.jscrollpane.min.js"></script>
+<script>
+$(function()
+{
+	var settings = {
+		showArrows: false,
+		autoReinitialise: true
+	};
+	$('.scroll-pane').jScrollPane(settings);
+});
+</script>
+</head>
+<body>
+
+    <!--layout right-->
+    <div class="layout_right bar">
+        <div class="p_content">
+                <div class="portlet">
+        <div class="top-l">
+                <div class="top-r">
+                        <div class="top-m"><span class="title">自动拓扑发现</span> </div>
+    </div>
+    </div>
+        <div class="middle-l">
+                <div class="middle-r">
+                        <div class="middle-m scroll-pane"> 
+                        <div class="setting-units">
+                        <div class="setting-unit">
+                            <div class="title">种子设置</div>
+                            <span class="icon icon_open"></span>
+                            <div class="holder" style="display:block">
+                                    <div class="sub">
+                                            <table>
+                                              <tbody>
+                                            <tr>
+                                                <td width="20%">添加种子IP地址</td>
+                                                <td>
+                                                  <input class="search" /> 
+                                                  <a><span class="icon icon_plus"></span></a></td>
+                                        </tr>
+                                            <tr>
+                                                <td>种子IP地址</td>
+                                                <td>
+                                                    <ul class="tc">
+                                                        <li><a>192.168.1.1<span class="icon icon_cross_s"></span></a></li>
+                                                        <li><a>192.168.1.2<span class="icon icon_cross_s"></span></a></li>
+                                                  </ul>
+                                              </td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                  </div>
+                          </div>
+                      </div>
+                        <div class="setting-unit">
+                            <div class="title">SNMP V1/V2设置</div>
+                            <span class="icon icon_open"></span>
+                            <div class="holder" style="display:block">
+                                    <div class="sub">
+                                        <table>
+                                          <tbody>
+                                        <tr>
+                                            <td>
+                                              <input class="search null" value="只读共同体（必填）" /> 
+                                              <span class="t">-</span>
+                                              <input class="search null" value="读写共同体（可选）" /> 
+                                              <a><span class="icon icon_plus"></span></a>
+                                             </td>
+                                      </tr>
+                                        <tr>
+                                            <td>
+                                                <ul class="tc">
+                                                        <li><a><span class="t">Public</span> <span class="icon icon_cross_s"></span></a></li>
+                                                        <li><a><span class="t">Public</span> - <span class="t">ReadP</span> <span class="icon icon_cross_s"></span></a></li>
+                                                        <li><a><span class="t">Public</span> - <span class="t">ReadP</span> <span class="icon icon_cross_s"></span></a></li>
+                                                        <li><a><span class="t">Public</span> <span class="icon icon_cross_s"></span></a></li>
+                                                  </ul>
+                                          </td>
+                                      </tr>
+                                      </tbody>
+                                    </table>
+                  </div>
+                          </div>
+                      </div>
+                        <div class="setting-unit">
+                            <div class="title">高级设置</div>
+                            <span class="icon icon_open"></span>
+                            <div class="holder">
+                                    <!--探索深度-->
+                                    <div class="form">
+                                        <table cellpadding="0" cellspacing="0">
+                                            <tr>
+                                            <td width="50%">
+                                            	<span class="t">探索深度</span> 
+                                                <input type="text" class="comm" size="5" value=" 1" />
+                                                <span class="t">距离种子设备的路由个数(0-5)</span>
+                                            	<span class="icon icon_info" title="发现网络的起点设备IP地址，建议选择核心设备。"></span>
+                                            </td>
+                                            <td><span class="t">设置算法</span> 
+                                              <label>
+                                              <span class="icon_unradio"></span>
+                                              <span>常规算法</span>
+                                              <span class="icon icon_info" title="适用于任何类型网络环境拓扑发现"></span>
+                                              </label>
+                                              <label>
+                                              <span class="icon_radioed"></span>
+                                              <span>Cisco CDP算法</span>
+                                              <span class="icon icon_info" title="适用于Cisco网络环境拓扑发现"></span>
+                                              </label>
+                                              </td>
+                                      </tr>
+                                        </table>
+                                    </div>
+                                    <!--附加子网-->
+                                    <div class="st2">
+                                    	<span class="dashed"></span>
+                                        <span class="f_left">附加子网</span>
+                                        <span class="dashed"></span>
+                                        <div class="st_btn">
+                                        <a class="btn" id="show_add1"><span class="icon icon_plusc"></span> 添加</a>
+                                        <a class="btn"><span class="icon icon_trash"></span> 删除</a>
+                                        </div>
+                                    </div>
+                                    <div class="common">
+                                    	<!--暂无数据-->
+                                        <table class="alert">
+                                        <tr>
+                                            <td>暂无数据.</td>
+                                      	</tr>
+                                      	</table>
+                                    </div>
+
+                                    <!--屏蔽子网-->
+                                    <div class="st2">
+                                    	<span class="dashed"></span>
+                                        <span class="f_left">屏蔽子网</span>
+                                        <span class="dashed"></span>
+                                        <div class="st_btn">
+                                        <a class="btn" id="show_add2"><span class="icon icon_plusc"></span> 添加</a>
+                                        <a class="btn"><span class="icon icon_trash"></span> 删除</a>
+                                        </div>
+                                    </div>
+                                    <div class="common">
+                                    <table>
+                                            <tr>      
+                                                <th width="10%"><span class="icon icon_checked"></span></th>
+                                                <th width="30%">子网地址</th>
+                                                <th>子网掩码</th>
+                                            </tr>
+                                            <tr>     
+                                                <td><span class="icon icon_checked"></span></td>
+                                                <td>172.168.1.11 </td>
+                                                <td>255.255.255.0</td>
+                                            </tr>
+                                            <tr>
+                                                <td><span class="icon icon_checked"></span></td>
+                                                <td>172.168.1.11 </td>
+                                                <td>255.255.255.0</td>
+                                            </tr>
+                                      	</table>
+                                    </div>
+
+                                        
+                                   <!--SNMPV3-->
+                                    <div class="st2">
+                                        <span class="dashed"></span>
+                                        <span class="f_left">SNMPV3设置</span>
+                                        <span class="dashed"></span>
+                                        <div class="st_btn">
+                                        <a class="btn" id="show_add3"><span class="icon icon_plusc"></span> 添加</a>
+                                        <a class="btn"><span class="icon icon_trash"></span> 删除</a>
+                                        </div>
+                                    </div>
+                                    <div class="common">
+                                        <table>
+                                                    <tr>
+                                                        <th width="10%"><span class="icon icon_checked"></span></th>
+                                                        <th>IP地址</th>
+                                                        <th>端口</th>
+                                                        <th>用户名</th>
+                                                        <th>安全级别</th>
+                                                        <th>上下文</th>
+                                                  </tr>
+                                                    <tr>
+                                                        <td><span class="icon icon_checked"></span></td>  
+                                                        <td>172.168.1.11 </td>
+                                                        <td>8080</td>
+                                                        <td>雷雷</td>
+                                                        <td>NOAUTH_NOPRIV</td>
+                                                        <td>-</td>
+                                                  </tr>
+                                                    <tr>
+                                                        <td><span class="icon icon_checked"></span></td> 
+                                                        <td>172.168.1.11 </td>
+                                                        <td>8080</td>
+                                                        <td>雷雷</td>
+                                                        <td>NOAUTH_NOPRIV</td>
+                                                        <td>-</td>
+                                                  </tr>
+                                                    <tr>
+                                                        <td><span class="icon icon_checked"></span></td> 
+                                                        <td>172.168.1.11 </td>
+                                                        <td>8080</td>
+                                                        <td>雷雷</td>
+                                                        <td>NOAUTH_NOPRIV</td>
+                                                        <td>-</td>
+                                                  </tr>
+                                                  <tr>
+                                                        <td><span class="icon icon_checked"></span></td> 
+                                                        <td>172.168.1.11 </td>
+                                                        <td>8080</td>
+                                                        <td>雷雷</td>
+                                                        <td>NOAUTH_NOPRIV</td>
+                                                        <td>-</td>
+                                                  </tr>
+                                                  <tr>
+                                                        <td><span class="icon icon_checked"></span></td> 
+                                                        <td>172.168.1.11 </td>
+                                                        <td>8080</td>
+                                                        <td>雷雷</td>
+                                                        <td>NOAUTH_NOPRIV</td>
+                                                        <td>-</td>
+                                                  </tr>
+                                              </table>
+                  					</div>
+                          </div>
+                      </div>
+                        <div class="setting-unit">
+                            <div class="title" id="find3" style="display:none">
+                                    发现结果
+                            </div>
+                            <div class="button" id="find4">
+                                <span id="find1">
+                                    <label>
+                                    <input type="radio" checked="checked" /> 
+                                    <span class="t">重新发现 <span class="icon icon_info" title="重新生成二层网络拓扑和三层网络拓扑，其自定义拓扑和子拓扑将不保留。 "></span></span>
+                                    </label>
+                                    <label>
+                                    <input type="radio" /> 
+                                    <span class="t">补充发现 <span class="icon icon_info" title="在原有发现结果的基础上进行增量发现。"></span></span>
+                                    </label>
+                                    <input type="button" class="submit" value="发现" id="findbtn">
+                                </span>
+                                <span id="find2" style="display:none">
+                                    <span class="t">正在发现...</span>
+                                    <input type="button" class="cancel" value="停止发现" id="findstop">
+                                </span>
+                          </div>
+                            <div class="holder p_content">
+                                     <div class="wrapper1">
+                                         <div class="scroll-pane bb" style="height:360px;">
+                                         <div class="common">
+                                         <div class="theadpart">
+                                         <table>
+                                            <tr>
+                                                <th>发现信息</th>
+                                            </tr>
+                                         </table>
+                                         </div>
+                                         </div>
+                                         <div class="sub">
+                                         <ul class="sub_ul">
+                                         	<li>2013/03/27 15:27:37 正在进行子网192.168.1.1链路发现...</li>
+                                            <li>2013/03/27 15:27:37 正在进行子网192.168.1.1链路发现...</li>
+                                            <li>2013/03/27 15:27:37 正在进行子网192.168.1.1链路发现...</li>
+                                            <li>2013/03/27 15:27:37 正在进行子网192.168.1.1链路发现...</li>
+                                            <li>2013/03/27 15:27:37 正在进行子网192.168.1.1链路发现...</li>
+                                            <li>2013/03/27 15:27:37 正在进行子网192.168.1.1链路发现...</li>
+                                            <li>2013/03/27 15:27:37 正在进行子网192.168.1.1链路发现...</li>
+                                            <li>2013/03/27 15:27:37 正在进行子网192.168.1.1链路发现...</li>
+                                            <li>2013/03/27 15:27:37 正在进行子网192.168.1.1链路发现...</li>
+                                            <li>2013/03/27 15:27:37 正在进行子网192.168.1.1链路发现...</li>
+                                            <li>2013/03/27 15:27:37 正在进行子网192.168.1.1链路发现...</li>
+                                            <li>2013/03/27 15:27:32 发现设备192.168.1.1...</li>
+                                            <li>2013/03/27 15:27:32 开始自动拓扑发现</li>
+                                         </ul>
+                                         </div>
+                                         </div>
+                                     </div>
+                                     <div class="wrapper2">
+                                     <div class="scroll-pane bb" style="height:360px;">
+                                     	 <div class="common">
+                                         <table>
+                                            <tr>
+                                                <th>统计信息</th>
+                                            </tr>
+                                         </table>
+                                         </div>
+                                         <div class="sub">
+                                         <table>
+                                        <tr>
+                                        	<th>共发现设备</th>
+                                            <th>231 台</th>   
+                                            <th>耗用时间</th>
+                                            <th>00：10：32</th>
+                                      </tr>
+                                        <tr>
+                                            <td>路由器</td>
+                                            <td>30 台</td>
+                                            <td></td>
+                                            <td></td>
+                                      </tr>
+                                      <tr>
+                                            <td>二层交换机</td>
+                                            <td>20 台</td>
+                                            <td></td>
+                                            <td></td>
+                                      </tr>
+                                        <tr>
+                                            <td>三层交换机</td>
+                                            <td>10 台</td>
+                                            <td></td>
+                                            <td></td>
+                                      </tr>
+                                      <tr>
+                                            <td>防火墙</td>
+                                            <td>2 台</td>
+                                            <td></td>
+                                            <td></td>
+                                      </tr>
+                                        <tr>
+                                            <td>主机</td>
+                                            <td>200 台</td>
+                                            <td></td>
+                                            <td></td>
+                                      </tr>
+                                      <tr>
+                                            <td>其他</td>
+                                            <td>23 台</td>
+                                            <td></td>
+                                            <td></td>
+                                      </tr>
+                                  </table>
+                                         </div>              
+                                     </div>           
+                                </div>
+                                 <div class="clear"></div> 
+                          	</div>
+                            
+                          </div>
+                        <div class="setting-unit" id="find5" style="display:none">
+                            <div class="button" id="find6">
+                                <input type="button" class="submit" value="重新发现" id="shwo_refind">
+                                <input type="button" class="submit" value="下一步" id="findnext">
+                          </div>
+                            <div class="title_txt" id="find7" style="display:none">
+                            	<label><input type="radio" checked="checked" id="show_new" /> <span class="t">新资源（40）</span></label>
+                                <label><input type="radio" id="show_old" /> <span class="t">已管理资源（20）</span></label>
+                             </div>
+                            <div class="holder holder_line">
+                                <div class="common" id="new">
+                                    <div class="theadpart" style="height:33px;">
+                                    <table>
+                                    	<thead>
+                                        <tr>
+                                            <th width="25%">资源名称</th>
+                                            <th width="25%">IP地址</th>
+                                            <th width="20%">MAC地址</th>
+                                            <th width="20%">资源类型</th>
+                                            <th>加入系统</th>
+                                      	</tr>
+                                      </thead>
+                                    </table>
+                                    </div>
+                                    <div class="tbodypart">
+                                   	<table>
+                                    	<tbody>
+                                    	<tr>
+                                            <td colspan="4"><a><span class="icon icon_down"></span><span class="t">锐捷交换机</span></a></td>
+                                            <td width="10%"><span class="icon icon_checked"></span></td>
+                                        </tr>
+                                        <tr class="cbg">
+                                            <td width="25%"><span class="icon"></span>Windows20100324-1305</td>
+                                            <td width="25%">172.16.14.95</td>
+                                            <td width="20%">00:1a:a9:7d:ed:75-00:1a:a9:7d:ed:76</td>
+                                            <td width="20%">Windows</td>
+                                            <td><span class="icon icon_checked"></span></td>
+                                        </tr>
+                                        <tr class="cbg">
+                                            <td><span class="icon"></span>Windows20100324-1305</td>
+                                            <td>172.16.14.95</td>
+                                            <td>00:1a:a9:7d:ed:75-00:1a:a9:7d:ed:76</td>
+                                            <td>Windows</td>
+                                            <td><span class="icon icon_checked"></span></td>
+                                      </tr>
+                                        <tr>
+                                            <td colspan="4"><a><span class="icon icon_down"></span><span class="t">Windows主机</span></a></td>
+                                            <td><span class="icon icon_checked"></span></td>
+                                        </tr>
+                                        <tr class="cbg">
+                                            <td><span class="icon"></span>Windows20100324-1305</td>
+                                            <td>172.16.14.95</td>
+                                            <td>00:1a:a9:7d:ed:75-00:1a:a9:7d:ed:76</td>
+                                            <td>Windows</td>
+                                            <td><span class="icon icon_checked"></span></td>
+                                       </tr>
+                                        <tr class="cbg">
+                                            <td><span class="icon"></span>Windows20100324-1305</td>
+                                            <td>172.16.14.95</td>
+                                            <td>00:1a:a9:7d:ed:75-00:1a:a9:7d:ed:76</td>
+                                            <td>Windows</td>
+                                            <td><span class="icon icon_checked"></span></td>
+                                      </tr>                                    
+                                    </table>
+                                    
+                                   </div>
+                              </div>
+                              	<div class="common" id="old" style="display:none">
+                                    <div class="theadpart" style="height:33px;">
+                                    <table>
+                                    	<thead>
+                                        <tr>
+                                            <th width="25%">资源名称</th>
+                                            <th width="25%">IP地址</th>
+                                            <th width="25%">MAC地址</th>
+                                            <th>资源类型</th>
+                                      	</tr>
+                                      </thead>
+                                    </table>
+                                    </div>
+                                    <div class="tbodypart">
+                                   	<table>
+                                    	<tbody>
+                                    	<tr>
+                                            <td colspan="4"><a><span class="icon icon_down"></span><span class="t">锐捷交换机</span></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td width="25%"><span class="icon"></span>Windows20100324-1305</td>
+                                            <td width="25%">172.16.14.95</td>
+                                            <td width="25%">00:1a:a9:7d:ed:75-00:1a:a9:7d:ed:76</td>
+                                            <td>Windows</td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="icon"></span>Windows20100324-1305</td>
+                                            <td>172.16.14.95</td>
+                                            <td>00:1a:a9:7d:ed:75-00:1a:a9:7d:ed:76</td>
+                                            <td>Windows</td>
+                                      </tr>
+                                        <tr>
+                                            <td colspan="4"><a><span class="icon icon_down"></span><span class="t">Windows主机</span></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="icon"></span>Windows20100324-1305</td>
+                                            <td>172.16.14.95</td>
+                                            <td>00:1a:a9:7d:ed:75-00:1a:a9:7d:ed:76</td>
+                                            <td>Windows</td>
+                                       </tr>
+                                        <tr>
+                                            <td><span class="icon"></span>Windows20100324-1305</td>
+                                            <td>172.16.14.95</td>
+                                            <td>00:1a:a9:7d:ed:75-00:1a:a9:7d:ed:76</td>
+                                            <td>Windows</td>
+                                      </tr>                                    
+                                    </table>
+                                    
+                                   </div>
+                              </div>
+                          </div>
+                      </div>
+                        <div class="setting-unit" id="find8" style="display:none">
+                            <div class="button">
+                                <input type="button" id="show_jump" class="submit" value="完成">
+                          </div>
+                      </div>
+                      </div>
+                      </div>
+              </div>
+        </div>
+        <div class="bottom-l">
+                <div class="bottom-r">
+                        <div class="bottom-m"></div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+
+    <!--layout left-->
+    <div class="layout_left bar">
+    <ul class="sidebar">
+        <li class="first">
+            <a href="smart6.html">
+                <span class="big_users"></span>
+                <span class="sidebar-text">用户管理</span>
+            </a>
+        </li>
+        <li class="on">
+            <a href="smart6-4.html">
+            	<span class="big_radar"></span>
+                <span class="sidebar-text">资源发现</span>
+            </a>
+            <ul class="sub-sidebar">
+            <li>
+                <a href="smart6-4.html">
+                    <span class="big_find"></span>
+                	<span class="sidebar-text">单个资源发现</span>
+                </a>
+            </li>
+            <li class="divider"></li>
+            <li>
+                <a href="smart6-4-1.html">
+                    <span class="big_findauto"></span>
+                	<span class="sidebar-text">自动拓扑发现</span>
+                </a>
+            </li>
+        </ul>
+        </li>
+        <li>
+            <a href="smart6-2.html">
+            	<span class="big_bell"></span>
+                <span class="sidebar-text">报警设置</span>
+            </a>
+        </li>
+        <li>
+            <a href="smart6-3.html">
+            	<span class="big_setting"></span>
+                <span class="sidebar-text">系统信息</span>
+            </a>
+        </li>
+    </ul>
+	</div>
+    
+<!--layer-->
+<div id="add1" style="width:500px;display:none">
+            <div class="portlet">
+    <div class="top-l">
+      <div class="top-r">
+        <div class="top-m"><span class="title">附加子网</span><span class="ico-quit"></span></div>
+</div>
+</div>
+    <div class="middle-l">
+      <div class="middle-r">
+        <div class="middle-m"> 
+        <!--table-->
+        <div class="form">
+              <table cellpadding="0" cellspacing="0">
+                <tbody>
+                    <tr>
+                        <td width="30%">子网地址</td>
+                        <td><input type="text" class="forminput"> <span class="rt">*</span></td>
+                    </tr>
+                    <tr class="cbg">
+                        <td>子网掩码</td>
+                        <td><input type="text" class="forminput"> <span class="rt">*</span></td>
+                    </tr>
+                    <tr >
+                        <td class="t_right" colspan="2"><input type="button" class="submit" value="保存"> <input type="button" class="cancel dialog_close" value="取消"> </td>
+                    </tr>
+              </tbody>
+            </table>
+          </div>
+
+</div>
+</div>
+</div>
+    <div class="bottom-l">
+      <div class="bottom-r">
+        <div class="bottom-m"></div>
+</div>
+</div>
+</div>
+            
+</div>
+<div id="add2" style="width:500px;display:none">
+<div class="panel_null">
+    <div class="top-l">
+      <div class="top-r">
+        <div class="top-m"><span class="ico-quit"></span></div>
+</div>
+</div>
+    <div class="middle-l">
+      <div class="middle-r">
+        <div class="middle-m">
+         	<div class="alert_text">
+              <span class="icon icon_warning"></span>
+              <span>该配置项最多添加5条。</span>
+            </div> 
+            <div class="button">
+              <a class="btn_s2 dialog_close">确定</a>  
+			</div>
+
+</div>
+</div>
+</div>
+    <div class="bottom-l">
+      <div class="bottom-r">
+        <div class="bottom-m"></div>
+</div>
+</div>
+</div>
+</div>
+<div id="add3" style="width:500px;display:none">
+<div class="portlet none">
+    <div class="top-l">
+      <div class="top-r">
+        <div class="top-m"><span class="title">SNMPV3设置</span><span class="ico-quit"></span></div>
+</div>
+</div>
+    <div class="middle-l">
+      <div class="middle-r">
+        <div class="middle-m"> 
+        <!--table-->
+        <div class="form">
+        	  <div class="tt1" style="left:177px; top:-6px;">
+              		<span class="t">请输入正确的IP地址。</span>
+              </div>
+              <div class="tt2" style="left:177px; top:123px;">
+              		<span>这个样式可以写入约18个汉字不折行字。</span>
+              </div>
+              <div class="tt3" style="left:177px; top:221px; display:none">
+              		<span>fixed18个以上的字符提示样式，最多40个中文字，如果有英文版本要根据实际情况做调整。</span>
+              </div>
+              <table cellpadding="0" cellspacing="0">
+                <tbody>						
+                    <tr>
+                        <td width="30%">IP地址</td>
+                        <td><input type="text" class="forminput red"> <span class="rt">*</span></td>
+                    </tr>
+                    <tr class="cbg">
+                        <td>端口</td>
+                        <td><input type="text" class="forminput"> <span class="rt">*</span></td>
+                    </tr>
+                    <tr>
+                        <td>用户名</td>
+                        <td><input type="text" class="forminput"> <span class="rt">*</span></td>
+                    </tr>
+                    <tr class="cbg">
+                        <td>安全级别</td>
+                        <td>
+                        <div class="select_body" style="width:200px;">
+                         <div class="select_trigger_wrap"><a class="select_trigger"></a></div>
+                         <div class="select_text">NOAUTH_NOPRIV</div>
+                        </div>
+                    <div class="select_boundtree" style="width:200px;">
+                      <ul>
+                        <li><a><span class="t">NOAUTH_NOPRIV</span></a></li>
+                        <li><a><span class="t">AUTH_NOPRIV</span></a></li>
+                        <li><a><span class="t">AUTH_PRIV</span></a></li>
+                      </ul>
+                    </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>上下文</td>
+                        <td><input type="text" class="forminput"> <span class="rt">*</span></td>
+                    </tr>
+                    <tr >
+                        <td class="t_right" colspan="2"><input type="button" class="submit" value="保存"> <input type="button" class="cancel dialog_close" value="取消"> </td>
+                    </tr>
+              </tbody>
+            </table>
+          </div>
+
+</div>
+</div>
+</div>
+    <div class="bottom-l">
+      <div class="bottom-r">
+        <div class="bottom-m"></div>
+</div>
+</div>
+</div>
+            
+</div>
+
+<!--layer-->
+<div id="jump" style="width:580px;display:none">
+    <div class="panel_null">
+    <div class="top-l">
+      <div class="top-r">
+        <div class="top-m"><span class="ico-quit"></span></div>
+      </div>
+    </div>
+    <div class="middle-l">
+      <div class="middle-r">
+        <div class="middle-m"> 
+            <div class="alert_text">
+              <span>发现完成，我要去</span>
+            </div>
+            <ul class="leap">   
+              	<li><a href="smart3.html"><span class="shortcut_box"></span>
+                	<span class="t">资源管理</span></a></li>
+                <li><a href="smart2.html"><span class="shortcut_topo"></span>
+                	<span class="t">网络拓扑</span></a></li>
+                <li><a href="smart6-4-1.html"><span class="shortcut_scan"></span>
+                	<span class="t">自动拓扑发现</span></a></li>
+                <li><a href="smart6-4.html"><span class="shortcut_find"></span>
+                	<span class="t">单个资源发现</span></a></li>
+              </ul>
+            <div class="clear" style="height:20px;"></div>
+        </div>
+      </div>
+    </div>
+    <div class="bottom-l">
+      <div class="bottom-r">
+        <div class="bottom-m"></div>
+      </div>
+    </div>
+</div>
+</div>
+<!--refind-->
+<div id="refind" style="width:500px;display:none">
+    <div class="panel_null">
+    <div class="top-l">
+      <div class="top-r">
+        <div class="top-m"><span class="ico-quit"></span></div>
+      </div>
+    </div>
+    <div class="middle-l">
+      <div class="middle-r">
+        <div class="middle-m"> 
+            <div class="alert_text">
+              <span class="icon icon_info"></span>
+              <span>放弃当前发现结果，重新发现？</span>
+            </div>
+            <div class="button">
+              <a class="btn_s2">确定</a>
+              <a class="btn_s dialog_close">取消</a>    
+			</div>
+        </div>
+      </div>
+    </div>
+    <div class="bottom-l">
+      <div class="bottom-r">
+        <div class="bottom-m"></div>
+      </div>
+    </div>
+</div>
+</div>
+<script>
+$('#show_add1').click(function(){
+	art.dialog({
+    content: document.getElementById('add1'),
+	id: 'ADD1',
+	padding: 0,
+	lock: true
+	});
+});
+$('#show_add2').click(function(){
+	art.dialog({
+    content: document.getElementById('add2'),
+	id: 'ADD2',
+	padding: 0,
+	lock: true
+	});
+});
+$('#show_add3').click(function(){
+	art.dialog({
+    content: document.getElementById('add3'),
+	id: 'ADD3',
+	padding: 0,
+	lock: true
+	});
+});
+$('#show_jump').click(function(){
+	art.dialog({
+    content: document.getElementById('jump'),
+	padding: 0,
+	lock: true
+	});
+});
+$('#shwo_refind').click(function(){
+	art.dialog({
+    content: document.getElementById('refind'),
+	padding: 0,
+	lock: true
+	});
+});
+
+$('td.td_tree .treehead').click(function(){	
+	if($(this).find('.icon').hasClass("icon_right"))
+		{
+		$(this).next('table.treenode').show(500);
+		$(this).find('.icon_right').addClass('icon_down').removeClass('icon_right');
+		}
+	else
+		{
+		$(this).next('table.treenode').hide(500);
+		$(this).find('.icon_down').addClass('icon_right').removeClass('icon_down');
+		}
+	
+	})
+</script>
+</body>
+</html>

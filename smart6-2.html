@@ -1,0 +1,471 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>RIIL Smart</title>
+<!--gloab-->
+<link href="../css/comm.css" rel="stylesheet" type="text/css" />
+<link href="../css/widget.css" rel="stylesheet" type="text/css" />
+<link href="../css/ico.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../js/jquery-1.8.2.min.js"></script>
+<!--demo-->
+<link href="../css/demo.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../js/demo.js"></script>
+<!--artdialog-->
+<link href="../css/artdialog.css" rel="stylesheet" />
+<script src="../js/artDialog.min.js"></script>
+<script src="../js/jquery.overlay.min.js"></script>
+<!--scroll-->
+<link href="../css/jquery.jscrollpane.css" rel="stylesheet" type="text/css" />
+<script src="../js/jquery.mousewheel.js"></script>
+<script src="../js/jquery.jscrollpane.min.js"></script>
+<script>
+$(function()
+{
+	var settings = {
+		showArrows: false,
+		autoReinitialise: true
+	};
+	$('.scroll-pane').jScrollPane(settings);
+});
+</script>
+</head>
+<body>
+    <!--layout right-->
+	<div class="layout_right bar">
+      <div class="p_content">
+      <div class="portlet">
+    <div class="top-l">
+      <div class="top-r">
+        <div class="top-m"><span class="title">报警设置</span> </div>
+</div>
+</div>
+    <div class="middle-l">
+      <div class="middle-r">
+        <div class="middle-m scroll-pane"> 
+        <div class="set_email">
+        	<div class="canvas">
+                    <div class="theadpart">
+                    	<table>
+                        	<tr>
+                            	<th class="thl" width="2%"></th>
+                                <th class="thm" width="96%"></th>
+                                <th class="thr" width="2%"></th>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="tbodypart">
+                    <table>
+                            <tr>
+                            	<td width="18%">邮件服务器地址</td>
+                                <td width="32%"><input class="bgray" type="text" /><span class="t rt">*</span></td>
+                            	<td width="18%">邮件服务器端口</td>
+                                <td><input class="bgray" type="text" /><span class="t rt">*</span></td>
+                            </tr>
+                            <tr>
+                            	<td>发送邮箱用户名</td>
+                                <td><input class="bgray" type="text" /><span class="t rt">*</span></td>
+                            	<td>发送邮箱密码</td>
+                                <td><input class="bgray" type="text" /></td>
+                            </tr>
+                            <tr>
+                            	<td>测试邮箱</td>
+                                <td><input class="bgray" type="text" /><span class="t rt">*</span></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr class="trbtn">
+                            	<td colspan="2" class="t_left">
+                                	<span class="icon icon_info_gray"></span> 
+                                    <span>报警信息接收邮箱设置</span>
+                                </td>
+                                <td colspan="2" class="t_right"> 
+                                    <input type="button" class="sblue" value="测试" />
+                                    <input type="button" class="sgreen" value="保存" />
+                                </td>
+                            </tr>
+                    </table>
+                    </div>
+                    <div class="tfootpart">
+                    	<table>
+                        	<tr>
+                            	<td class="tfl" width="2%"></td>
+                                <td class="tfm" width="96%"></td>
+                                <td class="tfr" width="2%"></td>
+                            </tr>
+                        </table>
+                    </div>
+                    </div>
+        <div class="clear"></div>
+        </div>
+        <div class="midline"></div>
+        <div class="set_sms">
+        	<div class="canvas">
+                    <div class="tabber">
+                        <ul>
+                          <li class="on"><a>串口方式</a> </li>
+                          <li><a>Web方式</a> </li>
+                          <li><a>第三方数据库</a> </li>
+                        </ul>
+                      </div>
+                    <div class="tabber-content">
+                    <div>
+                    <table>
+                            <tr>
+                            	<td width="20%">短信设备COM端口号</td>
+                                <td><input class="bgray" type="text" /><span class="rt">*</span></td>
+                            </tr>
+                            <tr>
+                            	<td>短信设备波特率</td>
+                                <td><input class="bgray" type="text" /><span class="rt">*</span></td>
+                            </tr>
+                            <tr>
+                            	<td>短信SIM卡PIN码</td>
+                                <td><input class="bgray" type="text" /><span class="rt">*</span></td>
+                            </tr>
+                            <tr>
+                            	<td>短信设备厂商</td>
+                                <td><input class="bgray" type="text" /><span class="rt">*</span></td>
+                            </tr>
+                            <tr>
+                            	<td>短信设备型号</td>
+                                <td><input class="bgray" type="text" /><span class="rt">*</span></td>
+                            </tr>
+                            <tr class="trbtn">
+                            	<td class="t_left">
+                                	<span class="icon icon_info_gray"></span> 
+                                    <span>报警短信接收设置</span>
+                                </td>
+                                <td class="t_right"> 
+                                    <input type="button" class="sblue" value="测试" />
+                                    <input type="button" class="sgreen" value="保存" />
+                                </td>
+                            </tr>
+                    </table>
+                    </div>
+                    <div style="display:none">
+                    <table>           
+                            <tr>
+                            	<td width="15%">IP地址</td>
+                                <td width="35%"><input class="bgray" type="text" /><span class="rt">*</span></td>
+                            	<td width="15%">端口</td>
+                                <td><input class="bgray" type="text" /><span class="rt">*</span></td>
+                            </tr>
+                            <tr>
+                            	<td>应用</td>
+                                <td><input class="bgray" type="text" /></td>
+                            	<td>参数</td>
+                                <td><input class="bgray" type="text" value="多个参数请用‘&’键链接" /></td>
+                            </tr>
+                            <tr>
+                            	<td>内容参数名称</td>
+                                <td><input class="bgray" type="text" /><span class="rt">*</span></td>
+                            	<td>手机参数名称</td>
+                                <td><input class="bgray" type="text" /><span class="rt">*</span></td>
+                            </tr>
+                            <tr>
+                            	<td>字符编码</td>
+                                <td colspan="3"><input class="bgray" type="text" /><span class="rt">*</span></td>
+                            </tr>
+                            <tr>
+                            	<td>URL</td>
+                                <td colspan="3"><span class="t">http://:/?=%Content%&amp;=%Telephone%</span></td>
+                            </tr>
+                            <tr class="trbtn">
+                            	<td colspan="2" class="t_left">
+                                	<span class="icon icon_info_gray"></span> 
+                                    <span>报警短信接收设置</span>
+                                </td>
+                                <td colspan="2" class="t_right"> 
+                                    <input type="button" class="sblue" value="测试" />
+                                    <input type="button" class="sgreen" value="保存" />
+                                </td>
+                            </tr>
+                    </table>
+                    </div>
+                    <div style="display:none">
+                    <table>                    
+                            <tr>
+                            	<td width="15%">数据库类型</td>
+                                <td width="35%"><div class="f_left">
+                                        <div class="select_body" style="width:180px;">
+                                             <div class="select_trigger_wrap"><a class="select_trigger"></a></div>
+                                             <div class="select_text">Oracle9i/10g</div>
+                                        </div>
+                                        <div class="select_boundtree">
+                                          <ul>
+                                            <li><a><span class="t">Oracle9i/10g</span></a></li>
+                                            <li><a><span class="t">MySQL</span></a></li>
+                                            <li><a><span class="t">Sybase</span></a></li>
+                                            <li><a><span class="t">DB2</span></a></li>
+                                            <li><a><span class="t">SQLServer2000</span></a></li>
+                                            <li><a><span class="t">SQLServer2005</span></a></li>
+                                          </ul>
+                                        </div>
+                                    </div>
+                                	<span class="rt">*</span></td>
+                            	<td width="15%"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                            	<td>数据库名称</td>
+                                <td><input class="bgray" type="text" /><span class="rt">*</span></td>
+                                <td>数据库IP地址</td>
+                                <td><input class="bgray" type="text" /><span class="rt">*</span></td>
+                            </tr>
+                            <tr>
+                            	<td>数据库端口</td>
+                                <td><input class="bgray" type="text" /><span class="rt">*</span></td>
+                            	<td>数据库用户名</td>
+                                <td><input class="bgray" type="text" /><span class="rt">*</span></td>
+                            </tr>
+                            <tr>
+                            	<td>数据库密码</td>
+                                <td><input class="bgray" type="text" /><span class="rt">*</span></td>
+                            	<td>数据库表名</td>
+                                <td><input class="bgray" type="text" /><span class="rt">*</span></td>
+                            </tr>
+                            <tr>
+                            	<td>插入方式</td>
+                                <td colspan="3">
+                                	<div class="f_left">
+                                	<div class="select_body" style="width:180px;">
+                                             <div class="select_trigger_wrap"><a class="select_trigger"></a></div>
+                                             <div class="select_text">存储过程插入</div>
+                                        </div>
+                                        <div class="select_boundtree">
+                                          <ul>
+                                            <li><a><span class="t">常规插入</span></a></li>
+                                            <li><a><span class="t">存储过程插入</span></a></li>
+                                          </ul>
+                                        </div>
+                                        </div>
+                                        
+                                 </td>
+                            </tr>
+                            <tr>
+                            	<td>存储过程名称</td>
+                                <td colspan="3">
+                                	<input class="bgray" type="text" />
+                                    <span class="rt">*</span>
+                                    <span class="t">存储过程必须包含两个参数，第一个为手机号，第二个为短信内容</span>
+                                 </td>
+                            </tr>
+                            <tr>
+                            	<td>SQL语句</td>
+                                <td colspan="3"><span class="t">INSERT INTO (Phone,Message,) VALUES ('手机号', '短信内容', '')</span></td>
+                            </tr>
+                            <tr class="cbg">
+                            	<td colspan="4" class="thead">
+                                	<span class="f_left">参数列表</span>
+                                    <span class="f_right">
+                                    	<a class="btn" id="show_add"><span class="icon icon_plusc"></span>添加</a>
+                                        <a class="btn" id="show_alert"><span class="icon icon_trash"></span>删除</a>
+                                    </span></td>
+                            </tr>
+                            </table>
+                    <div class="common">
+                    <div class="theadpart">
+                    <table>
+                            <tr>
+                            	<th width="10%" class="tcenter"><span class="icon icon_checked"></span></th>
+                                <th width="30%">参数名称</th>
+                                <th width="30%">参数类型</th>
+                                <th>参数值</th>
+                            </tr>
+                     </table>
+                     </div>
+                     <div class="tbodypart">
+                     <table>
+                            <tr>
+                            	<td width="10%" class="tcenter"><span class="icon icon_checked"></span></td>
+                                <td width="30%"><input class="bgray" type="text" /></td>
+                                <td width="30%">string</td>
+                                <td>手机号</td>
+                            </tr>
+                            <tr class="cbg">
+                            	<td class="tcenter"><span class="icon icon_checked"></span></td>
+                                <td><input class="bgray" type="text" /></td>
+                                <td>string</td>
+                                <td>短信内容</td>
+                            </tr>
+                    </table>
+                    </div>
+                    </div>
+                    <table>
+                            <tr class="trbtn">
+                            	<td colspan="2" class="t_left">
+                                	<span class="icon icon_info_gray"></span> 
+                                    <span>报警短信接收设置</span>
+                                </td>
+                                <td colspan="2" class="t_right"> 
+                                    <input type="button" class="sblue" value="测试" />
+                                    <input type="button" class="sgreen" value="保存" />
+                                </td>
+                            </tr>
+                    </table>
+                    </div>
+                    </div>
+                    </div>
+            <div class="clear"></div>
+        </div>
+        <!--table-->
+        
+        
+</div>
+</div>
+</div>
+    <div class="bottom-l">
+      <div class="bottom-r">
+        <div class="bottom-m"></div>
+</div>
+</div>
+</div>
+  </div>
+  </div>
+
+    <!--layout left-->
+    <div class="layout_left bar">
+    <ul class="sidebar">
+        <li class="first">
+            <a href="smart6.html">
+                <span class="big_users"></span>
+                <span class="sidebar-text">用户管理</span>
+            </a>
+        </li>
+        <li>
+            <a href="smart6-4.html">
+            	<span class="big_radar"></span>
+                <span class="sidebar-text">资源发现</span>
+            </a>
+            <ul class="sub-sidebar">
+            <li>
+                <a href="smart6-4.html">
+                    <span class="big_find"></span>
+                	<span class="sidebar-text">单个资源发现</span>
+                </a>
+            </li>
+            <li class="divider"></li>
+            <li>
+                <a href="smart6-4-1.html">
+                    <span class="big_findauto"></span>
+                	<span class="sidebar-text">自动拓扑发现</span>
+                </a>
+            </li>
+        </ul>
+        </li>
+        <li class="on">
+            <a href="smart6-2.html">
+            	<span class="big_bell"></span>
+                <span class="sidebar-text">报警设置</span>
+            </a>
+        </li>
+        <li>
+            <a href="smart6-3.html">
+            	<span class="big_setting"></span>
+                <span class="sidebar-text">系统信息</span>
+            </a>
+        </li>
+    </ul>
+	</div>
+ <!--add-->
+<div id="add" style="width:550px; display:none">
+    <div class="panel_null">
+    <div class="top-l">
+      <div class="top-r">
+        <div class="top-m"><span class="title">---</span><span class="ico-quit"></span></div>
+      </div>
+    </div>
+    <div class="middle-l">
+      <div class="middle-r">
+        <div class="middle-m"> 
+            <div class="simple">
+            <table>
+            	<tr>
+                	<td width="20%">参数名称</td>
+                    <td><input class="forminput" /></td>
+                </tr>
+                <tr>
+                	<td>参数类型</td>
+                    <td>
+                    	<div class="select_body" style="width:200px;">
+                             <div class="select_trigger_wrap"><a class="select_trigger"></a></div>
+                             <div class="select_text">string</div>
+                        </div>  
+                        <div class="select_boundtree">
+                          <ul>
+                            <li><a><span class="t">string</span></a></li>
+                            <li><a><span class="t">int</span></a></li>
+                            <li><a><span class="t">自定义</span></a></li>
+                          </ul>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                	<td>参数值</td>
+                    <td><input class="forminput" /></td>
+                </tr>
+            </table>
+            </div>
+            <div class="button">
+              <a class="btn_s2">确定</a>
+              <a class="btn_s dialog_close">取消</a>    
+			</div>
+        </div>
+      </div>
+    </div>
+    <div class="bottom-l">
+      <div class="bottom-r">
+        <div class="bottom-m"></div>
+      </div>
+    </div>
+</div>
+</div>   
+ <!--alert-->
+<div id="alert" style="width:550px; display:none">
+    <div class="panel_null">
+    <div class="top-l">
+      <div class="top-r">
+        <div class="top-m"><span class="title">---</span><span class="ico-quit"></span></div>
+      </div>
+    </div>
+    <div class="middle-l">
+      <div class="middle-r">
+        <div class="middle-m"> 
+            <div class="alert_text">
+              <span class="icon icon_trash"></span>
+              <span>确定要删除所选项吗？</span>
+            </div>
+            <div class="button">
+              <a class="btn_s2">确定</a>
+              <a class="btn_s dialog_close">取消</a>    
+			</div>
+        </div>
+      </div>
+    </div>
+    <div class="bottom-l">
+      <div class="bottom-r">
+        <div class="bottom-m"></div>
+      </div>
+    </div>
+</div>
+</div>   
+
+<script>
+$('#show_add').click(function(){
+	art.dialog({
+    content: document.getElementById('add'),
+	padding: 0,
+	lock: true
+	});
+});
+$('#show_alert').click(function(){
+	art.dialog({
+    content: document.getElementById('alert'),
+	padding: 0,
+	lock: true
+	});
+});
+</script>
+</body>
+</html>
