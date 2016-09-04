@@ -1,0 +1,153 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html class="homepage">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<!--index-->
+<link href="../css/index.css" rel="stylesheet" type="text/css" />
+<!--gloab-->
+<link href="../css/comm.css" rel="stylesheet" type="text/css" />
+<link href="../css/widget.css" rel="stylesheet" type="text/css" />
+<link href="../css/ico.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../js/jquery-1.8.2.min.js"></script>
+<!--demo-->
+<link href="../css/demo.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../js/demo.js"></script>
+<!--artdialog-->
+<link href="../css/artdialog.css" rel="stylesheet" />
+<script src="../js/artDialog.min.js"></script>
+<script src="../js/jquery.overlay.min.js"></script>
+<!--scroll-->
+<link href="../css/jquery.jscrollpane.css" rel="stylesheet" type="text/css" />
+<script src="../js/jquery.mousewheel.js"></script>
+<script src="../js/jquery.jscrollpane.min.js"></script>
+<script>
+$(function()
+{
+	var settings = {
+		showArrows: false,
+		autoReinitialise: true
+	};
+	$('.scroll-pane').jScrollPane(settings);
+});
+function MM_openBrWindow(theURL,winName,features) { //v2.0
+  window.open(theURL,winName,features);
+}
+function MM_goToURL() { //v3.0
+  var i, args=MM_goToURL.arguments; document.MM_returnValue = false;
+  for (i=0; i<(args.length-1); i+=2) eval(args[i]+".location='"+args[i+1]+"'");
+}
+function MM_changeProp(objId,x,theProp,theValue) { //v9.0
+  var obj = null; with (document){ if (getElementById)
+  obj = getElementById(objId); }
+  if (obj){
+    if (theValue == true || theValue == false)
+      eval("obj.style."+theProp+"="+theValue);
+    else eval("obj.style."+theProp+"='"+theValue+"'");
+  }
+}
+</script>
+<link href="../css/suggest.css" rel="stylesheet" />
+
+
+</head>
+
+<body >
+<div class="panel" style="width:900px; height:520px;">
+      <div class="top-l ">
+        <div class="top-r">
+          <div class="top-m">
+          	<span class="title">Riil-Smart反馈建议</span>
+            <span class="ico-quit"></span>
+             </div>
+        </div>
+      </div>
+      <div class="middle-l">
+        <div class="middle-r">
+          <div class="middle-m" style="height:480px;">
+          <div class="suggest_area" >
+          <div class="suggest_h" style="margin-left:60px; font-size:14px">
+                     <span class="suggestico_message"></span>你有什么问题或建议想对我们说？
+                     <span class="f_right suggest_back" ><a href="smart_suggest01.html">返回</a></span>
+                </div>
+         <div class=" suggest_textarea" style="text-align:center; height:331px ">
+            <textarea class="" style="width:750px; height:270px">
+1.您认为RIIL Smart的哪些产品和服务还需要改进？
+2.您对这些产品的改进有什么好的建议？
+            </textarea> 
+             </div>
+          <div class="setting-suggest">
+        <div class="button">
+        <a class="btn_s2 f_left"  >添加附件</a>
+        <div class="fj_box">
+        
+        <span class="textbox">看家我家哦我安分安分啊服务2飞是啊啊 </span>
+        <span class="icon icon_cross_s "></span>
+        </div><div class="fj_box">
+        
+        <span class="textbox">看家我家哦我安分安分啊服务2飞是啊啊 </span>
+        <span class="icon icon_cross_s "></span>
+        </div><div class="fj_box">
+        
+        <span class="textbox">看家我家哦我安分安分啊服务2飞是啊啊 </span>
+        <span class="icon icon_cross_s "></span>
+        </div>
+            <input type="button" value="提交问题" class="submit">
+        </div>
+     
+        </div>   
+          
+          </div>
+          <div class="suggest_btbg">
+          <div class="suggest_choose">
+            <span class="suggest_choose1 on" onclick="MM_goToURL('parent','smart_suggest01.html');return document.MM_returnValue">问题及建议</span>
+            <span class="suggest_choose2"  onclick="MM_goToURL('parent','smart_suggest03.html');return document.MM_returnValue">已回复的问题</span>
+          </div>
+          </div>
+          </div>
+         
+        </div>
+      </div>
+      <div class="bottom-l">
+        <div class="bottom-r">
+          <div class="bottom-m"></div>
+        </div>
+      </div>
+    </div>
+<!--弹出窗口-->
+<div class="panel_null uploadfile" style="top:50px; left:100px; display:none" id="mbox">
+      <div class="top-l">
+        <div class="top-r">
+          <div class="top-m"> 
+          	<span class="ico-quit" onclick="MM_changeProp('mbox','','display','none','DIV')"></span>
+            <span class="title">标题</span> </div>
+        </div>
+      </div>
+      <div class="middle-l">
+        <div class="middle-r">
+          <div class="middle-m">
+          <div class="">
+         
+					<input readonly="readonly" class="file">
+					<div class="imitate_file">
+		            <input type="file" class="inputfile" name="file">
+					<a class="btn_body on f-right"><span class="text">浏览</span></a>
+					</div>
+               
+   
+        
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bottom-l">
+        <div class="bottom-r">
+          <div class="bottom-m"></div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+</body>
+</html>

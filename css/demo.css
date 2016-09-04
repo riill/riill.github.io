@@ -1,0 +1,19 @@
+.demobox{width:45.5%;float:left; margin:1%; padding:1%; border:1px dashed #ccc;}
+.demoeffect{line-height:24px; padding:1%; border:1px solid #CCC; background:url(../images/comm/bg.png)}
+.democode{line-height:24px; padding:1%; border:1px solid #CCC; border-top:none;}
+h3{ line-height:26px;font-size:14px}
+.searchpart td{ white-space:nowrap}
+.searchpart input{ width:80px;}
+/*demo fixed */
+.content{ height:644px;}
+.layout_right .middle-m{height:600px;}
+.layout_left .middle-m{height:600px;}
+.layout_left {height:644px;}
+.layout_right{width:1106px;}
+.layout_right.swf{width:1048px;}
+.layout_right.swf{width:1048px;}
+.layout_right.bar{width:1288px;}
+.panel {position:relative; top:inherit; left:inherit}
+.interface_more{ position:absolute; bottom:0px; left:70px;width:134px; height:6px; margin:10px auto 0px;background:url(../images/comm/rate.png) center -75px; cursor:pointer;}
+.interface_more:hover{background:url(../images/comm/rate.png) center -90px}
+ul.sub_ul .select_boundtree li{ position:relative;border-bottom: 1px solid #cccccc;padding:0px!important;}

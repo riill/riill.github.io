@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<anychart>
+  <margin left="-10" right="-10" top="-10" bottom="-10"  />
+  <settings>
+    <animation enabled="True"/>
+  </settings>
+  <charts>
+    <chart plot_type="CategorizedVertical" enable_animation="false"><!-- 设置为什么形状的图， 线-->
+      <!--palette 模板颜色-->
+      <palette>
+        <item color="#ff5757" />
+        <item color="#fd7e02" />
+        <item color="#00d0d0" />
+        <item color="#01bd15" />
+        <item color="#328be8" />
+      </palette>
+	  <data_plot_settings default_series_type="Spline">
+        <line_series>
+          <tooltip_settings enabled="True">
+              <font color="#7b7b7b" family="微软雅黑" size="12"  />
+              <background enabled="true">
+                  <fill enabled="true" type="Gradient">
+                      <gradient angle="90">
+                          <key position="0" color="#ffffff" opacity="0.8" />
+                          <key position="1" color="#ededed" opacity="0.9" />
+                      </gradient>
+                  </fill>
+                  <border enabled="true" color="#cfcfcf" />
+                  <corners type="Rounded"/>
+              </background>
+            <format>资源名称: {%CategoryName}
+CPU平均利用率: {%YValue}{numDecimals:0}%</format>
+          </tooltip_settings>
+          <label_settings enabled="false" rotation="90">
+            <position anchor="Center" halign="Center" valign="Top" />
+            <format>{%YValue}</format>
+            <font size="10" color="Black">
+              <effects>
+                <drop_shadow enabled="True" opacity="0.3" distance="2" />
+              </effects>
+            </font>
+            <background enabled="false" />
+          </label_settings>
+        </line_series>
+      </data_plot_settings>
+      <!--data 设置信息的，录入数据的-->
+      <data>
+        <series name="R04303" type="Line">
+          <point y="95" name="WIN-G8I" />
+		 			<point y="89" name="RI00658" />
+		  		<point y="93" name="TJruijie" />
+          <point y="90" name="RIIL-93" />
+          <point y="94" name="RI00611" />
+        </series>
+        <series name="R11231" type="Line">
+          <point y="11" name="WIN-G8I" />
+		 			<point y="15" name="RI00658" />
+		  		<point y="19" name="TJruijie" />
+          <point y="16" name="RIIL-93" />
+          <point y="14" name="RI00611" />
+        </series>    
+        <series name="R19123" type="Line">
+          <point y="31" name="WIN-G8I" />
+		 			<point y="25" name="RI00658" />
+		  		<point y="39" name="TJruijie" />
+          <point y="36" name="RIIL-93" />
+          <point y="34" name="RI00611" />
+        </series>   
+        <series name="R16123" type="Line">
+          <point y="52" name="WIN-G8I" />
+		 			<point y="55" name="RI00658" />
+		  		<point y="50" name="TJruijie" />
+          <point y="43" name="RIIL-93" />
+          <point y="54" name="RI00611" />
+        </series>    
+         <series name="R66223" type="Line">
+          <point y="11" name="WIN-G8I" />
+		 			<point y="25" name="RI00658" />
+		  		<point y="19" name="TJruijie" />
+          <point y="6" name="RIIL-93" />
+          <point y="34" name="RI00611" />
+        </series>        
+        
+        
+        
+      </data>
+      <!--chart_settings 表设置-->
+      <chart_settings>
+        <chart_background enabled="false" />
+        <title>
+          <text enabled="true">CPU平均利用率 </text>
+        </title>
+        <axes>
+          <y_axis >
+            <title enabled="false">
+              <font color="#000" />
+              <text>在线用户数</text>
+            </title>
+            <labels allow_overlap="true">
+              <font color="#000" />
+              <format>{%Value}{maxChar:15,maxCharFinalChars:..}</format>
+            </labels>
+          </y_axis>
+          <x_axis>
+            <title enabled="false">
+              <font color="#000" />
+              <text>统计时间</text>
+            </title>
+            <labels allow_overlap="true">
+              <font color="#000" />
+              <format>2013-5-22 16:41:25</format>
+            </labels>
+          </x_axis>
+        </axes>
+      </chart_settings>
+    </chart>
+  </charts>
+</anychart>

@@ -1,0 +1,69 @@
+/*  
+*@Description: riilsmart index css   
+*@Author:      viviann
+*@Update:      viviann(2013-05-8)  
+*/ 
+@charset "UTF-8";
+/*----------------------header & footer-------------------------*/
+.header	{ position:relative; width:100%; height:96px; background:url(../images/index/header.jpg)}
+.footer	{ position:relative; width:100%; height:28px; text-align:right; background:url(../images/index/footer_bg.png)}
+.footer .textbg{ float:right; width:700px;height:28px; line-height:28px; padding:0px 20px; background:url(../images/comm/grid.png) center no-repeat; color:#fff;}
+.content{ background:url(../images/index/content.png) repeat-x;}
+.logo	{ float:left; width:318px; height:96px;}
+.welcome{ float:right; width:490px; height:25px;padding:8px 5px 2px; text-align:right;background:url(../images/index/welcome.png) top right no-repeat;}
+.welcome_text{ padding:0px 10px;color:#FFF;}
+.welcome .icon{ margin:0px 3px -4px 3px;}
+.nav	{ position:absolute; right:10px; bottom:5px; height:59px;}
+.nav li	{ display:block; float:left; padding:2px 8px; background:url(../images/index/nav_line.png) center right no-repeat}
+.nav a	{ display:block; width:96px; height:59px; background:url(../images/index/nav.png); cursor:pointer;}
+.nav a.nav01	{ background-position:0px 0px;}
+.nav a.nav02	{ background-position:-120px 0px;}
+.nav a.nav03	{ background-position:-240px 0px;}
+.nav a.nav04	{ background-position:-360px 0px;}
+.nav a.nav05	{ background-position:-480px 0px;}
+.nav a.nav06	{ background-position:-600px 0px;}
+.nav a.nav01:hover	{ background-position:0px -60px;}
+.nav a.nav02:hover	{ background-position:-120px -60px;}
+.nav a.nav03:hover	{ background-position:-240px -60px;}
+.nav a.nav04:hover	{ background-position:-360px -60px;}
+.nav a.nav05:hover	{ background-position:-480px -60px;}
+.nav a.nav06:hover	{ background-position:-600px -60px;}
+.nav a.nav01.on	{ background-position:0px -120px;}
+.nav a.nav02.on	{ background-position:-120px -120px;}
+.nav a.nav03.on	{ background-position:-240px -120px;}
+.nav a.nav04.on	{ background-position:-360px -120px;}
+.nav a.nav05.on	{ background-position:-480px -120px;}
+.nav a.nav06.on	{ background-position:-600px -120px;}
+.quicknav	{ position:absolute; top:96px; height:50px; padding-top:12px; padding-left:10px; background:url(../images/index/qnav.png);}
+/*end*/
+/*bookmark*/
+.bookmark	{ position:absolute; right:0px;}
+.quicknav .btn_img{ position:relative;}
+.quicknav .icon_cross_s{ display:none; position:absolute; top:4px; right:4px;}
+.quicknav .btn{ float:left; line-height:34px;}
+.qnav_bar	{ position:absolute; right:10px; top:10px;height:34px;}
+.qnav_bar li{ display:block; float:left;}
+.qnav_bar a	{ display:block; height:34px; background:url(../images/btn/q_btn.png);cursor:pointer;}
+.qnav_bar a.quick{ width:87px; background-position:0px 0px }
+.qnav_bar a.quickhistory{ width:89px; background-position:0px -80px}
+.qnav_bar a.quickset{width:37px; background-position:0px -160px}
+.qnav_bar a.quickclose{width:37px; background-position:0px -200px}
+.qnav_bar a.quick:hover{ width:87px; background-position:0px -40px }
+.qnav_bar a.quickhistory:hover{ width:89px; background-position:0px -120px}
+.qnav_bar a.quickset:hover{width:37px; background-position:right -160px}
+.qnav_bar a.quickclose:hover{width:37px; background-position:right -200px}
+.qnav_bar a.quick.on{ width:87px; background-position:0px -40px }
+.qnav_bar a.quickhistory.on{ width:89px; background-position:0px -120px}
+.qnav_bar a.quickset.on{width:37px; background-position:right -160px}
+.qnav_bar a.quickclose.on{width:37px; background-position:right -200px}
+/*tshirt*/
+ul.tshirt{text-align:center; margin:20px 0px;}
+ul.tshirt li{ display:inline-block;margin:5px;padding:10px; position:relative; border:1px solid transparent }
+ul.tshirt li:hover{ border:1px solid #fff}
+ul.tshirt li.on{ border:1px solid #fff}
+ul.tshirt li a.tshirt1{display:block;float:left;width:227px; height:170px; color:#555555; background-image:url(../images/index/tshirt1.png)}
+ul.tshirt li a.tshirt2{display:block;float:left;width:227px; height:170px; color:#555555; background-image:url(../images/index/tshirt2.png)}
+ul.tshirt li a.tshirt3{display:block;float:left;width:227px; height:170px; color:#555555; background-image:url(../images/index/tshirt3.png)}
+ul.tshirt li a.tshirt4{display:block;float:left;width:227px; height:170px; color:#555555; background-image:url(../images/index/tshirt4.png)}
+ul.tshirt li .btn_s{ position:absolute; bottom:23px; right:20px;}
+ul.tshirt li .check{ position:absolute; bottom:20px; right:10px;display:none}

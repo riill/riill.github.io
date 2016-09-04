@@ -1,0 +1,249 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>RIIL Smart</title>
+<!--gloab-->
+<link href="../css/comm.css" rel="stylesheet" type="text/css" />
+<link href="../css/widget.css" rel="stylesheet" type="text/css" />
+<link href="../css/ico.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../js/jquery-1.8.2.min.js"></script>
+<!--demo-->
+<link href="../css/demo.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../js/demo.js"></script>
+<!--artdialog-->
+<link href="../css/artdialog.css" rel="stylesheet" />
+<script src="../js/artDialog.min.js"></script>
+<script src="../js/jquery.overlay.min.js"></script>
+<!--scroll-->
+<link href="../css/jquery.jscrollpane.css" rel="stylesheet" type="text/css" />
+<script src="../js/jquery.mousewheel.js"></script>
+<script src="../js/jquery.jscrollpane.min.js"></script>
+<script>
+$(function()
+{
+	var settings = {
+		showArrows: false,
+		autoReinitialise: true
+	};
+	$('.scroll-pane').jScrollPane(settings);
+});
+</script>
+</head>
+<body>
+    <!--layout right-->
+    <div class="layout_right bar">
+        <div class="p_content">
+          <div class="tab-group">
+                <div class="tab">
+                  <ul>
+                    <li><a href="smart6-3.html">系统审计日志</a> </li>
+                    <li class="on"><a href="smart6-3-1.html">系统信息</a> </li>
+                    <li><a href="smart6-3-2.html">清空数据</a></li>
+                </ul>
+              </div>
+                <div class="tab-content scroll-pane" style="height:600px;">
+                    <div class="rare">
+                        <div class="theadpart">
+                        <table>
+                            <thead>
+                            <tr>								
+                                <th width="10%">类别</th>
+                                <th width="20%">信息项名称</th>
+                                <th>信息项内容</th>
+                            </tr>
+                            </thead>
+                        </table>
+                        </div>
+                        <div class="tbodypart">
+                        <table>
+                            <tbody> 	   		
+                                <tr>		
+                                    <td width="10%" rowspan="14" class="rowtd">系统信息</td>
+                                    <td width="20%">产品版本</td>
+                                    <td>RIIL Smart v6.0.0</td>
+                                </tr>
+                                <tr class="cbg">
+                                    <td>BUILD时间</td>	
+                                    <td>2013-03-22 01:42:11</td>
+                                </tr>
+                                <tr>	
+                                    <td>主页URL</td>
+                                    <td>http://172.17.160.59</td>
+                                </tr>
+                                <tr class="cbg">
+                                    <td>当前工作目录</td>	
+                                    <td>C:/RuiJie/RIIL/RIIL_Portal_Server</td>
+                                </tr>
+                                <tr>	
+                                    <td>运行时间</td>
+                                    <td>00天 01 小时 18 分钟</td>
+                                </tr>
+                                <tr class="cbg">
+                                    <td>用户位置</td>
+                                    <td>中国</td>
+                                </tr>
+                                <tr>
+                                    <td>用户时区</td>
+                                    <td>Asia/Shanghai</td>
+                                </tr>
+                                <tr class="cbg">
+                                    <td>应用服务器容器</td>
+                                    <td>Apache Tomcat/6.0.35</td>
+                                </tr>
+                                <tr>
+                                    <td>系统编码</td>
+                                    <td>GBK</td>
+                                </tr>
+                                <tr class="cbg">
+                                    <td>操作系统</td>
+                                    <td>Windows Server 2008 R2</td>
+                                </tr>
+                                <tr>
+                                    <td>数据库类型</td>
+                                    <td>MySQL</td>
+                                </tr>
+                                <tr class="cbg">
+                                    <td>数据库URL</td>
+                                    <td>jdbc:mysql://127.0.0.1:3306/riil_product?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true </td>
+                                </tr>
+                                <tr>
+                                    <td>数据库版本</td>
+                                    <td>5.5.21</td>
+                                </tr>
+                                <tr class="cbg">
+                                    <td>数据库驱动</td>
+                                    <td>com.mysql.jdbc.Driver </td>
+                                </tr>
+                                
+                                <tr class="nohover">		
+                                    <td width="10%" rowspan="14" class="rowtd2">Java虚拟机信息</td>
+                                    <td width="20%">Java版本	</td>
+                                    <td>1.6.0_31</td>
+                                </tr>
+                                <tr class="cbg">
+                                    <td>Java供应商</td>	
+                                    <td>Sun Microsystems Inc.</td>
+                                </tr>
+                                <tr>	
+                                    <td>JVM参数</td>
+                                    <td>
+    <p>-Xms512m</p>
+    <p>-Xmx1024m</p>
+    <p>-XX:PermSize=128m</p>
+    <p>-XX:MaxPermSize=256m</p>
+    <p>-DRIIL_APP=C:/RuiJie/RIIL/RIIL_Portal_Server</p>
+    <p>-DRIIL_LOG_LEVEL=ERROR</p>
+    <p>-Dcom.sun.management.jmxremote</p>
+    <p>-Dcom.sun.management.jmxremote.port=9999</p>
+    <p>-Dcom.sun.management.jmxremote.ssl=false</p>
+    <p>-Dcom.sun.management.jmxremote.authenticate=false</p>
+    <p>-XX:+UseParallelGC</p>
+    <p>-Xdebug</p>
+    <p>-Xnoagent</p>
+    <p>-Djava.compiler=NONE</p>
+    <p>-Xrunjdwp:transport=dt_socket,address=8001,server=y,suspend=n</p>
+    <p>-Djava.util.logging.config.file=C:/RuiJie/RIIL/RIIL_Portal_Server/tomcat/conf/logging.properties</p>
+    <p>-Dcom.sun.management.jmxremote</p>
+    <p>-Dcom.sun.management.jmxremote.port=9999</p>
+    <p>-Dfile.encoding=UTF-8</p>
+    <p>-Dcom.sun.management.jmxremote.ssl=false</p>
+    <p>-Dcom.sun.management.jmxremote.authenticate=false</p>
+    <p>-XX:+UseParallelGC</p>
+    <p>-Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager</p>
+    <p>-Djava.endorsed.dirs=C:/RuiJie/RIIL/RIIL_Portal_Server/tomcat/endorsed</p>
+    <p>-Dcatalina.base=C:/RuiJie/RIIL/RIIL_Portal_Server/tomcat</p>
+    <p>-Dcatalina.home=C:/RuiJie/RIIL/RIIL_Portal_Server/tomcat</p>
+    <p>-Dfile.encoding=UTF-8</p>
+    <p>-Djava.io.tmpdir=C:/RuiJie/RIIL/RIIL_Portal_Server/tomcat/temp</p>
+                                    </td>
+                                </tr>	
+                                <tr class="cbg">
+                                    <td>合计内存</td>	
+                                    <td>835Mr</td>
+                                </tr>
+                                <tr>	
+                                    <td>可用内存</td>
+                                    <td>196M</td>
+                                </tr>
+                                <tr class="cbg">
+                                    <td>已用内存</td>
+                                    <td>639M</td>
+                                </tr>
+                                <tr>
+                                    <td>PermGen内存合计</td>
+                                    <td>256M</td>
+                                </tr>
+                                <tr class="cbg">
+                                    <td>已用PermGen内存</td>
+                                    <td>62M</td>
+                                </tr>
+                                <tr>
+                                    <td>可用PermGen内存</td>
+                                    <td>194M</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        </div>
+                        </div>
+          </div>
+    </div>
+        </div>
+    </div>
+    
+    <!--layout left-->
+    <div class="layout_left bar">
+    <ul class="sidebar">
+        <li class="first">
+            <a href="smart6.html">
+                <span class="big_users"></span>
+                <span class="sidebar-text">用户管理</span>
+            </a>
+        </li>
+        <li>
+            <a href="smart6-4.html">
+            	<span class="big_radar"></span>
+                <span class="sidebar-text">资源发现</span>
+            </a>
+            <ul class="sub-sidebar">
+            <li>
+                <a href="smart6-4.html">
+                    <span class="big_find"></span>
+                	<span class="sidebar-text">单个资源发现</span>
+                </a>
+            </li>
+            <li class="divider"></li>
+            <li>
+                <a href="smart6-4-1.html">
+                    <span class="big_findauto"></span>
+                	<span class="sidebar-text">自动拓扑发现</span>
+                </a>
+            </li>
+        </ul>
+        </li>
+        <li>
+            <a href="smart6-2.html">
+            	<span class="big_bell"></span>
+                <span class="sidebar-text">报警设置</span>
+            </a>
+        </li>
+        <li class="on">
+            <a href="smart6-3.html">
+            	<span class="big_setting"></span>
+                <span class="sidebar-text">系统信息</span>
+            </a>
+        </li>
+    </ul>
+	</div>
+
+<script type=text/javascript>
+$(function(){
+	$('#select1 li').hover(function(){
+		$(this).children('ul').stop(true,true).show();
+	},function(){
+		$(this).children('ul').stop(true,true).hide();
+	});
+});
+</script>
+</body>
+</html>

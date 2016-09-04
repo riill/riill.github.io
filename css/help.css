@@ -1,0 +1,44 @@
+@charset "utf-8";
+/*guide_help*/
+.discover{padding:6px; width:125px; float:left; background: url("../images/help/help_line.png") 115px 37px no-repeat; }
+.discover01 { width: 110px; float: left; height: 29px; line-height: 29px; }
+.discover01 a {background: url("../images/help/help_ico.png")  0 -235px no-repeat; width: 110px; text-indent:26px; display: block; float: left; color: #fff; text-align: left; height: 29px; line-height: 29px; }
+.discover01 a.on { background-position: 0 -270px; }
+.discover01 a:hover {background-position: 0 -270px;text-decoration: none;}
+.discover02 { width: 110px; margin-top:3px; float: left; height: 29px; line-height: 29px; }
+.discover02 a {background: url("../images/help/help_ico.png")  0 -235px no-repeat; width: 110px; text-indent:26px; display: block; float: left; color: #fff; text-align: left; height: 29px; line-height: 29px; }
+.discover02 a.on { background-position: 0 -270px; }
+.discover02 a:hover {background-position: 0 -270px;text-decoration: none; }
+.help { top: 5px; height: 200px; position: absolute; left: 125px; }
+.help li { background: url("../images/help/help_line.png") no-repeat right 30px; display: block; float: left; padding: 2px 5px 2px 2px; }
+.help li.last { background: none; width: 110px; display: block; float: left; padding: 2px; }
+.help li a { display: block; float: left; color: #fff; cursor: pointer; height: 65px; line-height: 60px; text-align: center; }
+.help li a:hover { text-decoration: none; }
+/*help_nav*/
+.help a { background: url("../images/help/help_ico.png") no-repeat scroll 0 0 transparent; background-position: 0 0; cursor: pointer; display: block; height: 60px; width: 117px; }
+.help a.nav01.on { background-position: 0 -65px; }
+.help a.nav01:hover { background-position: 0 -65px; }
+.help a.nav02.on { background-position: 0 -65px; }
+.help a.nav02:hover { background-position: 0 -65px; }
+.help a.nav03.on { background-position: 0 -65px; }
+.help a.nav03:hover { background-position: 0 -65px; }
+.help a.nav04.on { background-position: 0 -65px; }
+.help a.nav04:hover { background-position: 0 -65px; }
+.help a.nav05.on { background-position: 0 -65px; }
+.help a.nav05:hover { background-position: 0 -65px; }
+.help a.nav06.on { background-position: 0 -65px; }
+.help a.nav06:hover { background-position: 0 -65px; }
+.help a.nav07.on { background-position: 0 -65px; }
+.help a.nav07:hover { background-position: 0 -65px; }
+.guide { top: 80px; height: 200px; position: absolute; left: 16px; }
+.guide li { float: left; line-height: 38px; }
+.guide li span { padding-right: 10px; }
+.guide a.nav01 { background: url("../images/help/help_ico.png") no-repeat scroll 0 -179px transparent; cursor: pointer; display: block; height: 38px; width: 36px; margin-right: 10px }
+.guide a.nav02 { background: url("../images/help/help_ico.png") no-repeat scroll -46px -179px transparent; cursor: pointer; display: block; height: 38px; width: 36px; margin-right: 10px }
+.guide a.nav03 { background: url("../images/help/help_ico.png") no-repeat scroll -96px -179px transparent; cursor: pointer; display: block; height: 38px; width: 36px; margin-right: 10px }
+.guide a.nav01.on { background-position: 0px -137px; }
+.guide a.nav01:hover { background-position: 0px -137px; }
+.guide a.nav02.on { background-position: -46px -137px; }
+.guide a.nav02:hover { background-position: -46px -137px; }
+.guide a.nav03.on { background-position: -96px -137px; }
+.guide a.nav03:hover { background-position: -96px -137px; }

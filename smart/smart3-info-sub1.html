@@ -1,0 +1,479 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<!--gloab-->
+<link href="../css/comm.css" rel="stylesheet" type="text/css" />
+<link href="../css/widget.css" rel="stylesheet" type="text/css" />
+<link href="../css/ico.css" rel="stylesheet" type="text/css" />
+<link href="../css/tree.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../js/jquery-1.8.2.min.js"></script>
+<!--demo-->
+<link href="../css/demo.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../js/demo.js"></script>
+<!--artdialog-->
+<link href="../css/artdialog.css" rel="stylesheet" />
+<script src="../js/artDialog.min.js"></script>
+<script src="../js/jquery.overlay.min.js"></script>
+<!--scroll-->
+<link href="../css/jquery.jscrollpane.css" rel="stylesheet" type="text/css" />
+<script src="../js/jquery.mousewheel.js"></script>
+<script src="../js/jquery.jscrollpane.min.js"></script>
+<script>
+$(function()
+{
+	var settings = {
+		showArrows: false,
+		autoReinitialise: true
+	};
+	$('.scroll-pane').jScrollPane(settings);
+});
+</script>
+</head>
+<body class='fixsize'>
+<div class="st2">
+    <div class="f_left">            	
+        <div class="select_body" style="width:300px;">
+             <div class="select_trigger_wrap"><a class="select_trigger"></a></div>
+             <div class="select_text">CPU</div>
+        </div>
+        <div class="select_boundtree">
+         <ul>     
+              <li><a href="smart3-info.html"><span class="t">WIN-CRI7TJ4VFIF(Windows主机(SNMP))</span></a></li>
+              <li><a class="on" href="smart3-info-sub.html"><span class="t">|----CPU</span></a></li>
+              <li><a href="smart3-info-sub1.html"><span class="t">|----进程</span></a></li>
+        </ul>
+        </div>
+    </div>
+    <div class="st_btn"><a class="btn" id="show_tools"><span class="icon_set"></span>常用工具&nbsp;</a></div>                 
+</div>
+
+<div class="layout">
+	<!--layout left-->
+    <div class="layout_left">
+      <div class="portlet">
+        <div class="top-l">
+          <div class="top-r">
+            <div class="top-m">
+                <span class="title">进程列表</span> 
+            </div>
+          </div>
+        </div>
+        <div class="middle-l">
+          <div class="middle-r">
+            <div class="middle-m"> 
+            <div class="scroll-pane" style="width:100%; height:100%;">
+            <!--search-->
+            <div class="st3">
+                <div class="select_body" style="width:225px;">
+                  <div class="select_trigger_wrap"><a class="select_trigger_del"></a></div>
+                  <input class="select_text" style="width: 190px;">
+                </div>
+                <div class="select_boundtree">
+                  <ul>
+                    <li><a class=""><span class="t">进程1</span></a></li>
+                    <li><a class="on"><span class="t">进程2</span></a></li>
+                  </ul>
+                </div>
+            </div>
+
+            <!--tree-->
+            <ul class="tree-wrap">
+                                    <li nodeid="root">
+                                    <ul class="treeview">
+                                    <li class="collapsable">
+                                    	<div class="hitarea expandable-hitarea"></div>
+                                    	<span>进程列表</span>
+                                    </li>
+                                    </ul>
+                                    </li>
+                              </ul>
+            </div>
+        	</div>
+		  </div>
+        </div>
+        <div class="bottom-l">
+          <div class="bottom-r">
+            <div class="bottom-m"></div>
+            </div>
+          </div>
+        </div>
+</div>
+	
+    <!--layout right-->
+    <div class="layout_right">
+      	<div class="portlet">
+            <div class="top-l">
+              <div class="top-r">
+                <div class="top-m">
+                	<span class="ico-set" id="show_set2"></span>
+                    <span class="ico-set" id="show_set"></span>
+                	<span class="ico-scan" id="show_scan"></span>
+                	<span class="title"></span>
+                </div>
+              </div>
+            </div>
+            <div class="middle-l">
+              <div class="middle-r">
+                <div class="middle-m">  
+                <!--search-->
+                
+                <!--table-->
+                <div class="common">
+                  <!-- 表格 -->
+                  <div class="theadpart">
+                    <table>
+                      <thead>
+                        <tr>
+                            <th width="20%"><span>状态</span></th>
+                            <th><span>显示名称</span></th>
+                        </tr>
+                        </thead>
+                    </table>
+                </div>
+                <div class="tbodypart">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td width="20%">-</td>
+                                <td>-</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                </div>
+                
+                </div>
+              </div>
+            </div>
+            <div class="bottom-l">
+              <div class="bottom-r">
+                <div class="bottom-m"></div>
+              </div>
+            </div>
+        </div>  
+        
+
+    </div>
+
+
+</div>
+
+
+<div class="detail_footer">
+    	<a href="smart3-info-sub.html"><span class="icon_home"></span></a>
+        <a class="on" href="smart3-info-sub1.html">告警内容</a>
+    </div>
+<!--tools-->
+<div id="tools" style=" display:none;position: absolute; right:2px; top:36px;">
+    <div class="layer">
+            <div class="top-l">
+              <div class="top-r">
+                <div class="top-m"><span class="title">---</span><span class="ico-quit"></span></div>
+              </div>
+            </div>
+            <div class="middle-l">
+              <div class="middle-r">
+                <div class="middle-m" style="width:100px;">
+                	<ul>
+                    	<li class="first"><a class="on"><span class="tool_mib"></span><span>MIB</span></a></li>
+                        <li><a><span class="tool_ping"></span><span>PING</span></a></li>
+                        <li><a><span class="tool_remoteping"></span><span>RemotePing</span></a></li>
+                        <li><a><span class="tool_snmptest"></span><span>SNMP</span></a></li>
+                        <li><a><span class="tool_telnet"></span><span>Telnet</span></a></li>
+                        <li><a><span class="tool_snc"></span><span>SNC</span></a></li>
+                        <li><a><span class="tool_traceroute"></span><span>Tracerout</span></a></li>
+                        <li class="last"><a><span class="tool_web"></span><span>WEB</span></a></li>
+                    </ul>
+                </div>
+              </div>
+            </div>
+            <div class="bottom-l">
+              <div class="bottom-r">
+                <div class="bottom-m"></div>
+              </div>
+            </div>
+        </div>
+</div>
+<!--scan-->
+<div id="scan" style="width:900px;display:none">
+    <div class="panel">
+    <div class="top-l">
+      <div class="top-r">
+        <div class="top-m">
+        	<span class="ico-quit"></span>
+        	<span class="title">进程列表</span>
+        </div>
+      </div>
+    </div>
+    <div class="middle-l">
+      <div class="middle-r">
+        <div class="middle-m"> 
+            <div class="st">
+            	<div class="st_btn">
+                	<a class="btn"><span class="icon_plusc"></span>加入监控</a>
+                    <a class="btn"><span class="icon_minus"></span>取消监控</a>
+                </div>
+            </div>
+            <div class="common">
+            	<table>
+                	<tr>
+                    	<th width="5%" class="tcenter"><span class="icon_uncheck"></span></th>
+                        <th width="5%" class="tcenter">状态</th>
+                        <th width="20%">进程名称</th>
+                        <th width="10%">PID</th>
+                        <th width="50%">启动路径</th>
+                        <th class="tcenter">监控状态</th>
+                    </tr>
+                </table>
+                <table cellpadding="0" cellspacing="0">
+                	<tr>
+                    	<td width="5%" class="tcenter"><span class="icon_uncheck"></span></td>
+                        <td width="5%" class="tcenter"><span class="status_g"></span></td>
+                        <td width="20%">wrapper.exe</td>
+                        <td width="10%">1292</td>
+                        <td width="50%">D:\ProgramFiles\ManageEegine\.........</td>
+                        <td class="tcenter"><span class="icon_access"></span></td>
+                    </tr>
+                    <tr>
+                    	<td class="tcenter"><span class="icon_uncheck"></span></td>
+                        <td class="tcenter"><span class="status_g"></span></td>
+                        <td>wrapper.exe</td>
+                        <td>1292</td>
+                        <td>D:\ProgramFiles\ManageEegine\.........</td>
+                        <td class="tcenter"><span class="icon_noaccess"></span></td>
+                    </tr>
+                    <tr>
+                    	<td class="tcenter"><span class="icon_uncheck"></span></td>
+                        <td class="tcenter"><span class="status_g"></span></td>
+                        <td>wrapper.exe</td>
+                        <td>1292</td>
+                        <td>D:\ProgramFiles\ManageEegine\.........</td>
+                        <td class="tcenter"><span class="icon_access"></span></td>
+                    </tr>
+                    <tr>
+                    	<td class="tcenter"><span class="icon_uncheck"></span></td>
+                        <td class="tcenter"><span class="status_g"></span></td>
+                        <td>wrapper.exe</td>
+                        <td>1292</td>
+                        <td>D:\ProgramFiles\ManageEegine\.........</td>
+                        <td class="tcenter"><span class="icon_access"></span></td>
+                    </tr>
+                    <tr>
+                    	<td class="tcenter"><span class="icon_uncheck"></span></td>
+                        <td class="tcenter"><span class="status_g"></span></td>
+                        <td>wrapper.exe</td>
+                        <td>1292</td>
+                        <td>D:\ProgramFiles\ManageEegine\.........</td>
+                        <td class="tcenter"><span class="icon_noaccess"></span></td>
+                    </tr>
+                    <tr>
+                    	<td class="tcenter"><span class="icon_uncheck"></span></td>
+                        <td class="tcenter"><span class="status_g"></span></td>
+                        <td>wrapper.exe</td>
+                        <td>1292</td>
+                        <td>D:\ProgramFiles\ManageEegine\.........</td>
+                        <td class="tcenter"><span class="icon_noaccess"></span></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="button">
+            	<input type="button" class="submit" value="保存"> <input type="button" class="cancel dialog_close" value="取消">
+			</div>
+        </div>
+      </div>
+    </div>
+    <div class="bottom-l">
+      <div class="bottom-r">
+        <div class="bottom-m"></div>
+      </div>
+    </div>
+</div>
+</div>
+<!--set-->
+<div id="set" style="width:600px;display:none">
+    <div class="panel">
+    <div class="top-l">
+      <div class="top-r">
+        <div class="top-m">
+        	<span class="ico-quit"></span>
+        	<span class="title">进程列表</span>
+        </div>
+      </div>
+    </div>
+    <div class="middle-l">
+      <div class="middle-r">
+        <div class="middle-m"> 
+            <div class="form">
+            	<table cellpadding="0" cellspacing="0">
+                	<tbody>
+                    <tr>
+                    	<td width="20%" class="tcenter"><a class="icon_checked"></a></td>
+                        <td>管理状态</td>
+                        <td width="20%" class="tcenter"><a class="icon_checked"></a></td>
+                        <td>操作状态</td>
+                    </tr>
+                    <tr>
+                    	<td class="tcenter"><a class="icon_checked"></a></td>
+                        <td>接收速率</td>
+                        <td class="tcenter"><a class="icon_checked"></a></td>
+                        <td>发送速率</td>
+                    </tr>
+                    <tr>
+                    	<td class="tcenter"><a class="icon_checked"></a></td>
+                        <td>接收利用率</td>
+                        <td class="tcenter"><a class="icon_checked"></a></td>
+                        <td>发送利用率</td>
+                    </tr>
+                    <tr>
+                    	<td class="tcenter"><a class="icon_checked"></a></td>
+                        <td>带宽利用率</td>
+                        <td class="tcenter"><a class="icon_checked"></a></td>
+                        <td>索引</td>
+                    </tr>
+                    <tr>
+                    	<td class="tcenter"><a class="icon_checked"></a></td>
+                        <td>接口名称</td>
+                        <td class="tcenter"><a class="icon_checked"></a></td>
+                        <td>接口类型</td>
+                    </tr>
+                    <tr>
+                    	<td class="tcenter"><a class="icon_checked"></a></td>
+                        <td>Mac地址</td>
+                        <td class="tcenter"><a class="icon_checked"></a></td>
+                        <td>接口带宽</td>
+                    </tr>
+                    <tr>
+                    	<td class="tcenter"><a class="icon_checked"></a></td>
+                        <td>接口描述</td>
+                        <td class="tcenter"></td>
+                        <td></td>
+                    </tr>
+                </tbody></table>
+            </div>
+            
+            <div class="button">
+            	<input type="button" class="submit" value="保存"> <input type="button" class="cancel dialog_close" value="取消">
+			</div>
+        </div>
+      </div>
+    </div>
+    <div class="bottom-l">
+      <div class="bottom-r">
+        <div class="bottom-m"></div>
+      </div>
+    </div>
+</div>
+</div>
+
+<!--set2-->
+<div id="set2" style="width:800px;display:none">
+    <div class="panel">
+    <div class="top-l">
+      <div class="top-r">
+        <div class="top-m">
+        	<span class="ico-quit"></span>
+        	<span class="title">进程列表</span>
+        </div>
+      </div>
+    </div>
+    <div class="middle-l">
+      <div class="middle-r">
+        <div class="middle-m"> 
+            <div class="form">
+            	<table cellpadding="0" cellspacing="0">
+                	<tbody>
+                    <tr>
+                    	<td width="10%" class="tcenter"><a class="icon_checked"></a></td>
+                        <td>管理状态</td>
+                        <td width="10%" class="tcenter"><a class="icon_checked"></a></td>
+                        <td>操作状态</td>
+                        <td width="10%" class="tcenter"><a class="icon_checked"></a></td>
+                        <td>接收速率</td>
+                    </tr>
+                    <tr>
+                    	<td class="tcenter"><a class="icon_checked"></a></td>
+                        <td>发送速率</td>
+                    	<td class="tcenter"><a class="icon_checked"></a></td>
+                        <td>接收利用率</td>
+                        <td class="tcenter"><a class="icon_checked"></a></td>
+                        <td>发送利用率</td>
+                    </tr>
+                    <tr>
+                    	<td class="tcenter"><a class="icon_checked"></a></td>
+                        <td>带宽利用率</td>
+                        <td class="tcenter"><a class="icon_checked"></a></td>
+                        <td>索引</td>
+                    	<td class="tcenter"><a class="icon_checked"></a></td>
+                        <td>接口名称</td>
+                    </tr>
+                    <tr>
+                    	<td class="tcenter"><a class="icon_checked"></a></td>
+                        <td>接口类型</td>
+                    	<td class="tcenter"><a class="icon_checked"></a></td>
+                        <td>Mac地址</td>
+                        <td class="tcenter"><a class="icon_checked"></a></td>
+                        <td>接口带宽</td>
+                    </tr>
+                    <tr>
+                    	<td class="tcenter"><a class="icon_checked"></a></td>
+                        <td>接口描述</td>
+                        <td class="tcenter"><a class="icon_checked"></a></td>
+                        <td>接收和发送的ICMP包速率</td>
+                        <td class="tcenter"><a class="icon_checked"></a></td>
+                        <td>接口累计接收和发送的包数</td>
+                    </tr>
+                    <tr>
+                    	<td class="tcenter"><a class="icon_checked"></a></td>
+                        <td>CPU平均负载(5分钟) </td>
+                        <td class="tcenter"><a class="icon_checked"></a></td>
+                        <td>硬盘写操作速率</td>
+                        <td class="tcenter"></td>
+                        <td></td>
+                    </tr>
+                </tbody></table>
+            </div>
+            
+            <div class="button">
+            	<input type="button" class="submit" value="保存"> <input type="button" class="cancel dialog_close" value="取消">
+			</div>
+        </div>
+      </div>
+    </div>
+    <div class="bottom-l">
+      <div class="bottom-r">
+        <div class="bottom-m"></div>
+      </div>
+    </div>
+</div>
+</div>
+
+<script>
+$('#show_tools').click(function(){
+	$("#tools").fadeIn(200);
+	return false;
+});
+$('#show_scan').click(function(){
+	art.dialog({
+    content: document.getElementById('scan'),
+	padding: 0,
+	lock: true
+	});
+});
+$('#show_set').click(function(){
+	art.dialog({
+    content: document.getElementById('set'),
+	padding: 0,
+	lock: true
+	});
+});
+$('#show_set2').click(function(){
+	art.dialog({
+    content: document.getElementById('set2'),
+	padding: 0,
+	lock: true
+	});
+});
+</script>
+</body>
+</html>

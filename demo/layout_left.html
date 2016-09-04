@@ -1,0 +1,239 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<!--gloab-->
+<link href="../css/comm.css" rel="stylesheet" type="text/css" />
+<link href="../css/widget.css" rel="stylesheet" type="text/css" />
+<link href="../css/ico.css" rel="stylesheet" type="text/css" />
+<link href="../css/tree.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../js/jquery-1.8.2.min.js"></script>
+<!--demo-->
+<link href="../css/demo.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../js/demo.js"></script>
+<!--artdialog-->
+<link href="../css/artdialog.css" rel="stylesheet" />
+<script src="../js/artDialog.min.js"></script>
+<script src="../js/jquery.overlay.min.js"></script>
+<!--scroll-->
+<link href="../css/jquery.jscrollpane.css" rel="stylesheet" type="text/css" />
+<script src="../js/jquery.mousewheel.js"></script>
+<script src="../js/jquery.jscrollpane.min.js"></script>
+<script>
+$(function()
+{
+	var settings = {
+		showArrows: false,
+		autoReinitialise: true
+	};
+	$('.scroll-pane').jScrollPane(settings);
+});
+</script>
+
+</head>
+<body class="layout">
+    <!--layout left-->
+    <div class="layout_left">
+      <div class="portlet">
+        <div class="top-l">
+          <div class="top-r">
+            <div class="top-m"><span class="title">资源管理</span> </div>
+    </div>
+  </div>
+        <div class="middle-l">
+          <div class="middle-r">
+            <div class="middle-m"> 
+              <!--subnav-->
+              <div class="subnav">
+                <ul>
+                  <li>
+                    <a class="h-subnav on">
+                        <span class="t">自定义资源组,文字长度控制在30个左右不能折行，溢出的话文字隐藏。</span>
+                        <span class="icon icon_cog"></span></a>
+                    <ul>
+                        <li>
+                            <a class="h-subnav on">
+                            	<span class="icon icon_allfiles"></span>
+                                <span class="t" onclick="javascript:window.location.href='smart3.html'">自定义资源组1</span>
+                                <span class="num">440</span>
+                            	<span class="icon icon_modify"></span>
+                                <span class="icon icon_remove"></span></a>
+                  	</li>
+                        <li>
+                            <a class="h-subnav">
+                            	<span class="icon icon_allfiles"></span>
+                                <span class="t">自定义资源组2，文字长度控制在30个左右不能折行，溢出的话文字隐藏。</span>
+                                <span class="num">90</span>
+                            	<span class="icon icon_modify"></span>
+                                <span class="icon icon_remove"></span></a>
+                  </li>
+                        <li>
+                            <a class="h-subnav">
+                            	<span class="icon icon_allfiles"></span>
+                                <span class="t">自定义资源组3</span>
+                                <span class="num">7</span>
+                            	<span class="icon icon_modify"></span>
+                                <span class="icon icon_remove"></span></a>
+                  </li>
+                        <li>
+                            <a class="h-subnav" id="show_add">
+                            	<span class="icon icon_plus"></span>
+                                <span class="t">新建资源组</span></a>
+                </li>
+            </ul>
+            </li>
+                  <li class="last">
+                    <a class="h-subnav">
+                        <span class="t">资源类型</span></a>
+                    <ul>
+                          <li>
+                            <a class="h-subnav" href="smart3-1.html">
+                            	<span class="icon icon_server"></span>
+                                <span class="t">主机</span>
+                                <span class="num">200</span></a>
+                    	  </li>
+                          <li>
+                            <a class="h-subnav">
+                            	<span class="icon icon_network"></span>
+                                <span class="t">网络设备</span>
+                                <span class="num">119</span></a>
+                    	  </li>
+                          <li>
+                            <a class="h-subnav">
+                            	<span class="icon icon_app"></span>
+                                <span class="t">应用</span>
+                                <span class="num">877</span></a>
+                  	  </li>
+                          <li>
+                            <a class="h-subnav">
+                            	<span class="icon icon_services"></span>
+                                <span class="t">基础服务</span>
+                                <span class="num">877</span></a>
+                  	  </li>
+              </ul>
+            </li>
+          </ul>
+</div>
+</div>
+</div>
+</div>
+        <div class="bottom-l">
+          <div class="bottom-r">
+            <div class="bottom-m"></div>
+</div>
+</div>
+</div>
+</div>
+
+    <!--layout left-->
+    <div class="layout_left">
+      <div class="portlet">
+        <div class="top-l">
+          <div class="top-r">
+            <div class="top-m"><span class="title">左侧tree</span> </div>
+    </div>
+  </div>
+        <div class="middle-l">
+          <div class="middle-r">
+            <div class="middle-m"> 
+              <!--tree-->
+              <ul class="treeview">
+                                    <li class="collapsable">
+                                    	<div class="hitarea expandable-hitarea"></div>
+                                    	<input type="checkbox">
+                                    	<span class="treenodecolor-current">(当前treenodecolor-current)</span>
+                                        <ul>
+                                            <li class="collapsable">
+                                                <div class="hitarea expandable-hitarea"></div>
+                                                <input type="checkbox">
+                                                <a class="">路由器</a>
+                                            </li>
+                                            <li class="expandable">
+                                                <div class="hitarea expandable-hitarea"></div>
+                                                <input type="checkbox">
+                                                <a>交换机</a>
+                                                <ul>
+                                                    <li class="collapsable">
+                                                        <div class="hitarea expandable-hitarea"></div>
+                                                        <input type="checkbox">
+                                                        <span class="selectednode">(选中selectednode)</span>
+                                                        <ul>
+                                                            <li>
+                                                                <div class="placeholder"></div>
+                                                                <input type="checkbox">
+                                                                <span>RG-S5760(1)</span>
+                                                                <ul>
+                                                                    <li>
+                                                                        <div class="placeholder"></div>
+                                                                        <input type="checkbox">
+                                                                        <span>面板1(1)</span>
+                                                                        <span class="ico-tool" id="show_treetool"></span>
+                                                                    </li>
+                                                                    <li>
+                                                                        <div class="placeholder"></div>
+                                                                        <input type="checkbox">
+                                                                        <span>面板2(0)</span>
+                                                                        <span class="ico-tool"></span>
+                                                                    </li>
+                                                                    <li>
+                                                                        <div class="placeholder"></div>
+                                                                        <input type="checkbox">
+                                                                        <span>RG-S5760(1)</span>
+                                                                        <span class="ico-tool"></span>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                         </ul>
+                                                    </li>
+                                                    <li class="expandable">
+                                                        <div class="hitarea expandable-hitarea"></div>
+                                                        <input type="checkbox">
+                                                        <span>Windows(68)</span>
+                                                    </li>
+                                                    <li class="expandable last">
+                                                        <div class="hitarea expandable-hitarea"></div>
+                                                        <input type="checkbox">
+                                                        <span>Windows(68)</span>
+                                                    </li>
+                                                 </ul>
+                                            </li>
+                                            <li class="expandable last">
+                                                <div class="hitarea expandable-hitarea"></div>
+                                                <input type="checkbox">
+                                                <span>安全设备</span>
+                                            </li>
+                                         </ul>
+                                    </li>
+                                    <li class="expandable">
+                                    	<div class="hitarea expandable-hitarea"></div>
+                                    	<input type="checkbox">
+                                    	<span>无线设备</span>
+                                        <ul>
+                                            <li class="expandable">
+                                                <div class="hitarea expandable-hitarea"></div>
+                                                <input type="checkbox">
+                                                <span>无线AC设备</span>
+                                            </li>
+                                            <li class="expandable">
+                                                <div class="hitarea expandable-hitarea"></div>
+                                                <input type="checkbox">
+                                                <span>无线AP设备</span>
+                                            </li>
+                                         </ul>
+                                    </li>
+                                    </ul>
+</div>
+</div>
+</div>
+        <div class="bottom-l">
+          <div class="bottom-r">
+            <div class="bottom-m"></div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+</body>
+</html>

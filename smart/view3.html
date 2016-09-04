@@ -1,0 +1,447 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<!--index-->
+<link href="../css/index.css" rel="stylesheet" type="text/css" />
+<!--gloab-->
+<link href="../css/comm.css" rel="stylesheet" type="text/css" />
+<link href="../css/widget.css" rel="stylesheet" type="text/css" />
+<link href="../css/ico.css" rel="stylesheet" type="text/css" />
+<link href="../css/tree.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../js/jquery-1.8.2.min.js"></script>
+<!--demo-->
+<link href="../css/demo.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../js/demo.js"></script>
+<!--artdialog-->
+<link href="../css/artdialog.css" rel="stylesheet" />
+<script src="../js/artDialog.min.js"></script>
+<script src="../js/jquery.overlay.min.js"></script>
+<!--scroll-->
+<link href="../css/jquery.jscrollpane.css" rel="stylesheet" type="text/css" />
+<script src="../js/jquery.mousewheel.js"></script>
+<script src="../js/jquery.jscrollpane.min.js"></script>
+<script>
+$(function()
+{
+	var settings = {
+		showArrows: false,
+		autoReinitialise: true
+	};
+	$('.scroll-pane').jScrollPane(settings);
+});
+</script>
+</head>
+<body>
+	<div class="p_content">
+    <div class="portlet" style="width:49.4%; float:left; margin-bottom:1%; margin-right:1%">
+      <div class="top-l">
+        <div class="top-r">
+          <div class="top-m">
+            <span class="title"></span>
+          </div>
+        </div>
+      </div>
+      <div class="middle-l">
+        <div class="middle-r">
+          <div class="middle-m" style="height:251px">
+          	<a class="bigadd"></a>
+          </div>
+        </div>
+      </div>
+      <div class="bottom-l">
+        <div class="bottom-r">
+          <div class="bottom-m"></div>
+        </div>
+      </div>
+    </div>
+    <div class="portlet" style="width:49.4%; float:left;">
+      <div class="top-l">
+        <div class="top-r">
+          <div class="top-m">
+            <span class="title"></span>
+          </div>
+        </div>
+      </div>
+      <div class="middle-l">
+        <div class="middle-r">
+          <div class="middle-m" style="height:251px">
+          	<a class="bigadd"></a>
+          </div>
+        </div>
+      </div>
+      <div class="bottom-l">
+        <div class="bottom-r">
+          <div class="bottom-m"></div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="portlet" style="width:49.4%; float:left; margin-right:1%">
+      <div class="top-l">
+        <div class="top-r">
+          <div class="top-m">
+          <span class="ico-del"></span>
+          <span class="ico-set" id="show_monitor"></span>
+          <span class="ico-update"></span>
+          <span class="icon_flag"></span>
+          <span class="title">关注主机</span>
+          </div>
+        </div>
+      </div>
+      <div class="middle-l">
+        <div class="middle-r">
+          <div class="middle-m" style="height:280px;"> 
+            	<div class="st">
+                <table>
+                	<tr>
+                    	<td width="12%">当前状态：</td>
+                        <td width="8%"><span class="bt">可用</span></td>
+                        <td width="12%">IP地址：</td>
+                        <td width="15%"><a class="bt">192.168.0.1</span></a></td>
+                        <td width="12%">操作系统：</td>
+                        <td width="15%"><span class="bt">Windows</span></td>
+                        <td width="12%">主机名称：</td>
+                        <td><a class="bt">R04735R04735R04735R04735R04735</a></td>
+                    </tr>
+                </table>
+                </div>
+                <div class="embody" style="height:250px;">
+               	  <div class="info" style="width:25%;">
+                  		<div class="lrline2" style="height:100%">
+                        <div class="info_pie"><img src="../images/demo/circle_cpu.png" /></div>
+                        <p>&nbsp;</p>
+                        <p class="tcenter">CPU平均利用率： <span class="bt">15%</span> </p>
+                  		</div>
+                    </div>
+                    <div class="info" style="width:25%;">
+                    <div class="lrline2" style="height:100%">
+                        <div class="info_pie"><img src="../images/demo/circle_mem.png" /></div>
+                        <p>&nbsp;</p>
+                        <p class="tcenter">内存平均利用率： <span class="bt">15%</span> </p>
+                    </div>
+                    </div>
+                    <div class="info" style="width:25%;">
+                        <div class="bb lrline2" style="height:100%;">
+                        	<div class="nodisc"  style="height:100%;"></div>
+                        </div>
+                    </div>
+                    <div class="info" style="width:25%;">
+                    <div class="lrline2">
+                        <div style="height:220px; overflow:hidden">
+                            <div class="bline p_content">
+                            <p>本地连接：</p>
+                            <p class="tnowrap">Intel(R) 82579LM GigabGigabGigabGigab</p>
+                            <p><span class="icon icon_online"></span> <span class="gt tsuper">接口正常</span></p>
+                            </div>
+                            <div class="tline p_content">
+                                 <div class="nolink" style="margin-top:20%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+          </div>
+        </div>
+      </div>
+      <div class="bottom-l">
+        <div class="bottom-r">
+          <div class="bottom-m"></div>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="portlet" style="width:49.4%; float:left; ">
+      <div class="top-l">
+        <div class="top-r">
+          <div class="top-m">
+          	<span class="icon_alarm"></span>
+            <span class="ico-update"></span>
+            <span class="title">报警一览</span>
+          </div>
+        </div>
+      </div>
+      <div class="middle-l">
+        <div class="middle-r">
+          <div class="middle-m" style="height:280px">
+            <div class="common">
+                    <div class="theadpart">
+                    <table>
+                    	<thead>
+                        <tr>
+                        	<th width="10%"><a class="rank-pull" id="show_rank"></a>状态</th>
+                            <th width="55%">报警信息</th>
+                            <th width="15%">接收人</th>
+                            <th>报警时间</th>
+                        </tr>
+                        </thead>
+                    </table>
+                    </div>
+                    <div class="tbodypart scroll-pane" style="height:216px">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td width="10%"><span class="icon icon_sms_on"></span></td>
+                                <td width="55%">(Windows)172.17.161.111 内存平均度速率：15000Byte/s(红色阈值&gt;10000Byte/s)</td>
+                                <td width="15%">Administrator</td>
+                                <td>2013-05-23 11:50:59</td>
+                            </tr>
+                            <tr class="cbg">
+                                <td><span class="icon icon_sms_on"></span><span class="icon icon_email_on"></span></td>
+                                <td>(Windows)172.17.161.111 内存平均度速率：15000Byte/s(红色阈值&gt;10000Byte/s)</td>
+                                <td>Administrator</td>
+                                <td>2013-05-23 11:50:59</td>
+                            </tr>
+                            <tr>
+                                <td><span class="icon icon_email_on"></span></td>
+                                <td>(Windows)172.17.161.111 内存平均度速率：15000Byte/s(红色阈值&gt;10000Byte/s)</td>
+                                <td>Administrator</td>
+                                <td>2013-05-23 11:50:59</td>
+                            </tr>
+                            <tr class="cbg">
+                                <td><span class="icon icon_sms_off"></span><span class="icon icon_email_on"></span></td>
+                                <td>(Windows)172.17.161.111 内存平均度速率：15000Byte/s(红色阈值&gt;10000Byte/s)</td>
+                                <td>Administrator</td>
+                                <td>2013-05-23 11:50:59</td>
+                            </tr>
+                            <tr>
+                                <td><span class="icon icon_sms_off"></span><span class="icon icon_email_off"></span></td>
+                                <td>(Windows)172.17.161.111 内存平均度速率：15000Byte/s(红色阈值&gt;10000Byte/s)</td>
+                                <td>Administrator</td>
+                                <td>2013-05-23 11:50:59</td>
+                            </tr>
+                            <tr class="cbg">
+                                <td><span class="icon icon_sms_off"></span><span class="icon icon_email_on"></span></td>
+                                <td>(Windows)172.17.161.111 内存平均度速率：15000Byte/s(红色阈值&gt;10000Byte/s)</td>
+                                <td>Administrator</td>
+                                <td>2013-05-23 11:50:59</td>
+                            </tr>
+                            <tr>
+                                <td><span class="icon icon_sms_off"></span><span class="icon icon_email_off"></span></td>
+                                <td>(Windows)172.17.161.111 内存平均度速率：15000Byte/s(红色阈值&gt;10000Byte/s)</td>
+                                <td>Administrator</td>
+                                <td>2013-05-23 11:50:59</td>
+                            </tr>
+                            <tr class="cbg">
+                                <td><span class="icon icon_sms_off"></span><span class="icon icon_email_on"></span></td>
+                                <td>(Windows)172.17.161.111 内存平均度速率：15000Byte/s(红色阈值&gt;10000Byte/s)</td>
+                                <td>Administrator</td>
+                                <td>2013-05-23 11:50:59</td>
+                            </tr>
+                            <tr>
+                                <td><span class="icon icon_sms_off"></span><span class="icon icon_email_off"></span></td>
+                                <td>(Windows)172.17.161.111 内存平均度速率：15000Byte/s(红色阈值&gt;10000Byte/s)</td>
+                                <td>Administrator</td>
+                                <td>2013-05-23 11:50:59</td>
+                            </tr>
+                            <tr class="cbg">
+                                <td><span class="icon icon_sms_off"></span><span class="icon icon_email_on"></span></td>
+                                <td>(Windows)172.17.161.111 内存平均度速率：15000Byte/s(红色阈值&gt;10000Byte/s)</td>
+                                <td>Administrator</td>
+                                <td>2013-05-23 11:50:59</td>
+                            </tr>
+                            <tr>
+                                <td><span class="icon icon_sms_off"></span><span class="icon icon_email_off"></span></td>
+                                <td>(Windows)172.17.161.111 内存平均度速率：15000Byte/s(红色阈值&gt;10000Byte/s)</td>
+                                <td>Administrator</td>
+                                <td>2013-05-23 11:50:59</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    </div>
+                    </div>
+          </div>
+        </div>
+      </div>
+      <div class="bottom-l">
+        <div class="bottom-r">
+          <div class="bottom-m"></div>
+        </div>
+      </div>
+    </div>
+    </div>
+	<ul class="pagination">
+              <li><a class="setting"></a></li>
+              <li><a href="view.html"></a></li>
+              <li><a href="view2.html"></a></li>
+              <li class="current"><a href="view3.html"></a></li>
+              <li><a class="add"></a></li>
+            </ul>
+<!--setting-->
+<div id="setting" style="width:400px;display:none">
+    <div class="panel_null">
+    <div class="top-l">
+      <div class="top-r">
+        <div class="top-m"><span class="title">我的工作台窗口设置</span><span class="ico-quit"></span></div>
+      </div>
+    </div>
+    <div class="middle-l">
+      <div class="middle-r">
+        <div class="middle-m">  
+            <div class="simple m_bottom">
+            	<table>
+                	<tr>
+                    	<td width="30%">刷新频率：</td>
+                        <td width="70%">
+                        <div class="select_body">
+                             <div class="select_trigger_wrap"><a class="select_trigger"></a></div>
+                             <div class="select_text">从不</div>
+                        </div>
+                        <div class="select_boundtree">
+                          <ul>
+                          	<li><a class="on"><span class="t">从不</span></a></li>
+                            <li><a><span class="t">两分钟</span></a></li>
+                            <li><a><span class="t">五分钟</span></a></li>
+                            <li><a><span class="t">十分钟</span></a></li>
+                          </ul>
+                        </div>
+                        </td>
+                    </tr>
+                	<tr>
+                    	<td>自动播放：</td>
+                        <td>
+                        <div class="select_body">
+                             <div class="select_trigger_wrap"><a class="select_trigger"></a></div>
+                             <div class="select_text">从不</div>
+                        </div>
+                        <div class="select_boundtree">
+                          <ul>
+                          	<li><a class="on"><span class="t">从不</span></a></li>
+                            <li><a><span class="t">两分钟</span></a></li>
+                            <li><a><span class="t">五分钟</span></a></li>
+                            <li><a><span class="t">十分钟</span></a></li>
+                          </ul>
+                        </div>
+                      </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="button">
+                	<a class="btn_s2">确定</a>
+                    <a class="btn_s dialog_close">取消</a>
+                </div>
+        </div>
+      </div>
+    </div>
+    <div class="bottom-l">
+      <div class="bottom-r">
+        <div class="bottom-m"></div>
+      </div>
+    </div>
+</div>
+</div>
+<!--bigadd-->
+<div id="bigadd" style="width:1000px;display:none">
+    <div class="panel">
+    <div class="top-l">
+      <div class="top-r">
+        <div class="top-m"><span class="title">我的工作台窗口设置</span><span class="ico-quit"></span></div>
+      </div>
+    </div>
+    <div class="middle-l">
+      <div class="middle-r">
+        <div class="middle-m">  
+            <div class="grid">
+                <div class="grid_l">
+                    <div class="grid_box">
+                        <div class="subject">告警一览<span class="icon icon_addto"></span></div>
+                        <div class="preview preview1"></div>
+                    </div>
+                    <div class="grid_box">
+                        <div class="subject">TOPN<span class="icon icon_addto"></span></div>
+                        <div class="preview preview2"></div>
+                    </div>
+                    <div class="grid_box">
+                        <div class="subject">资源一览<span class="icon icon_addto"></span></div>
+                        <div class="preview preview3"></div>
+                    </div>
+                    <div class="grid_box">
+                        <div class="subject">可用性一览<span class="icon icon_addto"></span></div>
+                        <div class="preview preview4"></div>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="grid_box">
+                        <div class="subject">指标关键链<span class="icon icon_addto"></span></div>
+                        <div class="preview preview5"></div>
+                    </div>
+                    <div class="grid_box">
+                        <div class="subject">关注主机<span class="icon icon_addto"></span></div>
+                        <div class="preview preview6"></div>
+                    </div>
+                    <div class="grid_box">
+                        <div class="subject">关注网络设备<span class="icon icon_addto"></span></div>
+                        <div class="preview preview7"></div>
+                    </div>
+                    <div class="grid_box">
+                        <div class="subject">关注应用<span class="icon icon_addto"></span></div>
+                        <div class="preview preview8"></div>
+                    </div>
+                    
+                    
+                </div>
+                <div class="grid_r">
+                    <div class="grid_trash on">
+                    	<span class="icon icon_trash"></span>
+                        <span class="t">拖动图标到此处进行移除。</span>
+                    </div>
+                    <div class="grid_tip">
+                    	<span class="icon icon_i"></span>
+                        <span class="t">请拖动下列图标进行排序。</span>
+                    </div>
+                    
+                    <div class="screen">
+                    	<div class="screen_item"><img src="../images/ele/quartz1.png" /></div>
+                        <div class="screen_item"><img src="../images/ele/quartz2.png" /></div>
+                        <div class="screen_item"><img src="../images/ele/quartz3.png" /></div>
+                        <div class="screen_item"><img src="../images/ele/quartz4.png" /></div>
+                    </div>
+                    <div class="screen">
+                    	<div class="screen_item"><img src="../images/ele/quartz5.png" /></div>
+                        <div class="screen_item on"></div>
+                        <div class="screen_item"></div>
+                        <div class="screen_item"></div>
+                    </div>
+                    <div class="screen">
+                    	<div class="screen_item"><img src="../images/ele/quartz6.png" /></div>
+                        <div class="screen_item"><img src="../images/ele/quartz6.png" /></div>
+                        <div class="screen_item"><img src="../images/ele/quartz7.png" /></div>
+                        <div class="screen_item"><img src="../images/ele/quartz8.png" /></div>
+                    </div>
+                    <div class="grid_submit">
+                    	<input type="button" class="submit" value="提交" />
+                        <input type="button" class="cancel dialog_close" value="取消" />
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="bottom-l">
+      <div class="bottom-r">
+        <div class="bottom-m"></div>
+      </div>
+    </div>
+</div>
+</div>
+<script>
+$('.bigadd,.add').click(function(){
+	art.dialog({
+    content: document.getElementById('bigadd'),
+	padding: 0,
+	lock: true
+	});
+});
+$('.pagination .setting').click(function(){
+	art.dialog({
+    content: document.getElementById('setting'),
+	padding: 0,
+	lock: true
+	});
+});
+</script>
+
+</body>
+</html>

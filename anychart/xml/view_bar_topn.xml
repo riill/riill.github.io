@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<anychart>
+    <margin left="-10" top="-10" bottom="-10" right="-10" />
+  <settings>
+    <animation enabled="true" />
+  </settings>
+  <charts>
+    <chart plot_type="CategorizedVertical">
+	  <!--palette 模板颜色-->
+	  <palette>
+        <item color="#ff5757" />
+        <item color="#fd7e02" />
+        <item color="#00d0d0" />
+        <item color="#01bd15" />
+        <item color="#328be8" />
+      </palette>
+	  <data_plot_settings default_series_type="Bar">
+        <bar_series group_padding="0.3" style="AquaLight">
+          <label_settings enabled="true">
+            <background enabled="false"/>
+            <position anchor="Center" valign="Center" halign="Center"/>
+            <font color="White" bold="true">
+              <effects>
+                <drop_shadow enabled="true" distance="1" angle="45" blur_x="1.5" blur_y="1.5" strength="2" opacity="0.5"/>
+              </effects>
+            </font>
+            <format>{%Value}{numDecimals:0}</format>
+          </label_settings>
+          <tooltip_settings enabled="True">
+              <font color="#7b7b7b" family="微软雅黑" size="12"  />
+              <background enabled="true">
+                  <fill enabled="true" type="Gradient">
+                      <gradient angle="90">
+                          <key position="0" color="#ffffff" opacity="0.8" />
+                          <key position="1" color="#ededed" opacity="0.9" />
+                      </gradient>
+                  </fill>
+                  <border enabled="true" color="#cfcfcf" />
+                  <corners type="Rounded"/>
+              </background>
+            <format>
+              <![CDATA[资源名称: {%Name}
+内存利用率: {%YValue}{numDecimals:2}]]>
+            </format>
+          </tooltip_settings>
+          <bar_style>
+            <fill opacity="1"/>
+            <states>
+              <hover color="White"/>
+            </states>
+          </bar_style>
+        </bar_series>
+      </data_plot_settings>
+	  <chart_settings>
+        <title enabled="true">
+          <text enabled="true">内存利用率（%）TOPN</text>
+        </title>
+        <axes>
+          <x_axis>
+            <labels allow_overlap="true">
+              <font color="#000" />
+              <format>{%Value}{maxChar:15,maxCharFinalChars:..}</format>
+            </labels>
+            <line color="White" />
+            <title enabled="false">
+              <font color="black" />
+              <text>---</text>
+            </title>
+          </x_axis>
+          <y_axis>
+            <labels>
+              <font color="#000" />
+            </labels>
+            <line color="White" />
+            <title enabled="false">
+              <font color="White" />
+              <text>--</text>
+            </title>
+            <scale minimum="0" maximum="100"></scale>
+          </y_axis>
+        </axes>
+        <chart_background enabled="false">
+          <border color="#001938" />
+          <corners type="Square" />
+          <fill type="Gradient">
+            <gradient angle="90.0">
+              <key position="0.0" opacity="0.8" color="#4e77a8" />
+              <key position="0.1" opacity="0.8" color="#275487" />
+              <key position="0.2" opacity="0.8" color="#073e7b" />
+              <key position="1.0" opacity="0.8" color="#001938" />
+            </gradient>
+          </fill>
+        </chart_background>
+        <data_plot_background enabled="false">
+          <border color="#2d95f6" />
+          <fill opacity="0.8" color="#073e7b" />
+          <x_axis_plane>
+            <fill type="Gradient">
+              <gradient angle="90.0">
+                <key position="0.0" opacity="0.7" color="#01284f" />
+                <key position="1.0" opacity="0.7" color="#01488f" />
+              </gradient>
+            </fill>
+          </x_axis_plane>
+          <y_axis_plane>
+            <fill type="Gradient">
+              <gradient angle="180.0">
+                <key position="0.0" opacity="0.7" color="#01284f" />
+                <key position="1.0" opacity="0.7" color="#01284f" />
+              </gradient>
+            </fill>
+          </y_axis_plane>
+        </data_plot_background>
+      </chart_settings>
+      <data>
+        <series name="Series 1" palette="Default">
+          <point y="25" name="WIN-G8I(172.17.1.1)" />
+		  		<point y="67" name="RI00658(172.17.1.1)" />
+          <point y="54" name="RI00611(172.17.1.1)" />
+          <point y="29" name="WIN-G82(172.17.1.7)" />
+          <point y="40" name="TJruijie(172.17.1.7)" />
+          <point y="25" name="RIIL-93(172.17.1.1)" />
+		  		<point y="55" name="RI00622(172.17.1.7)" />
+		  		<point y="75" name="TJruiji(172.17.1.5)" />
+        </series>
+      </data>  
+    </chart>
+  </charts>
+</anychart>

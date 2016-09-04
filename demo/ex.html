@@ -1,0 +1,2048 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<!--index-->
+<link href="../css/index.css" rel="stylesheet" type="text/css" />
+<!--gloab-->
+<link href="../css/comm.css" rel="stylesheet" type="text/css" />
+<link href="../css/widget.css" rel="stylesheet" type="text/css" />
+<link href="../css/ico.css" rel="stylesheet" type="text/css" />
+<link href="../css/tree.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../js/jquery-1.8.2.min.js"></script>
+<!--demo-->
+<link href="../css/demo.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../js/demo.js"></script>
+<!--artdialog-->
+<link href="../css/artdialog.css" rel="stylesheet" />
+<script src="../js/artDialog.min.js"></script>
+<script src="../js/jquery.overlay.min.js"></script>
+<!--scroll-->
+<link href="../css/jquery.jscrollpane.css" rel="stylesheet" type="text/css" />
+<script src="../js/jquery.mousewheel.js"></script>
+<script src="../js/jquery.jscrollpane.min.js"></script>
+<script>
+$(function()
+{
+	var settings = {
+		showArrows: false,
+		autoReinitialise: true
+	};
+	$('.scroll-pane').jScrollPane(settings);
+});
+</script>
+<!--AnyChart-->
+<script type="text/javascript" language="JavaScript" src="../anychart/js/AnyChart.js"></script>
+<script type="text/javascript" language="JavaScript">
+	var chart = new AnyChart('../anychart/swf/AnyChart.swf', '../anychart/swf/Preloader.swf');
+		chart.width = "100%";
+		chart.height = "100%";
+		chart.wMode='transparent';
+		chart.setXMLFile("../anychart/xml/view_pie2.xml");
+	chart.write("view_pie2");
+</script>
+<style>
+.panel{ position:relative;}
+.panel_null{ position:relative;}
+</style>
+</head>
+<body>
+
+<div class="demoeffect" style=" background-image:none; background-color:#fff">
+	<div class="scroll-pane" style="height:100px;" >
+    <table width="100%">
+        <tr>
+        	<td><a href="#demo_label">label</a></td>
+            <td><a href="#demo_btn_nav">btn_nav</a></td>
+            <td><a href="#demo_button">button</a></td>
+            <td><a href="#demo_st">st</a></td>
+        </tr>
+        <tr>
+        	<td><a href="#demo_page">page</a></td>
+            <td><a href="#demo_select">select</a></td>
+            <td><a href="#demo_setting-units">setting-units</a></td>
+            <td><a href="#demo_wrapper">wrapper</a></td>
+            <td><a href="#demo_table">table</a></td>
+        </tr>
+        <tr>
+        	<td><a href="#demo_input">input</a></td>
+            <td><a href="#demo_wrapper">tree</a></td>
+        </tr>
+    </table>
+    </div>
+</div>
+
+<!--demobox 弹出层，提示牌，错误提示，loading-->
+<div class="demobox">
+    <h3>弹出层</h3>
+    <div class="demoeffect">
+        <a class="btn" id="show_alert"><span class="icon icon_eye"></span>show_alert</a>
+        <a class="btn" id="show_panel_null"><span class="icon icon_eye"></span>show_panel_null</a>
+        <a class="btn" id="show_panel"><span class="icon icon_eye"></span>show_panel</a>
+        <a class="btn" id="screen_loading"><span class="icon icon_loading"></span>show_loading</a>
+        <a class="btn" id="portlet_loading"><span class="icon icon_loading"></span>show_loading</a>
+        <a onclick="javascript:openwindow('smart6-add.html','',700,529);"></a>
+        onclick="javascript:window.location.href='aa.htm'"
+    </div>
+    <h3>tt</h3>
+    <div class="demoeffect" style="height:440px; position:relative">
+    <div class="tt">提示问题提示问题提示问题提示问题提示问题提示问题提示问题提示问题</div>
+  	<div class="tt1" style="top:70px;"><span class="t">7个字左右的提示信息7个字左右的提示信息。</span></div>
+    <div class="tt1d" style="top:70px;left:300px;"><span class="t">7个字左右的提示信息。7个字左右的提示信息</span></div>
+    <div class="tt2" style="top:140px;"><span class="t">17个字左右的提示信息。17个字左右的提示信息。</span></div>
+    <div class="tt2d" style="top:140px;left:300px;"><span class="t">17个字左右的提示信息。17个字左右的提示信息。</span></div>
+    <div class="tt3" style="top:240px;"><span class="t">18-40个字的提示信息。最好的好人，都是犯过错误的过来人；一个人往往因为有一点小小的缺点，更显出他的可爱。</span></div>
+    <div class="tt3d" style="top:240px; left:300px;"><span class="t">18-40个字的提示信息。最好的好人，都是犯过错误的过来人；一个人往往因为有一点小小的缺点，更显出他的可爱。</span></div>
+    </div>
+    <h3><a class="title_btn"><span class="icon icon_eye"></span>hang提示牌</a></h3>
+    <div class="demoeffect" style="height:100px;">
+    	<div class="hang" style="top:; left:200px;">
+        	<span class="icon icon_tick"></span>
+            <span class="t gt">保存成功！</span>
+        </div>
+    </div>
+</div>
+<!--demobox tab-->
+<div class="demobox" id="demo_tab">
+    <h3>tab-group</h3>
+    <div class="demoeffect">
+    <div class="tab-group">
+      <div class="tab">
+        <ul>
+          <li class="on"><a>发现AC</a> </li>
+          <li><a>AC配置</a> </li>
+          <li><a>VLAN配置</a> </li>
+        </ul>
+      </div>
+      <div class="tab-content">
+       内容区域 
+      </div>
+    </div>
+  </div>
+  	<h3>tabber</h3>
+    <div class="demoeffect" style="background-color:#fff; background-image:none">
+    <div class="tab-group">
+      <div class="tabber">
+        <ul>
+          <li class="on"><a>发现AC</a> </li>
+          <li><a>AC配置</a> </li>
+          <li><a>VLAN配置</a> </li>
+        </ul>
+      </div>
+      <div class="tabber-content">
+       内容区域 
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--demobox arrow-->
+<div class="demobox">
+    <h3>arrow</h3>
+	<div class="demoeffect">
+    	<div class="arrow_l"><span class="icon icon_arrow_l"></span></div>
+        <div class="arrow_r"><span class="icon icon_arrow_r"></span></div>
+        <div class="clear"></div>
+    </div>
+</div>
+
+<!--demobox label-->
+<div class="demobox" id="demo_label">
+    <h3>label</h3>
+    <div class="demoeffect">
+        <label>
+        <span class="icon_radioed"></span>
+        <span class="t">常规算法</span>
+        <span class="icon icon_info" title="适用于任何类型网络环境拓扑发现"></span>
+        </label>
+    </div>
+</div>
+<!--demobox check&radio-->
+<div class="demobox" id="demo_label">
+    <h3>label</h3>
+    <div class="demoeffect">
+        <label>
+        <span class="icon_radioed"></span>
+        <span class="t">常规算法</span>
+        <span class="icon icon_info" title="适用于任何类型网络环境拓扑发现"></span>
+        </label>
+    </div>
+</div>
+<!--demobox input-->
+<div class="demobox" id="demo_input">
+    <h3>forminput</h3>
+    <div class="demoeffect">
+        <input type="text" class="forminput" />
+    </div>
+    <h3>forminput border-red</h3>
+    <div class="demoeffect">
+        <input type="text" class="forminput border-red" />
+    </div>
+    <h3>forminput2</h3>
+    <div class="demoeffect">
+        <input type="text" class="forminput2" />
+    </div>
+    <h3>forminput2 border-red</h3>
+    <div class="demoeffect">
+        <input type="text" class="forminput2 border-red" />
+    </div>
+    <h3>search</h3>
+    <div class="demoeffect">
+        <input type="text" class="search" />
+    </div>
+    <h3>search border-red</h3>
+    <div class="demoeffect">
+        <input type="text" class="search border-red" />
+    </div>
+    <h3>calendar</h3>
+    <div class="demoeffect">
+        <input type="text" class="calendar" />
+    </div>
+    <h3>calendar border-red</h3>
+    <div class="demoeffect">
+        <input type="text" class="calendar border-red" />
+    </div>
+    <h3>bn (border none)</h3>
+    <div class="demoeffect" c>
+        <input type="text" class="bn" />
+    </div>
+    <h3>by (border yellow)</h3>
+    <div class="demoeffect" style="background:#fff">
+        <input type="text" class="by" />
+    </div>
+    <h3>br (border red)</h3>
+    <div class="demoeffect" style="background:#fff">
+        <input type="text" class="br" />
+    </div>
+    <h3>blight</h3>
+    <div class="demoeffect" style="background:#fff">
+        <input type="text" class="blight" />
+    </div>
+    <h3>bbright</h3>
+    <div class="demoeffect" style="background:#fff">
+        <input type="text" class="bbright" />
+    </div>
+    <h3>comm</h3>
+    <div class="demoeffect">
+        <input type="text" class="comm" />
+    </div>
+    <h3>bgray</h3>
+    <div class="demoeffect">
+        <input type="text" class="bgray" />
+    </div>
+     <h3>bgray2</h3>
+    <div class="demoeffect">
+        <input type="text" class="bgray2" />
+    </div>
+</div>
+
+<!--demobox btn_nav-->
+<div class="demobox" id="demo_btn_nav">
+    <h3>btn_nav</h3>
+    <div class="demoeffect">
+        <ul class="btn_nav">
+                <li class="first"><a class="on">全部</a></li><li><a>主机</a></li><li><a>应用</a></li><li class="last"><a>网络设备</a></li>
+            </ul>
+	</div>
+</div>
+<!--demobox button-->
+<div class="demobox" id="demo_button">
+  	<h3>按钮 btn ico+text</h3>
+  	<div class="demoeffect">
+        <a class="btn"><span class="icon icon_more"></span> 批量操作</a>
+        <a class="btn"><span class="icon icon_eye"></span> 资源发现</a>
+        <a class="btn"><span class="icon icon_outbox"></span> 移出资源组</a>
+        <a class="btn"><span class="icon icon_inbox"></span> 加入资源组</a>
+        <a class="btn"><span class="icon icon_minus"></span> 取消监控</a>
+        <a class="btn"><span class="icon icon_trash"></span> 删除资源</a>
+        <a class="btn"><span class="icon icon_group"></span> 监控设置</a>
+        <a class="btn"><span class="icon icon_edit"></span> 编辑</a>
+        <a class="btn"><span class="icon icon_plusc"></span>添加</a>
+        <a class="btn"><span class="icon icon_trash"></span> 删除</a>
+        
+        <a class="btn"><span class="icon icon_minus"></span>备用删除</a>
+        <a class="btn"><span class="icon icon_compose"></span> 复制</a>
+        <a class="btn"><span class="icon icon_checkmark"></span> 确定/保存</a>
+        <a class="btn"><span class="icon icon_repeat"></span> 清空</a>
+        
+        <a class="btn"><span class="icon icon_share"></span> 导出</a>
+        <a class="btn"><span class="icon icon_fresh"></span> 刷新</a>
+        
+        <a class="btn"><span class="icon icon_set"></span> 设置</a>
+        <a class="btn"><span class="icon icon_search"></span> 搜索</a>
+        <a class="btn"><span class="icon icon_apply"></span> 应用</a>
+        
+        <a class="btn"><span class="icon icon_loading"></span> Loading</a>
+        <a class="btn"><span class="icon icon_recover"></span> 恢复为经验值</a>
+        
+        <br />
+        <a class="btn"><span class="icon icon_cross"></span>备用图标</a>
+        <a class="btn"><span class="icon icon_export"></span> 备用图标</a>
+    </div>
+  	<h3>按钮 only ico</h3>
+  	<div class="demoeffect">
+        <span class="icon icon_set" title="设置"></span>
+        <span class="icon icon_plusc_g" title="新建视图"></span>
+        <span class="icon icon_minus_g" title="删除视图"></span>
+        <span class="icon icon_edit_g" title="编辑视图"></span>
+        <span class="icon icon_record" title="发送记录"></span>
+  	</div>
+  	<h3>按钮 only bg</h3>
+  	<div class="demoeffect">
+        <a class="btn_img">大按钮</a>
+        <a class="btn_b">大按钮灰</a>
+        <a class="btn_b2">大按钮绿</a>
+        <a class="btn_s">小按钮灰</a>
+        <a class="btn_s2">小按钮绿</a>
+        <a class="btn_s3">小按钮</a>
+        <a class="btn_t">微型按钮</a>
+  	</div>
+  	<h3>按钮 fixed riil6.2 btn_body</h3>
+  	<div class="demoeffect">
+    	<a class="btn_body" href="javascript:void(0)" style="display:;" title="取消">
+        	<div class="btn_l">   
+            	<div class="btn_r">       
+                	<div class="btn_m">           
+                    	<span class="ico ico_cancel"></span>           
+                        <span class="text">取消</span>           
+                        <span class="pull"></span>       
+                    </div>
+                </div>
+            </div>
+        </a>
+        <a class="btn_body on" href="javascript:void(0)" style="display:;" title="确定">
+        	<div class="btn_l">   
+            	<div class="btn_r">       
+                	<div class="btn_m">           
+                    	<span class="ico ico_confirm"></span>           
+                        <span class="text">确定</span>           
+                        <span class="pull"></span>       
+                    </div>
+                </div>
+            </div>
+        </a>
+  	</div>
+    <h3>input button</h3>
+    <div class="demoeffect">
+            <input type="button" class="sblue" value="测试" />
+            <input type="button" class="sgreen" value="保存" />
+	</div>
+    <h3>input button </h3>
+    <div class="demoeffect">
+        <div class="setting-unit">
+        <div class="button">
+            <a class="t"><span class="icon icon_book"></span> 查看发现前提 </a>
+            <input type="button" class="submit" value="完成" />
+            <input type="button" class="submit" value="加入监控" />
+            <input type="button" class="cancel" value="取消" />
+        </div>
+        </div>
+	</div>
+    <h3>带开关动作的图标</h3>
+    <div class="demoeffect" style="background:#FFF">
+        <span class="icon icon_off"></span>
+        <span class="icon icon_on"></span>
+        <span class="icon icon_checked"></span>
+        <span class="icon icon_uncheck"></span>
+        <span class="icon icon_radioed"></span>
+        <span class="icon icon_unradio"></span>
+        <span class="icon icon_switchon"></span>
+        <span class="icon icon_switchoff"></span>
+    </div>
+</div>
+<!--demobox st st2 st3 st4-->
+<div class="demobox" id="demo_st">
+    <h3>st</h3>
+    <div class="demoeffect">
+		  <div class="st">
+            <div class="st_btn">
+            <a class="btn"><span class="icon icon_share"></span> 导出</a>
+            <a class="btn"><span class="icon icon_repeat"></span> 清空</a>
+            <a class="btn"><span class="icon icon_trash"></span> 删除</a>
+            </div>
+          </div>
+	</div>
+    
+    <h3>st</h3>
+    <div class="demoeffect">
+		  <div class="st">
+            <div class="f_right"><input class="search null" value=" 请输入IP地址或者资源名称" /> <span class="icon icon_search"></span></div>
+            <div class="f_left">
+                <div class="select_body">
+                     <div class="select_trigger_wrap"><a class="select_trigger"></a></div>
+                     <div class="select_text">一分钟</div>
+                </div>
+                <div class="select_boundtree">
+                  <ul>
+                    <li><a><span class="t">一小时</span></a></li>
+                    <li><a><span class="t">一天</span></a></li>
+                  </ul>
+                </div>
+            </div>
+        </div>
+        <div class="clear" style="height:10px;"></div>
+        <div class="st">
+            <span class="f_left">
+                <a class="btn_s4 on" id="show_all"><span class="alarm"></span><span>(280)</span></a>
+                <a class="btn_s4" id="show_red"><span class="alarm1"></span><span class="rt">(20)</span></a>
+                <a class="btn_s4"><span class="alarm2"></span> <span class="ot">(20)</span></a>
+                <a class="btn_s4"><span class="alarm3"></span> <span class="ct">(20)</span></a>
+                <a class="btn_s4"><span class="alarm4"></span> <span class="gt">(20)</span></a>
+                <a class="btn_s4"><span class="alarm5"></span> <span class="bt">(20)</span></a>
+            </span>
+        </div>
+        <div class="clear" style="height:10px;"></div>
+        <div class="st">
+        	<div class="f_left">
+                <div class="select_body">
+                     <div class="select_trigger_wrap"><a class="select_trigger"></a></div>
+                     <div class="select_text">最近一小时</div>
+                </div>
+                <div class="select_boundtree">
+                  <ul>
+                    <li><a><span class="t">最近一小时</span></a></li>
+                    <li><a><span class="t">最近一天</span></a></li>
+                    <li><a><span class="t">自定义时间</span></a></li>
+                  </ul>
+                </div>
+            </div>
+            <div class="f_left">
+            <input class="calendar" value="2013/04/10 21:40:20">
+            <span class="t">-</span>
+            <input class="calendar" value="2013/05/10 21:40:20">
+        </div>
+        </div>
+	</div>
+    
+    
+    
+    <h3>st2</h3>
+    <div class="demoeffect">
+    	<div class="st2">
+            <div class="f_left">
+                 <div class="select_body">
+                 <div class="select_trigger_wrap"><a class="select_trigger"></a></div>
+                 <div class="select_text">模板策略</div>
+                  </div>
+                    <div class="select_boundtree">
+                      <ul>
+                        <li><a><span class="t">模板策略</span></a></li>
+                        <li><a><span class="t">个性化策略</span></a></li>
+                    </ul>
+                  </div>
+                  </div>
+            <div class="f_left">
+                 <div class="select_body" style="width:200px;">
+                     <div class="select_trigger_wrap"><a class="select_trigger"></a></div>
+                     <div class="select_text">Windows主机（SNMP）</div>
+                 </div>
+                <div class="select_boundtree" style="width:200px;">
+                     <ul>     
+                          <li><a><span class="t">主机</span> <span class="icon icon_arrow_sr"></span></a>
+                            <ul style="display: none;"> 
+                              <li><a><span class="t">AIX主机（SNMP）</span></a></li>
+                              <li><a><span class="t">AIX主机（SSH/Telnet）</span></a></li>
+                              <li><a><span class="t">FreeBSD主机（SSH/Telnet）</span></a></li>
+                              <li><a><span class="t">HPUX主机（SNMP）</span></a></li>
+                              <li><a><span class="t">HPUX主机（SSH/Telnet）</span></a></li>
+                              <li><a><span class="t">Linux主机（SNMP）</span></a></li>
+                              <li><a><span class="t">Linux主机（SSH/Telnet）</span></a></li>
+                              <li><a><span class="t">SCO Unix主机（SNMP）</span></a></li>
+                              <li><a><span class="t">SCO Unix主机（SSH/Telnet）</span></a></li>
+                              <li><a><span class="t">Solaris主机（SNMP）</span></a></li>
+                              <li><a><span class="t">Solaris主机（SSH/Telnet）</span></a></li>
+                              <li><a><span class="t">Windows主机（SNMP）</span></a></li>
+                              <li><a><span class="t">Windows主机（SSH/Telnet）</span></a></li>
+                              <a class="more"></a>
+                      </ul>
+                    </li>
+                          <li><a><span class="t">网络设备</span> <span class="icon icon_arrow_sr"></span></a>
+                            <ul>    
+                              <li><a><span class="t">3Com交换机</span></a></li>
+                              <li><a><span class="t">3Com路由器</span></a></li>
+                              <li><a><span class="t">3Com其他设备</span></a></li>
+                              <li><a><span class="t">Array交换机</span></a></li>
+                              <li><a><span class="t">Array路由器</span></a></li>
+                              <li><a><span class="t">Array其他设备</span></a></li>
+                              <li><a><span class="t">Ceragon交换机</span></a></li>
+                              <li><a><span class="t">Ceragon路由器</span></a></li>
+                              <li><a><span class="t">Ceragon其他设备</span></a></li>
+                              <li><a><span class="t">Cisco交换机</span></a></li>
+                              <li><a><span class="t">Cisco路由器</span></a></li>
+                              <li><a><span class="t">Cisco其他设备</span></a></li>
+                              <a class="more"></a>
+                      </ul>
+                    </li>
+                          <li><a><span class="t">应用</span><span class="icon icon_arrow_sr"></span></a>
+                            <ul>                                  
+                              <li><a><span class="t">Apache</span></a></li>
+                              <li><a><span class="t">ApusicAS</span></a></li>
+                              <li><a><span class="t">CICS</span></a></li>
+                              <li><a><span class="t">DB2</span></a></li>
+                              <li><a><span class="t">IBM Directory Server</span></a></li>
+                              <li><a><span class="t">IIS</span></a></li>
+                              <li><a><span class="t">Informix</span></a></li>
+                              <li><a><span class="t">JBoss AS</span></a></li>
+                              <li><a><span class="t">Lotus Domino应用</span></a></li>
+                              <li><a><span class="t">MS Exchange 2003</span></a></li>
+                              <li><a><span class="t">MS Exchange 2005</span></a></li>
+                              <li><a><span class="t">MySQL</span></a></li>
+                              <a class="more"></a>
+                          </ul>
+                        </li>
+                          <li><a><span class="t">基础服务</span><span class="icon icon_arrow_sr"></span></a>
+                            <ul>                                    
+                              <li><a><span class="t">Ping</span></a></li>
+                              <li><a><span class="t">Port</span></a></li>
+                              <li><a><span class="t">URL</span></a></li>
+                          </ul>
+                        </li>
+               </ul>
+                </div>
+            	</div>
+            <div class="st_btn">
+                <a class="btn" id="show_copy"><span class="icon icon_compose"></span> 复制</a>
+                <a class="btn" id="show_alert"><span class="icon icon_trash"></span> 删除</a>
+          </div>
+    	</div>
+    </div>
+    <h3>st2</h3>
+    <div class="demoeffect">
+    	<div class="st2">
+        <span class="st_title"> 资产报表 </span>
+        <div class="f_left">
+        	<span class="select_label2">视图：</span>
+            <div class="select_body2" style="width:130px;">
+                 <div class="select_trigger_wrap"><a class="select_trigger"></a></div>
+                 <div class="select_text">定义视图名称</div>          
+            </div>
+            <div class="select_boundtree" style="width:130px;">
+              <ul>
+                <li><a><span class="t">定义视图名称</span></a></li>
+                <li><a><span class="t">定义视图名称</span></a></li>
+              </ul>
+            </div>
+        </div>
+        <div class="st_ico">
+        <span class="icon icon_plusc_g"></span>
+        <span class="icon icon_minus_g"></span>
+        <span class="icon icon_edit_g"></span>
+        </div>
+    </div>
+    </div>
+    
+    <h3>st2</h3>
+    <div class="demoeffect">
+		<div class="st2">
+        <div class="f_left">
+        <input class="calendar" value="2013/04/10 21:40:20" />
+        <span class="t">-</span>
+        <input class="calendar" value="2013/05/10 21:40:20" />
+    </div>
+		</div>
+    </div>
+    
+    <h3>st2</h3>
+    <div class="demoeffect">
+		<div class="st2">
+        <div class="st_btn">
+        <span class="t">频度：</span>
+        <span class="btn_t on">小时</span>
+        <span class="btn_t">天</span>
+        <span class="btn_t">周</span>
+        <span class="btn_s"><span class="icon icon_arrows"></span><span class="t">执行</span></span>
+        </div>
+		</div>
+    </div>
+    
+	<h3>st3</h3>
+    <div class="demoeffect">
+            <div class="st3">
+                <div class="f_left">
+                    <span class="t">规则关系</span> 
+                    <input type="radio" checked="checked" /> 
+                    <span class="t">AND</span>
+                    <input type="radio" /> 
+                    <span class="t">OR</span>
+                    <span class="t">监控频度：</span>
+                </div>
+                <div class="f_left">
+                    <div class="select_body2">
+                         <div class="select_trigger_wrap"><a class="select_trigger"></a></div>
+                         <div class="select_text">一分钟</div>
+                  </div>
+                 </div>
+                 <div class="f_left">
+                        <span class="t">抖动：</span>
+                        <input class="bn blight" size="5" type="text" value="1" />
+                  </div>
+          </div>
+    </div>
+    
+    <h3>st4 samelike st3 except underline</h3>
+    <div class="demoeffect">
+            <div class="st4">
+                <div class="f_left">
+                    <span class="t">规则关系</span> 
+                    <input type="radio" checked="checked" /> 
+                    <span class="t">AND</span>
+                    <input type="radio" /> 
+                    <span class="t">OR</span>
+                    <span class="t">监控频度：</span>
+                </div>
+                <div class="f_left">
+                    <div class="select_body2">
+                         <div class="select_trigger_wrap"><a class="select_trigger"></a></div>
+                         <div class="select_text">一分钟</div>
+                  </div>
+                 </div>
+                 <div class="f_left">
+                        <span class="t">抖动：</span>
+                        <input class="bn blight" size="5" type="text" value="1" />
+                  </div>
+          </div>
+    </div>
+    
+</div>
+<!--demobox 翻页-->
+<div class="demobox" id="demo_page">
+  <h3>翻页</h3>
+  <div class="demoeffect">
+    <div class="page">
+        <span class="jump">
+            <input type="text" class="pageinput">
+            <a class="page-go" title="跳转到"></a>
+        </span>
+        <span class="paging-btns">
+            <a class="p-last">末页</a>
+            <a class="p-next">下一页</a>
+            <a class="p-prev">上一页</a>
+            <a class="p-first">首页</a>
+        </span>
+        <span>17</span>
+        <span>总条数</span>
+        <span>1</span>
+        <span>/</span>
+        <span>1</span>
+    </div>
+  <div class="clear"></div>
+  </div>  
+</div>
+
+<!--demobox select-->
+<div class="demobox" id="demo_select">
+  <h3> 双项选择</h3>
+  <div class="demoeffect">
+    	<div class="choose">
+            <span class="choose1 on">资源模板</span>
+            <span class="choose2">全部模板</span>
+          </div>
+  <div class="clear"></div>
+  </div>
+  <h3>选择资源</h3>
+  <div class="demoeffect">
+    <div class="select_body" style="width:200px;">
+         <div class="select_trigger_wrap"><a class="select_trigger"></a></div>
+         <div class="select_text">Windows主机</div>
+    </div>
+    <div class="select_boundtree">
+         <ul>     
+              <li><a><span class="t">主机</span> <span class="icon icon_arrow_sr"></span></a>
+                <ul style="display: none;">
+                  <li><a><span class="t">Windows</span></a></li>
+                  <li><a><span class="t">Solaris</span></a></li>
+                  <li><a><span class="t">AIX</span></a></li>
+                  <li><a><span class="t">Linux</span></a></li>
+                  <li><a><span class="t">HP-UX</span></a></li>
+                  <li><a><span class="t">SCO</span></a></li>
+                  <li><a><span class="t">UnixWare</span></a></li>
+                  <li><a><span class="t">FreeBSD</span></a></li>
+                  <li><a><span class="t">其他主机</span></a></li>
+            </ul>
+          </li>
+              <li><a><span class="t">网络设备</span> <span class="icon icon_arrow_sr"></span></a>
+                <ul>
+                	<li><a><span class="t">路由器</span><span class="icon icon_arrow_sr"></span></a>
+                        <ul>
+                              <li><a><span class="t">3Com路由器</span></a></li>
+                              <li><a><span class="t">Array路由器</span></a></li>
+                              <li><a><span class="t">Ceragon路由器</span></a></li>
+                              <li><a><span class="t">Cisco路由器</span></a></li>
+                              <a class="more"></a>
+                        </ul>
+                    </li>
+                    <li><a><span class="t">交换机</span><span class="icon icon_arrow_sr"></span></a>
+                    	<ul>
+                              <li><a><span class="t">3Com交换机</span></a></li>
+                              <li><a><span class="t">Array交换机</span></a></li>
+                              <li><a><span class="t">Ceragon交换机</span></a></li>
+                              <li><a><span class="t">Cisco交换机</span></a></li>
+                              <a class="more"></a>
+                        </ul>
+                    </li>
+                    <li><a><span class="t">安全设备</span><span class="icon icon_arrow_sr"></span></a>
+                    	<ul>
+                              <li><a><span class="t">各厂商安全设备</span></a></li>
+                        </ul>
+                    </li>
+                    <li><a><span class="t">负载均衡器</span><span class="icon icon_arrow_sr"></span></a>
+                    	<ul>
+                              <li><a><span class="t">各厂商负载均衡器</span></a></li>
+                        </ul>
+                    </li>
+                    <li><a><span class="t">网闸</span><span class="icon icon_arrow_sr"></span></a>
+                    	<ul>
+                              <li><a><span class="t">各厂商网闸</span></a></li>
+                        </ul>
+                    </li>
+                    <li><a><span class="t">其他网络设备</span><span class="icon icon_arrow_sr"></span></a>
+                    	<ul>
+                              <li><a><span class="t">3Com其他设备</span></a></li>
+                              <li><a><span class="t">Array其他设备</span></a></li>
+                              <li><a><span class="t">Ceragon其他设备</span></a></li>
+                              <li><a><span class="t">Cisco其他设备</span></a></li>
+                              <a class="more"></a>
+                        </ul>
+                    </li>
+                </ul>
+          	  </li>
+              <li><a><span class="t">应用</span><span class="icon icon_arrow_sr"></span></a>
+                <ul>
+                	<li><a><span class="t">数据库</span><span class="icon icon_arrow_sr"></span></a>
+                    	<ul>   
+                  <li><a><span class="t">Apache</span></a></li>
+                  <li><a><span class="t">ApusicAS</span></a></li>
+                  <li><a><span class="t">CICS</span></a></li>
+                  <li><a><span class="t">DB2</span></a></li>
+                  <li><a><span class="t">IBM Directory Server</span></a></li>
+                  <li><a><span class="t">IIS</span></a></li>
+                  <li><a><span class="t">Informix</span></a></li>
+                  <li><a><span class="t">JBoss AS</span></a></li>
+                  <li><a><span class="t">Lotus Domino应用</span></a></li>
+                  <li><a><span class="t">MS Exchange 2003</span></a></li>
+                  <li><a><span class="t">MS Exchange 2005</span></a></li>
+                  <li><a><span class="t">MySQL</span></a></li>
+                  <a class="more"></a>
+                </ul>
+                    </li>
+                    <li><a><span class="t">邮件服务器</span><span class="icon icon_arrow_sr"></span></a>
+                    	<ul>   
+                  <li><a><span class="t">Apache</span></a></li>
+                  <li><a><span class="t">ApusicAS</span></a></li>
+                  <li><a><span class="t">CICS</span></a></li>
+                  <li><a><span class="t">DB2</span></a></li>
+                  <li><a><span class="t">IBM Directory Server</span></a></li>
+                  <li><a><span class="t">IIS</span></a></li>
+                  <li><a><span class="t">Informix</span></a></li>
+                  <li><a><span class="t">JBoss AS</span></a></li>
+                  <li><a><span class="t">Lotus Domino应用</span></a></li>
+                  <li><a><span class="t">MS Exchange 2003</span></a></li>
+                  <li><a><span class="t">MS Exchange 2005</span></a></li>
+                  <li><a><span class="t">MySQL</span></a></li>
+                  <a class="more"></a>
+                </ul>
+                    </li>
+                    <li><a><span class="t">J2EE应用服务器</span><span class="icon icon_arrow_sr"></span></a>
+                    	<ul>   
+                  <li><a><span class="t">Apache</span></a></li>
+                  <li><a><span class="t">ApusicAS</span></a></li>
+                  <li><a><span class="t">CICS</span></a></li>
+                  <li><a><span class="t">DB2</span></a></li>
+                  <li><a><span class="t">IBM Directory Server</span></a></li>
+                  <li><a><span class="t">IIS</span></a></li>
+                  <li><a><span class="t">Informix</span></a></li>
+                  <li><a><span class="t">JBoss AS</span></a></li>
+                  <li><a><span class="t">Lotus Domino应用</span></a></li>
+                  <li><a><span class="t">MS Exchange 2003</span></a></li>
+                  <li><a><span class="t">MS Exchange 2005</span></a></li>
+                  <li><a><span class="t">MySQL</span></a></li>
+                  <a class="more"></a>
+                </ul>
+                    </li>
+                    <li><a><span class="t">Web服务器</span><span class="icon icon_arrow_sr"></span></a>
+                    	<ul>   
+                  <li><a><span class="t">Apache</span></a></li>
+                  <li><a><span class="t">ApusicAS</span></a></li>
+                  <li><a><span class="t">CICS</span></a></li>
+                  <li><a><span class="t">DB2</span></a></li>
+                  <li><a><span class="t">IBM Directory Server</span></a></li>
+                  <li><a><span class="t">IIS</span></a></li>
+                  <li><a><span class="t">Informix</span></a></li>
+                  <li><a><span class="t">JBoss AS</span></a></li>
+                  <li><a><span class="t">Lotus Domino应用</span></a></li>
+                  <li><a><span class="t">MS Exchange 2003</span></a></li>
+                  <li><a><span class="t">MS Exchange 2005</span></a></li>
+                  <li><a><span class="t">MySQL</span></a></li>
+                  <a class="more"></a>
+                </ul>
+                    </li>
+                    <li><a><span class="t">Lotus Domino</span><span class="icon icon_arrow_sr"></span></a>
+                    	<ul>   
+                  <li><a><span class="t">Apache</span></a></li>
+                  <li><a><span class="t">ApusicAS</span></a></li>
+                  <li><a><span class="t">CICS</span></a></li>
+                  <li><a><span class="t">DB2</span></a></li>
+                  <li><a><span class="t">IBM Directory Server</span></a></li>
+                  <li><a><span class="t">IIS</span></a></li>
+                  <li><a><span class="t">Informix</span></a></li>
+                  <li><a><span class="t">JBoss AS</span></a></li>
+                  <li><a><span class="t">Lotus Domino应用</span></a></li>
+                  <li><a><span class="t">MS Exchange 2003</span></a></li>
+                  <li><a><span class="t">MS Exchange 2005</span></a></li>
+                  <li><a><span class="t">MySQL</span></a></li>
+                  <a class="more"></a>
+                </ul>
+                    </li>
+                </ul>
+              </li>
+              <li><a><span class="t">基础服务</span><span class="icon icon_arrow_sr"></span></a>
+                <ul>                                    
+                  <li><a><span class="t">Ping</span></a></li>
+                  <li><a><span class="t">Port</span></a></li>
+                  <li><a><span class="t">URL</span></a></li>
+                </ul>
+              </li>
+     </ul>
+    </div>
+  </div>
+  <h3>选择子资源</h3>
+  <div class="demoeffect">
+        <div class="select_body">
+             <div class="select_trigger_wrap"><a class="select_trigger"></a></div>
+             <div class="select_text">选择子资源</div>          
+        </div>
+        <div class="select_boundtree">
+                          <ul>           
+                            <li><a><span class="t">CPU</span></a></li>
+                            <li><a><span class="t">硬盘</span></a></li>
+                            <li><a><span class="t">分区</span></a></li>
+                            <li><a><span class="t">网络接口</span></a></li>
+                            <li><a><span class="t">进程</span></a></li>
+                          </ul>
+                        </div>
+  </div>
+  <h3> 选择时间</h3>
+  <div class="demoeffect">
+    <div class="select_body">
+         <div class="select_trigger_wrap"><a class="select_trigger"></a></div>
+         <div class="select_text">一分钟</div>
+    </div>
+    <div class="select_boundtree">
+      <ul>
+        <li><a><span class="t">一小时</span></a></li>
+        <li><a><span class="t">一天</span></a></li>
+      </ul>
+    </div>
+  </div>
+  <h3> 选择或输入</h3>
+  <div class="demoeffect">
+    <div class="select_body">
+         <div class="select_trigger_wrap"><a class="select_trigger"></a></div>
+         <input class="select_text" />
+    </div>
+    <div class="select_boundtree">
+      <ul>
+        <li><a><span class="t">一小时</span></a></li>
+        <li><a><span class="t">一天</span></a></li>
+      </ul>
+    </div>
+  </div>
+  <h3>下拉框带删除按钮样式</h3>
+  <div class="demoeffect">
+    <div class="select_body">
+      <div class="select_trigger_wrap"><a class="select_trigger_del"></a></div>
+      <input class="select_text" />
+    </div>
+    <div class="select_boundtree">
+          <ul>
+            <li><a><span class="t">选择子资源</span></a></li>
+            <li><a><span class="t">选择子资源</span></a></li>
+          </ul>
+        </div>
+  </div>
+  <h3>下拉框带删除按钮样式设置宽度</h3>
+  <div class="demoeffect">
+    <div class="select_body" style="width:200px;">
+      <div class="select_trigger_wrap"><a class="select_trigger_del"></a></div>
+      <input class="select_text" />
+    </div>
+    <div class="select_boundtree">
+      <ul>
+        <li><a><span class="t">选择子资源</span></a></li>
+        <li><a><span class="t">选择子资源</span></a></li>
+      </ul>
+    </div>
+  </div>
+  <h3>日期控件</h3>
+  <div class="demoeffect">
+    <div class="time_body">
+      <div class="time_trigger_wrap"><a class="time_trigger"></a></div>
+      <input class="time_text" />
+    </div>
+  </div>
+</div>
+
+<!--demobox 互斥的框架 setting-units-->
+<div class="demobox" id="demo_setting-units">
+  <div class="demoeffect">
+    <h3>互斥的框架</h3>
+    <div class="setting-units">
+    <div class="setting-unit">
+        <div class="title">
+        	标题比较大
+            <span>文字字号小</span>
+            <a class="title_btn">应用</a>
+            <span class="icon icon_close"></span>
+        </div>
+        <div class="holder" style="display: none;">
+            <div class="sub">
+                <table>
+                  <tbody>
+                <tr>
+                    <td>
+                      <input class="search null" value="只读共同体（必填）"> 
+                      <span class="t">-</span>
+                      <input class="search null" value="读写共同体（可选）"> 
+                      <a><span class="icon icon_plus"></span></a>
+                     </td>
+              </tr>
+                <tr>
+                    <td>
+                        <ul class="tc">
+                                <li><a><span class="t">Public</span> <span class="icon icon_cross_s"></span></a></li>
+                                <li><a><span class="t">Public</span> - <span class="t">ReadP</span> <span class="icon icon_cross_s"></span></a></li>
+                                <li><a><span class="t">Public</span> - <span class="t">ReadP</span> <span class="icon icon_cross_s"></span></a></li>
+                                <li><a><span class="t">Public</span> <span class="icon icon_cross_s"></span></a></li>
+                          </ul>
+                  </td>
+              </tr>
+              </tbody>
+            </table>
+            </div>
+        </div>
+    </div>
+    <div class="setting-unit">
+        <div class="title">
+        	标题
+            <span>文字</span>
+            <a class="rare_btn">高级设置</a>
+            <a class="title_btn" style="display:block">应用</a>
+            <span class="icon icon_close"></span>
+        </div>
+        <div class="holder" style="display: none;">
+            <div class="sub">
+                <table>
+                  <tbody>
+                <tr>
+                    <td>
+                      <input class="search null" value="只读共同体（必填）"> 
+                      <span class="t">-</span>
+                      <input class="search null" value="读写共同体（可选）"> 
+                      <a><span class="icon icon_plus"></span></a>
+                     </td>
+              </tr>
+                <tr>
+                    <td>
+                        <ul class="tc">
+                                <li><a><span class="t">Public</span> <span class="icon icon_cross_s"></span></a></li>
+                                <li><a><span class="t">Public</span> - <span class="t">ReadP</span> <span class="icon icon_cross_s"></span></a></li>
+                                <li><a><span class="t">Public</span> - <span class="t">ReadP</span> <span class="icon icon_cross_s"></span></a></li>
+                                <li><a><span class="t">Public</span> <span class="icon icon_cross_s"></span></a></li>
+                          </ul>
+                  </td>
+              </tr>
+              </tbody>
+            </table>
+            </div>
+        </div>
+    </div>
+    </div>
+    <h3>同时展开框架</h3>
+    <div class="setting-unit">
+        <div class="title">
+        	标题比较大
+            <span>文字字号小</span>
+            <span class="icon icon_close"></span>
+        </div>
+        <div class="holder" style="display: none;">
+            <div class="sub">
+                <table>
+                  <tbody>
+                <tr>
+                    <td>
+                      <input class="search null" value="只读共同体（必填）"> 
+                      <span class="t">-</span>
+                      <input class="search null" value="读写共同体（可选）"> 
+                      <a><span class="icon icon_plus"></span></a>
+                     </td>
+              </tr>
+                <tr>
+                    <td>
+                        <ul class="tc">
+                                <li><a><span class="t">Public</span> <span class="icon icon_cross_s"></span></a></li>
+                                <li><a><span class="t">Public</span> - <span class="t">ReadP</span> <span class="icon icon_cross_s"></span></a></li>
+                                <li><a><span class="t">Public</span> - <span class="t">ReadP</span> <span class="icon icon_cross_s"></span></a></li>
+                                <li><a><span class="t">Public</span> <span class="icon icon_cross_s"></span></a></li>
+                          </ul>
+                  </td>
+              </tr>
+              </tbody>
+            </table>
+            </div>
+        </div>
+    </div>
+    <div class="setting-unit">
+        <div class="title">
+        	标题
+            <span>文字</span>
+            <a class="rare_btn">高级设置</a>
+            <a class="title_btn" style="display:block">应用</a>
+            <span class="icon icon_close"></span>
+        </div>
+        <div class="holder" style="display: none;">
+            <div class="sub">
+                <table>
+                  <tbody>
+                <tr>
+                    <td>
+                      <input class="search null" value="只读共同体（必填）"> 
+                      <span class="t">-</span>
+                      <input class="search null" value="读写共同体（可选）"> 
+                      <a><span class="icon icon_plus"></span></a>
+                     </td>
+              </tr>
+                <tr>
+                    <td>
+                        <ul class="tc">
+                                <li><a><span class="t">Public</span> <span class="icon icon_cross_s"></span></a></li>
+                                <li><a><span class="t">Public</span> - <span class="t">ReadP</span> <span class="icon icon_cross_s"></span></a></li>
+                                <li><a><span class="t">Public</span> - <span class="t">ReadP</span> <span class="icon icon_cross_s"></span></a></li>
+                                <li><a><span class="t">Public</span> <span class="icon icon_cross_s"></span></a></li>
+                          </ul>
+                  </td>
+              </tr>
+              </tbody>
+            </table>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+<!--demobox 左中右-->
+<div class="demobox" id="demo_wrapper">
+  <h3>左中右</h3>
+  <div class="demoeffect">
+    <div class="wrapper">
+                      <div class="wrapper_l scroll-pane" style="height:400px;">
+                                <div class="st3">
+                                <div class="select_body" style="width:100%;">
+                                  <div class="select_trigger_wrap"><a class="select_trigger_del"></a></div>
+                                  <input class="select_text" value="请输入IP地址或资源名称">
+                                </div>
+                                <div class="select_boundtree" style="display: none;">
+                                      <ul>
+                                        <li><a><span class="t">选择子资源</span></a></li>
+                                        <li><a><span class="t">选择子资源</span></a></li>
+                                      </ul>
+                                    </div>
+                                </div>
+                              <!--tree-->
+                              <ul class="tree-wrap">
+                                    <li nodeid="root">
+                                    <ul class="treeview">
+                                    <li class="collapsable">
+                                    	<div class="hitarea expandable-hitarea"></div>
+                                    	<input type="checkbox">
+                                    	<span>主机(73)</span>
+                                        <ul>
+                                            <li class="collapsable">
+                                                <div class="hitarea expandable-hitarea"></div>
+                                                <input type="checkbox">
+                                                <span>Windows(68)</span>
+                                                <ul>
+                                                    <li class="collapsable">
+                                                        <div class="hitarea expandable-hitarea"></div>
+                                                        <input type="checkbox">
+                                                        <span>Windows(68)</span>
+                                                        <ul>
+                                            <li>
+                                                <div class="placeholder"></div>
+                                                <input type="checkbox">
+                                                <span>Windows(68)Windows(68)Windows(68)Windows(68)</span>
+                                            </li>
+                                            <li class="">
+                                                <div class="placeholder"></div>
+                                                <input type="checkbox">
+                                                <span>Windows(68)Windows(68)Windows(68)Windows(68)Windows(68)Windows(68)Windows(68)</span>
+                                            </li>
+                                            <li class="last">
+                                                <div class="last"></div>
+                                                <input type="checkbox">
+                                                <span>Windows(68)</span>
+                                            </li>
+                                         </ul>
+                                                    </li>
+                                                    <li class="expandable">
+                                                        <div class="hitarea expandable-hitarea"></div>
+                                                        <input type="checkbox">
+                                                        <span>Windows(68)</span>
+                                                    </li>
+                                                    <li class="expandable last">
+                                                        <div class="hitarea expandable-hitarea"></div>
+                                                        <input type="checkbox">
+                                                        <span>Windows(68)</span>
+                                                    </li>
+                                                 </ul>
+                                            </li>
+                                            <li class="expandable">
+                                                <div class="hitarea expandable-hitarea"></div>
+                                                <input type="checkbox">
+                                                <span>Windows(68)</span>
+                                            </li>
+                                            <li class="expandable last">
+                                                <div class="hitarea expandable-hitarea"></div>
+                                                <input type="checkbox">
+                                                <span>Windows(68)</span>
+                                            </li>
+                                         </ul>
+                                    </li>
+                                    <li class="expandable">
+                                    	<div class="hitarea expandable-hitarea"></div>
+                                    	<input type="checkbox">
+                                    	<span>主机(73)</span>
+                                        <ul>
+                                            <li class="expandable">
+                                                <div class="hitarea expandable-hitarea"></div>
+                                                <input type="checkbox">
+                                                <span>Windows(68)</span>
+                                            </li>
+                                            <li class="expandable">
+                                                <div class="hitarea expandable-hitarea"></div>
+                                                <input type="checkbox">
+                                                <span>Windows(68)</span>
+                                            </li>
+                                            <li class="expandable">
+                                                <div class="hitarea expandable-hitarea"></div>
+                                                <input type="checkbox">
+                                                <span>Windows(68)</span>
+                                            </li>
+                                         </ul>
+                                    </li>
+                                    </ul>
+                                    </li>
+                              </ul>
+                              <!--treeend-->
+                      </div>
+                      <div class="wrapper_m" style="height:400px;">
+                        <span class="ltor"></span>
+                        <span class="rtol"></span>
+                      </div>
+                      <div class="wrapper_r scroll-pane" style="height:400px;">
+                            <ul class="tree-wrap">
+                                    <li nodeid="root">
+                                    <ul class="treeview">
+                                    <li class="collapsable">
+                                    	<div class="hitarea expandable-hitarea"></div>
+                                    	<input type="checkbox">
+                                    	<span>主机(73)</span>
+                                        <ul>
+                                            <li class="collapsable">
+                                                <div class="hitarea expandable-hitarea"></div>
+                                                <input type="checkbox">
+                                                <span>Windows(68)</span>
+                                                <ul>
+                                                    <li class="collapsable">
+                                                        <div class="hitarea expandable-hitarea"></div>
+                                                        <input type="checkbox">
+                                                        <span>Windows(68)</span>
+                                                        <ul>
+                                            <li>
+                                                <div class="placeholder"></div>
+                                                <input type="checkbox">
+                                                <span>Windows(68)</span>
+                                            </li>
+                                            <li class="">
+                                                <div class="placeholder"></div>
+                                                <input type="checkbox">
+                                                <span>Windows(68)</span>
+                                            </li>
+                                            <li class=" last">
+                                                <div class="last"></div>
+                                                <input type="checkbox">
+                                                <span>Windows(68)</span>
+                                            </li>
+                                         </ul>
+                                                    </li>
+                                                    <li class="expandable">
+                                                        <div class="hitarea expandable-hitarea"></div>
+                                                        <input type="checkbox">
+                                                        <span>Windows(68)</span>
+                                                    </li>
+                                                    <li class="expandable last">
+                                                        <div class="hitarea expandable-hitarea"></div>
+                                                        <input type="checkbox">
+                                                        <span>Windows(68)</span>
+                                                    </li>
+                                                 </ul>
+                                            </li>
+                                            <li class="expandable">
+                                                <div class="hitarea expandable-hitarea"></div>
+                                                <input type="checkbox">
+                                                <span>Windows(68)</span>
+                                            </li>
+                                            <li class="expandable last">
+                                                <div class="hitarea expandable-hitarea"></div>
+                                                <input type="checkbox">
+                                                <span>Windows(68)</span>
+                                            </li>
+                                         </ul>
+                                    </li>
+                                    <li class="expandable">
+                                    	<div class="hitarea expandable-hitarea"></div>
+                                    	<input type="checkbox">
+                                    	<span>主机(73)</span>
+                                        <ul>
+                                            <li class="expandable">
+                                                <div class="hitarea expandable-hitarea"></div>
+                                                <input type="checkbox">
+                                                <span>Windows(68)</span>
+                                            </li>
+                                            <li class="expandable">
+                                                <div class="hitarea expandable-hitarea"></div>
+                                                <input type="checkbox">
+                                                <span>Windows(68)</span>
+                                            </li>
+                                            <li class="expandable">
+                                                <div class="hitarea expandable-hitarea"></div>
+                                                <input type="checkbox">
+                                                <span>Windows(68)</span>
+                                            </li>
+                                         </ul>
+                                    </li>
+                                    </ul>
+                                    </li>
+                              </ul>
+                      </div>
+                      <div class="clear"></div>
+                </div>
+  </div>
+  <h3>左右</h3>
+  <div class="p_content">
+             <div class="wrapper1">
+                 <div class="bb" style="height:300px;">
+                 <div class="common">
+                 <div class="theadpart">
+                 <table>
+                    <tr>
+                        <th>发现信息</th>
+                    </tr>
+                 </table>
+                 </div>
+                 </div>
+                 <div class="sub">
+                 <table>
+                            <tr>         
+                                <td width="25%">耗时时间</td>
+                                <td>00:00:20</td>
+                            </tr>
+                            <tr>
+                                <td width="25%">IP地址</td>
+                                <td>192.168.1.1</td>
+                            </tr>
+                            <tr>
+                                <td>资源名称</td>
+                                <td>R04807</td>
+                            </tr>
+                            <tr>
+                                <td>显示名称</td>
+                                <td>
+                                  <input type="text" class="b" size="10" value=" R04807" />
+                              </td>
+                            </tr>
+                            <tr>
+                                <td>资源类型</td>
+                                <td>Windows</td>
+                            </tr>
+                            <tr>
+                                <td>发现方式</td>
+                                <td>SNMP</td>
+                          </tr>
+                      </table>
+                 </div>
+                 </div>
+             </div>
+             <div class="wrapper2">
+             <div class="scroll-pane bb" style="height:300px;">
+             <div class="common">
+                 <div class="theadpart">
+                 <table>
+                    <tr>
+                        <th>子资源信息</th>
+                    </tr>
+                 </table>
+                 </div>
+                 <div class="tbodypart">
+                 <table>
+                    <tbody>
+                        <tr>
+                            <td width="90%"><a><span class="icon icon_down"></span><span class="t">CPU ( 8 ) </span></a></td>
+                            <td width="10%"><span class="icon icon_checked"></span></td>
+                        </tr>
+                        <tr class="cbg">
+                            <td><a><span class="icon"></span><span class="t">CPU0</span></a></td>
+                            <td><span class="icon icon_checked"></span></td>
+                        </tr>
+                        <tr class="cbg">
+                            <td><a><span class="icon"></span><span class="t">CPU1</span></a></td>
+                            <td><span class="icon icon_checked"></span></td>
+                        </tr>
+                        <tr class="cbg">
+                            <td><a><span class="icon"></span><span class="t">CPU2</span></a></td>
+                            <td><span class="icon icon_checked"></span></td>
+                        </tr>
+                        <tr class="cbg">
+                            <td><a><span class="icon"></span><span class="t">CPU3</span></a></td>
+                            <td><span class="icon icon_checked"></span></td>
+                        </tr>
+                        <tr class="cbg">
+                            <td><a><span class="icon"></span><span class="t">CPU4</span></a></td>
+                            <td><span class="icon icon_checked"></span></td>
+                        </tr>
+                        <tr class="cbg">
+                            <td><a><span class="icon"></span><span class="t">CPU5</span></a></td>
+                            <td><span class="icon icon_checked"></span></td>
+                        </tr>
+                        <tr class="cbg">
+                            <td><a><span class="icon"></span><span class="t">CPU6</span></a></td>
+                            <td><span class="icon icon_checked"></span></td>
+                        </tr>
+                        <tr class="cbg">
+                            <td><a><span class="icon"></span><span class="t">CPU7</span></a></td>
+                            <td><span class="icon icon_checked"></span></td>
+                        </tr>
+                        <tr class="cbg">
+                            <td><a><span class="icon"></span><span class="t">CPU8</span></a></td>
+                            <td><span class="icon icon_checked"></span></td>
+                        </tr>
+                        <tr>
+                            <td><a><span class="icon icon_down"></span><span class="t">分区（4）</span></a></td>
+                            <td><span class="icon icon_checked"></span></td>
+                        </tr>
+                        <tr class="cbg">
+                            <td><a><span class="icon"></span><span class="t">C:/</span></a></td>
+                            <td><span class="icon icon_checked"></span></td>
+                        </tr>
+                        <tr class="cbg">
+                            <td><a><span class="icon"></span><span class="t">D:/</span></a></td>
+                            <td><span class="icon icon_checked"></span></td>
+                        </tr>
+                        <tr class="cbg">
+                            <td><a><span class="icon"></span><span class="t">E:/</span></a></td>
+                            <td><span class="icon icon_checked"></span></td>
+                        </tr>
+                        <tr class="cbg">
+                            <td><a><span class="icon"></span><span class="t">F:/</span></a></td>
+                            <td><span class="icon icon_checked"></span></td>
+                        </tr>
+                        <tr>
+                            <td><a><span class="icon icon_right"></span><span class="t">硬盘（4）</span></a></td>
+                            <td><span class="icon icon_checked"></span></td>
+                        </tr>
+                        <tr>
+                            <td><a><span class="icon icon_right"></span><span class="t">网络接口（50）</span></a></td>
+                            <td><span class="icon icon_checked"></span></td>
+                        </tr>
+                  </tbody>
+                  </table>
+                 </div>
+                 </div>              
+             </div>           
+        </div>
+         <div class="clear"></div> 
+  </div>
+  <h3>左右2</h3>
+  <div class="demoeffect">
+  <div class="holder holder_line">
+                                    <div class="interface_left" style="width:25%;">
+                                        <div class="inner scroll-pane" style="height:400px;">
+                                        <ul class="interface">
+                                            <li class="first"><a class="on"><span class="icon icon_switchon" title="开启接口监控"></span><span class="gt"> CPU1</span><span class="icon icon_right"></span></a></li>
+                                            <li class="last"><a><span class="icon icon_switchoff"></span><span class="rt" id="show_redtxt"> CPU2</span><span class="icon icon_right"></span></a></li>
+                                        </ul>
+                                        </div>
+                                    </div>
+                                    <div class="interface_right" style="width:75%;">
+                                        <div class="scroll-pane" style="height:400px;">
+                                        <div class="common">
+                                        	<div class="theadpart">
+                                            <table>
+                                            <tr>
+                                                <th width="10%"><span>监控</span></th>
+                                                <th width="10%"><span>告警</span></th>
+                                                <th width="20%"><span>指标</span></th>
+                                                <th width="20%"><span>监控频度</span></th>
+                                                <th width="30%"><span>阈值</span></th>
+                                                <th>抖动</th>
+                                            </tr>
+                                        	</table>
+                                            </div>
+                                            <div class="tbodypart">
+                                            <table>
+                                            <tr>
+                                            	<td width="10%"><span class="icon icon_checked"></span></td>
+                                                <td width="10%"><span class="icon icon_checked"></span></td>
+                                                <td width="20%">CPU利用率</td>
+                                                <td width="20%">
+                                                <div class="select_body2" style="width:75px;">
+                                                         <div class="select_trigger_wrap"><a class="select_trigger"></a></div>
+                                                         <div class="select_text">一分钟</div>
+                                                  </div>
+                                                <div class="select_boundtree" style="width:75px;">
+                                                      <ul>
+                                                        <li><a><span class="t">一小时</span></a></li>
+                                                        <li><a><span class="t">一天</span></a></li>
+                                                    </ul>
+                                                    </div>
+                                                </td>
+                                                <td width="14%"><input type="text" class="by" size="2" value="60" /> %</td>
+                                                <td width="2%">-</td>
+                                                <td width="14%"><input type="text" class="br" size="2" value="80" /> %</td>
+                                                <td><input class="bn" type="text" size="2" value="1" /></td>
+                                            </tr>
+                                        	</table>
+                                        </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                	<div class="clear"></div>
+                          		</div>
+  </div>
+</div>
+
+<!--demobox 表格-->
+<div class="demobox" id="demo_table">
+  <h3>表格 common</h3>
+  <div class="demoeffect">
+    <div class="common">
+      <div class="theadpart">
+        <table>
+          <thead>
+            <tr>
+              <th width="5%"><span class="icon icon_checked"></span></th>
+              <th width="10%">
+              	<a class="rank-pull"></a>
+                <a class="rank-up"></a>
+                <span>标题名称</span>
+              </th>
+              <th>
+              <a class="rank-down"></a>
+              <a class="icon rank-down-grace"></a>
+              <span>标题名称如果非常长标题名称如果非常长标题名称如果非常长标题名称如果非常长标题名称如果非常长</span> </th>
+              <th class="tcenter" width="20%"><span>需要文字居中</span></th>
+            </tr>
+          </thead>
+        </table>
+      </div>
+      <div class="tbodypart">
+        <table>
+          <tbody>
+            <tr>
+              <td width="5%"><span class="icon icon_uncheck"></span></td>
+              <td width="10%">取值(pakeg)</td>
+              <td>取值</td>
+            </tr>
+            <tr>
+              <td><span class="icon icon_checked"></span></td>
+              <td>U make me wanner</td>
+              <td>取值</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <h3>表格 common_warp</h3>
+  <div class="demoeffect">
+    <div class="common">
+      <div class="theadpart">
+        <table>
+          <thead>
+            <tr>
+              <th width="5%"><span class="icon icon_checked"></span></th>
+              <th width="10%"><a class="rank-up"></a><span>标题名称</span></th>
+              <th><a class="rank-down"></a> <span>标题名称如果非常长标题名称如果非常长标题名称如果非常长标题名称如果非常长标题名称如果非常长</span></th>
+            </tr>
+          </thead>
+        </table>
+      </div>
+      <div class="tbodypart wrap">
+        <table>
+          <tbody>
+            <tr>
+              <td width="5%"><span class="icon icon_checked"></span></td>
+              <td width="10%">取值取值取值取值取值取值取值取值</td>
+              <td>取值</td>
+            </tr>
+            <tr>
+              <td><span class="icon icon_checked"></span></td>
+              <td>取值</td>
+              <td>取值</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <h3>表格 form</h3>
+  <div class="demoeffect">
+    <div class="form">
+              <table cellpadding="0" cellspacing="0">
+                <tbody>
+                    <tr>
+                        <td width="30%">子网地址<br />（*换行的效果）</td>
+                        <td><input type="text" class="forminput"> <span class="necessary">*</span></td>
+                    </tr>
+                    <tr class="cbg">
+                        <td>子网掩码</td>
+                        <td><input type="text" class="forminput"> <span class="necessary">*</span></td>
+                    </tr>
+                    <tr >
+                        <td class="t_right" colspan="2"><input type="button" class="submit" value="保存"> <input type="button" class="cancel dialog_close" value="取消"> </td>
+                    </tr>
+              </tbody>
+            </table>
+          </div>
+  </div>
+  <h3>表格 sub</h3>
+  <div class="demoeffect" style=" background-image:none; background-color:#fff">
+        <div class="sub">
+        <table>
+            <tr>
+              <th width="5%"><span class="icon icon_checked"></span></th>
+              <th width="10%">取值</th>
+              <th>取值如果超长溢出文字取值如果超长溢出文字取值如果超长溢出文字取值如果超长溢出文字</th>
+            </tr>
+            <tr>
+              <td><span class="icon icon_checked"></span></td>
+              <td>取值</td>
+              <td>取值</td>
+            </tr>
+            <tr>
+              <td><span class="icon icon_checked"></span></td>
+              <td>取值</td>
+              <td>取值</td>
+            </tr>
+            <tr>
+              <td><span class="icon icon_checked"></span></td>
+              <td>取值</td>
+              <td>取值</td>
+            </tr>
+            <tr>
+              <td><span class="icon icon_checked"></span></td>
+              <td>取值</td>
+              <td>取值</td>
+            </tr>
+        </table>
+        </div>
+  </div>
+  <h3>表格 rare</h3>
+  <div class="demoeffect">
+    <div class="rare">
+      <div class="theadpart">
+        <table>
+          <thead>
+            <tr>
+              <th class="thl"></th>
+              <th width="5%"  class="thm"><span class="icon icon_checked"></span></th>
+              <th width="20%" class="thm">标题名称</th>
+              <th class="thm">标题名称如果非常长标题名称如果非常长标题名称如果非常长标题名称如果非常长标题名称如果非常长</th>
+              <th class="thr"></th>
+            </tr>
+          </thead>
+        </table>
+      </div>
+      <div class="tbodypart">
+        <table>
+          <tbody>
+            <tr>
+              <td width="5%"><span class="icon icon_checked"></span></td>
+              <td width="20%">取值</td>
+              <td>取值</td>
+            </tr>
+            <tr>
+              <td><span class="icon icon_checked"></span></td>
+              <td>取值</td>
+              <td>取值</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <h3>表格 rare 无圆角样式滴时候</h3>
+  <div class="demoeffect">
+    <div class="rare">
+      <div class="theadpart">
+        <table>
+          <thead>
+            <tr>
+              <th width="5%"><span class="icon icon_checked"></span></th>
+              <th width="20%">标题名称</th>
+              <th>标题名称如果非常长标题名称如果非常长标题名称如果非常长标题名称如果非常长标题名称如果非常长</th>
+            </tr>
+          </thead>
+        </table>
+      </div>
+      <div class="tbodypart">
+        <table>
+          <tbody>
+            <tr>
+              <td width="5%"><span class="icon icon_checked"></span></td>
+              <td width="20%">取值</td>
+              <td>取值取值取值取值取值取值取值取值取值取值取值取值取值取值取值取值取值取值取值取值取值取值取值取值取值取值取值取值取值取值取值取值取值</td>
+            </tr>
+            <tr>
+              <td><span class="icon icon_checked"></span></td>
+              <td>取值</td>
+              <td>取值</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <h3>表格 report</h3>
+  <div class="demoeffect">
+  	<div class="report">
+        	<h3>testResources
+            	<a class="btn"><span class="icon icon_share"></span>导出PDF</a>
+                <a class="btn"><span class="icon icon_share"></span>导出Word</a>
+                <a class="btn"><span class="icon icon_share"></span>导出Excel</a>
+            </h3>
+            <table>
+            	<thead>
+                	<tr>
+                    <th width="5%" rowspan="2">序号</th>
+                    <th width="25%" rowspan="2">资源名称</th>
+                    <th colspan="3">CPU利用率(%)</th>
+                    <th colspan="3">内存利用率(%)</th>
+                    </tr>
+                    <tr>
+                    <th width="12%">平均值</th>
+                    <th width="12%">最大值</th>
+                    <th width="11%">最小值</th>
+                    <th width="12%">平均值</th>
+                    <th width="12%">最大值</th>
+                    <th width="11%">最小值</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    	<tr>
+                        	<td>1</td>
+                            <td>(Windows) R04303(172.17.161.117)</td>
+                            <td>1.06</td>
+                            <td>3.00</td>
+                            <td>0.25</td>
+                            <td>71.98</td>
+                            <td>73.44</td>
+                            <td>68.89</td>
+                        </tr>
+                        <tr class="cbg">
+                        	<td>1</td>
+                            <td>(Windows) R04303(172.17.161.117)</td>
+                            <td>1.06</td>
+                            <td>3.00</td>
+                            <td>0.25</td>
+                            <td>71.98</td>
+                            <td>73.44</td>
+                            <td>68.89</td>
+                        </tr>
+                        <tr>
+                        	<td>1</td>
+                            <td>(Windows) R04303(172.17.161.117)</td>
+                            <td>1.06</td>
+                            <td>3.00</td>
+                            <td>0.25</td>
+                            <td>71.98</td>
+                            <td>73.44</td>
+                            <td>68.89</td>
+                        </tr>
+                        <tr class="cbg">
+                        	<td>1</td>
+                            <td>(Windows) R04303(172.17.161.117)</td>
+                            <td>1.06</td>
+                            <td>3.00</td>
+                            <td>0.25</td>
+                            <td>71.98</td>
+                            <td>73.44</td>
+                            <td>68.89</td>
+                        </tr>
+                        <tr>
+                        	<td>1</td>
+                            <td>(Windows) R04303(172.17.161.117)</td>
+                            <td>1.06</td>
+                            <td>3.00</td>
+                            <td>0.25</td>
+                            <td>71.98</td>
+                            <td>73.44</td>
+                            <td>68.89</td>
+                        </tr>
+                        <tr class="cbg">
+                        	<td>1</td>
+                            <td>(Windows) R04303(172.17.161.117)</td>
+                            <td>1.06</td>
+                            <td>3.00</td>
+                            <td>0.25</td>
+                            <td>71.98</td>
+                            <td>73.44</td>
+                            <td>68.89</td>
+                        </tr>
+                        <tr>
+                        	<td>1</td>
+                            <td>(Windows) R04303(172.17.161.117)</td>
+                            <td>1.06</td>
+                            <td>3.00</td>
+                            <td>0.25</td>
+                            <td>71.98</td>
+                            <td>73.44</td>
+                            <td>68.89</td>
+                        </tr>
+                        <tr class="cbg">
+                        	<td>1</td>
+                            <td>(Windows) R04303(172.17.161.117)</td>
+                            <td>1.06</td>
+                            <td>3.00</td>
+                            <td>0.25</td>
+                            <td>71.98</td>
+                            <td>73.44</td>
+                            <td>68.89</td>
+                        </tr>
+                    </tbody>
+            </table>
+        </div>
+  
+  </div>
+  <h3>表格 simple</h3>
+  <div class="demoeffect">
+  <div class="simple">
+            	<div class="theadpart">
+                <table>
+                	<thead>
+                    	<tr>
+                        	<th width="10%">发送状态</th>
+                            <th width="20%">告警时间</th>
+                            <th width="15%">接收人</th>
+                            <th>发送内容</th>
+                            <th width="6%">转发</th>
+                        </tr>
+                    </thead>
+                </table>
+                </div>
+                <div class="tbodypart">
+                <table>
+                	<tbody>
+                    	<tr>
+                        	<td width="10%"><span class="icon icon_sms_on"></span><span class="icon icon_email_on"></span></td>
+                        	<td width="20%">2013-05-23 11:50:59</td>
+                            <td width="15%">Administrator</td>
+                            <td>(Windows)172.17.161.111 内存平均度速率：15000Byte/s(红色阈值&gt;10000Byte/s)</td>
+                            <td width="6%"><span class="icon icon_share"></span></td>
+                        </tr>
+                        <tr>
+                        	<td><span class="icon icon_sms_on"></span><span class="icon icon_email_on"></span></td>
+                        	<td>2013-05-23 11:50:59</td>
+                            <td>Administrator</td>
+                            <td>(Windows)172.17.161.111 内存平均度速率：15000Byte/s(红色阈值&gt;10000Byte/s)</td>
+                            <td><span class="icon icon_share"></span></td>
+                        </tr>
+                    </tbody>
+                </table>
+                </div>
+                </div>
+  </div>
+  <h3>表格 simple tnowrap</h3>
+  <div class="demoeffect">
+  <div class="simple tnowrap">
+            	<div class="theadpart">
+                <table>
+                	<thead>
+                    	<tr>
+                        	<th width="10%">发送状态</th>
+                            <th width="20%">告警时间</th>
+                            <th width="15%">接收人</th>
+                            <th>发送内容</th>
+                            <th width="6%">转发</th>
+                        </tr>
+                    </thead>
+                </table>
+                </div>
+                <div class="tbodypart">
+                <table>
+                	<tbody>
+                    	<tr>
+                        	<td width="10%"><span class="icon icon_sms_on"></span><span class="icon icon_email_on"></span></td>
+                        	<td width="20%">2013-05-23 11:50:59</td>
+                            <td width="15%">Administrator</td>
+                            <td>(Windows)172.17.161.111 内存平均度速率：15000Byte/s(红色阈值&gt;10000Byte/s)</td>
+                            <td width="6%"><span class="icon icon_share"></span></td>
+                        </tr>
+                        <tr>
+                        	<td><span class="icon icon_sms_on"></span><span class="icon icon_email_on"></span></td>
+                        	<td>2013-05-23 11:50:59</td>
+                            <td>Administrator</td>
+                            <td>(Windows)172.17.161.111 内存平均度速率：15000Byte/s(红色阈值&gt;10000Byte/s)</td>
+                            <td><span class="icon icon_share"></span></td>
+                        </tr>
+                    </tbody>
+                </table>
+                </div>
+                </div>
+  </div>
+</div>
+<!--demobox 无数据-->
+<div class="demobox">
+  <div class="demoeffect" style="background-image:url(../images/index/body_bg.png)">
+    <div class="nodata"><span class="line2">暂时没有可读取的数据！</span></div>
+  </div>
+  <div class="democode">
+    <pre>&lt;div class=&quot;nodata&quot;&gt;无数据&lt;/div&gt;</pre>
+  </div>
+  <div class="demoeffect">
+    <div class="nodata-min">无数据</div>
+  </div>
+  <div class="democode">
+    <pre>&lt;div class=&quot;nodata-min&quot;&gt;无数据&lt;/div&gt;</pre>
+  </div>
+</div>
+<!--demobox port-->
+<div class="demobox">
+  <div class="demoeffect">
+    <span class="port_green"></span>
+    <span class="port_red"></span>
+    <span class="port_gray"></span>
+  </div>
+  
+  
+  
+</div>
+
+<!--layer alert-->
+<div id="alert" style="width:550px; display:none">
+    <div class="panel_null">
+    <div class="top-l">
+      <div class="top-r">
+        <div class="top-m"><span class="title">---</span><span class="ico-quit"></span></div>
+      </div>
+    </div>
+    <div class="middle-l">
+      <div class="middle-r">
+        <div class="middle-m">
+            <div class="alert_text">
+              <span class="icon icon_trash"></span>
+              <span>确定要删除所选项吗？</span>
+            </div>
+            <div class="button">
+              <a class="btn_s2">确定</a>
+              <a class="btn_s dialog_close">取消</a>    
+			</div>
+        </div>
+      </div>
+    </div>
+    <div class="bottom-l">
+      <div class="bottom-r">
+        <div class="bottom-m"></div>
+      </div>
+    </div>
+</div>
+
+</div>
+<!--layer panel_null-->
+<div id="panel_null" style="width:550px; display:none">
+    <div class="panel_null">
+    <div class="top-l">
+      <div class="top-r">
+        <div class="top-m"><span class="title">---</span><span class="ico-quit"></span></div>
+      </div>
+    </div>
+    <div class="middle-l">
+      <div class="middle-r">
+        <div class="middle-m">
+            <div class="alert_text">
+              <span class="icon icon_trash"></span>
+              <span>确定要删除所选项吗？</span>
+            </div>
+            <div class="simple">
+            <table>
+            	<tr>
+                	<td width="20%">模板名称：</td>
+                    <td><input type="text" class="forminput2" value="复件 Linux OS（Telnet/SSH）监控" /> <span class="icon icon_info" title="模板名称请控制在30个字符以里。"></span></td>
+                </tr>
+                <tr>
+                	<td>模板类型：</td>
+                    <td>Linux OS（Telnet/SSH）</td>
+                </tr>
+            </table>
+            </div>
+            <ul class="leap">   
+              	<li><a href="../smart/smart3.html"><span class="shortcut_box"></span>
+                	<span class="t">资源管理</span></a></li>
+                <li><a href="../smart6-1.html"><span class="shortcut_board"></span>
+                	<span class="t">监控模板</span></a></li>
+                <li><a href="../smart/smart2.html"><span class="shortcut_topo"></span>
+                	<span class="t">网络拓扑</span></a></li>
+                <li><a href="../smart/smart6-4-1.html"><span class="shortcut_scan"></span>
+                	<span class="t">自动拓扑发现</span></a></li>
+                <li><a href="../smart/smart6-4.html"><span class="shortcut_find"></span>
+                	<span class="t">单个资源发现</span></a></li>
+              </ul>
+            <div class="button">
+              <span class="infotxt">帮助说明：复制当前模板为新模板。</span>
+              <a class="btn_s2">确定</a>
+              <a class="btn_s dialog_close">取消</a>    
+			</div>
+        </div>
+      </div>
+    </div>
+    <div class="bottom-l">
+      <div class="bottom-r">
+        <div class="bottom-m"></div>
+      </div>
+    </div>
+</div>
+
+</div>
+<!--layer panel-->
+<div id="panel" style="width:550px;display:none">
+    <div class="panel">
+    <div class="top-l">
+      <div class="top-r">
+        <div class="top-m"><span class="title">---</span><span class="ico-quit"></span></div>
+      </div>
+    </div>
+    <div class="middle-l">
+      <div class="middle-r">
+        <div class="middle-m">  
+            <div class="form">
+              <table cellpadding="0" cellspacing="0">
+                <tbody>						
+                    <tr>
+                        <td width="30%">IP地址</td>
+                        <td><input type="text" class="forminput red"> <span class="necessary">*</span></td>
+                    </tr>
+                    <tr class="cbg">
+                        <td>端口</td>
+                        <td><input type="text" class="forminput"> <span class="necessary">*</span></td>
+                    </tr>
+                    <tr>
+                        <td>用户名</td>
+                        <td><input type="text" class="forminput"> <span class="necessary">*</span></td>
+                    </tr>
+                    <tr class="cbg">
+                        <td>安全级别</td>
+                        <td>
+                        <div class="select_body" style="width:200px;">
+                         <div class="select_trigger_wrap"><a class="select_trigger"></a></div>
+                         <div class="select_text">NOAUTH_NOPRIV</div>
+                        </div>
+                    <div class="select_boundtree">
+                      <ul>
+                        <li><a><span class="t">NOAUTH_NOPRIV</span></a></li>
+                        <li><a><span class="t">AUTH_NOPRIV</span></a></li>
+                        <li><a><span class="t">AUTH_PRIV</span></a></li>
+                      </ul>
+                    </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>上下文</td>
+                        <td><input type="text" class="forminput"> <span class="necessary">*</span></td>
+                    </tr>
+                    <tr>
+                        <td class="t_right" colspan="2"><input type="button" class="submit" value="保存"> <input type="button" class="cancel dialog_close" value="取消"> </td>
+                    </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bottom-l">
+      <div class="bottom-r">
+        <div class="bottom-m"></div>
+      </div>
+    </div>
+</div>
+
+</div>
+<!--show_calendarimg-->
+<div class="calendarimg" style="display:none; position:absolute">
+<img src="../images/demo/calendar.png" /></div>
+
+<script>
+$('#show_alert').click(function(){
+	art.dialog({
+    content: document.getElementById('alert'),
+	padding: 0,
+	lock: true
+	});
+});
+
+$('#show_panel_null').click(function(){
+	art.dialog({
+    content: document.getElementById('panel_null'),
+	padding: 0,
+	lock: true
+	});
+});
+$('#show_panel').click(function(){
+	art.dialog({
+    content: document.getElementById('panel'),
+	padding: 0,
+	lock: true
+	});
+});
+</script>
+<script>
+$(document).ready(function(){
+var $modal = $('<div class="loading"> 加载中，请稍候......</div>');
+$('#screen_loading').click(function(evt) {
+	evt.preventDefault();
+	$(this).overlay({
+	effect: 'fade',
+	opacity: 0.7,
+	color:'#000',
+	closeOnClick: true,
+	onShow: function() {
+		$('body').append($modal);
+		},
+	onHide: function() {
+		$modal.remove();
+		},
+	})
+});
+});
+</script>
+<script>
+$(document).ready(function(){
+var $modal1 = $('<div class="loading-min2"> 加载中，请稍候......</div>');
+$('#portlet_loading').click(function(evt) {
+	evt.preventDefault();
+	$(this).overlay({
+	opacity: 0.5,
+	color:'#fff',
+	effect: 'fade',
+	closeOnClick: true,
+	onShow: function() {
+		$('body').append($modal1);
+		},
+	onHide: function() {
+		$modal1.remove();
+		},
+	})
+});
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,2285 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<!--index-->
+<link href="../css/index.css" rel="stylesheet" type="text/css" />
+<!--gloab-->
+<link href="../css/comm.css" rel="stylesheet" type="text/css" />
+<link href="../css/widget.css" rel="stylesheet" type="text/css" />
+<link href="../css/ico.css" rel="stylesheet" type="text/css" />
+<link href="../css/tree.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript" src="../js/jquery-1.8.2.min.js"></script>
+<!--demo-->
+<link href="../css/demo.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../js/demo.js"></script>
+<!--artdialog-->
+<link href="../css/artdialog.css" rel="stylesheet" />
+<script src="../js/artDialog.min.js"></script>
+<script src="../js/jquery.overlay.min.js"></script>
+<!--scroll-->
+<link href="../css/jquery.jscrollpane.css" rel="stylesheet" type="text/css" />
+<script src="../js/jquery.mousewheel.js"></script>
+<script src="../js/jquery.jscrollpane.min.js"></script>
+<script>
+$(function()
+{
+	var settings = {
+		showArrows: false,
+		autoReinitialise: true
+	};
+	$('.scroll-pane').jScrollPane(settings);
+});
+</script>
+<!--AnyChart-->
+<script type="text/javascript" language="JavaScript" src="../anychart/js/AnyChart.js"></script>
+<script type="text/javascript" language="JavaScript">
+var chart = new AnyChart('../anychart/swf/AnyChart.swf', '../anychart/swf/Preloader.swf');
+		chart.width = "100%";
+		chart.height = "100%";
+		chart.wMode='transparent';
+		chart.setXMLFile("../anychart/xml/view_pie2.xml");
+	chart.write("view_pie2");
+function MM_changeProp(objId,x,theProp,theValue) { //v9.0
+  var obj = null; with (document){ if (getElementById)
+  obj = getElementById(objId); }
+  if (obj){
+    if (theValue == true || theValue == false)
+      eval("obj.style."+theProp+"="+theValue);
+    else eval("obj.style."+theProp+"='"+theValue+"'");
+  }
+}
+</script>
+<style>
+.panel {
+	position:relative;
+}
+.panel_null {
+	position:relative;
+}
+</style>
+</head>
+<body>
+<!--全局设置-->
+<div class="panel_null" style="width:800px;">
+      <div class="top-l">
+        <div class="top-r">
+          <div class="top-m"> 
+          	<span class="ico-quit"></span>
+            <span class="title"></span> </div>
+        </div>
+      </div>
+      <div class="middle-l">
+        <div class="middle-r">
+          <div class="middle-m" style="padding:10px;">
+          
+
+
+
+<div class="tab-group">
+      <div class="tab">
+        <ul>
+          <li class="on"><a onclick="MM_changeProp('sb','','display','block','DIV');MM_changeProp('tp','','display','none','DIV');MM_changeProp('ll','','display','none','DIV');">设备</a> </li>
+          <li><a onclick="MM_changeProp('ll','','display','block','DIV');MM_changeProp('sb','','display','none','DIV');MM_changeProp('tp','','display','none','DIV');">链路</a> </li>
+          <li><a onclick="MM_changeProp('tp','','display','block','DIV');MM_changeProp('sb','','display','none','DIV');MM_changeProp('ll','','display','none','DIV');">拓扑</a> </li>
+        </ul>
+      </div>
+      <div class="tab-content">
+
+       <div style="height:400px; overflow:auto" >
+       
+       
+       <!--切签的内容-->
+       <!--设备-->
+       <div id="sb"  style="display:none">
+       <div style="min-height:350px;">
+          <div class="st"><span class="f_left" style="margin-top:1px;"><a type="checkbox" href="javascript:void(0)" class="icon_uncheck"><input type="checkbox" style="display: none;" colid="id"></a>按照全局设置显示</span></div>
+       <div class="p_areanobr">
+       请选择设备标注：
+        <div><label><a class="icon_radioed"></a>管理IP</label><label><a class="icon_radioed"></a>SysOID</label><label><a class="icon_radioed"></a>屏显名称</label><label><a class="icon_radioed"></a>设备类型</label></div>
+       </div> 
+       <div class="p_areanobr">
+       核心设备图标大小设置：
+        <div><label><a class="icon_radioed"></a>小</label><label><a class="icon_radioed"></a>中</label><label><a class="icon_radioed"></a>大</label></div>
+       </div> 
+       <div class="p_areanobr">
+       骨干设备图标大小设置：
+        <div><label><a class="icon_radioed"></a>小</label><label><a class="icon_radioed"></a>中</label><label><a class="icon_radioed"></a>大</label></div>
+       </div>
+       </div>
+       <div class="p_areanobr">
+        
+        
+    	<a class="btn_body" href="javascript:void(0)" title="取消">
+        	<div class="btn_l">   
+            	<div class="btn_r">       
+                	<div class="btn_m">           
+                    	<span class="ico ico_cancel"></span>           
+                        <span class="text">取消</span>           
+                        <span class="pull"></span>       
+                    </div>
+                </div>
+            </div>
+        </a>
+        <a class="btn_body on" href="javascript:void(0)" title="应用">
+        	<div class="btn_l">   
+            	<div class="btn_r">       
+                	<div class="btn_m">           
+                    	<span class="ico ico_confirm"></span>           
+                        <span class="text">确定</span>           
+                        <span class="pull"></span>       
+                    </div>
+                </div>
+            </div>
+        </a>
+  	</div>
+       </div>
+       
+       <!--链路-->
+        <div id="ll" style="display:none">
+          <div style="min-height:350px;">
+             <div class="setting-units">
+    <div class="setting-unit">
+        <div class="title">
+        	链路设置
+            <span class="icon icon_close"></span>
+        </div>
+        <div class="holder" style="display: none;">
+            <div class="sub">
+                <table>
+                  <tbody>
+                <tr>
+                    <td style="width:15%">
+                  链路标注：
+                  </td>
+                  <td style="width:85%">
+        <div class="select_body">
+             <div class="select_trigger_wrap"><a class="select_trigger"></a></div>
+             <div class="select_text">无标注</div>          
+        </div>
+        <div class="select_boundtree" style="width: 100px; display: none;">
+                          <ul>           
+                            <li><a><span class="t">无标注</span></a></li>
+                            <li><a><span class="t">链路类型</span></a></li>
+                            <li><a><span class="t">链路备注</span></a></li>
+                            <li><a><span class="t">上行流量</span></a></li>
+                            <li><a><span class="t">下行流量</span></a></li>
+                            <li><a><span class="t">总流量</span></a></li>
+                          </ul>
+                        </div>
+ 
+                     </td>
+              </tr>
+              <tr><td>链路显示方式：</td>
+              
+              
+              <td><a type="checkbox" href="javascript:void(0)" class="icon_uncheck"><input type="checkbox" style="display: none;" colid="id"></a>以单链路形式显示</td>
+              </tr>
+               <tr><td>链路颜色指示：</td>
+              
+              
+              <td>
+               <div class="select_body">
+             <div class="select_trigger_wrap"><a class="select_trigger"></a></div>
+             <div class="select_text">总流量</div>          
+        </div>
+        <div class="select_boundtree" style="width: 100px; display: none;">
+                          <ul>           
+                            <li><a><span class="t">总流量</span></a></li>
+                            <li><a><span class="t">宽带利用率</span></a></li>
+
+                          </ul>
+                        </div>
+              </td>
+              </tr>
+              
+              </tbody>
+            </table>
+            </div>
+        </div>
+    </div>
+    <div class="setting-unit">
+        <div class="title">
+        	告警设置
+            <span class="icon icon_close"></span>
+        </div>
+        <div class="holder" style="display: none;">
+            <div class="sub">
+                <div class="report">
+                <div class="clear">
+        	<div class="f_left f_fix" style="padding-left:10px; margin-top:10px">
+         
+        <div class="select_body" style="width:100px">
+             <div class="select_trigger_wrap"><a class="select_trigger"></a></div>
+             <div class="select_text">10M以下</div>          
+        </div>
+        
+        <div class="select_boundtree" style="width: 50px; display: none;">
+                          <ul>           
+                           
+                            <li><a><span class="t">10M以下</span></a></li>
+                            <li><a><span class="t">100M</span></a></li>
+                            <li><a><span class="t">1000M</span></a></li>
+                            <li><a><span class="t">1G</span></a></li>
+
+                          </ul>
+                        </div></div>
+                    
+            <span title="链路颜色指标超过红色阈值时，链路颜色显示为红色，且产生主要级别的告警；链路颜色指标超过黄色阈值时，链路颜色显示为黄色，且产生警告级别的告警；链路颜色指标未超过黄色阈值时，链路显示为绿色。" style="margin-left:5px; margin-top:13px" class="icon icon_warning f_left2 f_fix"></span>            
+            <span class="f_left f_fix" style="margin-top:10px">根据不同带宽设置其对应阈值</span>
+            <div style="margin-top:2px;" class="f_right"><span class="icon icon_recover"></span>恢复出厂设置</div>
+            </div>
+            <table>
+            	<thead>
+                	<tr>
+                    <th width="20%">指标</th>
+                    <th width="53%">阈值定义</th>
+                    <th width="10%">抖动</th>
+                    <th width="17%">超时时间</th>
+                    </tr>
+                   
+                </thead>
+                <tbody>
+                    	<tr>
+                        	<td>可用状态</td>
+                            <td><div>-</div></td>
+                            <td>
+        <div style="width:50px" class="select_body">
+             <div class="select_trigger_wrap"><a class="select_trigger"></a></div>
+             <div class="select_text">1</div>          
+        </div>
+        <div style="width: 50px; display: none;" class="select_boundtree">
+                          <ul>           
+                           
+                            <li><a><span class="t">1</span></a></li>
+                            <li><a><span class="t">2</span></a></li>
+                            <li><a><span class="t">3</span></a></li>
+                            <li><a><span class="t">4</span></a></li>
+                            <li><a><span class="t">5</span></a></li>
+
+                          </ul>
+                        </div>
+  </td>
+                            <td><input type="text" class="bgray2" style="width:60px"> 毫秒<span style="color:red">*</span></td>
+                           
+                        </tr>
+                        <tr class="cbg">
+                        	<td>上行流量</td>
+                            <td><div>
+                            <div class="yu"><input type="text" style="width:90px; margin-top:6px;" class=" colorbox_orange"></div>
+                            <div class="yu2">kpbs-<span class="redstar">*</span></div>
+                            <div class="yu"><input type="text" style="width:90px; margin-top:6px;" class=" colorbox_red"></div>
+                            <div class="yu2">kpbs <span class="redstar">*</span></div>
+                            
+                            </div>
+</td>
+                            <td> <div style="width:50px" class="select_body">
+             <div class="select_trigger_wrap"><a class="select_trigger"></a></div>
+             <div class="select_text">1</div>          
+        </div>
+        <div style="width: 50px; display: none;" class="select_boundtree">
+                          <ul>           
+                           
+                            <li><a><span class="t">1</span></a></li>
+                            <li><a><span class="t">2</span></a></li>
+                            <li><a><span class="t">3</span></a></li>
+                            <li><a><span class="t">4</span></a></li>
+                            <li><a><span class="t">5</span></a></li>
+
+                          </ul>
+                        </div></td>
+                            <td><input type="text" class="bgray2" style="width:60px"> 毫秒<span style="color:red">*</span></td>
+                            
+                        </tr>
+                        <tr>
+                        	<td>下行流量</td>
+                            <td><div>
+                            <div class="yu"><input type="text" style="width:90px; margin-top:6px;" class=" colorbox_orange"></div>
+                            <div class="yu2">kpbs-<span class="redstar">*</span></div>
+                            <div class="yu"><input type="text" style="width:90px; margin-top:6px;" class=" colorbox_red"></div>
+                            <div class="yu2">kpbs <span class="redstar">*</span></div>
+                            
+                            </div></td>
+                            <td> <div style="width:50px" class="select_body">
+             <div class="select_trigger_wrap"><a class="select_trigger"></a></div>
+             <div class="select_text">1</div>          
+        </div>
+        <div style="width: 50px; display: none;" class="select_boundtree">
+                          <ul>           
+                           
+                            <li><a><span class="t">1</span></a></li>
+                            <li><a><span class="t">2</span></a></li>
+                            <li><a><span class="t">3</span></a></li>
+                            <li><a><span class="t">4</span></a></li>
+                            <li><a><span class="t">5</span></a></li>
+
+                          </ul>
+                        </div></td>
+                            <td><input type="text" class="bgray2" style="width:60px"> 毫秒<span style="color:red">*</span></td>
+                           
+                        </tr>
+                        <tr class="cbg">
+                        	<td>总流量</td>
+                            <td><div>
+                            <div class="yu"><input type="text" style="width:90px; margin-top:6px;" class=" colorbox_orange"></div>
+                            <div class="yu2">kpbs-<span class="redstar">*</span></div>
+                            <div class="yu"><input type="text" style="width:90px; margin-top:6px;" class=" colorbox_red"></div>
+                            <div class="yu2">kpbs <span class="redstar">*</span></div>
+                            
+                            </div></td>
+                            <td> <div style="width:50px" class="select_body">
+             <div class="select_trigger_wrap"><a class="select_trigger"></a></div>
+             <div class="select_text">1</div>          
+        </div>
+        <div style="width: 50px; display: none;" class="select_boundtree">
+                          <ul>           
+                           
+                            <li><a><span class="t">1</span></a></li>
+                            <li><a><span class="t">2</span></a></li>
+                            <li><a><span class="t">3</span></a></li>
+                            <li><a><span class="t">4</span></a></li>
+                            <li><a><span class="t">5</span></a></li>
+
+                          </ul>
+                        </div></td>
+                            <td><input type="text" class="bgray2" style="width:60px"> 毫秒<span style="color:red">*</span></td>
+                          
+                        </tr>
+                        <tr>
+                        	<td>上行宽带利用率(%)</td>
+                            <td>(Windows) R04303(172.17.161.117)</td>
+                            <td> <div style="width:50px" class="select_body">
+             <div class="select_trigger_wrap"><a class="select_trigger"></a></div>
+             <div class="select_text">1</div>          
+        </div>
+        <div style="width: 50px; display: none;" class="select_boundtree">
+                          <ul>           
+                           
+                            <li><a><span class="t">1</span></a></li>
+                            <li><a><span class="t">2</span></a></li>
+                            <li><a><span class="t">3</span></a></li>
+                            <li><a><span class="t">4</span></a></li>
+                            <li><a><span class="t">5</span></a></li>
+
+                          </ul>
+                        </div></td>
+                            <td><input type="text" class="bgray2" style="width:60px"> 毫秒<span style="color:red">*</span></td>
+                            
+                        </tr>
+                        <tr class="cbg">
+                        	<td>下行宽带利用率(%)</td>
+                            <td>(Windows) R04303(172.17.161.117)</td>
+                            <td> <div style="width:50px" class="select_body">
+             <div class="select_trigger_wrap"><a class="select_trigger"></a></div>
+             <div class="select_text">1</div>          
+        </div>
+        <div style="width: 50px; display: none;" class="select_boundtree">
+                          <ul>           
+                           
+                            <li><a><span class="t">1</span></a></li>
+                            <li><a><span class="t">2</span></a></li>
+                            <li><a><span class="t">3</span></a></li>
+                            <li><a><span class="t">4</span></a></li>
+                            <li><a><span class="t">5</span></a></li>
+
+                          </ul>
+                        </div></td>
+                            <td><input type="text" class="bgray2" style="width:60px"> 毫秒<span style="color:red">*</span></td>
+                          
+                        </tr>
+                        <tr>
+                        	<td>宽带利用率(%)</td>
+                            <td>(Windows) R04303(172.17.161.117)</td>
+                            <td> <div style="width:50px" class="select_body">
+             <div class="select_trigger_wrap"><a class="select_trigger"></a></div>
+             <div class="select_text">1</div>          
+        </div>
+        <div style="width: 50px; display: none;" class="select_boundtree">
+                          <ul>           
+                           
+                            <li><a><span class="t">1</span></a></li>
+                            <li><a><span class="t">2</span></a></li>
+                            <li><a><span class="t">3</span></a></li>
+                            <li><a><span class="t">4</span></a></li>
+                            <li><a><span class="t">5</span></a></li>
+
+                          </ul>
+                        </div></td>
+                            <td><input type="text" class="bgray2" style="width:60px"> 毫秒<span style="color:red">*</span></td>
+                          
+                        </tr>
+                        
+                    </tbody>
+            </table>
+        </div>
+            </div>
+        </div>
+    </div>
+    </div>
+       
+         </div>
+              <div class="p_areanobr">
+        
+        
+    	<a class="btn_body" href="javascript:void(0)" title="取消">
+        	<div class="btn_l">   
+            	<div class="btn_r">       
+                	<div class="btn_m">           
+                    	<span class="ico ico_cancel"></span>           
+                        <span class="text">取消</span>           
+                        <span class="pull"></span>       
+                    </div>
+                </div>
+            </div>
+        </a>
+        <a class="btn_body on" href="javascript:void(0)" title="应用">
+        	<div class="btn_l">   
+            	<div class="btn_r">       
+                	<div class="btn_m">           
+                    	<span class="ico ico_confirm"></span>           
+                        <span class="text">确定</span>           
+                        <span class="pull"></span>       
+                    </div>
+                </div>
+            </div>
+        </a>
+  	</div>
+       </div>
+       
+        <!--拓扑-->
+       <div id="tp"  style="display:">
+       <div style="min-height:350px;">
+          <div class="st"><span class="f_left" style="margin-top:1px;"><a type="checkbox" href="javascript:void(0)" class="icon_uncheck"><input type="checkbox" style="display: none;" colid="id"></a>按照全局设置显示</span></div>
+        
+        <div class="p_areanobr">
+             <table style="width:630px;"><tbody>
+             <tr>
+             	<td width="20%"><span class="fixedvalue">不显示告警和状态</span></td>
+                <td width="80%">：<label><a class="icon_uncheck"></a> </label></td>
+                </tr><tr>
+               <td style="vertical-align:top"><span class="fixedvalue">拓扑显示设备</span></td>
+                <td><span class="f_left2">：</span><div class="topo_labelbox f_left2">
+                <span class="labelbox"><label><a class="icon_checked"></a> 路由器</label></span>
+                <span class="labelbox"><label><a class="icon_checked"></a> 三层交换机</label></span>
+                <span class="labelbox"><label><a class="icon_checked"></a> 二层交换机</label></span>
+                <span class="labelbox"><label><a class="icon_checked"></a> 无线AP设备</label></span>
+               <span class="labelbox"> <label><a class="icon_checked"></a> 无线AC设备</label></span>
+               <span class="labelbox"> <label><a class="icon_checked"></a> 防火墙</label></span>
+                <span class="labelbox"><label><a class="icon_checked"></a> 负载均衡</label></span>
+               <span class="labelbox"> <label><a class="icon_checked"></a> 服务器</label></span>
+                <span class="labelbox"> <label><a class="icon_checked"></a> 主机</label></span>
+                <span class="labelbox"><label><a class="icon_checked"></a> 存储设备</label></span>
+               <span class="labelbox"> <label><a class="icon_checked"></a> 其它</label></span>
+                
+                </div>
+                
+                
+                
+                
+                </td></tr>
+                <tr>
+                <td><span class="fixedvalue">文字显示比例</span></td>
+                <td>：<span style="display:inline-block"></span></td></tr>
+             <tr>
+                <td><span class="fixedvalue">节点文字颜色</span></td>
+                <td>：<span style="display:inline-block"></span> </td></tr>
+             </tbody></table>
+             </div>
+       
+       </div>
+       <div class="p_areanobr">
+        
+        
+    	<a class="btn_body" href="javascript:void(0)" title="取消">
+        	<div class="btn_l">   
+            	<div class="btn_r">       
+                	<div class="btn_m">           
+                    	<span class="ico ico_cancel"></span>           
+                        <span class="text">取消</span>           
+                        <span class="pull"></span>       
+                    </div>
+                </div>
+            </div>
+        </a>
+        <a class="btn_body on" href="javascript:void(0)" title="应用">
+        	<div class="btn_l">   
+            	<div class="btn_r">       
+                	<div class="btn_m">           
+                    	<span class="ico ico_confirm"></span>           
+                        <span class="text">确定</span>           
+                        <span class="pull"></span>       
+                    </div>
+                </div>
+            </div>
+        </a>
+  	</div>
+       </div>      
+      </div>
+      
+      
+    </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="bottom-l">
+        <div class="bottom-r">
+          <div class="bottom-m"></div>
+        </div>
+      </div>
+    </div>
+
+</div>
+<!---->
+-----------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--当前链路一览-->
+<div>当前链路一览</div>
+<div class="panel" style="width:1150px; height:600px;">
+  <div class="top-l pro_cursor">
+    <div class="top-r">
+      <div class="top-m"> <span class="title">当前链路一览</span> <span class="ico-quit"></span> </div>
+    </div>
+  </div>
+  <div class="middle-l">
+    <div class="middle-r">
+      <div class="middle-m" style="height:520px;">
+        <div class="st">
+          <div class="f_left">
+            <div class="select_body" style="width:200px">
+              <div class="select_trigger_wrap"><a class="select_trigger"></a></div>
+              <div class="select_text">源IP地址</div>
+            </div>
+            <div class="select_boundtree" style="width: 200px; display: none;">
+              <ul>
+                <li class=""><a><span class="t">源IP地址</span></a></li>
+                <li class=""><a><span class="t">目的IP地址</span></a></li>
+                <li class=""><a><span class="t">源接口</span></a></li>
+                <li><a><span class="t">目的接口</span></a></li>
+                <li><a><span class="t">取值接口</span></a></li>
+              </ul>
+            </div>
+          </div>
+         <div class="f_left" style="margin-top:2px">
+<input class="serach" type="text">
+</div>
+<div class="f_left f_fix" style="margin-left:2px">
+<span class="icon icon_search"></span>
+</div>
+          <div class="f_right" style="margin-top:2px;"><span class="icon icon_share"></span>导出</div>
+          <div class="f_right" style="margin-top:0px;"> <span class="margin_r"> <span class="topico light_red "></span>超荷负载</span> <span class="margin_r"> <span class="topico light_yellow "></span>警戒负载</span> <span class="margin_r"> <span class="topico light_green "></span>正常负载</span> <span class="margin_r"> <span class="topico light_grace "></span>未知</span> <span class="margin_r"> <span class="topico light_break "></span>断开</span> </div>
+        </div>
+        <div class="common gridblue" style="clear:both">
+          <div class="theadpart">
+            <table >
+              <thead>
+                <tr>
+                  <th width="9%"  ><span class="f_left">源IP地址</span><a sorttag="desc" sortvalue="C_AVAIL_STATUS,ins.C_NAME_DISPLAY" sortmethod="desc" class="rank rank-down" style="display:inline-block;cursor:pointer;"></a></th>
+                  <th width="9%"  ><span class="f_left">目的IP地址</span><a sorttag="desc" sortvalue="C_AVAIL_STATUS,ins.C_NAME_DISPLAY" sortmethod="desc" class="rank rank-down" style="display:inline-block;cursor:pointer;"></a></th>
+                  <th width="9%"  ><span class="f_left">源接口</span><a sorttag="desc" sortvalue="C_AVAIL_STATUS,ins.C_NAME_DISPLAY" sortmethod="desc" class="rank rank-down" style="display:inline-block;cursor:pointer;"></a></th>
+                  <th width="9%"  ><span class="f_left">目的接口</span><a sorttag="desc" sortvalue="C_AVAIL_STATUS,ins.C_NAME_DISPLAY" sortmethod="desc" class="rank rank-down" style="display:inline-block;cursor:pointer;"></a></th>
+                  <th width="4%" style="text-align:center">状态</th>
+                  <th width="10%"  ><span class="f_left">取值接口</span><a sorttag="desc" sortvalue="C_AVAIL_STATUS,ins.C_NAME_DISPLAY" sortmethod="desc" class="rank rank-down" style="display:inline-block;cursor:pointer;"></a></th>
+                  <th width="8%"><span class="f_left">流量-上行</span><a sorttag="desc" sortvalue="C_AVAIL_STATUS,ins.C_NAME_DISPLAY" sortmethod="desc" class="rank rank-down" style="display:inline-block;cursor:pointer;"></a></th>
+                  <th width="8%"><span class="f_left">流量-下行</span><a sorttag="desc" sortvalue="C_AVAIL_STATUS,ins.C_NAME_DISPLAY" sortmethod="desc" class="rank rank-down" style="display:inline-block;cursor:pointer;"></a></th>
+                  <th width="11%"><span class="f_left">宽带利用率-上行</span><a sorttag="desc" sortvalue="C_AVAIL_STATUS,ins.C_NAME_DISPLAY" sortmethod="desc" class="rank rank-down" style="display:inline-block;cursor:pointer;"></a></th>
+                  <th width="11%"><span class="f_left">宽带利用率-下行</span><a sorttag="desc" sortvalue="C_AVAIL_STATUS,ins.C_NAME_DISPLAY" sortmethod="desc" class="rank rank-down" style="display:inline-block;cursor:pointer;"></a></th>
+                  <th width="8%"  ><span class="f_left">宽带容量</span><a sorttag="desc" sortvalue="C_AVAIL_STATUS,ins.C_NAME_DISPLAY" sortmethod="desc" class="rank rank-down" style="display:inline-block;cursor:pointer;"></a></th>
+                  <th width="4%"  style="text-align:center">操作</th>
+                </tr>
+                <tr> </tr>
+              </thead>
+            </table>
+          </div>
+          <div class="tbodypart">
+            <table >
+              <tbody>
+                <tr>
+                  <td width="9%">172.168.0.1</td>
+                  <td width="9%">172.168.0.1</td>
+                  <td width="9%">Gdakjetjlk</td>
+                  <td width="9%">Gdakjetjlk</td>
+                  <td width="4%" style="text-align:center"><span class="topico light_red "></span></td>
+                  <td width="10%">Gdakjetjlk</td>
+                  <td  width="8%">24Mbps</td>
+                  <td width="8%">24Mbps</td>
+                  <td width="11%">54.1%</td>
+                  <td width="11%">56.1%</td>
+                  <td width="8%">100Mbps</td>
+                  <td width="4%" style="text-align:center"><span class="icon icon_edit"></span></td>
+                </tr>
+                <tr class="cbg">
+                  <td width="10%">172.168.0.1</td>
+                  <td width="10%">172.168.0.1</td>
+                  <td width="10%">Gdakjetjlk</td>
+                  <td width="10%">Gdakjetjlk</td>
+                  <td width="5%" style="text-align:center"><span class="topico light_red "></span></td>
+                  <td width="10%">Gdakjetjlk</td>
+                  <td  width="8%">-</td>
+                  <td width="8%">-</td>
+                  <td width="8%">-</td>
+                  <td width="8%">-</td>
+                  <td width="8%">-</td>
+                  <td width="5%" style="text-align:center"><span class="icon icon_edit"></span></td>
+                </tr>
+                <tr>
+                  <td width="9%">172.168.0.1</td>
+                  <td width="9%">172.168.0.1</td>
+                  <td width="9%">Gdakjetjlk</td>
+                  <td width="9%">Gdakjetjlk</td>
+                  <td width="4%" style="text-align:center"><span class="topico light_red "></span></td>
+                  <td width="10%">Gdakjetjlk</td>
+                  <td  width="8%">24Mbps</td>
+                  <td width="8%">24Mbps</td>
+                  <td width="11%">54.1%</td>
+                  <td width="11%">56.1%</td>
+                  <td width="8%">100Mbps</td>
+                  <td width="4%" style="text-align:center"><span class="icon icon_edit"></span></td>
+                </tr>
+                <tr class="cbg">
+                  <td width="10%">172.168.0.1</td>
+                  <td width="10%">172.168.0.1</td>
+                  <td width="10%">Gdakjetjlk</td>
+                  <td width="10%">Gdakjetjlk</td>
+                  <td width="5%" style="text-align:center"><span class="topico light_red "></span></td>
+                  <td width="10%">Gdakjetjlk</td>
+                  <td  width="8%">-</td>
+                  <td width="8%">-</td>
+                  <td width="8%">-</td>
+                  <td width="8%">-</td>
+                  <td width="8%">-</td>
+                  <td width="5%" style="text-align:center"><span class="icon icon_edit"></span></td>
+                </tr>
+                <tr>
+                  <td width="9%">172.168.0.1</td>
+                  <td width="9%">172.168.0.1</td>
+                  <td width="9%">Gdakjetjlk</td>
+                  <td width="9%">Gdakjetjlk</td>
+                  <td width="4%" style="text-align:center"><span class="topico light_red "></span></td>
+                  <td width="10%">Gdakjetjlk</td>
+                  <td  width="8%">24Mbps</td>
+                  <td width="8%">24Mbps</td>
+                  <td width="11%">54.1%</td>
+                  <td width="11%">56.1%</td>
+                  <td width="8%">100Mbps</td>
+                  <td width="4%" style="text-align:center"><span class="icon icon_edit"></span></td>
+                </tr>
+                <tr class="cbg">
+                  <td width="10%">172.168.0.1</td>
+                  <td width="10%">172.168.0.1</td>
+                  <td width="10%">Gdakjetjlk</td>
+                  <td width="10%">Gdakjetjlk</td>
+                  <td width="5%" style="text-align:center"><span class="topico light_red "></span></td>
+                  <td width="10%">Gdakjetjlk</td>
+                  <td  width="8%">-</td>
+                  <td width="8%">-</td>
+                  <td width="8%">-</td>
+                  <td width="8%">-</td>
+                  <td width="8%">-</td>
+                  <td width="5%" style="text-align:center"><span class="icon icon_edit"></span></td>
+                </tr>
+                <tr>
+                  <td width="9%">172.168.0.1</td>
+                  <td width="9%">172.168.0.1</td>
+                  <td width="9%">Gdakjetjlk</td>
+                  <td width="9%">Gdakjetjlk</td>
+                  <td width="4%" style="text-align:center"><span class="topico light_red "></span></td>
+                  <td width="10%">Gdakjetjlk</td>
+                  <td  width="8%">24Mbps</td>
+                  <td width="8%">24Mbps</td>
+                  <td width="11%">54.1%</td>
+                  <td width="11%">56.1%</td>
+                  <td width="8%">100Mbps</td>
+                  <td width="4%" style="text-align:center"><span class="icon icon_edit"></span></td>
+                </tr>
+                <tr class="cbg">
+                  <td width="10%">172.168.0.1</td>
+                  <td width="10%">172.168.0.1</td>
+                  <td width="10%">Gdakjetjlk</td>
+                  <td width="10%">Gdakjetjlk</td>
+                  <td width="5%" style="text-align:center"><span class="topico light_red "></span></td>
+                  <td width="10%">Gdakjetjlk</td>
+                  <td  width="8%">-</td>
+                  <td width="8%">-</td>
+                  <td width="8%">-</td>
+                  <td width="8%">-</td>
+                  <td width="8%">-</td>
+                  <td width="5%" style="text-align:center"><span class="icon icon_edit"></span></td>
+                </tr>
+                <tr>
+                  <td width="9%">172.168.0.1</td>
+                  <td width="9%">172.168.0.1</td>
+                  <td width="9%">Gdakjetjlk</td>
+                  <td width="9%">Gdakjetjlk</td>
+                  <td width="4%" style="text-align:center"><span class="topico light_red "></span></td>
+                  <td width="10%">Gdakjetjlk</td>
+                  <td  width="8%">24Mbps</td>
+                  <td width="8%">24Mbps</td>
+                  <td width="11%">54.1%</td>
+                  <td width="11%">56.1%</td>
+                  <td width="8%">100Mbps</td>
+                  <td width="4%" style="text-align:center"><span class="icon icon_edit"></span></td>
+                </tr>
+                <tr class="cbg">
+                  <td width="10%">172.168.0.1</td>
+                  <td width="10%">172.168.0.1</td>
+                  <td width="10%">Gdakjetjlk</td>
+                  <td width="10%">Gdakjetjlk</td>
+                  <td width="5%" style="text-align:center"><span class="topico light_red "></span></td>
+                  <td width="10%">Gdakjetjlk</td>
+                  <td  width="8%">-</td>
+                  <td width="8%">-</td>
+                  <td width="8%">-</td>
+                  <td width="8%">-</td>
+                  <td width="8%">-</td>
+                  <td width="5%" style="text-align:center"><span class="icon icon_edit"></span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="page"> <span class="jump">
+          <input type="text" class="pageinput">
+          <a title="跳转到" class="page-go"></a> </span> <span class="paging-btns"> <a class="p-last">末页</a> <a class="p-next">下一页</a> <a class="p-prev">上一页</a> <a class="p-first">首页</a> </span> <span>17</span> <span>总条数</span> <span>1</span> <span>/</span> <span>1</span> </div>
+        <div class="rare clear">
+          <div class="theadpart">
+            <table>
+              <thead>
+                <tr>
+                  <th >链路信息</th>
+                </tr>
+              </thead>
+            </table>
+          </div>
+          <div class="tbodypart">
+            <table>
+              <tbody>
+                <tr>
+                  <td width="50%">链路类型：</td>
+                  <td width="50%">备注：</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="bottom-l">
+    <div class="bottom-r">
+      <div class="bottom-m"></div>
+    </div>
+  </div>
+</div>
+<!----> 
+---------------------------------------------------------------------------------------------------------------------
+
+
+<!--编辑链路-->
+<div>单链路</div>
+<div class="panel" style="width:1150px; height:600px;">
+  <div class="top-l pro_cursor">
+    <div class="top-r">
+      <div class="top-m"> <span class="title">编辑链路</span> <span class="ico-quit"></span> </div>
+    </div>
+  </div>
+  <div class="middle-l">
+    <div class="middle-r">
+      <div class="middle-m" style="height:450px;">
+        <div class="st">
+        <div class="f_left">当前链路颜色指标：总流量</div>
+          <div class="f_right" style="margin-top:0px;">     <span class="margin_r"> <span class="icon icon_plusc"></span>添加链路</span>  <span class="margin_r"> <span class="icon icon_minus"></span>删除链路</span></div>
+        </div>
+        <div class="common gridblue" style="clear:both">
+          <div class="theadpart">
+            <table >
+              <thead>
+                <tr>
+                  <th width="3%" style="text-align:center"><a class="icon_uncheck" href="javascript:void(0)" type="checkbox"><input type="checkbox" colid="id" style="display: none;"></a></th>
+                  <th width="10%"  ><span class="f_left">源设备</span><a sorttag="desc" sortvalue="C_AVAIL_STATUS,ins.C_NAME_DISPLAY" sortmethod="desc" class="rank rank-down" style="display:inline-block;cursor:pointer;"></a></th>
+                  <th width="10%"  ><span class="f_left">目的设备</span><a sorttag="desc" sortvalue="C_AVAIL_STATUS,ins.C_NAME_DISPLAY" sortmethod="desc" class="rank rank-down" style="display:inline-block;cursor:pointer;"></a></th>
+                  <th width="10%"  ><span class="f_left">源IP地址</span><a sorttag="desc" sortvalue="C_AVAIL_STATUS,ins.C_NAME_DISPLAY" sortmethod="desc" class="rank rank-down" style="display:inline-block;cursor:pointer;"></a></th>
+                  <th width="10%"  ><span class="f_left">目的IP地址</span><a sorttag="desc" sortvalue="C_AVAIL_STATUS,ins.C_NAME_DISPLAY" sortmethod="desc" class="rank rank-down" style="display:inline-block;cursor:pointer;"></a></th>
+                  <th width="12%"  >源接口</th>
+                  <th width="22%">目的接口</th>
+                  <th width="12%">取值接口</th>
+                  <th width="8%" style="text-align:center">告警设置</th>
+                  <th width="3%" style="text-align:center">备注</th>
+                
+                </tr>
+                <tr> </tr>
+              </thead>
+            </table>
+          </div>
+          <div class="tbodypart" style="height:330px;">
+            <table >
+              <tbody>
+                <tr>
+                  <td width="3%" style="text-align:center"><a class="icon_uncheck" href="javascript:void(0)" type="checkbox"><input type="checkbox" colid="id" style="display: none;"></a></td>
+                  <td width="10%">S2652G-1</td>
+                  <td width="10%">r0231</td>
+                  <td width="10%">172.168.0.1</td>
+                  <td width="10%">172.168.0.1</td>
+                  <td width="12%">
+            <div style="width:120px" class="select_body">
+              <div class="select_trigger_wrap"><a class="select_trigger"></a></div>
+              <div class="select_text">FastEnter0/5</div>
+            </div>
+            <div style="width: 120px; display: none;" class="select_boundtree">
+              <ul>
+                <li class=""><a><span class="t">FastEnter0/5</span></a></li>
+                <li class=""><a><span class="t">FastEnter1/5</span></a></li>
+                <li class=""><a><span class="t">FastEnter2/5</span></a></li>
+              </ul>
+            </div>
+          </td>
+                  <td  width="22%">  <div style="width:220px" class="select_body">
+              <div class="select_trigger_wrap"><a class="select_trigger"></a></div>
+              <div class="select_text">Inter(R)877323LM Gigabit Networ Card</div>
+            </div>
+            <div style="width: 220px; display: none;" class="select_boundtree">
+              <ul>
+                <li class=""><a><span class="t">Inter(R)877323LM Gigabit Networ Card</span></a></li>
+                <li class=""><a><span class="t">Inter(R)877323LM Gigabit Networ Card</span></a></li>
+                <li class=""><a><span class="t">Inter(R)877323LM Gigabit Networ Card</span></a></li>
+              </ul>
+            </div></td>
+                  <td width="12%">24Mbps</td>
+                  <td width="8%" style="text-align:center"><span class="icon icon_set"></span></td>
+                  <td width="3%" style="text-align:center"><span class="icon icon_edit"></span></td>
+                </tr>
+                <tr class="cbg">
+                  <td width="3%" style="text-align:center"><a class="icon_uncheck" href="javascript:void(0)" type="checkbox"><input type="checkbox" colid="id" style="display: none;"></a></td>
+                  <td width="10%">S2652G-1</td>
+                  <td width="10%">r0231</td>
+                  <td width="10%">172.168.0.1</td>
+                  <td width="10%">172.168.0.1</td>
+                  <td width="12%">
+            <div style="width:120px" class="select_body">
+              <div class="select_trigger_wrap"><a class="select_trigger"></a></div>
+              <div class="select_text">FastEnter0/5</div>
+            </div>
+            <div style="width: 120px; display: none;" class="select_boundtree">
+              <ul>
+                <li class=""><a><span class="t">FastEnter0/5</span></a></li>
+                <li class=""><a><span class="t">FastEnter1/5</span></a></li>
+                <li class=""><a><span class="t">FastEnter2/5</span></a></li>
+              </ul>
+            </div>
+          </td>
+                  <td  width="22%">  <div style="width:220px" class="select_body">
+              <div class="select_trigger_wrap"><a class="select_trigger"></a></div>
+              <div class="select_text">Inter(R)877323LM Gigabit Networ Card</div>
+            </div>
+            <div style="width: 220px; display: none;" class="select_boundtree">
+              <ul>
+                <li class=""><a><span class="t">Inter(R)877323LM Gigabit Networ Card</span></a></li>
+                <li class=""><a><span class="t">Inter(R)877323LM Gigabit Networ Card</span></a></li>
+                <li class=""><a><span class="t">Inter(R)877323LM Gigabit Networ Card</span></a></li>
+              </ul>
+            </div></td>
+                  <td width="12%">24Mbps</td>
+                  <td width="8%" style="text-align:center"><span class="icon icon_set"></span></td>
+                  <td width="3%" style="text-align:center"><span class="icon icon_edit"></span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="page"> <span class="jump">
+          <input type="text" class="pageinput">
+          <a title="跳转到" class="page-go"></a> </span> <span class="paging-btns"> <a class="p-last">末页</a> <a class="p-next">下一页</a> <a class="p-prev">上一页</a> <a class="p-first">首页</a> </span> <span>17</span> <span>总条数</span> <span>1</span> <span>/</span> <span>1</span> </div>
+        
+      </div>
+    </div>
+  </div>
+  <div class="bottom-l">
+    <div class="bottom-r">
+      <div class="bottom-m"></div>
+    </div>
+  </div>
+</div>
+
+
+<div>编辑备注</div>
+<div style="width:400px;" class="panel_null">
+      <div class="top-l">
+        <div class="top-r">
+          <div class="top-m"> 
+          	<span class="ico-quit"></span>
+            <span class="title">编辑备注</span> </div>
+        </div>
+      </div>
+      <div class="middle-l">
+        <div class="middle-r">
+          <div class="middle-m">
+          	 <div class="simple m_bottom">
+             <textarea name="" cols="" rows="" style="width:340px;"></textarea>
+           </div>
+             <div class="button">
+             	<a class="btn_s2">确定</a>
+                <a class="btn_s">取消</a>
+             </div>
+          </div>
+        </div>
+      </div>
+      <div class="bottom-l">
+        <div class="bottom-r">
+          <div class="bottom-m"></div>
+        </div>
+      </div>
+    </div>
+<br /><br /><br />
+
+
+
+<div>添加链路</div>
+<div style="width:400px;" class="panel_null">
+      <div class="top-l">
+        <div class="top-r">
+          <div class="top-m"> 
+          	<span class="ico-quit"></span>
+            <span class="title">选择源设备</span> </div>
+        </div>
+      </div>
+      <div class="middle-l">
+        <div class="middle-r">
+          <div class="middle-m">
+          	 <div class="simple m_bottom">
+             <table><tbody>
+             <tr>
+             	<td width="30%"><span class="fixedvalue">源设备</span>：</td>
+                <td width="70%">
+                <div style="width:200px" class="select_body">
+             <div class="select_trigger_wrap"><a class="select_trigger"></a></div>
+             <div class="select_text">Gigabit</div>          
+        </div><div style="width: 200px; display: none;" class="select_boundtree">
+                          <ul>           
+                            <li class=""><a><span class="t">Gigabit</span></a></li>
+                            <li><a><span class="t">rsfst</span></a></li>
+                          </ul>
+                        </div>
+                </td>
+             </tr>
+             </tbody></table></div>
+             <div class="button">
+             	<a class="btn_s2">确定</a>
+                <a class="btn_s">取消</a>
+             </div>
+          </div>
+        </div>
+      </div>
+      <div class="bottom-l">
+        <div class="bottom-r">
+          <div class="bottom-m"></div>
+        </div>
+      </div>
+    </div>
+
+
+
+<br /><br /><br />
+
+
+
+
+
+<div>编辑链路--单链路</div>
+<div class="panel" style="width:750px; height:620px;">
+  <div class="top-l pro_cursor">
+    <div class="top-r">
+      <div class="top-m"> <span class="title">链路告警设置</span> <span class="ico-quit"></span> </div>
+    </div>
+  </div>
+  <div class="middle-l">
+    <div class="middle-r">
+      <div class="middle-m" style="height:570px;">
+        <div class="p_areanobr">
+          
+          
+          <div class="report">
+        	<h3>可用性指标</h3>
+            <table>
+            	<thead>
+                	<tr>
+                    <th width="33%" >指标</th>
+                    <th width="33%" >抖动</th>
+                    <th width="34%" >超时时间</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    	<tr>
+                        	<td>可用性</td>
+                            <td>
+        <div class="select_body" style="width:50px">
+             <div class="select_trigger_wrap"><a class="select_trigger"></a></div>
+             <div class="select_text">1</div>          
+        </div>
+        <div class="select_boundtree" style="width: 50px; display: none;">
+                          <ul>           
+                           
+                            <li><a><span class="t">1</span></a></li>
+                            <li><a><span class="t">2</span></a></li>
+                            <li><a><span class="t">3</span></a></li>
+                            <li><a><span class="t">4</span></a></li>
+                            <li><a><span class="t">5</span></a></li>
+
+                          </ul>
+                        </div>
+  </td>
+                            <td><input type="text" style="width:60px" class="bgray2"> 毫秒<span style="color:red">*</span></td>
+                           
+                        </tr>
+                    </tbody>
+            </table>
+        </div>
+      
+        <div class="report">
+        	<h3>指标阈值设置<span class="icon icon_warning" style="margin-left:10px;" title="链路颜色指标超过红色阈值时，链路颜色显示为红色，且产生主要级别的告警；链路颜色指标超过黄色阈值时，链路颜色显示为黄色，且产生警告级别的告警；链路颜色指标未超过黄色阈值时，链路显示为绿色。"></span></h3>
+            <div class="topo_infobox">当前链路颜色指标：带宽利用率</div>
+            <table>
+            	<thead>
+                	<tr>
+                    <th width="20%" >指标</th>
+                    <th width="53%" >阈值定义</th>
+                    <th width="10%" >抖动</th>
+                    <th width="17%" >超时时间</th>
+                    </tr>
+                   
+                </thead>
+                <tbody>
+                    	<tr>
+                        	<td>可用状态</td>
+                            <td><div>-</div></td>
+                            <td>
+        <div class="select_body" style="width:50px">
+             <div class="select_trigger_wrap"><a class="select_trigger"></a></div>
+             <div class="select_text">1</div>          
+        </div>
+        <div class="select_boundtree" style="width: 50px; display: none;">
+                          <ul>           
+                           
+                            <li><a><span class="t">1</span></a></li>
+                            <li><a><span class="t">2</span></a></li>
+                            <li><a><span class="t">3</span></a></li>
+                            <li><a><span class="t">4</span></a></li>
+                            <li><a><span class="t">5</span></a></li>
+
+                          </ul>
+                        </div>
+  </td>
+                            <td><input type="text" style="width:60px" class="bgray2"> 毫秒<span style="color:red">*</span></td>
+                           
+                        </tr>
+                        <tr class="cbg">
+                        	<td>上行流量</td>
+                            <td><div>
+                            <div class="yu"><input type="text" class=" colorbox_orange" style="width:90px; margin-top:6px;"></div>
+                            <div class="yu2">kpbs-<span class="redstar">*</span></div>
+                            <div class="yu"><input type="text" class=" colorbox_red" style="width:90px; margin-top:6px;"></div>
+                            <div class="yu2">kpbs <span class="redstar">*</span></div>
+                            
+                            </div>
+</td>
+                            <td> <div class="select_body" style="width:50px">
+             <div class="select_trigger_wrap"><a class="select_trigger"></a></div>
+             <div class="select_text">1</div>          
+        </div>
+        <div class="select_boundtree" style="width: 50px; display: none;">
+                          <ul>           
+                           
+                            <li><a><span class="t">1</span></a></li>
+                            <li><a><span class="t">2</span></a></li>
+                            <li><a><span class="t">3</span></a></li>
+                            <li><a><span class="t">4</span></a></li>
+                            <li><a><span class="t">5</span></a></li>
+
+                          </ul>
+                        </div></td>
+                            <td><input type="text" style="width:60px" class="bgray2"> 毫秒<span style="color:red">*</span></td>
+                            
+                        </tr>
+                        <tr>
+                        	<td>下行流量</td>
+                            <td><div>
+                            <div class="yu"><input type="text" class=" colorbox_orange" style="width:90px; margin-top:6px;"></div>
+                            <div class="yu2">kpbs-<span class="redstar">*</span></div>
+                            <div class="yu"><input type="text" class=" colorbox_red" style="width:90px; margin-top:6px;"></div>
+                            <div class="yu2">kpbs <span class="redstar">*</span></div>
+                            
+                            </div></td>
+                            <td> <div class="select_body" style="width:50px">
+             <div class="select_trigger_wrap"><a class="select_trigger"></a></div>
+             <div class="select_text">1</div>          
+        </div>
+        <div class="select_boundtree" style="width: 50px; display: none;">
+                          <ul>           
+                           
+                            <li><a><span class="t">1</span></a></li>
+                            <li><a><span class="t">2</span></a></li>
+                            <li><a><span class="t">3</span></a></li>
+                            <li><a><span class="t">4</span></a></li>
+                            <li><a><span class="t">5</span></a></li>
+
+                          </ul>
+                        </div></td>
+                            <td><input type="text" style="width:60px" class="bgray2"> 毫秒<span style="color:red">*</span></td>
+                           
+                        </tr>
+                        <tr class="cbg">
+                        	<td>总流量</td>
+                            <td><div>
+                            <div class="yu"><input type="text" class=" colorbox_orange" style="width:90px; margin-top:6px;"></div>
+                            <div class="yu2">kpbs-<span class="redstar">*</span></div>
+                            <div class="yu"><input type="text" class=" colorbox_red" style="width:90px; margin-top:6px;"></div>
+                            <div class="yu2">kpbs <span class="redstar">*</span></div>
+                            
+                            </div></td>
+                            <td> <div class="select_body" style="width:50px">
+             <div class="select_trigger_wrap"><a class="select_trigger"></a></div>
+             <div class="select_text">1</div>          
+        </div>
+        <div class="select_boundtree" style="width: 50px; display: none;">
+                          <ul>           
+                           
+                            <li><a><span class="t">1</span></a></li>
+                            <li><a><span class="t">2</span></a></li>
+                            <li><a><span class="t">3</span></a></li>
+                            <li><a><span class="t">4</span></a></li>
+                            <li><a><span class="t">5</span></a></li>
+
+                          </ul>
+                        </div></td>
+                            <td><input type="text" style="width:60px" class="bgray2"> 毫秒<span style="color:red">*</span></td>
+                          
+                        </tr>
+                        <tr>
+                        	<td>上行宽带利用率(%)</td>
+                            <td>(Windows) R04303(172.17.161.117)</td>
+                            <td> <div class="select_body" style="width:50px">
+             <div class="select_trigger_wrap"><a class="select_trigger"></a></div>
+             <div class="select_text">1</div>          
+        </div>
+        <div class="select_boundtree" style="width: 50px; display: none;">
+                          <ul>           
+                           
+                            <li><a><span class="t">1</span></a></li>
+                            <li><a><span class="t">2</span></a></li>
+                            <li><a><span class="t">3</span></a></li>
+                            <li><a><span class="t">4</span></a></li>
+                            <li><a><span class="t">5</span></a></li>
+
+                          </ul>
+                        </div></td>
+                            <td><input type="text" style="width:60px" class="bgray2"> 毫秒<span style="color:red">*</span></td>
+                            
+                        </tr>
+                        <tr class="cbg">
+                        	<td>下行宽带利用率(%)</td>
+                            <td>(Windows) R04303(172.17.161.117)</td>
+                            <td> <div class="select_body" style="width:50px">
+             <div class="select_trigger_wrap"><a class="select_trigger"></a></div>
+             <div class="select_text">1</div>          
+        </div>
+        <div class="select_boundtree" style="width: 50px; display: none;">
+                          <ul>           
+                           
+                            <li><a><span class="t">1</span></a></li>
+                            <li><a><span class="t">2</span></a></li>
+                            <li><a><span class="t">3</span></a></li>
+                            <li><a><span class="t">4</span></a></li>
+                            <li><a><span class="t">5</span></a></li>
+
+                          </ul>
+                        </div></td>
+                            <td><input type="text" style="width:60px" class="bgray2"> 毫秒<span style="color:red">*</span></td>
+                          
+                        </tr>
+                        <tr>
+                        	<td>宽带利用率(%)</td>
+                            <td>(Windows) R04303(172.17.161.117)</td>
+                            <td> <div class="select_body" style="width:50px">
+             <div class="select_trigger_wrap"><a class="select_trigger"></a></div>
+             <div class="select_text">1</div>          
+        </div>
+        <div class="select_boundtree" style="width: 50px; display: none;">
+                          <ul>           
+                           
+                            <li><a><span class="t">1</span></a></li>
+                            <li><a><span class="t">2</span></a></li>
+                            <li><a><span class="t">3</span></a></li>
+                            <li><a><span class="t">4</span></a></li>
+                            <li><a><span class="t">5</span></a></li>
+
+                          </ul>
+                        </div></td>
+                            <td><input type="text" style="width:60px" class="bgray2"> 毫秒<span style="color:red">*</span></td>
+                          
+                        </tr>
+                        
+                    </tbody>
+            </table>
+        </div>
+        </div>
+        <div class="p_areanobr">
+    	<a title="取消" style="display:;" href="javascript:void(0)" class="btn_body">
+        	<div class="btn_l">   
+            	<div class="btn_r">       
+                	<div class="btn_m">           
+                    	<span class="ico ico_cancel"></span>           
+                        <span class="text">取消</span>           
+                        <span class="pull"></span>       
+                    </div>
+                </div>
+            </div>
+        </a>
+        <a title="确定" style="display:;" href="javascript:void(0)" class="btn_body on">
+        	<div class="btn_l">   
+            	<div class="btn_r">       
+                	<div class="btn_m">           
+                    	<span class="ico ico_confirm"></span>           
+                        <span class="text">确定</span>           
+                        <span class="pull"></span>       
+                    </div>
+                </div>
+            </div>
+        </a>
+  	</div>
+      </div>
+    </div>
+  </div>
+  <div class="bottom-l">
+    <div class="bottom-r">
+      <div class="bottom-m"></div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div>编辑链路--多链路</div>
+<div class="panel" style="width:750px; height:620px;">
+  <div class="top-l pro_cursor">
+    <div class="top-r">
+      <div class="top-m"> <span class="title">编辑链路</span> <span class="ico-quit"></span> </div>
+    </div>
+  </div>
+  <div class="middle-l">
+    <div class="middle-r">
+      <div class="middle-m" style="height:570px;">
+        <div class="p_areanobr">
+          <div>源IP:172.17.161.1（S5760_test）->目的IP:172.17.167.8(RG-S2652G-E-3)</div>
+          <div class="table_links">
+            <table style="width:100%">
+              <tr>
+                <td style="width:13%"><span class="f_left2">源接口</span><span class="f_right2">：</span></td>
+                <td  style="width:37%"><div class="f_left">
+        <div class="select_body" style="width:200px">
+             <div class="select_trigger_wrap"><a class="select_trigger"></a></div>
+             <div class="select_text">GigabitEthernet 0/43</div>          
+        </div>
+        <div class="select_boundtree" style="width: 200px; display: none;">
+                          <ul>           
+                            <li class=""><a><span class="t">GigabitEthernet 0/43</span></a></li>
+                            <li><a><span class="t">GigabitEthernet 0/43</span></a></li>
+                            <li><a><span class="t">GigabitEthernet 0/43</span></a></li>
+                            <li><a><span class="t">GigabitEthernet 0/43</span></a></li>
+                            <li><a><span class="t">GigabitEthernet 0/43</span></a></li>
+                          </ul>
+                        </div>
+  </div></td>
+                <td style="width:13%"><span class="f_left2">目的接口</span><span class="f_right2">：</span></td>
+                <td style="width:37%"><div class="f_left">
+        <div class="select_body" style="width:200px">
+             <div class="select_trigger_wrap"><a class="select_trigger"></a></div>
+             <div class="select_text">GigabitEthernet 0/43</div>          
+        </div>
+        <div class="select_boundtree" style="width: 200px; display: none;">
+                          <ul>           
+                            <li class=""><a><span class="t">GigabitEthernet 0/43</span></a></li>
+                            <li><a><span class="t">GigabitEthernet 0/43</span></a></li>
+                            <li><a><span class="t">GigabitEthernet 0/43</span></a></li>
+                            <li><a><span class="t">GigabitEthernet 0/43</span></a></li>
+                            <li><a><span class="t">GigabitEthernet 0/43</span></a></li>
+                          </ul>
+                        </div>
+  </div></td>
+              </tr>
+              <tr>
+                <td style="width:13%"><span class="f_left2">取值接口</span><span class="f_right2">：</span></td>
+                <td  style="width:37%"><div class="f_left">
+        <div class="select_body" style="width:200px">
+             <div class="select_trigger_wrap"><a class="select_trigger"></a></div>
+             <div class="select_text">源接口</div>          
+        </div>
+        <div class="select_boundtree" style="width: 200px; display: none;">
+                          <ul>           
+                            <li class=""><a><span class="t">源接口</span></a></li>
+                            <li><a><span class="t">目标接口</span></a></li>
+                          </ul>
+                        </div>
+  </div></td>
+                <td style="width:13%"><span class="f_left2">备注</span><span class="f_right2">：</span></td>
+                <td style="width:37%"><input type="text" class="bgray2" style="width:190px"></td>
+              </tr>
+            </table>
+          </div>
+      
+        <div class="report">
+        	<h3>链路告警设置<span title="链路颜色指标超过红色阈值时，链路颜色显示为红色，且产生主要级别的告警；链路颜色指标超过黄色阈值时，链路颜色显示为黄色，且产生警告级别的告警；链路颜色指标未超过黄色阈值时，链路显示为绿色。" style="margin-left:10px;" class="icon icon_warning"></span></h3>
+            <div class="topo_infobox">当前链路颜色指标：带宽利用率</div>
+            <table>
+            	<thead>
+                	<tr>
+                    <th width="20%" >指标</th>
+                    <th width="53%" >阈值定义</th>
+                    <th width="10%" >抖动</th>
+                    <th width="17%" >超时时间</th>
+                    </tr>
+                   
+                </thead>
+                <tbody>
+                    	<tr>
+                        	<td>可用状态</td>
+                            <td><div>-</div></td>
+                            <td>
+        <div class="select_body" style="width:50px">
+             <div class="select_trigger_wrap"><a class="select_trigger"></a></div>
+             <div class="select_text">1</div>          
+        </div>
+        <div class="select_boundtree" style="width: 50px; display: none;">
+                          <ul>           
+                           
+                            <li><a><span class="t">1</span></a></li>
+                            <li><a><span class="t">2</span></a></li>
+                            <li><a><span class="t">3</span></a></li>
+                            <li><a><span class="t">4</span></a></li>
+                            <li><a><span class="t">5</span></a></li>
+
+                          </ul>
+                        </div>
+  </td>
+                            <td><input type="text" style="width:60px" class="bgray2"> 毫秒<span style="color:red">*</span></td>
+                           
+                        </tr>
+                        <tr class="cbg">
+                        	<td>上行流量</td>
+                            <td><div>
+                            <div class="yu"><input type="text" class=" colorbox_orange" style="width:90px; margin-top:6px;"></div>
+                            <div class="yu2">kpbs-<span class="redstar">*</span></div>
+                            <div class="yu"><input type="text" class=" colorbox_red" style="width:90px; margin-top:6px;"></div>
+                            <div class="yu2">kpbs <span class="redstar">*</span></div>
+                            
+                            </div>
+</td>
+                            <td> <div class="select_body" style="width:50px">
+             <div class="select_trigger_wrap"><a class="select_trigger"></a></div>
+             <div class="select_text">1</div>          
+        </div>
+        <div class="select_boundtree" style="width: 50px; display: none;">
+                          <ul>           
+                           
+                            <li><a><span class="t">1</span></a></li>
+                            <li><a><span class="t">2</span></a></li>
+                            <li><a><span class="t">3</span></a></li>
+                            <li><a><span class="t">4</span></a></li>
+                            <li><a><span class="t">5</span></a></li>
+
+                          </ul>
+                        </div></td>
+                            <td><input type="text" style="width:60px" class="bgray2"> 毫秒<span style="color:red">*</span></td>
+                            
+                        </tr>
+                        <tr>
+                        	<td>下行流量</td>
+                            <td><div>
+                            <div class="yu"><input type="text" class=" colorbox_orange" style="width:90px; margin-top:6px;"></div>
+                            <div class="yu2">kpbs-<span class="redstar">*</span></div>
+                            <div class="yu"><input type="text" class=" colorbox_red" style="width:90px; margin-top:6px;"></div>
+                            <div class="yu2">kpbs <span class="redstar">*</span></div>
+                            
+                            </div></td>
+                            <td> <div class="select_body" style="width:50px">
+             <div class="select_trigger_wrap"><a class="select_trigger"></a></div>
+             <div class="select_text">1</div>          
+        </div>
+        <div class="select_boundtree" style="width: 50px; display: none;">
+                          <ul>           
+                           
+                            <li><a><span class="t">1</span></a></li>
+                            <li><a><span class="t">2</span></a></li>
+                            <li><a><span class="t">3</span></a></li>
+                            <li><a><span class="t">4</span></a></li>
+                            <li><a><span class="t">5</span></a></li>
+
+                          </ul>
+                        </div></td>
+                            <td><input type="text" style="width:60px" class="bgray2"> 毫秒<span style="color:red">*</span></td>
+                           
+                        </tr>
+                        <tr class="cbg">
+                        	<td>总流量</td>
+                            <td><div>
+                            <div class="yu"><input type="text" class=" colorbox_orange" style="width:90px; margin-top:6px;"></div>
+                            <div class="yu2">kpbs-<span class="redstar">*</span></div>
+                            <div class="yu"><input type="text" class=" colorbox_red" style="width:90px; margin-top:6px;"></div>
+                            <div class="yu2">kpbs <span class="redstar">*</span></div>
+                            
+                            </div></td>
+                            <td> <div class="select_body" style="width:50px">
+             <div class="select_trigger_wrap"><a class="select_trigger"></a></div>
+             <div class="select_text">1</div>          
+        </div>
+        <div class="select_boundtree" style="width: 50px; display: none;">
+                          <ul>           
+                           
+                            <li><a><span class="t">1</span></a></li>
+                            <li><a><span class="t">2</span></a></li>
+                            <li><a><span class="t">3</span></a></li>
+                            <li><a><span class="t">4</span></a></li>
+                            <li><a><span class="t">5</span></a></li>
+
+                          </ul>
+                        </div></td>
+                            <td><input type="text" style="width:60px" class="bgray2"> 毫秒<span style="color:red">*</span></td>
+                          
+                        </tr>
+                        <tr>
+                        	<td>上行宽带利用率(%)</td>
+                            <td>(Windows) R04303(172.17.161.117)</td>
+                            <td> <div class="select_body" style="width:50px">
+             <div class="select_trigger_wrap"><a class="select_trigger"></a></div>
+             <div class="select_text">1</div>          
+        </div>
+        <div class="select_boundtree" style="width: 50px; display: none;">
+                          <ul>           
+                           
+                            <li><a><span class="t">1</span></a></li>
+                            <li><a><span class="t">2</span></a></li>
+                            <li><a><span class="t">3</span></a></li>
+                            <li><a><span class="t">4</span></a></li>
+                            <li><a><span class="t">5</span></a></li>
+
+                          </ul>
+                        </div></td>
+                            <td><input type="text" style="width:60px" class="bgray2"> 毫秒<span style="color:red">*</span></td>
+                            
+                        </tr>
+                        <tr class="cbg">
+                        	<td>下行宽带利用率(%)</td>
+                            <td>(Windows) R04303(172.17.161.117)</td>
+                            <td> <div class="select_body" style="width:50px">
+             <div class="select_trigger_wrap"><a class="select_trigger"></a></div>
+             <div class="select_text">1</div>          
+        </div>
+        <div class="select_boundtree" style="width: 50px; display: none;">
+                          <ul>           
+                           
+                            <li><a><span class="t">1</span></a></li>
+                            <li><a><span class="t">2</span></a></li>
+                            <li><a><span class="t">3</span></a></li>
+                            <li><a><span class="t">4</span></a></li>
+                            <li><a><span class="t">5</span></a></li>
+
+                          </ul>
+                        </div></td>
+                            <td><input type="text" style="width:60px" class="bgray2"> 毫秒<span style="color:red">*</span></td>
+                          
+                        </tr>
+                        <tr>
+                        	<td>宽带利用率(%)</td>
+                            <td>(Windows) R04303(172.17.161.117)</td>
+                            <td> <div class="select_body" style="width:50px">
+             <div class="select_trigger_wrap"><a class="select_trigger"></a></div>
+             <div class="select_text">1</div>          
+        </div>
+        <div class="select_boundtree" style="width: 50px; display: none;">
+                          <ul>           
+                           
+                            <li><a><span class="t">1</span></a></li>
+                            <li><a><span class="t">2</span></a></li>
+                            <li><a><span class="t">3</span></a></li>
+                            <li><a><span class="t">4</span></a></li>
+                            <li><a><span class="t">5</span></a></li>
+
+                          </ul>
+                        </div></td>
+                            <td><input type="text" style="width:60px" class="bgray2"> 毫秒<span style="color:red">*</span></td>
+                          
+                        </tr>
+                        
+                    </tbody>
+            </table>
+        </div>
+        </div>
+        <div class="p_areanobr">
+        <span><span class="redstar">*</span> 说明：若不保留对链路的个性化设置，则无法设置指标阈值。</span>
+    	<a title="取消" style="display:;" href="javascript:void(0)" class="btn_body">
+        	<div class="btn_l">   
+            	<div class="btn_r">       
+                	<div class="btn_m">           
+                    	<span class="ico ico_cancel"></span>           
+                        <span class="text">取消</span>           
+                        <span class="pull"></span>       
+                    </div>
+                </div>
+            </div>
+        </a>
+        <a title="确定" style="display:;" href="javascript:void(0)" class="btn_body on">
+        	<div class="btn_l">   
+            	<div class="btn_r">       
+                	<div class="btn_m">           
+                    	<span class="ico ico_confirm"></span>           
+                        <span class="text">确定</span>           
+                        <span class="pull"></span>       
+                    </div>
+                </div>
+            </div>
+        </a>
+  	</div>
+      </div>
+    </div>
+  </div>
+  <div class="bottom-l">
+    <div class="bottom-r">
+      <div class="bottom-m"></div>
+    </div>
+  </div>
+</div>
+<!---->
+
+---------------------------------------------------------------------------------------------------------------------
+<!--链路详细信息-->
+<div>链路详细信息</div>
+<div class="panel" style="width:1150px; height:600px;">
+  <div class="top-l pro_cursor">
+    <div class="top-r">
+      <div class="top-m"> <span class="title">详细信息</span> <span class="ico-quit"></span> </div>
+    </div>
+  </div>
+  <div class="middle-l">
+    <div class="middle-r">
+      <div class="middle-m" style="height:450px;">
+        <div class="st">
+        <div class="f_left"><span class="icon icon_info_gray"></span>显示链路的详细信息</div>
+          <div class="f_right" style="margin-top:0px;"> <span class="margin_r"> <span class="topico light_red "></span>超荷负载</span> <span class="margin_r"> <span class="topico light_yellow "></span>警戒负载</span> <span class="margin_r"> <span class="topico light_green "></span>正常负载</span> <span class="margin_r"> <span class="topico light_grace "></span>未知</span> <span class="margin_r"> <span class="topico light_break "></span>断开</span> </div>
+        </div>
+        <div class="common gridblue" style="clear:both">
+          <div class="theadpart">
+            <table >
+              <thead>
+                <tr>
+                  <th width="9%"  ><span class="f_left">源设备</span><a sorttag="desc" sortvalue="C_AVAIL_STATUS,ins.C_NAME_DISPLAY" sortmethod="desc" class="rank rank-down" style="display:inline-block;cursor:pointer;"></a></th>
+                  <th width="9%"  ><span class="f_left">目的设备</span><a sorttag="desc" sortvalue="C_AVAIL_STATUS,ins.C_NAME_DISPLAY" sortmethod="desc" class="rank rank-down" style="display:inline-block;cursor:pointer;"></a></th>
+                  <th width="9%"  ><span class="f_left">源接口</span><a sorttag="desc" sortvalue="C_AVAIL_STATUS,ins.C_NAME_DISPLAY" sortmethod="desc" class="rank rank-down" style="display:inline-block;cursor:pointer;"></a></th>
+                  <th width="9%"  ><span class="f_left">目的接口</span><a sorttag="desc" sortvalue="C_AVAIL_STATUS,ins.C_NAME_DISPLAY" sortmethod="desc" class="rank rank-down" style="display:inline-block;cursor:pointer;"></a></th>
+                  <th width="4%" style="text-align:center">状态</th>
+                  <th width="10%"  ><span class="f_left">取值接口</span><a sorttag="desc" sortvalue="C_AVAIL_STATUS,ins.C_NAME_DISPLAY" sortmethod="desc" class="rank rank-down" style="display:inline-block;cursor:pointer;"></a></th>
+                  <th width="8%"><span class="f_left">流量-上行</span><a sorttag="desc" sortvalue="C_AVAIL_STATUS,ins.C_NAME_DISPLAY" sortmethod="desc" class="rank rank-down" style="display:inline-block;cursor:pointer;"></a></th>
+                  <th width="8%"><span class="f_left">流量-下行</span><a sorttag="desc" sortvalue="C_AVAIL_STATUS,ins.C_NAME_DISPLAY" sortmethod="desc" class="rank rank-down" style="display:inline-block;cursor:pointer;"></a></th>
+                  <th width="11%"><span class="f_left">宽带利用率-上行</span><a sorttag="desc" sortvalue="C_AVAIL_STATUS,ins.C_NAME_DISPLAY" sortmethod="desc" class="rank rank-down" style="display:inline-block;cursor:pointer;"></a></th>
+                  <th width="11%"><span class="f_left">宽带利用率-下行</span><a sorttag="desc" sortvalue="C_AVAIL_STATUS,ins.C_NAME_DISPLAY" sortmethod="desc" class="rank rank-down" style="display:inline-block;cursor:pointer;"></a></th>
+                  <th width="8%"  ><span class="f_left">宽带容量</span><a sorttag="desc" sortvalue="C_AVAIL_STATUS,ins.C_NAME_DISPLAY" sortmethod="desc" class="rank rank-down" style="display:inline-block;cursor:pointer;"></a></th>
+                  <th width="4%"  style="text-align:center">操作</th>
+                </tr>
+                <tr> </tr>
+              </thead>
+            </table>
+          </div>
+          <div class="tbodypart">
+            <table >
+              <tbody>
+                <tr>
+                  <td width="9%">172.168.0.1</td>
+                  <td width="9%">172.168.0.1</td>
+                  <td width="9%">Gdakjetjlk</td>
+                  <td width="9%">Gdakjetjlk</td>
+                  <td width="4%" style="text-align:center"><span class="topico light_red "></span></td>
+                  <td width="10%">Gdakjetjlk</td>
+                  <td  width="8%">24Mbps</td>
+                  <td width="8%">24Mbps</td>
+                  <td width="11%">54.1%</td>
+                  <td width="11%">56.1%</td>
+                  <td width="8%">100Mbps</td>
+                  <td width="4%" style="text-align:center"><span class="icon icon_edit"></span></td>
+                </tr>
+                <tr class="cbg">
+                  <td width="10%">172.168.0.1</td>
+                  <td width="10%">172.168.0.1</td>
+                  <td width="10%">Gdakjetjlk</td>
+                  <td width="10%">Gdakjetjlk</td>
+                  <td width="5%" style="text-align:center"><span class="topico light_red "></span></td>
+                  <td width="10%">Gdakjetjlk</td>
+                  <td  width="8%">-</td>
+                  <td width="8%">-</td>
+                  <td width="8%">-</td>
+                  <td width="8%">-</td>
+                  <td width="8%">-</td>
+                  <td width="5%" style="text-align:center"><span class="icon icon_edit"></span></td>
+                </tr>
+                <tr>
+                  <td width="9%">172.168.0.1</td>
+                  <td width="9%">172.168.0.1</td>
+                  <td width="9%">Gdakjetjlk</td>
+                  <td width="9%">Gdakjetjlk</td>
+                  <td width="4%" style="text-align:center"><span class="topico light_red "></span></td>
+                  <td width="10%">Gdakjetjlk</td>
+                  <td  width="8%">24Mbps</td>
+                  <td width="8%">24Mbps</td>
+                  <td width="11%">54.1%</td>
+                  <td width="11%">56.1%</td>
+                  <td width="8%">100Mbps</td>
+                  <td width="4%" style="text-align:center"><span class="icon icon_edit"></span></td>
+                </tr>
+                <tr class="cbg">
+                  <td width="10%">172.168.0.1</td>
+                  <td width="10%">172.168.0.1</td>
+                  <td width="10%">Gdakjetjlk</td>
+                  <td width="10%">Gdakjetjlk</td>
+                  <td width="5%" style="text-align:center"><span class="topico light_red "></span></td>
+                  <td width="10%">Gdakjetjlk</td>
+                  <td  width="8%">-</td>
+                  <td width="8%">-</td>
+                  <td width="8%">-</td>
+                  <td width="8%">-</td>
+                  <td width="8%">-</td>
+                  <td width="5%" style="text-align:center"><span class="icon icon_edit"></span></td>
+                </tr>
+                <tr>
+                  <td width="9%">172.168.0.1</td>
+                  <td width="9%">172.168.0.1</td>
+                  <td width="9%">Gdakjetjlk</td>
+                  <td width="9%">Gdakjetjlk</td>
+                  <td width="4%" style="text-align:center"><span class="topico light_red "></span></td>
+                  <td width="10%">Gdakjetjlk</td>
+                  <td  width="8%">24Mbps</td>
+                  <td width="8%">24Mbps</td>
+                  <td width="11%">54.1%</td>
+                  <td width="11%">56.1%</td>
+                  <td width="8%">100Mbps</td>
+                  <td width="4%" style="text-align:center"><span class="icon icon_edit"></span></td>
+                </tr>
+                <tr class="cbg">
+                  <td width="10%">172.168.0.1</td>
+                  <td width="10%">172.168.0.1</td>
+                  <td width="10%">Gdakjetjlk</td>
+                  <td width="10%">Gdakjetjlk</td>
+                  <td width="5%" style="text-align:center"><span class="topico light_red "></span></td>
+                  <td width="10%">Gdakjetjlk</td>
+                  <td  width="8%">-</td>
+                  <td width="8%">-</td>
+                  <td width="8%">-</td>
+                  <td width="8%">-</td>
+                  <td width="8%">-</td>
+                  <td width="5%" style="text-align:center"><span class="icon icon_edit"></span></td>
+                </tr>
+                <tr>
+                  <td width="9%">172.168.0.1</td>
+                  <td width="9%">172.168.0.1</td>
+                  <td width="9%">Gdakjetjlk</td>
+                  <td width="9%">Gdakjetjlk</td>
+                  <td width="4%" style="text-align:center"><span class="topico light_red "></span></td>
+                  <td width="10%">Gdakjetjlk</td>
+                  <td  width="8%">24Mbps</td>
+                  <td width="8%">24Mbps</td>
+                  <td width="11%">54.1%</td>
+                  <td width="11%">56.1%</td>
+                  <td width="8%">100Mbps</td>
+                  <td width="4%" style="text-align:center"><span class="icon icon_edit"></span></td>
+                </tr>
+                <tr class="cbg">
+                  <td width="10%">172.168.0.1</td>
+                  <td width="10%">172.168.0.1</td>
+                  <td width="10%">Gdakjetjlk</td>
+                  <td width="10%">Gdakjetjlk</td>
+                  <td width="5%" style="text-align:center"><span class="topico light_red "></span></td>
+                  <td width="10%">Gdakjetjlk</td>
+                  <td  width="8%">-</td>
+                  <td width="8%">-</td>
+                  <td width="8%">-</td>
+                  <td width="8%">-</td>
+                  <td width="8%">-</td>
+                  <td width="5%" style="text-align:center"><span class="icon icon_edit"></span></td>
+                </tr>
+                <tr>
+                  <td width="9%">172.168.0.1</td>
+                  <td width="9%">172.168.0.1</td>
+                  <td width="9%">Gdakjetjlk</td>
+                  <td width="9%">Gdakjetjlk</td>
+                  <td width="4%" style="text-align:center"><span class="topico light_red "></span></td>
+                  <td width="10%">Gdakjetjlk</td>
+                  <td  width="8%">24Mbps</td>
+                  <td width="8%">24Mbps</td>
+                  <td width="11%">54.1%</td>
+                  <td width="11%">56.1%</td>
+                  <td width="8%">100Mbps</td>
+                  <td width="4%" style="text-align:center"><span class="icon icon_edit"></span></td>
+                </tr>
+                <tr class="cbg">
+                  <td width="10%">172.168.0.1</td>
+                  <td width="10%">172.168.0.1</td>
+                  <td width="10%">Gdakjetjlk</td>
+                  <td width="10%">Gdakjetjlk</td>
+                  <td width="5%" style="text-align:center"><span class="topico light_red "></span></td>
+                  <td width="10%">Gdakjetjlk</td>
+                  <td  width="8%">-</td>
+                  <td width="8%">-</td>
+                  <td width="8%">-</td>
+                  <td width="8%">-</td>
+                  <td width="8%">-</td>
+                  <td width="5%" style="text-align:center"><span class="icon icon_edit"></span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="page"> <span class="jump">
+          <input type="text" class="pageinput">
+          <a title="跳转到" class="page-go"></a> </span> <span class="paging-btns"> <a class="p-last">末页</a> <a class="p-next">下一页</a> <a class="p-prev">上一页</a> <a class="p-first">首页</a> </span> <span>17</span> <span>总条数</span> <span>1</span> <span>/</span> <span>1</span> </div>
+        
+      </div>
+    </div>
+  </div>
+  <div class="bottom-l">
+    <div class="bottom-r">
+      <div class="bottom-m"></div>
+    </div>
+  </div>
+</div>
+
+---------------------------------------------------------------------------------------------------------------------
+<!--虚拟设备属性-->
+<div>虚拟设备属性</div>
+<div class="panel" style="width:450px; height:300px;">
+  <div class="top-l pro_cursor">
+    <div class="top-r">
+      <div class="top-m"> <span class="title">虚拟设备属性</span> <span class="ico-quit"></span> </div>
+    </div>
+  </div>
+  <div class="middle-l">
+    <div class="middle-r">
+      <div class="middle-m" style="height:200px;">
+       <div class="p_areanobr">
+             <table><tbody>
+             <tr>
+             	<td width="30%"><span class="fixedvalue">虚拟设备名称</span></td>
+                <td width="70%">：<input type="text" style="width:190px" class="bgray2"></td>
+                <tr>
+               <td ><span class="fixedvalue">IP地址</span></td>
+                <td >：<input type="text" style="width:190px" class="bgray2"></td></tr>
+                <tr>
+                <td><span class="fixedvalue">图标</span></td>
+                <td >：<span style="display:inline-block"><img src="../images/demo/topoico.png" /></span> <a href="">更改图标</a></td></tr>
+             </tr>
+             </tbody></table>
+             </div>
+        <div class="p_areanobr">
+    	<a title="取消" style="display:;" href="javascript:void(0)" class="btn_body">
+        	<div class="btn_l">   
+            	<div class="btn_r">       
+                	<div class="btn_m">           
+                    	<span class="ico ico_cancel"></span>           
+                        <span class="text">取消</span>           
+                        <span class="pull"></span>       
+                    </div>
+                </div>
+            </div>
+        </a>
+        <a title="确定" style="display:;" href="javascript:void(0)" class="btn_body on">
+        	<div class="btn_l">   
+            	<div class="btn_r">       
+                	<div class="btn_m">           
+                    	<span class="ico ico_confirm"></span>           
+                        <span class="text">确定</span>           
+                        <span class="pull"></span>       
+                    </div>
+                </div>
+            </div>
+        </a>
+  	</div>
+      </div>
+    </div>
+  </div>
+  <div class="bottom-l">
+    <div class="bottom-r">
+      <div class="bottom-m"></div>
+    </div>
+  </div>
+</div>
+
+<div>更改图标</div>
+<div class="panel_null" style="width:400px;">
+      <div class="top-l">
+        <div class="top-r">
+          <div class="top-m"> 
+          	<span class="ico-quit"></span>
+            <span class="title">选择源设备</span> </div>
+        </div>
+      </div>
+      <div class="middle-l">
+        <div class="middle-r">
+          <div class="middle-m">
+          <div class="selectpic">	 
+           <ul><li class="spic"><img src="../images/demo/topoico.png"></li> 
+               <li class="spic"><img src="../images/demo/topoico.png"></li> 
+               <li class="spic"><img src="../images/demo/topoico.png"></li> 
+               <li class="spic"><img src="../images/demo/topoico.png"></li> 
+                              <li class="spic"><img src="../images/demo/topoico.png"></li> 
+               <li class="spic"><img src="../images/demo/topoico.png"></li> 
+               <li class="spic"><img src="../images/demo/topoico.png"></li> 
+               <li class="spic"><img src="../images/demo/topoico.png"></li> 
+               <li class="spic"><img src="../images/demo/topoico.png"></li> 
+               <li class="spic"><img src="../images/demo/topoico.png"></li> 
+                              <li class="spic"><img src="../images/demo/topoico.png"></li> 
+               <li class="spic"><img src="../images/demo/topoico.png"></li> 
+               <li class="spic"><img src="../images/demo/topoico.png"></li> 
+
+            </ul>  
+            <div class="clear"></div> 
+          </div>  
+          </div>
+        </div>
+      </div>
+      <div class="bottom-l">
+        <div class="bottom-r">
+          <div class="bottom-m"></div>
+        </div>
+      </div>
+    </div>
+
+<!----> 
+
+
+---------------------------------------------------------------------------------------------------------------------
+<!--添加图片节点-->
+<div>添加图片节点</div>
+<div class="panel" style="width:450px; height:600px;">
+  <div class="top-l pro_cursor">
+    <div class="top-r">
+      <div class="top-m"> <span class="title">添加图片节点</span> <span class="ico-quit"></span> </div>
+    </div>
+  </div>
+  <div class="middle-l">
+    <div class="middle-r">
+      <div class="middle-m" style="height:560px;">
+       <div class="p_areanobr">
+       <div ><span class="icon icon_warning"></span>显示名称为空，则不显示其名称。</div>
+             <table><tbody>
+             <tr>
+             	<td width="30%"><span class="fixedvalue">显示名称</span></td>
+                <td width="70%">：<input type="text" class="bgray2" style="width:190px" value="未命名名称"></td>
+                <tr>
+                <td><span class="fixedvalue">图标</span></td>
+                <td >：<span style="display:inline-block"><img src="../images/demo/topoico.png" /></span> <a href="">更改图标</a></td></tr>
+             </tr>
+             </tbody></table>
+             
+             </div>
+             <div class="p_areanobr">
+           <label style="padding:0px;"><a class="icon_radioed"></a>不关联</label>
+             </div>
+             <div class="p_areanobr">
+             <div><label style="padding:0px;"><a class="icon_radioed"></a>关联资源</label> <span class="icon icon_warning"></span></div>
+             <table style="width:400px;"><tbody>
+             <tr>
+             	<td width="90px" valign="top"><span class="fixedvalue">选择资源</span></td>
+                <td   valign="top"><span style="vertical-align:top">：</span> <textarea class="bgray2" style="width:190px">未命名名称</textarea><span>
+                <span style="color:red" class="f_right">*</span>
+                <a title="浏览"  href="javascript:void(0)" class="btn_body on">
+        	<div class="btn_l">   
+            	<div class="btn_r">       
+                	<div class="btn_m">           
+                    	<span class="ico ico_confirm"></span>           
+                        <span class="text">浏览</span>           
+                        <span class="pull"></span>       
+                    </div>
+                </div>
+            </div>
+        </a></span>
+        </td></tr>
+             </tbody></table>
+             </div>
+             <div class="p_areanobr">
+             <div><label style="padding:0px;"><a class="icon_radioed"></a>关联子图 </label><span class="icon icon_warning"></span></div>
+             <table style="width:400px;"><tbody>
+             <tr>
+             	<td width="90px"><span class="fixedvalue">选择子图</span></td>
+                <td ><span style=" float:left">：</span> 
+        	<div class="f_left f_fix">
+                <div class="select_body" style="width:200px" >
+             <div class="select_trigger_wrap"><a class="select_trigger"></a></div>
+             <div class="select_text">Gigabit</div>          
+        </div><div class="select_boundtree" style="width: 200px; display: none;">
+                          <ul>           
+                            <li class=""><a><span class="t">Gigabit</span></a></li>
+                            <li><a><span class="t">rsfst</span></a></li>
+                          </ul>
+                        </div>
+              
+            </div><span style="color:red">*</span>
+        </td></tr>
+             </tbody></table>
+             </div>
+        <div class="p_areanobr">
+         <table style="width:400px;"><tbody>
+             <tr>
+             	<td width="90px"><span class="fixedvalue">显示状态</span></td>
+                <td >：<div class="cell_inner " style="text-align:center;"><a class="icon_uncheck" href="javascript:void(0)" type="checkbox"><input type="checkbox" colid="id" value="a9284757-d440-363e-bf3e-7488466e6464" style="display: none;"></a></div>
+        	
+        </td></tr>
+             </tbody></table>
+        
+        </div>
+        <div class="p_areanobr">
+        
+        
+    	<a title="取消" href="javascript:void(0)" class="btn_body">
+        	<div class="btn_l">   
+            	<div class="btn_r">       
+                	<div class="btn_m">           
+                    	<span class="ico ico_cancel"></span>           
+                        <span class="text">取消</span>           
+                        <span class="pull"></span>       
+                    </div>
+                </div>
+            </div>
+        </a>
+        <a title="确定"  href="javascript:void(0)" class="btn_body on">
+        	<div class="btn_l">   
+            	<div class="btn_r">       
+                	<div class="btn_m">           
+                    	<span class="ico ico_confirm"></span>           
+                        <span class="text">确定</span>           
+                        <span class="pull"></span>       
+                    </div>
+                </div>
+            </div>
+        </a>
+  	</div>
+      </div>
+    </div>
+  </div>
+  <div class="bottom-l">
+    <div class="bottom-r">
+      <div class="bottom-m"></div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div>选择资源</div>
+<div class="panel_null" style="width:400px;">
+      <div class="top-l">
+        <div class="top-r">
+          <div class="top-m"> 
+          	<span class="ico-quit"></span>
+            <span class="title">浏览</span> </div>
+        </div>
+      </div>
+      <div class="middle-l">
+        <div class="middle-r">
+          <div class="middle-m">
+          <div class="">
+    <div class="select_body" style="width: 352px;">
+         <div class="select_trigger_wrap"><a class="select_trigger"></a></div>
+         <input class="select_text" style="width: 322px;" value="请输入IP地址或名称进行搜索">
+    </div>
+    <div class="select_boundtree" style="width: 352px; display: none;">
+      <ul>
+        <li><a><span class="t">daffafafafafafaf</span></a></li>
+        <li><a><span class="t">afafafafaf</span></a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="treebox scroll-pane" style="height:380px; width:100px;">
+          <ul class="tree-wrap">
+                                    <li nodeid="root">
+                                    <ul class="treeview">
+                                    <li class="collapsable">
+                                    	<div class="hitarea expandable-hitarea"></div>
+                                    	<input type="checkbox">
+                                    	<span>主机(73)</span>
+                                        <ul>
+                                            <li class="collapsable">
+                                                <div class="hitarea expandable-hitarea"></div>
+                                                <input type="checkbox">
+                                                <span>Windows(68)</span>
+                                                <ul>
+                                                    <li class="collapsable">
+                                                        <div class="hitarea expandable-hitarea"></div>
+                                                        <input type="checkbox">
+                                                        <span>Windows(68)</span>
+                                                        <span class="ico-tool"> </span>
+                                                        <ul>
+                                            <li>
+                                                <div class="placeholder"></div>
+                                                <input type="checkbox">
+                                                <span>Windows(68)Windows(68)Windows(68)Windows(68)</span>
+                                            </li>
+                                            <li class="">
+                                                <div class="placeholder"></div>
+                                                <input type="checkbox">
+                                                <span>Windows(68)Windows(68)Windows(68)Windows(68)Windows(68)Windows(68)Windows(68)</span>
+                                            </li>
+                                            <li class="last">
+                                                <div class="last"></div>
+                                                <input type="checkbox">
+                                                <span>Windows(68)</span>
+                                            </li>
+                                         </ul>
+                                                    </li>
+                                                    <li class="expandable">
+                                                        <div class="hitarea expandable-hitarea"></div>
+                                                        <input type="checkbox">
+                                                        <span>Windows(68)</span>
+                                                    </li>
+                                                    <li class="expandable last">
+                                                        <div class="hitarea expandable-hitarea"></div>
+                                                        <input type="checkbox">
+                                                        <span>Windows(68)</span>
+                                                    </li>
+                                                 </ul>
+                                            </li>
+                                            <li class="expandable">
+                                                <div class="hitarea expandable-hitarea"></div>
+                                                <input type="checkbox">
+                                                <span>Windows(68)</span>
+                                            </li>
+                                            <li class="expandable last">
+                                                <div class="hitarea expandable-hitarea"></div>
+                                                <input type="checkbox">
+                                                <span>Windows(68)</span>
+                                            </li>
+                                         </ul>
+                                    </li>
+                                    <li class="expandable">
+                                    	<div class="hitarea expandable-hitarea"></div>
+                                    	<input type="checkbox">
+                                    	<span>主机(73)</span>
+                                        <ul>
+                                            <li class="expandable">
+                                                <div class="hitarea expandable-hitarea"></div>
+                                                <input type="checkbox">
+                                                <span>Windows(68)</span>
+                                            </li>
+                                            <li class="expandable">
+                                                <div class="hitarea expandable-hitarea"></div>
+                                                <input type="checkbox">
+                                                <span>Windows(68)</span>
+                                            </li>
+                                            <li class="expandable">
+                                                <div class="hitarea expandable-hitarea"></div>
+                                                <input type="checkbox">
+                                                <span>Windows(68)</span>
+                                            </li>
+                                         </ul>
+                                    </li>
+                                    </ul>
+                                    </li>
+                              </ul>
+   </div>       
+          
+            
+          </div>
+        </div>
+      </div>
+      <div class="bottom-l">
+        <div class="bottom-r">
+          <div class="bottom-m"></div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+<div>更改图标</div>
+<div class="panel_null" style="width:400px;">
+      <div class="top-l">
+        <div class="top-r">
+          <div class="top-m"> 
+          	<span class="ico-quit"></span>
+            <span class="title">选择源设备</span> </div>
+        </div>
+      </div>
+      <div class="middle-l">
+        <div class="middle-r">
+          <div class="middle-m">
+          <div class="selectpic">	 
+           <ul><li class="spic"><img src="../images/demo/topoico.png"></li> 
+               <li class="spic"><img src="../images/demo/topoico.png"></li> 
+               <li class="spic"><img src="../images/demo/topoico.png"></li> 
+               <li class="spic"><img src="../images/demo/topoico.png"></li> 
+                              <li class="spic"><img src="../images/demo/topoico.png"></li> 
+               <li class="spic"><img src="../images/demo/topoico.png"></li> 
+               <li class="spic"><img src="../images/demo/topoico.png"></li> 
+               <li class="spic"><img src="../images/demo/topoico.png"></li> 
+               <li class="spic"><img src="../images/demo/topoico.png"></li> 
+               <li class="spic"><img src="../images/demo/topoico.png"></li> 
+                              <li class="spic"><img src="../images/demo/topoico.png"></li> 
+               <li class="spic"><img src="../images/demo/topoico.png"></li> 
+               <li class="spic"><img src="../images/demo/topoico.png"></li> 
+
+            </ul>  
+            <div class="clear"></div> 
+          </div>  
+          </div>
+        </div>
+      </div>
+      <div class="bottom-l">
+        <div class="bottom-r">
+          <div class="bottom-m"></div>
+        </div>
+      </div>
+    </div>
+
+
+---------------------------------------------------------------------------------------------------------------------
+<!--颜色选取-->
+<div>颜色选取</div>
+<div class="panel" style="width:450px; height:300px;">
+  <div class="top-l pro_cursor">
+    <div class="top-r">
+      <div class="top-m"> <span class="title">虚拟设备属性</span> <span class="ico-quit"></span> </div>
+    </div>
+  </div>
+  <div class="middle-l">
+    <div class="middle-r">
+      <div class="middle-m" style="height:200px;">
+       <div class="p_areanobr">
+             <table><tbody>
+             <tr>
+             	<td width="30%"><span class="fixedvalue">虚拟设备名称</span></td>
+                <td width="70%">：<input type="text" style="width:190px" class="bgray2"></td>
+                <tr>
+               <td ><span class="fixedvalue">IP地址</span></td>
+                <td >：<input type="text" style="width:190px" class="bgray2"></td></tr>
+                <tr>
+                <td><span class="fixedvalue">颜色选取</span></td>
+                <td >：<span class="colorbox_bg" style="background-color:#30C"><span class="colorbox_window"></span> </span></td></tr>
+             </tr>
+             </tbody></table>
+             </div>
+        <div class="p_areanobr">
+    	<a title="取消" style="display:;" href="javascript:void(0)" class="btn_body">
+        	<div class="btn_l">   
+            	<div class="btn_r">       
+                	<div class="btn_m">           
+                    	<span class="ico ico_cancel"></span>           
+                        <span class="text">取消</span>           
+                        <span class="pull"></span>       
+                    </div>
+                </div>
+            </div>
+        </a>
+        <a title="确定" style="display:;" href="javascript:void(0)" class="btn_body on">
+        	<div class="btn_l">   
+            	<div class="btn_r">       
+                	<div class="btn_m">           
+                    	<span class="ico ico_confirm"></span>           
+                        <span class="text">确定</span>           
+                        <span class="pull"></span>       
+                    </div>
+                </div>
+            </div>
+        </a>
+  	</div>
+      </div>
+    </div>
+  </div>
+  <div class="bottom-l">
+    <div class="bottom-r">
+      <div class="bottom-m"></div>
+    </div>
+  </div>
+</div>
+
+
+
+<!----> 
+
+
+
+<script>
+$('#show_alert').click(function(){
+	art.dialog({
+    content: document.getElementById('alert'),
+	padding: 0,
+	lock: true
+	});
+});
+
+$('#show_panel_null').click(function(){
+	art.dialog({
+    content: document.getElementById('panel_null'),
+	padding: 0,
+	lock: true
+	});
+});
+$('#show_panel').click(function(){
+	art.dialog({
+    content: document.getElementById('panel'),
+	padding: 0,
+	lock: true
+	});
+});
+</script> 
+<script>
+$(document).ready(function(){
+var $modal = $('<div class="loading" style="margin-left:-100px;"> 加载中，请稍候......</div>');
+$('#screen_loading').click(function(evt) {
+	evt.preventDefault();
+	$(this).overlay({
+	effect: 'fade',
+	opacity: 0.7,
+	color:'#000',
+	closeOnClick: true,
+	onShow: function() {
+		$('body').append($modal);
+		},
+	onHide: function() {
+		$modal.remove();
+		},
+	})
+});
+});
+</script> 
+<script>
+$(document).ready(function(){
+var $modal1 = $('<div class="loading-min" style="margin-left:-100px;"></div>');
+$('#portlet_loading').click(function(evt) {
+	evt.preventDefault();
+	$(this).overlay({
+	opacity: 0.6,
+	color:'#ccc',
+	effect: 'fade',
+	closeOnClick: true,
+	onShow: function() {
+		$('body').append($modal1);
+		},
+	onHide: function() {
+		$modal1.remove();
+		},
+	})
+});
+});
+</script>
+</body>
+</html>

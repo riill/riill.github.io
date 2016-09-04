@@ -1,0 +1,58 @@
+.suggest_area{ height:440px;}
+.suggest_bg{  background:url(../images/suggest/bg_ask.png) no-repeat 90px 30px; width:900px; height:350px;}
+.suggest_nav {position:absolute}
+.suggest_nav a	{ display:block; width:96px; height:59px; background:url(../images/suggest/nav_suggest.png); cursor:pointer;}
+.suggest_nav a.nav01	{ background-position:0px 0px;}
+.suggest_nav a.nav02	{ background-position:-120px 0px;}
+.suggest_nav a.nav03	{ background-position:-240px 0px;}
+.suggest_nav a.nav04	{ background-position:-360px 0px;}
+.suggest_nav a.nav05	{ background-position:-480px 0px;}
+.suggest_nav a.nav06	{ background-position:-600px 0px;}
+.suggest_nav a.nav01:hover	{ background-position:0px -60px;}
+.suggest_nav a.nav02:hover	{ background-position:-120px -60px;}
+.suggest_nav a.nav03:hover	{ background-position:-240px -60px;}
+.suggest_nav a.nav04:hover	{ background-position:-360px -60px;}
+.suggest_nav a.nav05:hover	{ background-position:-480px -60px;}
+.suggest_nav a.nav06:hover	{ background-position:-600px -60px;}
+.suggest_nav .textbox {color:#FFF; text-align:left; width:202px; line-height:28px}
+.suggest_nav .textbox .title { font-size:16px; font-weight:bold; text-align:center}
+.usesuggest	{ margin-left:390px;}
+.suggest_btbg { border-top:1px solid #CCC; height:39px; background-color:#eaeaea}
+/*choose*/
+
+.suggest_choose { clear:both; width:auto}
+.suggest_choose1{ display:block; float:left; width:50%; height:39px; line-height:39px; text-align:center;  color:#5b5b5b; cursor:pointer}
+.suggest_choose1.on{  background:url(../images/suggest/qiebg.png) repeat-x; color:#fff}
+.suggest_choose2{ display:block; float:left;width:50%; height:39px; line-height:39px; text-align:center;  color:#5b5b5b;cursor:pointer}
+.suggest_choose2.on{ background:url(../images/suggest/qiebg.png) repeat-x;color:#fff}
+.suggest_user {margin-left:20px;}
+.borderlinefix{border-bottom:1px solid #bababa}
+
+.suggest_h{padding:10px}
+.suggest_textarea{ text-align:center;}
+/*fastmessage*/
+.fastmessagebox{ width:510px; height:400px; position:absolute}
+.fastmessagebox .area{  height:250px;}
+
+.suggestico_message {
+    background: url("../images/ico/icon.png") no-repeat scroll -511px 0 transparent;
+    display: inline-block;
+    height: 32px;
+    line-height: 32px;
+    margin-right: 2px;
+    overflow: hidden;
+    vertical-align: middle;
+    width: 32px;
+}
+.setting-suggest {
+    background-color: #F3F3F3;
+    background-image: url("../images/comm/bg.gif");
+    border-top: 1px solid #FFFFFF;
+    line-height: 36px;
+    padding: 5px 0 1px;
+    position: relative;
+}
+.suggest_back{ display:inline-block; padding-right:80px; padding-top:7px;}
+.fj_box{ width:180px; height:20px; line-height:20px; margin-left:15px; border:1px solid #d0d0d0; float:left; text-align:left }
+.fj_box .textbox{ width:155px; display:inline-block; overflow: hidden;text-overflow: ellipsis;vertical-align: middle;white-space: nowrap; padding-left:5px}
+.uploadfile{ width:370px; height:400px; position:absolute }

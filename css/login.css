@@ -1,0 +1,27 @@
+@charset "utf-8";
+html, body {height:100%; overflow:hidden;font-family:Verdana, Geneva, sans-serif;font-size:12px;} 
+/*login comm*/
+.login{ background-image:url(../images/login/bg.jpg);background-color:#12064e; background-position:center center; }
+.login-middle{position:absolute;width:567px;height: 462px;left:50%; top:50%; padding-left:15px;}
+.copyright{ width:100%; color:#ffffff; opacity:.3;filter: alpha(opacity=30); text-align:center;}
+/*input*/
+input.userinput,input.pwinput{ width:190px; height:25px; line-height:25px;border:0; background:Transparent; color:#fff;font-size:14px;}
+input.pwinput{ width:150px;}
+input.btn_login{ width:63px; height:44px; border:0; background:url(../images/login/btn_login.png) no-repeat;cursor:pointer; position:absolute; top:0px; right:0px}
+input.btn_login:hover{ background:url(../images/login/btn_login_on.png) no-repeat;}
+p.user{ width:218px;height:44px; padding-left:50px; padding-top:8px; background:url(../images/login/user.png) no-repeat; display:block;position:absolute;top:227px;left:165px;}
+p.pwd { width:218px;height:44px; padding-left:50px; padding-top:8px; background:url(../images/login/pwd.png) no-repeat; display:block;position:absolute;top:277px;left:165px;}
+p.radio{width:140px;height:20px; background:url(../images/login/radio.png) center left no-repeat; cursor:pointer;position:absolute;top:350px;left:223px;}
+p.user.on{background:url(../images/login/user_on.png) no-repeat;}
+p.pwd.on{background:url(../images/login/pwd_on.png) no-repeat;}
+p.radio.on{ background:url(../images/login/radio_on.png) no-repeat;}
+/**warning**/
+.wrap{position:absolute; left:50%; top:50%;}
+.wraning{ position:absolute;height:22px;white-space:nowrap; max-width:800px; overflow:hidden; padding-left:10px; background:url(../images/login/wl.png) top left no-repeat; }
+.wraningbg{ padding-right:10px; background:url(../images/login/wr.png) top right no-repeat}
+.wraning p{position:relative; padding:0; margin:0px;height:22px;line-height:22px;color:#F33;text-shadow:1px 1px 1px #900;background:url(../images/login/wm.png) top repeat-x;}
+.wraning p img { position:relative; top:3px;}
+/*--uk--*/
+p.ukey_text{ width:317px; height:28px; position:absolute; top:230px; left:130px;}
+.ukey_btn{ display:block; width:239px; height:59px; position:absolute; top:290px; left:168px; background-image:url(../images/login/ukey_btn.png); cursor:pointer}
+.ukey_btn:hover{ background-image:url(../images/login/ukey_btn_on.png)}

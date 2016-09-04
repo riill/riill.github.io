@@ -1,0 +1,364 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<!--gloab-->
+<link href="../css/comm.css" rel="stylesheet" type="text/css" />
+<link href="../css/widget.css" rel="stylesheet" type="text/css" />
+<link href="../css/ico.css" rel="stylesheet" type="text/css" />
+<link href="../css/tree.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../js/jquery-1.8.2.min.js"></script>
+<!--demo-->
+<link href="../css/demo.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../js/demo.js"></script>
+<!--artdialog-->
+<link href="../css/artdialog.css" rel="stylesheet" />
+<script src="../js/artDialog.min.js"></script>
+<script src="../js/jquery.overlay.min.js"></script>
+<!--scroll-->
+<link href="../css/jquery.jscrollpane.css" rel="stylesheet" type="text/css" />
+<script src="../js/jquery.mousewheel.js"></script>
+<script src="../js/jquery.jscrollpane.min.js"></script>
+<script>
+$(function()
+{
+	var settings = {
+		showArrows: false,
+		autoReinitialise: true
+	};
+	$('.scroll-pane').jScrollPane(settings);
+});
+</script>
+</head>
+<body class='fixsize'>
+<div class="st2">
+    <div class="f_left">            	
+        资源详细信息(172.17.160.227)
+    </div>
+</div>
+<div class="p_content">
+<div class="portlet">
+            <div class="top-l">
+              <div class="top-r">
+                <div class="top-m">
+                    <span class="title">告警内容</span>
+                </div>
+              </div>
+            </div>
+            <div class="middle-l">
+              <div class="middle-r">
+                <div class="middle-m">  
+        <!--search-->
+        <div class="st2 bnone">
+        	<div class="f_left">            	
+                <div class="select_body" style="width:70px">
+                     <div class="select_trigger_wrap"><a class="select_trigger"></a></div>
+                     <div class="select_text">未恢复</div>
+                </div>
+    			<div class="select_boundtree">
+                 <ul>     
+                      <li><a><span class="t">未恢复</span></a></li>
+                      <li><a><span class="t">已恢复</span></a></li>
+                 </ul>
+    			</div>
+           	</div>
+            <div class="f_left"><span class="select_label2">产生时间：</span></div>
+            <div class="f_left">
+                <div class="select_body">
+                     <div class="select_trigger_wrap"><a class="select_trigger"></a></div>
+                     <div class="select_text">最近一小时</div>
+                </div>
+                <div class="select_boundtree">
+                  <ul>
+                    <li><a><span class="t">最近一小时</span></a></li>
+                    <li><a><span class="t">最近一天</span></a></li>
+                    <li><a><span class="t">自定义时间</span></a></li>
+                  </ul>
+                </div>
+            </div>
+            <div class="f_left" style="margin-left:10px;">
+            <input class="calendar" value="2013/04/10 21:40:20">
+            <span class="t">-</span>
+            <input class="calendar" value="2013/05/10 21:40:20">
+            </div>
+            <div class="f_left"><a class="btn t"><span class="icon icon_search"></span>搜索</a></div>     
+              
+            
+        </div>
+        <!--search-->
+        <div class="st">
+            <span class="f_left">
+                <a class="btn_s4 on" id="show_all"><span>全部(280)</span></a>
+                <a class="btn_s4" id="show_red"><span class="alarm1s"></span><span class="rt">严重(20)</span></a>
+                <a class="btn_s4"><span class="alarm2s"></span> <span class="ot">主要(20)</span></a>
+                <a class="btn_s4"><span class="alarm3s"></span> <span class="pt">次要(20)</span></a>
+                <a class="btn_s4"><span class="alarm4s"></span> <span class="at">警告(20)</span></a>
+                <a class="btn_s4"><span class="alarm5s"></span> <span class="ct">未知(20)</span></a>
+                <a class="btn_s4"><span class="alarm6s"></span> <span class="gt">信息(20)</span></a>
+            </span>
+        </div>
+        <!--table #all-->
+        <div class="common" id="all">
+                    <div class="theadpart">
+                    <table>
+                    	<thead> 		 			 		 			  			   		    			   		 
+                        <tr>
+                            <th width="20%"><a class="rank-down"></a><a class="rank-pull" id="show_rank"></a><span>告警内容</span></th>
+                            <th width="20%"><a class="rank-down"></a><a class="rank-pull"></a><span>资源名称</span></th>
+                            <th width="15%"><a class="rank-down"></a><a class="rank-pull"></a><span>IP地址</span> </th>
+                            <th width="20%"><a class="rank-down"></a><a class="rank-pull"></a><span>监控类型</span> </th>
+                            <th width="15%"><a class="rank-down"></a><span>产生时间</span> </th>
+                            <th width="10%" class="tcenter">发送纪录 </th>
+                        </tr>
+                        </thead>
+                    </table>
+                    </div>
+                    <div class="tbodypart">
+                    <table>
+                    	<tbody>
+                        <tr>
+                            <td width="20%"><span class="alarm1s"></span><a id="show_info">内存利用率轻微超标</a></td>
+                            <td width="20%">Rill_ZB_Switch_6509_1</td>
+                            <td width="15%">192.168.1.1</td>
+                            <td width="20%">Windows主机(SSH/Telnet)</td>
+                            <td width="15%">2013/03/29 13:39:52</td>
+                            <td width="10%" class="tcenter"><span class="icon icon_record"></span></td>
+                        </tr>	
+                        <tr class="cbg">
+                            <td><span class="alarm1s"></span>内存利用率轻微超标</td>
+                            <td>Rill_ZB_Switch_6509_1</td>
+                            <td>192.168.1.1</td>
+                            <td>Windows主机(SSH/Telnet)</td>
+                            <td>2013/03/29 13:39:52</td>
+                            <td class="tcenter"></td>
+                        </tr>
+                        <tr>
+                            <td><span class="alarm1s"></span>内存利用率轻微超标</td>
+                            <td>Rill_ZB_Switch_6509_1</td>
+                            <td>192.168.1.1</td>
+                            <td>Windows主机(SSH/Telnet)</td>
+                            <td>2013/03/29 13:39:52</td>
+                            <td class="tcenter"></td>
+                        </tr>
+                        <tr class="cbg">
+                            <td><span class="alarm2s"></span>内存利用率轻微超标</td>
+                            <td>Rill_ZB_Switch_6509_1</td>
+                            <td>192.168.1.1</td>
+                            <td>Windows主机(SSH/Telnet)</td>
+                            <td>2013/03/29 13:39:52</td>
+                            <td class="tcenter"><span class="icon icon_record"></span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="alarm4s"></span>内存利用率轻微超标</td>
+                            <td>Rill_ZB_Switch_6509_1</td>
+                            <td>192.168.1.1</td>
+                            <td>Windows主机(SSH/Telnet)</td>
+                            <td>2013/03/29 13:39:52</td>
+                            <td class="tcenter"><span class="icon icon_record"></span></td>
+                        </tr>
+                        <tr class="cbg">
+                            <td><span class="alarm4s"></span>内存利用率轻微超标</td>
+                            <td>Rill_ZB_Switch_6509_1</td>
+                            <td>192.168.1.1</td>
+                            <td>Windows主机(SSH/Telnet)</td>
+                            <td>2013/03/29 13:39:52</td>
+                            <td class="tcenter"><span class="icon icon_record"></span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="alarm5s"></span>内存利用率轻微超标</td>
+                            <td>Rill_ZB_Switch_6509_1</td>
+                            <td>192.168.1.1</td>
+                            <td>Windows主机(SSH/Telnet)</td>
+                            <td>2013/03/29 13:39:52</td>
+                            <td class="tcenter"><span class="icon icon_record"></span></td>
+                        </tr>
+                        <tr class="cbg">
+                            <td><span class="alarm2s"></span>内存利用率轻微超标</td>
+                            <td>Rill_ZB_Switch_6509_1</td>
+                            <td>192.168.1.1</td>
+                            <td>Windows主机(SSH/Telnet)</td>
+                            <td>2013/03/29 13:39:52</td>
+                            <td class="tcenter"><span class="icon icon_record"></span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="alarm4s"></span>内存利用率轻微超标</td>
+                            <td>Rill_ZB_Switch_6509_1</td>
+                            <td>192.168.1.1</td>
+                            <td>Windows主机(SSH/Telnet)</td>
+                            <td>2013/03/29 13:39:52</td>
+                            <td class="tcenter"><span class="icon icon_record"></span></td>
+                        </tr>
+                        <tr class="cbg">
+                            <td><span class="alarm4s"></span>内存利用率轻微超标</td>
+                            <td>Rill_ZB_Switch_6509_1</td>
+                            <td>192.168.1.1</td>
+                            <td>Windows主机(SSH/Telnet)</td>
+                            <td>2013/03/29 13:39:52</td>
+                            <td class="tcenter"></td>
+                        </tr>
+                        <tr>
+                            <td><span class="alarm5s"></span>内存利用率轻微超标</td>
+                            <td>Rill_ZB_Switch_6509_1</td>
+                            <td>192.168.1.1</td>
+                            <td>Windows主机(SSH/Telnet)</td>
+                            <td>2013/03/29 13:39:52</td>
+                            <td class="tcenter"><span class="icon icon_record"></span></td>
+                        </tr>
+                        <tr class="cbg">
+                            <td><span class="alarm2s"></span>内存利用率轻微超标</td>
+                            <td>Rill_ZB_Switch_6509_1</td>
+                            <td>192.168.1.1</td>
+                            <td>Windows主机(SSH/Telnet)</td>
+                            <td>2013/03/29 13:39:52</td>
+                            <td class="tcenter"><span class="icon icon_record"></span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="alarm3s"></span>内存利用率轻微超标</td>
+                            <td>Rill_ZB_Switch_6509_1</td>
+                            <td>192.168.1.1</td>
+                            <td>Windows主机(SSH/Telnet)</td>
+                            <td>2013/03/29 13:39:52</td>
+                            <td class="tcenter"><span class="icon icon_record"></span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="alarm3s"></span>内存利用率轻微超标</td>
+                            <td>Rill_ZB_Switch_6509_1</td>
+                            <td>192.168.1.1</td>
+                            <td>Windows主机(SSH/Telnet)</td>
+                            <td>2013/03/29 13:39:52</td>
+                            <td class="tcenter"><span class="icon icon_record"></span></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    </div>
+                    <div class="page">
+                        <span class="jump">
+                            <input type="text" class="pageinput">
+                            <a class="page-go" title="跳转到"></a>
+                        </span>
+                        <span class="paging-btns">
+                            <a class="p-last">末页</a>
+                            <a class="p-next">下一页</a>
+                            <a class="p-prev">上一页</a>
+                            <a class="p-first">首页</a>
+                        </span>
+                        <span>17</span>
+                        <span>总条数</span>
+                        <span>1</span>
+                        <span>/</span>
+                        <span>1</span>
+                    </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="bottom-l">
+              <div class="bottom-r">
+                <div class="bottom-m"></div>
+              </div>
+            </div>
+        </div>
+</div>
+<div class="detail_footer">
+    	<a href="smart3-ping.html"><span class="icon_home"></span></a>
+        <a href="smart3-ping1.html" class="on">告警内容</a>
+    </div>
+<!--tools-->
+<div id="tools" style=" display:none;position: absolute; right:2px; top:36px;">
+    <div class="layer">
+            <div class="top-l">
+              <div class="top-r">
+                <div class="top-m"><span class="title">---</span><span class="ico-quit"></span></div>
+              </div>
+            </div>
+            <div class="middle-l">
+              <div class="middle-r">
+                <div class="middle-m" style="width:100px;">
+                	<ul>
+                    	<li class="first"><a class="on"><span class="tool_mib"></span><span>MIB</span></a></li>
+                        <li><a><span class="tool_ping"></span><span>PING</span></a></li>
+                        <li><a><span class="tool_remoteping"></span><span>RemotePing</span></a></li>
+                        <li><a><span class="tool_snmptest"></span><span>SNMP</span></a></li>
+                        <li><a><span class="tool_telnet"></span><span>Telnet</span></a></li>
+                        <li><a><span class="tool_snc"></span><span>SNC</span></a></li>
+                        <li><a><span class="tool_traceroute"></span><span>Tracerout</span></a></li>
+                        <li class="last"><a><span class="tool_web"></span><span>WEB</span></a></li>
+                    </ul>
+                </div>
+              </div>
+            </div>
+            <div class="bottom-l">
+              <div class="bottom-r">
+                <div class="bottom-m"></div>
+              </div>
+            </div>
+        </div>
+</div>
+<!--set-->
+<div id="set" style="width:500px;display:none">
+    <div class="panel">
+    <div class="top-l">
+      <div class="top-r">
+        <div class="top-m">
+        	<span class="ico-quit"></span>
+        	<span class="title">设置</span>
+        </div>
+      </div>
+    </div>
+    <div class="middle-l">
+      <div class="middle-r">
+        <div class="middle-m"> 
+            <div class="form">
+            	<table cellpadding="0" cellspacing="0">
+                	<tr>
+                    	<td width="20%"><a class="icon_checked_dis"></a></td>
+                        <td>关键指标</td>
+                    </tr>
+                    <tr>
+                    	<td><a class="icon_checked"></a></td>
+                        <td>性能指标</td>
+                    </tr>
+                    <tr>
+                    	<td><a class="icon_checked"></a></td>
+                        <td>告警台</td>
+                    </tr>
+                    <tr>
+                    	<td><a class="icon_checked"></a></td>
+                        <td>配置指标</td>
+                    </tr>
+                    <tr>
+                    	<td><a class="icon_uncheck"></a></td>
+                        <td>信息指标</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="button">
+            	<span class="infotxt">帮助说明：自定义Portlets，最多显示4项。</span>
+            	<input type="button" class="submit" value="保存"> <input type="button" class="cancel dialog_close" value="取消">
+			</div>
+        </div>
+      </div>
+    </div>
+    <div class="bottom-l">
+      <div class="bottom-r">
+        <div class="bottom-m"></div>
+      </div>
+    </div>
+</div>
+</div>
+
+<script>
+$('#show_tools').click(function(){
+	$("#tools").fadeIn(200);
+	return false;
+});
+$('#show_set').click(function(){
+	art.dialog({
+    content: document.getElementById('set'),
+	padding: 0,
+	lock: true
+	});
+});
+</script>
+</body>
+</html>

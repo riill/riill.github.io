@@ -1,0 +1,585 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<!--gloab-->
+<link href="../css/comm.css" rel="stylesheet" type="text/css" />
+<link href="../css/widget.css" rel="stylesheet" type="text/css" />
+<link href="../css/ico.css" rel="stylesheet" type="text/css" />
+<link href="../css/tree.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../js/jquery-1.8.2.min.js"></script>
+<!--demo-->
+<link href="../css/demo.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../js/demo.js"></script>
+<!--artdialog-->
+<link href="../css/artdialog.css" rel="stylesheet" />
+<script src="../js/artDialog.min.js"></script>
+<script src="../js/jquery.overlay.min.js"></script>
+<!--scroll-->
+<link href="../css/jquery.jscrollpane.css" rel="stylesheet" type="text/css" />
+<script src="../js/jquery.mousewheel.js"></script>
+<script src="../js/jquery.jscrollpane.min.js"></script>
+<script>
+$(function()
+{
+	var settings = {
+		showArrows: false,
+		autoReinitialise: true
+	};
+	$('.scroll-pane').jScrollPane(settings);
+});
+</script>
+</head>
+<body class='fixsize'>
+<div class="st2">
+    <div class="f_left">            	
+        <div class="select_body" style="width:300px;">
+             <div class="select_trigger_wrap"><a class="select_trigger"></a></div>
+             <div class="select_text">WIN-CRI7TJ4VFIF(Windows主机(SNMP))</div>
+        </div>
+        <div class="select_boundtree">
+         <ul>     
+              <li><a class="on" href="smart3-info.html"><span class="t">WIN-CRI7TJ4VFIF(Windows主机(SNMP))</span></a></li>
+              <li><a href="smart3-info-sub.html"><span class="t">|----CPU</span></a></li>
+              <li><a href="smart3-info-sub1.html"><span class="t">|----进程</span></a></li>
+        </ul>
+        </div>
+    </div>
+    <div class="st_btn">
+    	<a class="btn"><span class="icon_set"></span>监控设置</a>
+        <a class="btn"><span class="icon_panel"></span>面板</a>
+        <a class="btn" id="show_tools"><span class="icon_rulers"></span>常用工具&nbsp;</a>
+    </div>                 
+</div>
+<div>
+    <div class="setting-unit">
+        <div class="title">
+        	基本信息
+            <span class="icon icon_open"></span>
+        </div>
+        <div class="holder">
+            <div class="sub">
+            <table>
+              <tbody>
+                <tr>
+                    <td width="10%">资源名称：</td>
+                    <td width="23%">WIN-CRI7TJ4VFIF</td>
+                    <td width="10%">显示名称：</td>
+                    <td width="23%">
+                        	<span class="icon_edit"></span>
+                    		<span>WIN-CRI7TJ4VFIFCRI7TJ4VFIFCRI7TJ4VF</span>
+                    </td>
+                    <td width="10%">IP地址：</td>
+                    <td>
+                    	<div class="f_left">
+                        <div class="select_body2" style="width:110px;">
+                             <div class="select_trigger_wrap"><a class="select_trigger"></a></div>
+                             <div class="select_text">172.17.160.79</div>
+                        </div>
+                        <div class="select_boundtree">
+                          <ul>
+                            <li><a><span class="t">172.17.160.79</span></a></li>
+                            <li><a><span class="t">172.17.160.79</span></a></li>
+                          </ul>
+                        </div>
+                        </div>
+                        <div class="f_left">
+                    	<a class="btn_s3" id="show_ipmore"><span>信息表</span></a>
+                        </div>
+                        </td>
+              	</tr>
+                <tr>
+                    <td>资源类型	：</td>
+                    <td>Windows</td>
+                    <td>操作系统	：</td>
+                    <td>Microsoft Windows 7 Ultimate</td>
+                    <td>可用状态	：</td>
+                    <td><span class="status_g"></span></td>
+              	</tr>
+                <tr>
+                    <td>当前健康度：</td>
+                    <td>100</td>
+                    <td>当前繁忙度	：</td>
+                    <td>1(正常)</td>
+                    <td>运行时长	：</td>
+                    <td>4天0小时09分40秒</td>
+                </tr>
+                <tr>
+                    <td>当前可用性	：</td>
+                    <td>100%</td>
+              	</tr>
+              </tbody>
+            </table>
+            </div>
+        </div>
+    </div>
+    <div class="setting-unit">
+        <div class="title">
+        	其它信息
+            <span class="icon_close"></span>
+            <!--<a class="title_btn" style="display:inline" id="show_set">设置</a>-->
+        </div>
+        <div class="holder" style="display:block">
+            <div class="p_content">
+                <div class="portlet" style="width:49.4%; float:left; margin-bottom:0.5%; margin-right:1%">
+                  <div class="top-l">
+                    <div class="top-r">
+                      <div class="top-m">
+                      	<span class="ico-info"></span>
+                        <span class="ico-update"></span>
+                        <span class="ico-terminal"></span>
+                        <span class="title">关键指标</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="middle-l">
+                    <div class="middle-r">
+                      <div class="middle-m" style="height:231px">
+                      	<div class="detail2 tcenter">
+                        	<div style="margin:40px auto 20px;"><img src="../images/demo/detail_cpu.png" width="187" height="110" /></div>
+                            <p class="tcenter"><span>CPU平均利用率：</span> <span class="bt">15%</span> </p>        
+                        </div>
+                        <div class="detail2 tcenter">
+                            <div style="margin:40px auto 20px;"><img src="../images/demo/detail_cpu.png" width="187" height="110" /></div>
+                            <p class="tcenter"><span>内存平均利用率：</span> <span class="bt">15%</span> </p>     
+                        </div>            
+                      </div>
+                    </div>
+                  </div>
+                  <div class="bottom-l">
+                    <div class="bottom-r">
+                      <div class="bottom-m"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="portlet" style="width:49.4%; float:left;">
+                  <div class="top-l">
+                    <div class="top-r">
+                      <div class="top-m">
+                        <span class="ico-del"></span>
+                        <span class="ico-info"></span>
+                        <span class="ico-update"></span>
+                        <span class="ico-terminal"></span>
+                        <span class="ico-zoom"></span>
+                        <span class="title">性能类指标</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="middle-l">
+                    <div class="middle-r">
+                      <div class="middle-m" style="height:231px">
+                        <div class="common">
+                        	<div class="theadpart">
+                            	<table>
+                                	<tr>
+                                    	<th>指标名称</th>
+                                        <th>状态</th>
+                                        <th>当前值</th>
+                                        <th>最近采集时间</th>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="tbodypart">
+                            	<table>	 	 
+                                	<tr>
+                                    	<td>CPU利用率(%)	</td>
+                                        <td><span class="status_g"></span></td>
+                                        <td>0.38</td>
+                                        <td>2013-07-16 14:57</td>
+                                    </tr>
+                                    <tr>
+                                    	<td>内存利用率(%)</td>
+                                        <td><span class="status_g"></span></td>
+                                        <td>81.08</td>
+                                        <td>2013-07-16 14:57</td>
+                                    </tr>
+                                    <tr>
+                                    	<td> Ping时延(ms)</td>
+                                        <td><span class="status_g"></span></td>
+                                        <td>1</td>
+                                        <td>2013-07-15 09:46</td>
+                                    </tr>
+                                    <tr>
+                                    	<td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="bottom-l">
+                    <div class="bottom-r">
+                      <div class="bottom-m"></div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="portlet" style="width:49.4%; float:left; margin-right:0.5%">
+                  <div class="top-l">
+                    <div class="top-r">
+                      <div class="top-m">
+                        <span class="ico-del"></span>
+                        <span class="ico-info"></span>
+                        <span class="ico-update"></span>
+                        <span class="ico-terminal"></span>
+                        <span class="ico-zoom"></span>
+                        <span class="title">信息类指标</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="middle-l">
+                    <div class="middle-r">
+                      <div class="middle-m" style="height:241px"> 
+                      <div class="common">
+                        	<div class="theadpart">
+                            	<table>
+                                	<tr>
+                                    	<th>指标名称</th>
+                                        <th>当前值</th>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="tbodypart">
+                            	<table>	 	 
+                                	<tr>
+                                    	<td>IP地址</td>
+                                        <td>172.17.160.79</td>
+                                    </tr>
+                                    <tr>
+                                    	<td>主机名</td>
+                                        <td>WIN-CRI7TJ4VFIF</td>
+                                    </tr>
+                                    <tr>
+                                    	<td>CPU个数</td>
+                                        <td>8</td>
+                                    </tr>
+                                    <tr>
+                                    	<td>内存总量(GB)</td>
+                                        <td>8.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>网络接口个数</td>
+                                        <td>1</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="bottom-l">
+                    <div class="bottom-r">
+                      <div class="bottom-m"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="portlet" style="width:49.4%; float:left;">
+                  <div class="top-l">
+                    <div class="top-r">
+                      <div class="top-m">
+                        <span class="ico-del"></span>
+                        <span class="ico-info"></span>
+                        <span class="ico-update"></span>
+                        <span class="ico-terminal"></span>
+                        <span class="ico-zoom"></span>
+                        <span class="title">告警台</span> 
+                      </div>
+                    </div>
+                  </div>
+                  <div class="middle-l">
+                    <div class="middle-r">
+                      <div class="middle-m" style="height:241px;">
+                        <div class="common">
+                    <div class="theadpart">
+                    <table>
+                    	<thead>
+                        <tr>
+                        	<th width="40%">告警内容</th>
+                            <th width="20%">IP地址</th>
+                            <th width="20%">产生时间</th>
+                            <th class="tcenter">发送记录</th>
+                        </tr>
+                        </thead>
+                    </table>
+                    </div>
+                    <div class="tbodypart scroll-pane" style="height:206px">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td width="40%"><span class="alarm1s"></span>内存利用率轻微超标</td>
+                                <td width="20%">192.168.1.1</td>
+                                <td width="20%">2013/03/29 13:39:52</td>
+                                <td class="tcenter"><span class="icon icon_record"></span></td>
+                            </tr>	
+                            <tr class="cbg">
+                                <td><span class="alarm1s"></span>内存利用率轻微超标</td>
+                                <td>192.168.1.1</td>
+                                <td>2013/03/29 13:39:52</td>
+                                <td class="tcenter"><span class="icon icon_record"></span></td>
+                            </tr>
+                            <tr>
+                                <td><span class="alarm1s"></span>内存利用率轻微超标</td>
+                                <td>192.168.1.1</td>
+                                <td>2013/03/29 13:39:52</td>
+                                <td class="tcenter"><span class="icon icon_record"></span></td>
+                            </tr>
+                            <tr class="cbg">
+                                <td><span class="alarm1s"></span>内存利用率轻微超标</td>
+                                <td>192.168.1.1</td>
+                                <td>2013/03/29 13:39:52</td>
+                                <td class="tcenter"><span class="icon icon_record"></span></td>
+                            </tr>
+                            <tr>
+                                <td><span class="alarm1s"></span>内存利用率轻微超标</td>
+                                <td>192.168.1.1</td>
+                                <td>2013/03/29 13:39:52</td>
+                                <td class="tcenter"><span class="icon icon_record"></span></td>
+                            </tr>
+                            <tr class="cbg">
+                                <td><span class="alarm1s"></span>内存利用率轻微超标</td>
+                                <td>192.168.1.1</td>
+                                <td>2013/03/29 13:39:52</td>
+                                <td class="tcenter"><span class="icon icon_record"></span></td>
+                            </tr>
+                            <tr>
+                                <td><span class="alarm1s"></span>内存利用率轻微超标</td>
+                                <td>192.168.1.1</td>
+                                <td>2013/03/29 13:39:52</td>
+                                <td class="tcenter"><span class="icon icon_record"></span></td>
+                            </tr>
+                            <tr class="cbg">
+                                <td><span class="alarm1s"></span>内存利用率轻微超标</td>
+                                <td>192.168.1.1</td>
+                                <td>2013/03/29 13:39:52</td>
+                                <td class="tcenter"><span class="icon icon_record"></span></td>
+                            </tr>
+                            <tr>
+                                <td><span class="alarm1s"></span>内存利用率轻微超标</td>
+                                <td>192.168.1.1</td>
+                                <td>2013/03/29 13:39:52</td>
+                                <td class="tcenter"><span class="icon icon_record"></span></td>
+                            </tr>
+                            <tr class="cbg">
+                                <td><span class="alarm1s"></span>内存利用率轻微超标</td>
+                                <td>192.168.1.1</td>
+                                <td>2013/03/29 13:39:52</td>
+                                <td class="tcenter"><span class="icon icon_record"></span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    </div>
+                    </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="bottom-l">
+                    <div class="bottom-r">
+                      <div class="bottom-m"></div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+	<div class="clear" style="height:10px;"></div>
+</div>
+
+<div class="detail_footer">
+    	<a class="on" href="smart3-info.html"><span class="icon_home"></span></a>
+        <a href="smart3-info1.html">指标列表</a>
+        <a href="smart3-info2.html">告警内容</a>
+        <a href="smart3-info3.html">实时数据分析</a>
+        <a href="smart3-info4.html">拓扑定位</a>
+    </div>
+<!--tools-->
+<div id="tools" style=" display:none;position: absolute; right:2px; top:36px;">
+    <div class="layer">
+            <div class="top-l">
+              <div class="top-r">
+                <div class="top-m"><span class="title">---</span><span class="ico-quit"></span></div>
+              </div>
+            </div>
+            <div class="middle-l">
+              <div class="middle-r">
+                <div class="middle-m" style="width:100px;">
+                	<ul>
+                    	<li class="first"><a class="on"><span class="tool_mib"></span><span>MIB</span></a></li>
+                        <li><a><span class="tool_ping"></span><span>PING</span></a></li>
+                        <li><a><span class="tool_remoteping"></span><span>RemotePing</span></a></li>
+                        <li><a><span class="tool_snmptest"></span><span>SNMP</span></a></li>
+                        <li><a><span class="tool_telnet"></span><span>Telnet</span></a></li>
+                        <li><a><span class="tool_snc"></span><span>SNC</span></a></li>
+                        <li><a><span class="tool_traceroute"></span><span>Tracerout</span></a></li>
+                        <li class="last"><a><span class="tool_web"></span><span>WEB</span></a></li>
+                    </ul>
+                </div>
+              </div>
+            </div>
+            <div class="bottom-l">
+              <div class="bottom-r">
+                <div class="bottom-m"></div>
+              </div>
+            </div>
+        </div>
+</div>
+<!--ipmore-->
+<div id="ipmore" style=" display:none;position: absolute; right:110px; top:120px;">
+    <div class="layer">
+            <div class="top-l">
+              <div class="top-r">
+                <div class="top-m"><span class="title">---</span><span class="ico-quit"></span></div>
+              </div>
+            </div>
+            <div class="middle-l">
+              <div class="middle-r">
+                <div class="middle-m" style="width:100px;">
+                	<ul>
+                    	<li class="first"><a class="on" id="show_toolport"><span class="t">接口表</span></a></li>
+                        <li><a><span class="t">地址表</span></a></li>
+                        <li><a><span class="t">路由表</span></a></li>
+                        <li><a><span class="t">ARP表</span></a></li>
+                        <li class="last"><a><span class="t">VLAN表</span></a></li>
+                    </ul>
+                </div>
+              </div>
+            </div>
+            <div class="bottom-l">
+              <div class="bottom-r">
+                <div class="bottom-m"></div>
+              </div>
+            </div>
+        </div>
+</div>
+
+<!--set-->
+<div id="set" style="width:500px;display:none">
+    <div class="panel">
+    <div class="top-l">
+      <div class="top-r">
+        <div class="top-m">
+        	<span class="ico-quit"></span>
+        	<span class="title">设置</span>
+        </div>
+      </div>
+    </div>
+    <div class="middle-l">
+      <div class="middle-r">
+        <div class="middle-m"> 
+            <div class="form">
+            	<table cellpadding="0" cellspacing="0">
+                	<tr>
+                    	<td width="20%"><a class="icon_checked_dis"></a></td>
+                        <td>关键指标</td>
+                    </tr>
+                    <tr>
+                    	<td><a class="icon_checked"></a></td>
+                        <td>性能类指标</td>
+                    </tr>
+                    <tr>
+                    	<td><a class="icon_checked"></a></td>
+                        <td>告警台</td>
+                    </tr>
+                    <tr>
+                    	<td><a class="icon_checked"></a></td>
+                        <td>信息类指标</td>
+                    </tr>
+                    <tr>
+                    	<td><a class="icon_uncheck"></a></td>
+                        <td>信息指标</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="button">
+            	<span class="infotxt">帮助说明：自定义Portlets，最多显示4项。</span>
+            	<input type="button" class="submit" value="保存"> <input type="button" class="cancel dialog_close" value="取消">
+			</div>
+        </div>
+      </div>
+    </div>
+    <div class="bottom-l">
+      <div class="bottom-r">
+        <div class="bottom-m"></div>
+      </div>
+    </div>
+</div>
+</div>
+<!--toolport-->
+<div id="toolport" style="width:800px;display:none">
+    <div class="panel">
+    <div class="top-l">
+      <div class="top-r">
+        <div class="top-m">
+        	<span class="ico-quit"></span>
+        	<span class="title">接口表</span>
+        </div>
+      </div>
+    </div>
+    <div class="middle-l">
+      <div class="middle-r">
+        <div class="middle-m"> 
+            <div class="st">
+            	<span class="t f_left">设备IP：</span>
+                <span class="t f_left">192.168.1.1</span>
+                <span class="t f_left">设备类型：</span>
+                <span class="t f_left">二层交换机</span>
+            </div>
+            <div class="common">
+            	<table>
+                	<tr>
+                    	<th><span class="rank-pull"></span>接口名称</th>
+                        <th><span class="rank-pull"></span>接口索引</th>
+                        <th>类型</th>
+                        <th>管理状态</th>
+                        <th>运行状态</th>
+                        <th>带宽容量（Mbps）</th>
+                    </tr>
+                </table>
+                <div class="bb2"  style="height:250px;">
+                	<div class="nodata">暂无可展示的数据。</div>
+                </div>
+            </div>
+            <div class="button">
+            	<input type="button" class="submit" value="保存"> <input type="button" class="cancel dialog_close" value="取消">
+			</div>
+        </div>
+      </div>
+    </div>
+    <div class="bottom-l">
+      <div class="bottom-r">
+        <div class="bottom-m"></div>
+      </div>
+    </div>
+</div>
+</div>
+
+<script>
+$('#show_tools').click(function(){
+	$("#tools").fadeIn(200);
+	return false;
+});
+$('#show_ipmore').click(function(){
+	$("#ipmore").fadeIn(200);
+	return false;
+});
+$('#show_set').click(function(){
+	art.dialog({
+    content: document.getElementById('set'),
+	padding: 0,
+	lock: true
+	});
+});
+$('#show_toolport').click(function(){
+	art.dialog({
+    content: document.getElementById('toolport'),
+	padding: 0,
+	lock: true
+	});
+});
+
+</script>
+</body>
+</html>

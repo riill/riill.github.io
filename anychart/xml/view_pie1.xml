@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<anychart>
+  <margin left="0" right="0" top="0" bottom="0"  />
+  <settings>
+    <animation enabled="True"/>
+  </settings>
+  <charts>
+    <chart plot_type="Pie" enable_animation="false"><!-- 设置为什么形状的图，比如当前的为饼图所以plot_type为pie(饼)-->
+      <!--palette 模板颜色-->
+	  <palette>
+        <item color="#ff5757" />
+        <item color="#fd7e02" />
+        <item color="#00d0d0" />
+        <item color="#01bd15" />
+        <item color="#328be8" />
+      </palette>
+	  <data_plot_settings enable_3d_mode="true"><!-- 是否支持三D模式-->
+        <pie_series>
+          <!-- tooltip_setting 提示信息设置，这个提示信息是当鼠标放到相应的板块时所显示的信息-->
+		  <tooltip_settings enabled="true" >
+              <font color="#7b7b7b" family="微软雅黑" size="12"  />
+              <background enabled="true">
+                  <fill enabled="true" type="Gradient">
+                      <gradient angle="90">
+                          <key position="0" color="#ffffff" opacity="0.8" />
+                          <key position="1" color="#ededed" opacity="0.9" />
+                      </gradient>
+                  </fill>
+                  <border enabled="true" color="#cfcfcf" />
+                  <corners type="Rounded"/>
+              </background>
+            <format><!--设置提示信息格式{numDecimals: 2}%设置小数的位数-->
+              <![CDATA[类别：{%Name}
+数量: {%Value}{numDecimals: 0}
+百分比: {%YValue}{numDecimals: 0}%]]>
+            </format>
+          </tooltip_settings>
+          <!--label_settings 表上标签设置-->
+		  <label_settings enabled="true" mode="Inside" multi_line_align="Center"><!--标签设置-->
+            <background enabled="false" />            
+            <position anchor="Center" valign="Center" halign="Center" padding="0" />
+            <font color="#ffffff" size="10"></font>
+            <format><!--设置标签文本的格式{numDecimals:1}%小数位数是一位-->
+              <![CDATA[{%YPercentOfSeries}{numDecimals:0}%]]>
+            </format>
+          </label_settings>
+        </pie_series>
+      </data_plot_settings>
+      <!--data 设置信息的，录入数据的-->
+	  <data>
+        <series name="告警级别数量" type="Pie"><!--每个区域的名字和值，后面的数据除以总的数据就是占饼图的百分比，比如元素E8813/和21333=41.3%-->
+          <point name="严重" y="6" color="#ff0202" />
+          <point name="主要" y="10" color="#ff912b" />
+		  <point name="警告" y="10" color="#0ab0dc" />
+        </series>
+      </data>
+	  <!--chart_settings 表设置-->
+	  <chart_settings>
+        <chart_background enabled="false">
+          <fill type="Gradient">
+            <gradient angle="90">
+              <key position="0" color="#4e77a8" opacity="0.8" />
+              <key position="0.1" color="#275487" opacity="0.8" />
+              <key position="0.2" color="#073e7b" opacity="0.8" />
+              <key position="1" color="#001938" opacity="0.8" />
+            </gradient>
+          </fill>
+        </chart_background>
+        <title enabled="false" padding="15">
+          <text>
+            <![CDATA[2D Pie Chart]]>
+          </text>
+        </title>
+		<!--legend 说明性图例设置-->
+        <legend enabled="true" ignore_auto_item="true" padding="0">
+          <format >
+            <![CDATA[{%Icon} {%Name} ({%YValue}{numDecimals:0})]]>
+          </format>
+          <template></template>
+          <font color="#000" size="10"></font>
+          <title enabled="false">
+            <text>
+              <![CDATA[Products Sales]]>
+            </text>
+          </title>
+          <columns_separator enabled="false"/>
+          <background  enabled="false"></background>
+          <items>
+            <item source="Points"/>
+          </items>
+        </legend>
+      </chart_settings>
+    </chart>
+  </charts>
+</anychart>

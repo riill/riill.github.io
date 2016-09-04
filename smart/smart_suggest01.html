@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html class="homepage">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<!--index-->
+<link href="../css/index.css" rel="stylesheet" type="text/css" />
+<!--gloab-->
+<link href="../css/comm.css" rel="stylesheet" type="text/css" />
+<link href="../css/widget.css" rel="stylesheet" type="text/css" />
+<link href="../css/ico.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../js/jquery-1.8.2.min.js"></script>
+<!--demo-->
+<link href="../css/demo.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../js/demo.js"></script>
+<!--artdialog-->
+<link href="../css/artdialog.css" rel="stylesheet" />
+<script src="../js/artDialog.min.js"></script>
+<script src="../js/jquery.overlay.min.js"></script>
+<!--scroll-->
+<link href="../css/jquery.jscrollpane.css" rel="stylesheet" type="text/css" />
+<script src="../js/jquery.mousewheel.js"></script>
+<script src="../js/jquery.jscrollpane.min.js"></script>
+<script>
+$(function()
+{
+	var settings = {
+		showArrows: false,
+		autoReinitialise: true
+	};
+	$('.scroll-pane').jScrollPane(settings);
+});
+function MM_openBrWindow(theURL,winName,features) { //v2.0
+  window.open(theURL,winName,features);
+}
+function MM_goToURL() { //v3.0
+  var i, args=MM_goToURL.arguments; document.MM_returnValue = false;
+  for (i=0; i<(args.length-1); i+=2) eval(args[i]+".location='"+args[i+1]+"'");
+}
+</script>
+<link href="../css/suggest.css" rel="stylesheet" />
+
+
+</head>
+
+<body >
+<div class="panel" style="width:900px; height:520px;">
+      <div class="top-l ">
+        <div class="top-r">
+          <div class="top-m">
+          	<span class="title">Riil-Smart反馈建议</span>
+            <span class="ico-quit"></span>
+             </div>
+        </div>
+      </div>
+      <div class="middle-l">
+        <div class="middle-r">
+          <div class="middle-m" style="height:480px;">
+          <div class="suggest_area" >
+          <div class="suggest_bg">
+          <div class="suggest_nav" style="left:117px; top:87px;"><a class="nav01"></a></div>
+          <div class="suggest_nav" style="left:92px; top:188px;"><a class="nav02"></a></div>
+          <div class="suggest_nav" style="left:121px; top:282px;"><a class="nav03"></a></div>          
+          <div class="suggest_nav" style="left:643px; top:87px;"><a class="nav04"></a></div>
+          <div class="suggest_nav" style="left:669px; top:188px;"><a class="nav05"></a></div>
+          <div class="suggest_nav" style="left:638px; top:282px;"><a class="nav06"></a></div>   
+          <div class="suggest_nav" style="left:348px; top:190px;">
+          <div class="textbox">
+          <div class="title">您遇到了什么问题？</div>
+          <span>选择您在使用Smart系统时遇到的问题，我们将尽快分析处理。</span>
+          </div>
+          
+          
+          
+          </div>   
+              
+          </div>
+          <div class="usesuggest"><a class="btn_b2" href="smart_suggest02.html">使用建议</a></div>
+          </div>
+          <div class="suggest_btbg">
+          <div class="suggest_choose">
+            <span class="suggest_choose1 on" onclick="MM_goToURL('parent','smart_suggest01.html');return document.MM_returnValue">问题及建议</span>
+            <span class="suggest_choose2"  onclick="MM_goToURL('parent','smart_suggest03.html');return document.MM_returnValue">已回复的问题</span>
+          </div>
+          </div>
+          </div>
+         
+        </div>
+      </div>
+      <div class="bottom-l">
+        <div class="bottom-r">
+          <div class="bottom-m"></div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+</body>
+</html>

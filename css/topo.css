@@ -1,0 +1,95 @@
+/*  
+*@Description: riilsmart topo_html  
+*@Author:      yhn
+*@Update:      yhn
+*/ 
+@charset "UTF-8";
+
+.p_area{padding:5px; clear:both; height:28px; background-color:#ededed; border-bottom:solid 1px #CCC}
+.p_areanobr{padding:15px; clear:both;}
+.f_left,.f_right {height: 23px;line-height: 23px; margin-right: 5px; margin-top: 4px;}
+.f_left2 {float:left}
+.f_right2 {float:right}
+.yu{width:105px; float:left}
+.yu2{width:50px; float:left}
+.redstar{ color:#F00; font-family:Arial, Helvetica, sans-serif}
+.colorbox_orange {border:1px solid #eb8c1b; color:#eb8c1b; background:none; height:22px; line-height:22px; display:inline-block}
+.colorbox_red    {border:1px solid #F00; color:#F00;background:none; height:22px; line-height:22px; display:inline-block}
+.colorbox_nobor  {border:1px none #eb8c1b;}
+/*图标*/
+.topico {
+		background:url(../images/ico/topo.png);
+		background-repeat:no-repeat;
+    display: inline-block;
+    height: 16px;
+    line-height: 16px;
+    margin-right: 2px;
+    overflow: hidden;
+    vertical-align: middle;
+    width: 25px;
+}
+
+.light_red {   background-position: 0 0;}
+.light_yellow {   background-position: -60px 0;}
+.light_green {   background-position: -120px 0;}
+.light_grace {   background-position: -180px 0;}
+.light_break {    background-position: -240px 0;}
+.margin_r{margin-right:20px;}
+
+
+/*表格*/
+.table_links tr,td{line-height:32px} 
+
+
+
+.xtable h3 {
+    padding: 10px;
+}
+.xtable h3 a.btn {
+    float: right;
+}
+.xtable table {
+    color: #666666;
+    border-collapse: collapse;
+    table-layout: fixed;
+    width: 100%;
+}
+.xtable thead{background:url(../images/comm/table.png); background-repeat:repeat-x; background-position:0 -160px;}
+.xtable th {
+	background:url(../images/comm/bg.png);
+	background-repeat:repeat; 
+    border: 1px solid #C4C4C4;
+    color: #000000;
+    line-height: 30px;
+    overflow: hidden;
+    padding: 0 5px;
+    text-align: left;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.xtable td {
+    background-color: #F3F3F3;
+    border: 1px solid #C4C4C4;
+    height: 36px;
+    line-height: 36px;
+    padding: 0 5px;
+	overflow:hidden;
+   text-overflow: ellipsis;
+
+    white-space: nowrap;
+}
+.xtable tr.cbg td {
+    background-color: #F9F9F9;
+}
+.treebox {border:1px solid #CCC; background-color:#f2f2f2}
+.selectpic {border:1px solid #CCC; background-color:#f2f2f2}
+.selectpic .spic{width:32px; height:32px; margin:3px; float:left; cursor:pointer}
+.selectpic .spic:hover{background-color:#0CF}
+
+.topo_labelbox { width:490px;}
+.topo_labelbox .labelbox { width:120px; float:left}
+.topo_labelbox .labelbox label{white-space:normal;}
+.topo_infobox {padding-left:10px;}
+/*颜色选取*/
+.colorbox_bg {display:inline-block; width:22px; height:22px;}
+.colorbox_window {display:inline-block; background-image:url(../images/comm/color_box.png); width:22px; height:22px; cursor:pointer;}

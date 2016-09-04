@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>RIIL Smart</title>
+<!--gloab-->
+<link href="../css/comm.css" rel="stylesheet" type="text/css" />
+<link href="../css/widget.css" rel="stylesheet" type="text/css" />
+<link href="../css/ico.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../js/jquery-1.8.2.min.js"></script>
+<!--demo-->
+<link href="../css/demo.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../js/demo.js"></script>
+<!--artdialog-->
+<link href="../css/artdialog.css" rel="stylesheet" />
+<script src="../js/artDialog.min.js"></script>
+<script src="../js/jquery.overlay.min.js"></script>
+<!--scroll-->
+<link href="../css/jquery.jscrollpane.css" rel="stylesheet" type="text/css" />
+<script src="../js/jquery.mousewheel.js"></script>
+<script src="../js/jquery.jscrollpane.min.js"></script>
+<script>
+$(function()
+{
+	var settings = {
+		showArrows: false,
+		autoReinitialise: true
+	};
+	$('.scroll-pane').jScrollPane(settings);
+});
+</script>
+</head>
+<body>
+    <!--layout right-->
+    <div class="layout_right bar">
+        <div class="p_content">
+          <div class="tab-group">
+                <div class="tab">
+                  <ul>
+                    <li><a href="smart6-3.html">系统审计日志</a> </li>
+                    <li><a href="smart6-3-1.html">系统信息</a> </li>
+                    <li class="on"><a href="smart6-3-2.html">清空数据</a></li>
+                </ul>
+              </div>
+                <div class="tab-content" style="height:600px;">
+                <div style="background-image:url(../images/help/dush.png); overflow: hidden; width:338px; height:144px; color:#848484; position:absolute; top:126px; left:361px;"></div>
+    </div>
+        </div>
+    </div>
+
+    <!--layout left-->
+    <div class="layout_left bar">
+    <ul class="sidebar">
+        <li class="first">
+            <a href="smart6.html">
+                <span class="big_users"></span>
+                <span class="sidebar-text">用户管理</span>
+            </a>
+        </li>
+        <li>
+            <a href="smart6-4.html">
+            	<span class="big_radar"></span>
+                <span class="sidebar-text">资源发现</span>
+            </a>
+            <ul class="sub-sidebar">
+            <li>
+                <a href="smart6-4.html">
+                    <span class="big_find"></span>
+                	<span class="sidebar-text">单个资源发现</span>
+                </a>
+            </li>
+            <li class="divider"></li>
+            <li>
+                <a href="smart6-4-1.html">
+                    <span class="big_findauto"></span>
+                	<span class="sidebar-text">自动拓扑发现</span>
+                </a>
+            </li>
+        </ul>
+        </li>
+        <li>
+            <a href="smart6-2.html">
+            	<span class="big_bell"></span>
+                <span class="sidebar-text">报警设置</span>
+            </a>
+        </li>
+        <li class="on">
+            <a href="smart6-3.html">
+            	<span class="big_setting"></span>
+                <span class="sidebar-text">系统信息</span>
+            </a>
+        </li>
+    </ul>
+	</div>
+
+<script type=text/javascript>
+$(function(){
+	$('#select1 li').hover(function(){
+		$(this).children('ul').stop(true,true).show();
+	},function(){
+		$(this).children('ul').stop(true,true).hide();
+	});
+});
+</script>
+</body>
+</html>

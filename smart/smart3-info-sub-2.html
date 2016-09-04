@@ -1,0 +1,435 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<!--gloab-->
+<link href="../css/comm.css" rel="stylesheet" type="text/css" />
+<link href="../css/widget.css" rel="stylesheet" type="text/css" />
+<link href="../css/ico.css" rel="stylesheet" type="text/css" />
+<link href="../css/tree.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../js/jquery-1.8.2.min.js"></script>
+<!--demo-->
+<link href="../css/demo.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../js/demo.js"></script>
+<!--artdialog-->
+<link href="../css/artdialog.css" rel="stylesheet" />
+<script src="../js/artDialog.min.js"></script>
+<script src="../js/jquery.overlay.min.js"></script>
+<!--scroll-->
+<link href="../css/jquery.jscrollpane.css" rel="stylesheet" type="text/css" />
+<script src="../js/jquery.mousewheel.js"></script>
+<script src="../js/jquery.jscrollpane.min.js"></script>
+<script>
+$(function()
+{
+	var settings = {
+		showArrows: false,
+		autoReinitialise: true
+	};
+	$('.scroll-pane').jScrollPane(settings);
+});
+</script>
+</head>
+<body class='fixsize'>
+<div class="st2">
+    <div class="f_left">            	
+        <div class="select_body" style="width:300px;">
+             <div class="select_trigger_wrap"><a class="select_trigger"></a></div>
+             <div class="select_text">CPU</div>
+        </div>
+        <div class="select_boundtree">
+         <ul>     
+              <li><a href="smart3-info.html"><span class="t">WIN-CRI7TJ4VFIF(Windows主机(SNMP))</span></a></li>
+              <li><a class="on" href="smart3-info-sub.html"><span class="t">|----CPU</span></a></li>
+              <li><a href="smart3-info-sub1.html"><span class="t">|----进程</span></a></li>
+        </ul>
+        </div>
+    </div>
+    <div class="st_btn"><a class="btn" id="show_tools"><span class="icon_set"></span>常用工具&nbsp;</a></div>                 
+</div>
+
+<div class="layout">
+	<!--layout left-->
+    <div class="layout_left">
+      <div class="portlet">
+        <div class="top-l">
+          <div class="top-r">
+            <div class="top-m"><span class="title">CPU列表</span> </div>
+          </div>
+        </div>
+        <div class="middle-l">
+          <div class="middle-r">
+            <div class="middle-m"> 
+            <div class="scroll-pane" style="width:100%; height:100%;">
+            <!--search-->
+            <div class="st3">
+                <div class="select_body" style="width:225px;">
+                  <div class="select_trigger_wrap"><a class="select_trigger_del"></a></div>
+                  <input class="select_text" style="width: 190px;">
+                </div>
+                <div class="select_boundtree">
+                  <ul>
+                    <li><a class=""><span class="t">CPU1</span></a></li>
+                    <li><a class="on"><span class="t">CPU2</span></a></li>
+                  </ul>
+                </div>
+            </div>
+            <!--tree-->
+            <ul class="tree-wrap">
+                                    <li nodeid="root">
+                                    <ul class="treeview">
+                                    <li class="collapsable">
+                                    	<div class="hitarea expandable-hitarea"></div>
+                                    	<span style="cursor:pointer;" onclick="javascript:window.location.href='smart3-info-sub.html'">CPU列表</span>
+                                        <ul>
+                                            <li class="expandable">
+                                                <div class="hitarea"></div>
+                                                <span style="cursor:pointer;" class="treenodecolor-current" onclick="javascript:window.location.href='smart3-info-sub-2.html'">CPU1</span>
+                                            </li>
+                                            <li class="expandable">
+                                                <div class="hitarea"></div>
+                                                <span style="cursor:pointer;">CPU2</span>
+                                            </li>
+                                            <li class="expandable">
+                                                <div class="hitarea"></div>
+                                                <span style="cursor:pointer;">CPU3</span>
+                                            </li>
+                                            <li class="expandable">
+                                                <div class="hitarea"></div>
+                                                <span style="cursor:pointer;">CPU4</span>
+                                            </li>
+                                            <li class="expandable">
+                                                <div class="hitarea"></div>
+                                                <span style="cursor:pointer;">CPU5</span>
+                                            </li>
+                                            <li class="expandable">
+                                                <div class="hitarea"></div>
+                                                <span style="cursor:pointer;">CPU6</span>
+                                            </li>
+                                            <li class="expandable">
+                                                <div class="hitarea"></div>
+                                                <span style="cursor:pointer;">CPU7</span>
+                                            </li>
+                                            <li class="expandable last">
+                                                <div class="hitarea"></div>
+                                                <span style="cursor:pointer;">CPU8</span>
+                                            </li>
+                                         </ul>
+                                    </li>
+                                    </ul>
+                                    </li>
+                              </ul>
+            </div>
+        	</div>
+		  </div>
+        </div>
+        <div class="bottom-l">
+          <div class="bottom-r">
+            <div class="bottom-m"></div>
+            </div>
+          </div>
+        </div>
+</div>
+	
+    <!--layout right-->
+    <div class="layout_right">
+      	<div class="portlet">
+            <div class="top-l">
+              <div class="top-r">
+                <div class="top-m">
+                	<span class="ico-set" id="show_set"></span>
+                    <span class="ico-update"></span>
+                	<span class="ico-terminal"></span>
+                	<span class="title">指标列表</span>
+                </div>
+              </div>
+            </div>
+            <div class="middle-l">
+              <div class="middle-r">
+                <div class="middle-m">  
+                <!--search-->
+                
+                <!--table-->
+                <div class="common">
+                  <!-- 表格 -->
+                  <div class="theadpart">
+                    <table>
+                      <thead>
+                        <tr>
+                            <th width="30%"><span>指标名称</span></th>
+                            <th width="10%"><span>状态</span></th>
+                            <th width="30%"><span>当前值</span></th>
+                            <th><span>最近采集时间</span></th>
+                        </tr>
+                        </thead>
+                    </table>
+                </div>
+                <div class="tbodypart">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td width="30%"><span class="icon_down"></span>性能指标</td>
+                                <td width="10%"></td>
+                                <td width="30%"></td>
+                                <td></td>
+                            </tr>
+                            <tr class="cbg">
+                                <td><span class="icon"></span><a id="show_chart">CPU利用率(%)</a></td>
+                                <td><span class="status"></span></td>
+                                <td>-</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td><span class="icon_down"></span>信息指标</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr class="cbg">
+                                <td><span class="icon"></span>CPU名称</td>
+                                <td>-</td>
+                                <td>CPU1</td>
+                                <td>2013-07-19 11:41</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                
+                </div>
+                </div>
+                
+                </div>
+              </div>
+            </div>
+            <div class="bottom-l">
+              <div class="bottom-r">
+                <div class="bottom-m"></div>
+              </div>
+            </div>
+        </div>  
+        
+
+    </div>
+
+
+</div>
+
+<div class="detail_footer">
+    	<a class="on" href="smart3-info-sub.html"><span class="icon_home"></span></a>
+        <a href="smart3-info-sub-1.html">告警内容</a>
+    </div>
+<!--tools-->
+<div id="tools" style=" display:none;position: absolute; right:2px; top:36px;">
+    <div class="layer">
+            <div class="top-l">
+              <div class="top-r">
+                <div class="top-m"><span class="title">---</span><span class="ico-quit"></span></div>
+              </div>
+            </div>
+            <div class="middle-l">
+              <div class="middle-r">
+                <div class="middle-m" style="width:100px;">
+                	<ul>
+                    	<li class="first"><a class="on"><span class="tool_mib"></span><span>MIB</span></a></li>
+                        <li><a><span class="tool_ping"></span><span>PING</span></a></li>
+                        <li><a><span class="tool_remoteping"></span><span>RemotePing</span></a></li>
+                        <li><a><span class="tool_snmptest"></span><span>SNMP</span></a></li>
+                        <li><a><span class="tool_telnet"></span><span>Telnet</span></a></li>
+                        <li><a><span class="tool_snc"></span><span>SNC</span></a></li>
+                        <li><a><span class="tool_traceroute"></span><span>Tracerout</span></a></li>
+                        <li class="last"><a><span class="tool_web"></span><span>WEB</span></a></li>
+                    </ul>
+                </div>
+              </div>
+            </div>
+            <div class="bottom-l">
+              <div class="bottom-r">
+                <div class="bottom-m"></div>
+              </div>
+            </div>
+        </div>
+</div>
+<!--set-->
+<div id="set" style="width:500px;display:none">
+    <div class="panel">
+    <div class="top-l">
+      <div class="top-r">
+        <div class="top-m">
+        	<span class="ico-quit"></span>
+        	<span class="title">设置</span>
+        </div>
+      </div>
+    </div>
+    <div class="middle-l">
+      <div class="middle-r">
+        <div class="middle-m">
+            <div class="form">
+            	<table cellpadding="0" cellspacing="0">
+                	<tr>
+                    	<td width="20%"><a class="icon_checked"></a></td>
+                        <td>CPU利用率</td>
+                    </tr>
+                    <tr>
+                    	<td><a class="icon_checked"></a></td>
+                        <td>CPU名称</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="button">
+            	<span class="infotxt">帮助说明：自定义子资源显示的指标列。</span>
+            	<input type="button" class="submit" value="保存"> <input type="button" class="cancel dialog_close" value="取消">
+			</div>
+        </div>
+      </div>
+    </div>
+    <div class="bottom-l">
+      <div class="bottom-r">
+        <div class="bottom-m"></div>
+      </div>
+    </div>
+</div>
+</div>
+<!--chart-->
+<div id="chart" style="width:800px;display:none">
+    <div class="panel_null">
+    <div class="top-l">
+      <div class="top-r">
+        <div class="top-m">
+        	<span class="ico-quit"></span>
+        	<span class="title">-</span>
+        </div>
+      </div>
+    </div>
+    <div class="middle-l">
+      <div class="middle-r">
+        <div class="middle-m">
+            <div class="st4">
+            	<div class="f_left">
+                	<a class="btn_tiny on">1H</a>
+                    <a class="btn_tiny">1D</a>
+                    <a class="btn_tiny">7D</a>
+                    <a class="btn_tiny">30D</a>
+                    <a class="btn_tiny">365D</a>
+                </div>
+            	<div class="st_btn">
+                    <a class="btn" id="show_tinyset"><span class="icon icon_set"></span> 设置</a>
+                    <a class="btn" id="show_share"><span class="icon icon_share"></span> 导出</a>
+                </div>
+            </div>
+            <div class="bb2" style="height:400px;">
+            	<div class="nodata" style="margin-top:10%">暂无可读取的数据。</div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="bottom-l">
+      <div class="bottom-r">
+        <div class="bottom-m"></div>
+      </div>
+    </div>
+</div>
+</div>
+<!--tinyset-->
+<div id="tinyset" style="top:136px;left:700px; position:absolute; z-index:9999; display:none">
+    <div class="layer">
+            <div class="top-l">
+              <div class="top-r">
+                <div class="top-m"><span class="title">---</span><span class="ico-quit"></span></div>
+              </div>
+            </div>
+            <div class="middle-l">
+              <div class="middle-r">
+                <div class="middle-m" style="width:350px;">
+                	<div class="common">
+                	<table>
+                    	<tr>
+                        	<td width="30%">开始时间：</td>
+                            <td><input class="calendar" value="2013/04/10 21:40:20"></td>
+                        </tr>
+                        <tr class="cbg">
+                        	<td>结束时间：</td>
+                            <td><input class="calendar" value="2013/04/10 21:40:20"></td>
+                        </tr>
+                        <tr>
+                        	<td>频率：</td>
+                            <td>
+                <div class="select_body">
+                     <div class="select_trigger_wrap"><a class="select_trigger"></a></div>
+                     <div class="select_text">一小时</div>
+                </div>
+                <div class="select_boundtree">
+                  <ul>
+                    <li><a><span class="t">一小时</span></a></li>
+                    <li><a><span class="t">一天</span></a></li>
+                  </ul>
+                </div>
+                            </td>
+                        </tr>
+                    </table>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="bottom-l">
+              <div class="bottom-r">
+                <div class="bottom-m"></div>
+              </div>
+            </div>
+        </div>
+</div>
+<!--share-->
+<div id="share" style="top:136px;left:965px; position:absolute; z-index:9999; display:none">
+    <div class="layer">
+            <div class="top-l">
+              <div class="top-r">
+                <div class="top-m"><span class="title">---</span><span class="ico-quit"></span></div>
+              </div>
+            </div>
+            <div class="middle-l">
+              <div class="middle-r">
+                <div class="middle-m">
+                	<ul>
+                    	<li class="first"><a class="btn on"><span class="icon icon_share"></span>导出Word</a></li>
+                        <li><a class="btn"><span class="icon icon_share"></span>导出PDf</a></li>
+                        <li class="last"><a class="btn"><span class="icon icon_share"></span>导出Excel</a></li>
+                    </ul>
+                </div>
+              </div>
+            </div>
+            <div class="bottom-l">
+              <div class="bottom-r">
+                <div class="bottom-m"></div>
+              </div>
+            </div>
+        </div>
+</div>
+
+<script>
+$('#show_tools').click(function(){
+	$("#tools").fadeIn(200);
+	return false;
+});
+$('#show_tinyset').click(function(){
+	$("#tinyset").fadeIn(200);
+	return false;
+});
+$('#show_share').click(function(){
+	$("#share").fadeIn(200);
+	return false;
+});
+$('#show_set').click(function(){
+	art.dialog({
+    content: document.getElementById('set'),
+	padding: 0,
+	lock: true
+	});
+});
+$('#show_chart').click(function(){
+	art.dialog({
+    content: document.getElementById('chart'),
+	padding: 0,
+	lock: true
+	});
+});
+</script>
+</body>
+</html>
